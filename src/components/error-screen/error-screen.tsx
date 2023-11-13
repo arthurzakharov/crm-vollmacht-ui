@@ -20,7 +20,7 @@ const ErrorScreen: FC<Props> = (props) => (
     <h3 className="error-screen__h3">{props.tableTitle}:</h3>
     <table className="error-screen__table">
       <tbody>
-        {props.tableRows.map((tableRow) => (
+        {props.tableRows.map((tableRow: TableRow) => (
           <tr key={tableRow.key}>
             <th className="error-screen__th">{tableRow.key}</th>
             <td className="error-screen__td" dangerouslySetInnerHTML={{ __html: tableRow.value }} />
@@ -30,5 +30,7 @@ const ErrorScreen: FC<Props> = (props) => (
     </table>
   </section>
 );
+
+ErrorScreen.displayName = "ErrorScreen";
 
 export default ErrorScreen;

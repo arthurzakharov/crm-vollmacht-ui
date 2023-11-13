@@ -27,4 +27,6 @@ const Header: FC<Props> = (props) => {
   );
 };
 
+Header.displayName = 'Header';
+
 export default Header;

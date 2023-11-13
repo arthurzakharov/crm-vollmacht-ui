@@ -25,4 +25,6 @@ const PlaneLayout: FC<PropsWithChildren<Props>> = (props) => {
   );
 };
 
+PlaneLayout.displayName = 'PlaneLayout';
+
 export default PlaneLayout;

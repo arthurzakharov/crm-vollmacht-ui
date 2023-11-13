@@ -32,4 +32,6 @@ const Footer: FC<Props> = (props) => (
   </footer>
 );
 
+Footer.displayName = 'Footer';
+
 export default Footer;
