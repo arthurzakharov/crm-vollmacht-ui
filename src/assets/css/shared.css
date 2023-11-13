@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white-3);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--gray-2);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  border-radius: 0.125rem;
+  outline: 2px solid transparent;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:focus:not(:active) {
+  outline-color: var(--orange-1);
+  outline-offset: 0;
+  transition: outline-color 150ms ease-in-out 50ms;
+}
+
+button,
+*[role="button"] {
+  border: none;
+  border-radius: 0.125rem;
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  outline: 2px solid transparent;
+}
+
+button:hover,
+*[role="button"]:hover {
+  cursor: pointer;
+}
+
+button:focus:not(:active),
+*[role="button"]:focus:not(:active) {
+  outline-color: var(--orange-1);
+  outline-offset: 0;
+  transition: outline-color 150ms ease-in-out 50ms;
+}

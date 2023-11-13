@@ -1,0 +1,43 @@
+{
+  "name": "crm-vollmacht-ui",
+  "version": "0.0.1",
+  "description": "ovm ui components library",
+  "main": "dist/cjs/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurzakharov/ovm-ui.git"
+  },
+  "scripts": {
+    "rollup": "rollup -c --bundleConfigAsCjs",
+    "release": "node ./publish.js"
+  },
+  "author": "arthurzakharov",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "ovm-ui"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react": "^18.2.37",
+    "react": "^18.2.0",
+    "rollup": "^4.4.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-import-css": "^3.3.5",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}

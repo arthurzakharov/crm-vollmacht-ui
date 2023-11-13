@@ -1,0 +1,38 @@
+.plain-layout__header,
+.plain-layout__footer {
+  padding: 16px 16px 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .plain-layout {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width-tablet);
+    width: 94%;
+  }
+
+  .plain-layout__header {
+    padding: 18px 0;
+  }
+
+  .plain-layout__footer {
+    padding: 48px 0 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .plain-layout {
+    max-width: none;
+    width: var(--max-width-laptop);
+  }
+
+  .plain-layout__footer {
+    padding: 60px 0 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .plain-layout {
+    width: var(--max-width-pc);
+  }
+}
