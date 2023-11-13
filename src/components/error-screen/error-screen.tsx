@@ -17,7 +17,7 @@ const ErrorScreen: FC<Props> = (props) => (
   <section className="error-screen">
     <h1 className="error-screen__h1">{props.title}</h1>
     <h2 className="error-screen__h2">{props.subtitle}</h2>
-    <h3 className="error-screen__h3">{props.tableTitle}:</h3>
+    <h3 className="error-screen__h3">{props.tableTitle}</h3>
     <table className="error-screen__table">
       <tbody>
         {props.tableRows.map((tableRow: TableRow) => (
