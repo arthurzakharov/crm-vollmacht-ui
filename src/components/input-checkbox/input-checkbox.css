@@ -1,0 +1,102 @@
+.input-checkbox {
+  position: relative;
+  padding: 8px 0;
+  margin: 2px 0;
+}
+
+.input-checkbox__element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.input-checkbox__element:disabled ~ .input-checkbox__content:hover,
+.input-checkbox__element:disabled ~ .input-checkbox__content:hover * {
+  cursor: not-allowed;
+}
+
+.input-checkbox__element:active ~ .input-checkbox__content > .input-checkbox__box {
+  outline: none;
+}
+
+.input-checkbox__box {
+  position: absolute;
+  z-index: 1;
+  top: 4px;
+  left: 0;
+}
+
+.input-checkbox__label::before {
+  position: absolute;
+  z-index: 0;
+  top: -8px;
+  bottom: 8px;
+  left: -10px;
+  display: block;
+  content: "";
+  width: calc(100% + 20px);
+  height: calc(100% + 16px);
+  opacity: 0;
+  transition:
+    background-color 150ms ease-in-out,
+    opacity 150ms ease-in-out;
+}
+
+.input-checkbox__checkbox-wrap {
+  position: absolute;
+  z-index: 1;
+  top: 4px;
+  left: 0;
+  display: flex;
+}
+
+.input-checkbox__content {
+  position: relative;
+  padding-left: 32px;
+  display: flex;
+  transition: padding-right 150ms ease-in-out;
+}
+
+.input-checkbox__content:hover,
+.input-checkbox__content:hover * {
+  cursor: pointer;
+}
+
+.input-checkbox__content--neutral,
+.input-checkbox__content--success {
+  padding-right: 8px;
+}
+
+.input-checkbox__content--error {
+  padding-right: 20px;
+}
+
+.input-checkbox__content--error > .input-checkbox__label::before {
+  opacity: 1;
+  background-color: color-mix(in srgb, var(--red-1) 20%, transparent);
+  transition:
+    background-color 150ms ease-in-out,
+    opacity 150ms ease-in-out;
+}
+
+.input-checkbox__icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation-name: fadeIn;
+  animation-duration: 150ms;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
