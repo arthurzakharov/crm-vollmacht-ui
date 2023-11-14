@@ -8,12 +8,10 @@ const useGetAuthenticate = (
   getAuthentication: () => void,
 ) => {
   const shouldSkip = (baseUrl: string, secret: string, authentication: ApiStatus): boolean => {
-    console.log("shouldSkip", !baseUrl || !secret || authentication === "fulfilled");
     return !baseUrl || !secret || authentication === "fulfilled";
   };
 
   useEffect(() => {
-    console.log("useGetAuthenticate", baseUrl, secret);
     if (shouldSkip(baseUrl, secret, authentication)) {
       return;
     } else {
