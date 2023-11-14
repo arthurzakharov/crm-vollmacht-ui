@@ -1,11 +1,13 @@
 import type { Page, WhereSecret } from "../../types";
+import type { Location } from "react-router";
 import { useEffect } from "react";
-import { useLocation, useParams } from "react-router";
 
-const useGetSecretFromUrl = (page: Page, save: (secret: string) => void) => {
-  const location = useLocation();
-  const { secret } = useParams();
-
+const useGetSecretFromUrl = (
+  page: Page,
+  location: Location,
+  secret: string | undefined,
+  save: (secret: string) => void,
+) => {
   const fromWhereGetSecret = (page: Page): WhereSecret => {
     switch (page) {
       case "home":
