@@ -96,4 +96,6 @@ const Loader: FC<Props> = (props) => {
   );
 };
 
+Loader.displayName = "Loader";
+
 export default Loader;
