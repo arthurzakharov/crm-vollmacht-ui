@@ -1,0 +1,34 @@
+.form-row:not(:last-of-type),
+.form-row> *:not(:last-of-type) {
+    margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .form-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .form-row > * {
+        flex-basis: 50%;
+    }
+
+    .form-row > *:nth-child(odd) {
+        margin-right: 12px;
+    }
+
+    .form-row > *:nth-child(even) {
+        margin-left: 12px;
+    }
+
+    .form-row > *:only-child {
+        flex-basis: calc(50% - 12px);
+        flex-grow: initial;
+    }
+
+    .form-row > *:not(:last-of-type) {
+        margin-bottom: initial;
+    }
+}
