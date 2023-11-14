@@ -1,10 +1,8 @@
 import { useEffect } from "react";
 
-const useGetConfigJson = (baseUrl: string, getConfigJson: () => Promise<void>) => {
+const useGetConfigJson = (baseUrl: string, getConfigJson: () => void) => {
   useEffect(() => {
-    (async () => {
-      if (!baseUrl) await getConfigJson();
-    })();
+    if (!baseUrl) getConfigJson();
   }, []);
 };
 
