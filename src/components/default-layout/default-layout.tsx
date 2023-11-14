@@ -45,7 +45,7 @@ const DefaultLayout: FC<Props> = (props) => {
           <Footer name={props.footerName} links={props.footerLinks} />
         </div>
       </div>
-      {props.children[4]}
+      {props.children[3]}
     </Fragment>
   );
 };
