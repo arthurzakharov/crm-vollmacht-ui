@@ -1,17 +1,18 @@
-import React, { FC, PropsWithChildren } from "react";
+import type { FC, PropsWithChildren } from "react";
 import type { FooterLink } from "../footer/footer";
+import React from "react";
 import Header from "../header";
 import Footer from "../footer";
 import "./plain-layout.css";
 
-interface Props {
+interface Props extends PropsWithChildren {
   headerLogo: string;
   headerPhone: string;
   footerLinks: FooterLink[];
   footerName: string;
 }
 
-const PlaneLayout: FC<PropsWithChildren<Props>> = (props) => {
+const PlaneLayout: FC<Props> = (props) => {
   return (
     <div className="plain-layout">
       <div className="plain-layout__header">
@@ -25,6 +26,6 @@ const PlaneLayout: FC<PropsWithChildren<Props>> = (props) => {
   );
 };
 
-PlaneLayout.displayName = 'PlaneLayout';
+PlaneLayout.displayName = "PlaneLayout";
 
 export default PlaneLayout;

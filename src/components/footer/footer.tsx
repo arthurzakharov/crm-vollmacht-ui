@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import type { FC } from "react";
+import React from "react";
 import "./footer.css";
 
 export type FooterLink = {
@@ -32,6 +33,6 @@ const Footer: FC<Props> = (props) => (
   </footer>
 );
 
-Footer.displayName = 'Footer';
+Footer.displayName = "Footer";
 
 export default Footer;
