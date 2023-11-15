@@ -8,7 +8,6 @@ import "./customer-info.css";
 interface Props {
   version: "form" | "sidebar";
   homeStep: null | HomeStep;
-  isEditButtonHidden: boolean;
   onClick: () => void;
   firstName?: string;
   lastName?: string;
@@ -19,6 +18,7 @@ interface Props {
   houseNumber?: string;
   postCode?: string;
   city?: string;
+  isEditButtonHidden?: boolean;
 }
 
 const CustomerInfo: FC<Props> = (props) => {
