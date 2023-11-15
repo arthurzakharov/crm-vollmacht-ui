@@ -1,10 +1,10 @@
-import type { Page } from "../../types";
+import type { Page, ApiStatus } from "../../types";
 import { useEffect } from "react";
 
 const usePostFirstView = (
   firstViewUrl: null | string,
   currentPage: null | Page,
-  baseUrl: string,
+  isAuthenticationResolved: ApiStatus,
   postUrl: (url: string) => void,
 ) => {
   const getPathname = (): string => {
@@ -16,17 +16,10 @@ const usePostFirstView = (
   };
 
   useEffect(() => {
-    console.table([
-      ["firstViewUrl", firstViewUrl, !firstViewUrl],
-      ["currentPage", currentPage, currentPage === "home"],
-      ["baseUrl", baseUrl, !!baseUrl],
-      ["result", !firstViewUrl && !!baseUrl && currentPage === "home"],
-    ]);
-    if (!firstViewUrl && !!baseUrl && currentPage === "home") {
-      console.log("download");
+    if (!firstViewUrl && isAuthenticationResolved === "fulfilled" && currentPage === "home") {
       postUrl(getFirstViewUrl());
     }
-  }, [firstViewUrl, baseUrl, currentPage]);
+  }, [firstViewUrl, isAuthenticationResolved, currentPage]);
 };
 
 export default usePostFirstView;
