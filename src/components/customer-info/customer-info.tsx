@@ -8,7 +8,7 @@ import "./customer-info.css";
 interface Props {
   version: "form" | "sidebar";
   homeStep: null | HomeStep;
-  isEditButtonVisible: boolean;
+  isEditButtonHidden: boolean;
   onClick: () => void;
   firstName?: string;
   lastName?: string;
@@ -53,7 +53,7 @@ const CustomerInfo: FC<Props> = (props) => {
     <div className={customerInfoCn()}>
       <div className="customer-info__navigation">
         Ihre Angaben
-        {props.isEditButtonVisible ? (
+        {!props.isEditButtonHidden ? (
           <button type="button" tabIndex={0} className="customer-info__button" onClick={() => props.onClick()}>
             <span className="customer-info__text">ändern</span>
             <img alt="pen-icon" src={penSrc} className="customer-info__icon" />
