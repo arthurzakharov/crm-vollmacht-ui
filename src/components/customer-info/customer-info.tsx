@@ -1,5 +1,4 @@
 import type { FC } from "react";
-import type { HomeStep } from "../../types";
 import React from "react";
 import cn from "classnames";
 import penSrc from "../../assets/png/pen/pen.png";
@@ -7,7 +6,6 @@ import "./customer-info.css";
 
 interface Props {
   version: "form" | "sidebar";
-  homeStep: null | HomeStep;
   onClick: () => void;
   firstName?: string;
   lastName?: string;
