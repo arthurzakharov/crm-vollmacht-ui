@@ -8,6 +8,7 @@ import "./customer-info.css";
 interface Props {
   version: "form" | "sidebar";
   homeStep: null | HomeStep;
+  isEditButtonVisible: boolean;
   onClick: () => void;
   firstName?: string;
   lastName?: string;
@@ -18,14 +19,9 @@ interface Props {
   houseNumber?: string;
   postCode?: string;
   city?: string;
-  isBirthDateEmpty?: boolean;
 }
 
 const CustomerInfo: FC<Props> = (props) => {
-  const isEditButtonVisible = (): boolean => {
-    return (props.homeStep === "remuneration" || props.homeStep === "checkout") && !!props.isBirthDateEmpty;
-  };
-
   const customerInfoCn = (): string => {
     return cn("customer-info", {
       "customer-info--sidebar": props.version === "sidebar",
@@ -34,21 +30,21 @@ const CustomerInfo: FC<Props> = (props) => {
 
   const getFirstLine = (): string => {
     if (!!props.firstName || !!props.lastName || !!props.birthName) {
-      return `${props.firstName} ${props.lastName} ${props.birthName}`;
+      return `${props.firstName || ""} ${props.lastName || ""} ${props.birthName || ""}`;
     }
     return "";
   };
 
   const getSecondLine = (): string => {
     if (!!props.birthDate || !!props.birthCity) {
-      return `Geb in ${props.birthDate} ${props.birthCity}`;
+      return `Geb in ${props.birthDate || ""} ${props.birthCity || ""}`;
     }
     return "";
   };
 
   const getThirdLine = (): string => {
     if (!!props.street || !!props.houseNumber || !!props.postCode || !!props.city) {
-      return `${props.street} ${props.houseNumber}, ${props.postCode} ${props.city}`;
+      return `${props.street || ""} ${props.houseNumber || ""}, ${props.postCode || ""} ${props.city || ""}`;
     }
     return "";
   };
@@ -57,7 +53,7 @@ const CustomerInfo: FC<Props> = (props) => {
     <div className={customerInfoCn()}>
       <div className="customer-info__navigation">
         Ihre Angaben
-        {isEditButtonVisible() ? (
+        {props.isEditButtonVisible ? (
           <button type="button" tabIndex={0} className="customer-info__button" onClick={() => props.onClick()}>
             <span className="customer-info__text">ändern</span>
             <img alt="pen-icon" src={penSrc} className="customer-info__icon" />
