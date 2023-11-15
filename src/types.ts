@@ -6,6 +6,8 @@ export type ApiStatus = "pending" | "fulfilled" | "rejected" | "idle";
 
 export type FieldStatus = "success" | "error" | "neutral";
 
+export type AllowedPath = "/" | "/attachment" | "/remuneration";
+
 export type Option = {
   value: string;
   label: string;
