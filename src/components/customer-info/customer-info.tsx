@@ -7,7 +7,7 @@ import "./customer-info.css";
 
 interface Props {
   version: "form" | "sidebar";
-  formStep: HomeStep;
+  homeStep: null | HomeStep;
   onClick: () => void;
   firstName?: string;
   lastName?: string;
@@ -23,7 +23,7 @@ interface Props {
 
 const CustomerInfo: FC<Props> = (props) => {
   const isEditButtonVisible = (): boolean => {
-    return (props.formStep === "remuneration" || props.formStep === "checkout") && !!props.isBirthDateEmpty;
+    return (props.homeStep === "remuneration" || props.homeStep === "checkout") && !!props.isBirthDateEmpty;
   };
 
   const customerInfoCn = (): string => {
