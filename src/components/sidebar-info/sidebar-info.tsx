@@ -8,8 +8,8 @@ import CustomerInfo from "../customer-info";
 import "./sidebar-info.css";
 
 interface Props {
-  formStep: HomeStep;
-  currentPage: Page;
+  formStep: null | HomeStep;
+  currentPage: null | Page;
   charge: string;
   reference: string;
   onClick: () => void;
