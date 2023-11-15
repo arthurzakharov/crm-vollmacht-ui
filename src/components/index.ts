@@ -25,3 +25,4 @@ export { default as Sidebar } from "./sidebar";
 export { default as SidebarInfo } from "./sidebar-info";
 export { default as Signature } from "./signature";
 export { default as StatusIcon } from "./status-icon";
+export { default as SubmitButton } from "./status-icon";

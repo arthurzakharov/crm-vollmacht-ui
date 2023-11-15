@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC, PropsWithChildren } from "react";
 import type { Page, HomeStep, AttachmentStep } from "../../types";
 import React, { useEffect, useState } from "react";
 import AnimateHeight, { Height } from "react-animate-height";
@@ -12,7 +12,7 @@ type SidebarStep = {
   title: string;
 };
 
-interface Props {
+interface Props extends PropsWithChildren {
   currentPage: null | Page;
   formStep: null | HomeStep;
   attachmentSectionNames: AttachmentStep[];
@@ -138,10 +138,7 @@ const Sidebar: FC<Props> = (props) => {
       />
       {props.currentPage !== "attachment" && (
         <AnimateHeight duration={250} delay={125} animateOpacity easing="cubic-bezier(0.4, 0, 0.2, 1)" height={height}>
-          <div className="sidebar__button">
-            {/*<SubmitButton isSidebarVersion />*/}
-            <button>SUBMIT</button>
-          </div>
+          <div className="sidebar__button">{props.children}</div>
         </AnimateHeight>
       )}
       {props.currentPage === "attachment" ? (
