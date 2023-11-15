@@ -20,9 +20,9 @@ const usePostFirstView = (
       ["firstViewUrl", firstViewUrl, !!firstViewUrl],
       ["currentPage", currentPage, currentPage !== "home"],
       ["baseUrl", baseUrl, !baseUrl],
-      ["result", !!firstViewUrl || currentPage !== "home" || !baseUrl, ""],
+      ["result", (!!firstViewUrl && !baseUrl) || currentPage !== "home", ""],
     ]);
-    if (!!firstViewUrl || currentPage !== "home" || !baseUrl) {
+    if ((!!firstViewUrl && !baseUrl) || currentPage !== "home") {
       console.log("exit");
       return;
     } else {
