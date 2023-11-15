@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const usePostFirstView = (
   firstViewUrl: null | string,
   currentPage: null | Page,
-  baseUtl: string,
+  baseUrl: string,
   postUrl: (url: string) => void,
 ) => {
   const getPathname = (): string => {
@@ -16,12 +16,20 @@ const usePostFirstView = (
   };
 
   useEffect(() => {
-    if (firstViewUrl || currentPage !== "home" || !baseUtl) {
+    console.table([
+      ["firstViewUrl", firstViewUrl, !!firstViewUrl],
+      ["currentPage", currentPage, currentPage !== "home"],
+      ["baseUrl", baseUrl, !baseUrl],
+      ["result", !!firstViewUrl || currentPage !== "home" || !baseUrl, ""],
+    ]);
+    if (!!firstViewUrl || currentPage !== "home" || !baseUrl) {
+      console.log("exit");
       return;
     } else {
+      console.log("download");
       postUrl(getFirstViewUrl());
     }
-  }, [firstViewUrl, baseUtl]);
+  }, [firstViewUrl, baseUrl, currentPage]);
 };
 
 export default usePostFirstView;
