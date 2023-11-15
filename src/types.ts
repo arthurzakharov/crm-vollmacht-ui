@@ -1,5 +1,7 @@
 export type Page = "home" | "remuneration" | "attachment" | "error";
 
+export type HomeStep = "personal" | "address" | "checkout" | "remuneration";
+
 export type WhereSecret = "query" | "path";
 
 export type ApiStatus = "pending" | "fulfilled" | "rejected" | "idle";

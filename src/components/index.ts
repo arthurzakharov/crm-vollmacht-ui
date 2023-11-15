@@ -2,6 +2,7 @@ import "../assets/css/variables.css";
 import "../assets/css/shared.css";
 
 export { default as Checkbox } from "./checkbox";
+export { default as CustomerInfo } from "./customer-info";
 export { default as DefaultLayout } from "./default-layout";
 export { default as Dialog } from "./dialog";
 export { default as DialogArticle } from "./dialog-article";

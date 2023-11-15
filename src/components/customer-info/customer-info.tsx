@@ -1,0 +1,76 @@
+import type { FC } from "react";
+import type { HomeStep } from "../../types";
+import React from "react";
+import cn from "classnames";
+import penSrc from "../../assets/png/pen/pen.png";
+import "./customer-info.css";
+
+interface Props {
+  version: "form" | "sidebar";
+  formStep: HomeStep;
+  onClick: () => void;
+  firstName?: string;
+  lastName?: string;
+  birthName?: string;
+  birthDate?: string;
+  birthCity?: string;
+  street?: string;
+  houseNumber?: string;
+  postCode?: string;
+  city?: string;
+  isBirthDateEmpty?: boolean;
+}
+
+const CustomerInfo: FC<Props> = (props) => {
+  const isEditButtonVisible = (): boolean => {
+    return (props.formStep === "remuneration" || props.formStep === "checkout") && !!props.isBirthDateEmpty;
+  };
+
+  const customerInfoCn = (): string => {
+    return cn("customer-info", {
+      "customer-info--sidebar": props.version === "sidebar",
+    });
+  };
+
+  const getFirstLine = (): string => {
+    if (!!props.firstName || !!props.lastName || !!props.birthName) {
+      return `${props.firstName} ${props.lastName} ${props.birthName}`;
+    }
+    return "";
+  };
+
+  const getSecondLine = (): string => {
+    if (!!props.birthDate || !!props.birthCity) {
+      return `Geb in ${props.birthDate} ${props.birthCity}`;
+    }
+    return "";
+  };
+
+  const getThirdLine = (): string => {
+    if (!!props.street || !!props.houseNumber || !!props.postCode || !!props.city) {
+      return `${props.street} ${props.houseNumber}, ${props.postCode} ${props.city}`;
+    }
+    return "";
+  };
+
+  return (
+    <div className={customerInfoCn()}>
+      <div className="customer-info__navigation">
+        Ihre Angaben
+        {isEditButtonVisible() ? (
+          <button type="button" tabIndex={0} className="customer-info__button" onClick={() => props.onClick()}>
+            <span className="customer-info__text">ändern</span>
+            <img alt="pen-icon" src={penSrc} className="customer-info__icon" />
+          </button>
+        ) : null}
+      </div>
+      {!!getFirstLine() ? <p>{getFirstLine()}</p> : null}
+      {!!getSecondLine() ? <p>{getSecondLine()}</p> : null}
+      {!!getThirdLine() ? <p>{getThirdLine()}</p> : null}
+    </div>
+  );
+};
+
+CustomerInfo.displayName = "CustomerInfo";
+
+export default CustomerInfo;
