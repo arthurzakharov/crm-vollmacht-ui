@@ -1,7 +1,12 @@
 import type { Page } from "../../types";
 import { useEffect } from "react";
 
-const usePostFirstView = (firstViewUrl: null | string, currentPage: null | Page, postUrl: (url: string) => void) => {
+const usePostFirstView = (
+  firstViewUrl: null | string,
+  currentPage: null | Page,
+  baseUtl: string,
+  postUrl: (url: string) => void,
+) => {
   const getPathname = (): string => {
     return window.location.pathname === "/" ? "" : window.location.pathname;
   };
@@ -11,12 +16,12 @@ const usePostFirstView = (firstViewUrl: null | string, currentPage: null | Page,
   };
 
   useEffect(() => {
-    if (firstViewUrl || currentPage !== "home") {
+    if (firstViewUrl || currentPage !== "home" || !baseUtl) {
       return;
     } else {
       postUrl(getFirstViewUrl());
     }
-  }, [firstViewUrl]);
+  }, [firstViewUrl, baseUtl]);
 };
 
 export default usePostFirstView;
