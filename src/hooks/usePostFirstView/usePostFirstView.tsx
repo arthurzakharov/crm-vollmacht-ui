@@ -17,12 +17,12 @@ const usePostFirstView = (
 
   useEffect(() => {
     console.table([
-      ["firstViewUrl", firstViewUrl, !!firstViewUrl],
-      ["currentPage", currentPage, currentPage !== "home"],
-      ["baseUrl", baseUrl, !baseUrl],
-      ["result", !!firstViewUrl && !baseUrl && currentPage === "home"],
+      ["firstViewUrl", firstViewUrl, !firstViewUrl],
+      ["currentPage", currentPage, currentPage === "home"],
+      ["baseUrl", baseUrl, !!baseUrl],
+      ["result", !firstViewUrl && !!baseUrl && currentPage === "home"],
     ]);
-    if (!!firstViewUrl && !baseUrl && currentPage === "home") {
+    if (!firstViewUrl && !!baseUrl && currentPage === "home") {
       console.log("download");
       postUrl(getFirstViewUrl());
     }
