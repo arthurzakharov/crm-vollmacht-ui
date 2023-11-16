@@ -143,7 +143,7 @@ const Signature: FC<Props> = (props) => {
   };
 
   return (
-    <div data-id="signature" className="signature">
+    <div id="signature" className="signature">
       <h6 className="signature__title">Wir haben eine digitale Signatur für Sie generiert.</h6>
       <div className="signature__main">
         <div className="signature__content">
