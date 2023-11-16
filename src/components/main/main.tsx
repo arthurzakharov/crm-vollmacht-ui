@@ -12,6 +12,8 @@ interface Props extends PropsWithChildren {
   formSubtitle: string;
   charge: string;
   reference: string;
+  chargeTitle: string;
+  referenceTitle: string;
 }
 
 const Main: FC<Props> = (props) => {
@@ -31,11 +33,11 @@ const Main: FC<Props> = (props) => {
       {!isAttachment(props.page) && isPortableDevice && (
         <div className="main__info">
           <p className="main__client">
-            <strong>Tatvorwurf: </strong>
+            <strong>{props.chargeTitle}: </strong>
             {props.charge}
           </p>
           <p className="main__client">
-            <strong>Mandat Nr: </strong>
+            <strong>{props.referenceTitle}: </strong>
             {props.reference}
           </p>
         </div>

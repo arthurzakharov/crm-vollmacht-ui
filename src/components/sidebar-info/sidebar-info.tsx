@@ -12,6 +12,8 @@ interface Props {
   currentPage: null | Page;
   charge: string;
   reference: string;
+  chargeTitle: string;
+  referenceTitle: string;
   onClick: () => void;
   firstName?: string;
   lastName?: string;
@@ -41,11 +43,11 @@ const SidebarInfo: FC<Props> = (props) => {
     <div className="sidebar-info">
       <div>
         <p className="sidebar-info__text">
-          <strong>Tatvorwurf: </strong>
+          <strong>{props.chargeTitle}: </strong>
           {props.charge}
         </p>
         <p className="sidebar-info__text">
-          <strong>Mandat Nr: </strong>
+          <strong>{props.referenceTitle}: </strong>
           {props.reference}
         </p>
       </div>

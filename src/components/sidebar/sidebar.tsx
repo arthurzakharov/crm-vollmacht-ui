@@ -18,6 +18,8 @@ interface Props extends PropsWithChildren {
   attachmentSectionNames: AttachmentStep[];
   charge: string;
   reference: string;
+  chargeTitle: string;
+  referenceTitle: string;
   onClick: () => void;
   isBirthDateEmpty?: boolean;
   isFormPersonalCorrect?: boolean;
@@ -124,6 +126,8 @@ const Sidebar: FC<Props> = (props) => {
         currentPage={props.currentPage}
         charge={props.charge}
         reference={props.reference}
+        chargeTitle={props.chargeTitle}
+        referenceTitle={props.referenceTitle}
         onClick={props.onClick}
         firstName={props.firstName}
         lastName={props.lastName}
