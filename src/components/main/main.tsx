@@ -33,12 +33,12 @@ const Main: FC<Props> = (props) => {
       {!isAttachment(props.page) && isPortableDevice && (
         <div className="main__info">
           <p className="main__client">
-            <strong>{props.chargeTitle}: </strong>
-            {props.charge}
+            <strong>{props.chargeTitle}</strong>
+            <span dangerouslySetInnerHTML={{ __html: props.charge }} />
           </p>
           <p className="main__client">
-            <strong>{props.referenceTitle}: </strong>
-            {props.reference}
+            <strong>{props.referenceTitle}</strong>
+            <span dangerouslySetInnerHTML={{ __html: props.reference }} />
           </p>
         </div>
       )}
