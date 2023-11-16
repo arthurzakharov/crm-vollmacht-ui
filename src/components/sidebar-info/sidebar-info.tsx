@@ -43,12 +43,12 @@ const SidebarInfo: FC<Props> = (props) => {
     <div className="sidebar-info">
       <div>
         <p className="sidebar-info__text">
-          <strong>{props.chargeTitle}: </strong>
-          {props.charge}
+          <strong>{props.chargeTitle}</strong>
+          <span dangerouslySetInnerHTML={{ __html: props.charge }} />
         </p>
         <p className="sidebar-info__text">
-          <strong>{props.referenceTitle}: </strong>
-          {props.reference}
+          <strong>{props.referenceTitle}</strong>
+          <span dangerouslySetInnerHTML={{ __html: props.reference }} />
         </p>
       </div>
       {props.currentPage !== "attachment" && (
