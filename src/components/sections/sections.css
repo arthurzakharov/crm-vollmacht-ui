@@ -1,0 +1,98 @@
+.attachment-sections {
+  list-style: none;
+  background-color: var(--white-1);
+}
+
+.attachment-sections__item {
+  position: relative;
+}
+
+.attachment-sections__item:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.attachment-sections__number {
+  position: absolute;
+  z-index: 1;
+  top: -4px;
+  left: -40px;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 50% 50% 0;
+  padding-right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  color: var(--white-1);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  background-color: var(--orange-1);
+}
+
+.sections__title {
+  cursor: pointer;
+  margin-left: -5px;
+  padding: 1px 5px;
+  display: flex;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--blue-1);
+}
+
+.sections__title--opened .sections__arrow {
+  transform: rotate(180deg);
+}
+
+.sections__title--closed .sections__arrow {
+  transform: rotate(0deg);
+}
+
+.sections__text {
+  user-select: none;
+}
+
+.sections__arrow {
+  display: block;
+  margin-left: 16px;
+  width: 12px;
+  transition: transform 300ms cubic-bezier(0.3, 0, 0, 1) 0s;
+}
+
+.sections__content {
+  position: relative;
+  padding-top: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .sections__item {
+    padding-left: 50px;
+    padding-bottom: 10px;
+  }
+
+  .sections__item:not(:first-of-type) {
+    margin-top: 25px;
+  }
+
+  .sections__number {
+    border-radius: 50%;
+    padding-right: initial;
+    top: -2px;
+    left: 2px;
+  }
+
+  .sections__line {
+    position: absolute;
+    z-index: 1;
+    left: -34px;
+    bottom: 0;
+    width: 1px;
+    height: calc(100% - 33px);
+    border: none;
+    background-color: var(--orange-1);
+  }
+}

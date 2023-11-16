@@ -21,6 +21,7 @@ export { default as Logos } from "./logos";
 export { default as Main } from "./main";
 export { default as PlainLayout } from "./plain-layout";
 export { default as Radio } from "./radio";
+export { default as Sections } from "./sections";
 export { default as Sidebar } from "./sidebar";
 export { default as SidebarInfo } from "./sidebar-info";
 export { default as Signature } from "./signature";
