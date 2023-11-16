@@ -41,3 +41,11 @@ export const urlFromWindow = (): string => {
   const pathname = window.location.pathname === "/" ? "" : window.location.pathname;
   return window.origin + pathname;
 };
+
+export const fakeAwait = async (time = 500): Promise<void> => {
+  return await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
+};
