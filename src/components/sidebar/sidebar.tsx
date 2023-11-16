@@ -149,7 +149,7 @@ const Sidebar: FC<Props> = (props) => {
         </div>
       ) : null}
       <div className="sidebar__logos">
-        <Logos />
+        <Logos show={["tls"]} />
       </div>
     </div>
   );
