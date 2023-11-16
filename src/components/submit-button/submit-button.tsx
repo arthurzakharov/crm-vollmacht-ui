@@ -5,7 +5,7 @@ import Loader from "../loader";
 import "./submit-button.css";
 
 interface Props {
-  isLeadSigning: boolean;
+  isSigning: boolean;
   text: string;
   onClick: (e: MouseEvent<HTMLButtonElement>) => Promise<void>;
   isSidebarVersion?: boolean;
@@ -13,20 +13,14 @@ interface Props {
 
 const SubmitButton: FC<Props> = (props) => {
   const submitButtonCn = (): string => {
-    return cn("submit-button", props.isLeadSigning ? "submit-button--loading" : "submit-button--idle", {
+    return cn("submit-button", props.isSigning ? "submit-button--loading" : "submit-button--idle", {
       "submit-button--sidebar-version": !!props.isSidebarVersion,
     });
   };
 
   return (
-    <button
-      type="button"
-      tabIndex={0}
-      disabled={props.isLeadSigning}
-      className={submitButtonCn()}
-      onClick={props.onClick}
-    >
-      {props.isLeadSigning && (
+    <button type="button" tabIndex={0} disabled={props.isSigning} className={submitButtonCn()} onClick={props.onClick}>
+      {props.isSigning && (
         <div className="submit-button__loader">
           <Loader color="white" />
         </div>
