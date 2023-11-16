@@ -30,8 +30,11 @@ const Signature: FC<Props> = (props) => {
   const { width, height } = useWindowSize();
 
   useEffect(() => {
-    if (props.fullName && !props.signature) props.fetchSignature();
-  }, [props.fullName]);
+    console.log("signature", props.fullName, !props.signature);
+    if (props.fullName && !props.signature) {
+      props.fetchSignature();
+    }
+  }, [props.fullName, props.signature]);
 
   useEffect(() => {
     if (props.status === "fulfilled" && props.signature) {
