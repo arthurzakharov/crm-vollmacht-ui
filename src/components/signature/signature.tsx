@@ -34,7 +34,7 @@ const Signature: FC<Props> = (props) => {
     if (!!props.fullName && !props.signature) {
       props.fetchSignature();
     }
-  }, [props.fullName, props.signature]);
+  }, []);
 
   useEffect(() => {
     if (props.status === "fulfilled" && props.signature) {
