@@ -82,7 +82,7 @@
   color: var(--blue-1);
 }
 
-.main__client > strong {
+.main__client strong {
   font-weight: 600;
 }
 

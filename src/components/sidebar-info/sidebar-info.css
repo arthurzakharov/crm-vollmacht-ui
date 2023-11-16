@@ -14,7 +14,7 @@
   color: var(--blue-1);
 }
 
-.sidebar-info__text > strong {
+.sidebar-info__text strong {
   font-weight: 600;
 }
 
