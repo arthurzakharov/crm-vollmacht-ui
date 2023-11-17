@@ -17,7 +17,7 @@ export type AllowedPath = "/" | "/attachment" | "/remuneration";
 export type Section<S> = {
   title: string;
   section: S;
-  element: ReactNode;
+  element: null | ReactNode;
 };
 
 export type Option = {
