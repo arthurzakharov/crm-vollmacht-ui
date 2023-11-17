@@ -1,5 +1,6 @@
 import type { MouseEvent } from "react";
-import React, { ReactNode } from "react";
+import type { Section } from "../../types";
+import React from "react";
 import AnimateHeight from "react-animate-height";
 import cn from "classnames";
 import arrowBlueSrc from "../../assets/png/arrow-blue/arrow-blue.png";
@@ -8,21 +9,15 @@ import "./sections.css";
 interface Props<S, N> {
   activeSection: null | N;
   onTitleClick: (name: N) => void;
-  list: SectionList<S>[];
+  list: Section<S>[];
 }
 
-interface SectionList<S> {
-  title: string;
-  section: S;
-  element: ReactNode;
-}
-
-interface Section<N> {
+interface SectionName<N> {
   id: number;
   name: N;
 }
 
-const Sections = <N extends string, S extends Section<N>>(props: Props<S, N>) => {
+const Sections = <N extends string, S extends SectionName<N>>(props: Props<S, N>) => {
   const titleCn = (name: N): string => {
     return cn("sections__title", {
       "sections__title--opened": name === props.activeSection,
@@ -38,7 +33,7 @@ const Sections = <N extends string, S extends Section<N>>(props: Props<S, N>) =>
 
   return (
     <ul className="sections">
-      {props.list.map((item: SectionList<S>, i: number) => (
+      {props.list.map((item: Section<S>, i: number) => (
         <li key={item.section.name} className="sections__item">
           <div className="sections__number">{i + 1}</div>
           <button
