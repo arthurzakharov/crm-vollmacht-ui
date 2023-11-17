@@ -1,17 +1,17 @@
-.attachment-sections {
+.sections {
   list-style: none;
   background-color: var(--white-1);
 }
 
-.attachment-sections__item {
+.sections__item {
   position: relative;
 }
 
-.attachment-sections__item:not(:first-of-type) {
+.sections__item:not(:first-of-type) {
   margin-top: 20px;
 }
 
-.attachment-sections__number {
+.sections__number {
   position: absolute;
   z-index: 1;
   top: -4px;
