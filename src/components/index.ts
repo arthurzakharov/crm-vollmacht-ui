@@ -28,3 +28,4 @@ export { default as SidebarInfo } from "./sidebar-info";
 export { default as Signature } from "./signature";
 export { default as StatusIcon } from "./status-icon";
 export { default as SubmitButton } from "./submit-button";
+export { default as Uploader } from "./uploader";

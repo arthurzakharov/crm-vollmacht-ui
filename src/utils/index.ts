@@ -49,3 +49,10 @@ export const fakeAwait = async (time = 500): Promise<void> => {
     }, time);
   });
 };
+
+export const fileSize = (size: number): string => {
+  const pow = Math.pow(10, 2);
+  return !!Math.round(size / 1000000)
+    ? `${Math.abs(Math.round((size / 1000000) * pow) / pow)}MB`
+    : `${Math.abs(Math.round((size / 1000) * pow) / pow)}KB`;
+};
