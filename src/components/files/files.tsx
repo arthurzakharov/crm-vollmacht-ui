@@ -10,6 +10,7 @@ type GotLetter = "yes" | "no" | "";
 interface Props {
   uncompletedText: string;
   completedText: string;
+  questionText: string;
   completed: boolean;
   onCancel: () => {};
 }
@@ -33,7 +34,7 @@ const Files: FC<PropsWithChildren<Props>> = (props) => {
       <p className="files__description" dangerouslySetInnerHTML={{ __html: getDescription() }} />
       {!props.completed && (
         <div className={cn("files__questions", { "files__questions--single": gotLetter !== "yes" })}>
-          <p className="files__subtitle">Haben Sie bereits Post von der Behörde erhalten?</p>
+          <p className="files__subtitle">{props.questionText}</p>
           <InputRadio
             options={[
               { label: "Ja", value: "yes" },
