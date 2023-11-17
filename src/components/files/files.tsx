@@ -13,7 +13,6 @@ interface Props {
   questionText: string;
   completed: boolean;
   onCancel: () => {};
-  reset: () => {};
 }
 
 const Files: FC<PropsWithChildren<Props>> = (props) => {
