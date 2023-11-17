@@ -1,18 +1,17 @@
 import type { FC, PropsWithChildren } from "react";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import AnimateHeight from "react-animate-height";
 import InputRadio from "../input-radio";
 import "./files.css";
-import { AttachmentStep } from "../../types";
 
 type GotLetter = "yes" | "no" | "";
 
 interface Props {
+  uncompletedText: string;
+  completedText: string;
   completed: boolean;
-  activeSection: null | AttachmentStep;
-  setActiveAttachmentSection: (activeSection: null | AttachmentStep) => void;
-  setFilesUploadingMore: (v: boolean) => void;
+  onCancel: () => {};
 }
 
 const Files: FC<PropsWithChildren<Props>> = (props) => {
@@ -21,24 +20,13 @@ const Files: FC<PropsWithChildren<Props>> = (props) => {
   const updateQuestionAnswer = (value: string): void => {
     setGotLetter(value as GotLetter);
     if (value === "no") {
-      // TODO: What if there is no survey next. It was already answered
-      props.setActiveAttachmentSection("survey");
+      props.onCancel();
     }
   };
 
-  const getDescription = (): string =>
-    props.completed
-      ? "Sobald Sie neue Behördenschreiben erhalten, übermitteln Sie uns diese bitte umgehend."
-      : "Wir können mit der Fallbearbeitung des registrierten Verstoßes erst beginnen, wenn uns <strong>das letzte Schreiben, das Sie von der Behörde erhalten</strong> haben, vorliegt.";
-
-  useEffect(() => {
-    if (props.activeSection !== "files") {
-      setTimeout(() => {
-        setGotLetter(props.completed ? "yes" : "");
-        props.setFilesUploadingMore(false);
-      }, 450);
-    }
-  }, [props.activeSection]);
+  const getDescription = (): string => {
+    return props.completed ? props.completedText : props.uncompletedText;
+  };
 
   return (
     <div className="files">
