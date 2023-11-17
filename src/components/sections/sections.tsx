@@ -12,12 +12,7 @@ interface Props<S, N> {
   list: Section<S>[];
 }
 
-interface SectionName<N> {
-  id: number;
-  name: N;
-}
-
-const Sections = <N extends string, S extends SectionName<N>>(props: Props<S, N>) => {
+const Sections = <N extends string, S extends { name: N }>(props: Props<S, N>) => {
   const titleCn = (name: N): string => {
     return cn("sections__title", {
       "sections__title--opened": name === props.activeSection,
