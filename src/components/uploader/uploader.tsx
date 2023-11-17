@@ -11,7 +11,7 @@ import uploadSrc from "../../assets/png/upload/upload.png";
 import trashGraySrc from "../../assets/png/trash-gray/trash-gray.png";
 import trashBlueSrc from "../../assets/png/trash-blue/trash-blue.png";
 import fileSrc from "../../assets/png/file/file.png";
-import checkSrc from "../../assets/png/check.png";
+import checkSrc from "../../assets/png/check/check.png";
 import "./uploader.css";
 
 interface Props {
