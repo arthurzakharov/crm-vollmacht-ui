@@ -54,7 +54,7 @@ const Files: FC<PropsWithChildren<Props>> = (props) => {
         delay={150}
         animateOpacity
         easing="cubic-bezier(0.4, 0, 0.2, 1)"
-        height={gotLetter === "yes" ? "auto" : 0}
+        height={gotLetter === "yes" || props.completed ? "auto" : 0}
       >
         <div className={cn("files__upload", { "files__upload--single": props.completed })}>{props.children}</div>
       </AnimateHeight>
