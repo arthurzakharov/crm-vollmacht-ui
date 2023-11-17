@@ -1,0 +1,38 @@
+.files__description {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray-2);
+}
+
+.files__description > strong {
+  font-weight: 400;
+}
+
+.files__questions {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.files__questions--single {
+  padding-bottom: 20px;
+}
+
+.files__upload {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.files__upload--single {
+  padding-top: 20px;
+}
+
+.files__subtitle {
+  margin-bottom: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--gray-2);
+}

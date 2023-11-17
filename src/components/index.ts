@@ -7,6 +7,7 @@ export { default as DefaultLayout } from "./default-layout";
 export { default as Dialog } from "./dialog";
 export { default as DialogArticle } from "./dialog-article";
 export { default as ErrorScreen } from "./error-screen";
+export { default as Files } from "./files";
 export { default as Footer } from "./footer";
 export { default as FormNavigationButton } from "./form-navigation-button";
 export { default as FormRow } from "./form-row";
