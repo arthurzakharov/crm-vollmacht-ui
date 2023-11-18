@@ -15,7 +15,7 @@ import checkSrc from "../../assets/png/check/check.png";
 import "./uploader.css";
 
 interface Props {
-  list: string[];
+  areFilesUploaded: boolean;
   filesToUpload: File[];
   status: ApiStatus;
   onReject: (fileRejection: FileRejection[]) => void;
@@ -53,12 +53,12 @@ const Uploader: FC<Props> = (props) => {
 
   return (
     <div className="uploader">
-      {!props.list.length ? (
+      {props.areFilesUploaded ? (
         <p className="uploader__title">
           Perfekt! Übermitteln Sie jetzt bitte <u>das letzte Schreiben</u> das Sie bereits erhalten haben.
         </p>
       ) : null}
-      <AnimateHeight height={!props.list.length ? "auto" : 0}>
+      <AnimateHeight height={!props.areFilesUploaded ? "auto" : 0}>
         <Dropzone
           noKeyboard
           multiple
@@ -125,17 +125,13 @@ const Uploader: FC<Props> = (props) => {
           )}
         </Dropzone>
       </AnimateHeight>
-      {!!props.list.length && (
+      {props.areFilesUploaded && (
         <div className="uploader__uploaded-files">
           <h6>Bereits übermittelt</h6>
-          <ul>
-            {props.list.map((uploadedFile: string) => (
-              <li key={uploadedFile}>
-                <span>{uploadedFile}</span>
-                <img alt="check" src={checkSrc} />
-              </li>
-            ))}
-          </ul>
+          <div>
+            <span>Document</span>
+            <img alt="check" src={checkSrc} />
+          </div>
         </div>
       )}
     </div>
