@@ -11,14 +11,14 @@ interface Props {
   uncompletedText: string;
   completedText: string;
   questionText: string;
-  completed: boolean;
+  areFilesUploaded: boolean;
   onCancel: () => {};
 }
 
-const Files: FC<PropsWithChildren<Props>> = (props) => {
+function Files(props: PropsWithChildren<Props>) {
   const [gotLetter, setGotLetter] = useState<GotLetter>("");
 
-  const updateQuestionAnswer = (value: string): void => {
+  const updateQuestionAnswer = (value: GotLetter): void => {
     setGotLetter(value as GotLetter);
     if (value === "no") {
       props.onCancel();
@@ -26,16 +26,16 @@ const Files: FC<PropsWithChildren<Props>> = (props) => {
   };
 
   const getDescription = (): string => {
-    return props.completed ? props.completedText : props.uncompletedText;
+    return props.areFilesUploaded ? props.completedText : props.uncompletedText;
   };
 
   return (
     <div className="files">
       <p className="files__description" dangerouslySetInnerHTML={{ __html: getDescription() }} />
-      {!props.completed && (
-        <div className={cn("files__questions", { "files__questions--single": gotLetter !== "yes" })}>
+      {!props.areFilesUploaded && (
+        <div className="files__questions">
           <p className="files__subtitle">{props.questionText}</p>
-          <InputRadio
+          <InputRadio<GotLetter>
             options={[
               { label: "Ja", value: "yes" },
               { label: "Nein", value: "no" },
@@ -54,13 +54,13 @@ const Files: FC<PropsWithChildren<Props>> = (props) => {
         delay={150}
         animateOpacity
         easing="cubic-bezier(0.4, 0, 0.2, 1)"
-        height={gotLetter === "yes" || props.completed ? "auto" : 0}
+        height={gotLetter === "yes" || props.areFilesUploaded ? "auto" : 0}
       >
-        <div className={cn("files__upload", { "files__upload--single": props.completed })}>{props.children}</div>
+        <div className={cn("files__upload", { "files__upload--single": props.areFilesUploaded })}>{props.children}</div>
       </AnimateHeight>
     </div>
   );
-};
+}
 
 Files.displayName = "Files";
 

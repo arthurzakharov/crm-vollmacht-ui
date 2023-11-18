@@ -5,29 +5,30 @@ import Label from "../label";
 import Radio from "../radio";
 import "./input-radio.css";
 
-interface Props {
-  options: Option[];
-  value: string;
+interface Props<T extends string = string> {
+  options: Option<T>[];
+  value: T;
   name: string;
   status: FieldStatus;
   sizeRadio: "m" | "l";
   sizeLabel: "s" | "m";
   disabled?: boolean;
-  onChange: (value: string) => void;
+  onChange: (value: T) => void;
 }
 
-const InputRadio: FC<Props> = (props) => {
+function InputRadio<T extends string = string>(props: Props<T>) {
   const [focusedOption, setFocusedOption] = useState<string>("");
 
-  const onOptionClick = (e: MouseEvent<HTMLDivElement>, value: string): void => {
+  const onOptionClick = (e: MouseEvent<HTMLDivElement>, value: T): void => {
     e.preventDefault();
+    props.options[0].value;
     if ((e.clientX === 0 && e.clientY === 0) || props.disabled) return;
     props.onChange(value);
   };
 
   return (
     <div className="input-radio">
-      {props.options.map((option: Option) => (
+      {props.options.map((option: Option<T>) => (
         <div key={option.value} className="input-radio__option" onClick={(e) => onOptionClick(e, option.value)}>
           <input
             id={option.value}
@@ -40,7 +41,7 @@ const InputRadio: FC<Props> = (props) => {
             className="input-radio__element"
             onFocus={(e) => setFocusedOption(e.target.value)}
             onBlur={() => setFocusedOption("")}
-            onChange={(e) => props.onChange(e.target.value)}
+            onChange={(e) => props.onChange(e.target.value as T)}
           />
           <div className="input-radio__box">
             <Radio
@@ -60,7 +61,7 @@ const InputRadio: FC<Props> = (props) => {
       ))}
     </div>
   );
-};
+}
 
 InputRadio.displayName = "InputRadio";
 

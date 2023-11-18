@@ -20,7 +20,7 @@ export type Section<S> = {
   element: null | ReactNode;
 };
 
-export type Option = {
-  value: string;
+export interface Option<T extends string = string> {
+  value: T;
   label: string;
-};
+}
