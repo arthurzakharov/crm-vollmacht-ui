@@ -142,4 +142,6 @@ const Uploader: FC<Props> = (props) => {
   );
 };
 
+Uploader.displayName = "Uploader";
+
 export default Uploader;

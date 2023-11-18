@@ -32,7 +32,7 @@ function Files(props: PropsWithChildren<Props>) {
   return (
     <div className="files">
       <p className="files__description" dangerouslySetInnerHTML={{ __html: getDescription() }} />
-      {!props.areFilesUploaded && (
+      {!props.areFilesUploaded ? (
         <div className="files__questions">
           <p className="files__subtitle">{props.questionText}</p>
           <InputRadio<GotLetter>
@@ -48,7 +48,7 @@ function Files(props: PropsWithChildren<Props>) {
             onChange={updateQuestionAnswer}
           />
         </div>
-      )}
+      ) : null}
       <AnimateHeight
         duration={300}
         delay={150}
