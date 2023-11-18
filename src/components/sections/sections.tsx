@@ -10,6 +10,7 @@ interface Props<S, N> {
   activeSection: null | N;
   onTitleClick: (name: N) => void;
   list: Section<S>[];
+  animateOpacity?: boolean;
 }
 
 const Sections = <N extends string, S extends { name: N }>(props: Props<S, N>) => {
@@ -45,7 +46,7 @@ const Sections = <N extends string, S extends { name: N }>(props: Props<S, N>) =
             <AnimateHeight
               duration={300}
               delay={150}
-              animateOpacity
+              animateOpacity={props.animateOpacity}
               easing="cubic-bezier(0.4, 0, 0.2, 1)"
               height={item.section.name === props.activeSection ? "auto" : 0}
             >
