@@ -56,3 +56,26 @@ export const fileSize = (size: number): string => {
     ? `${Math.abs(Math.round((size / 1000000) * pow) / pow)}MB`
     : `${Math.abs(Math.round((size / 1000) * pow) / pow)}KB`;
 };
+
+export function isFile(value: any): value is File {
+  return value instanceof File;
+}
+
+export function createFormData<T extends { files: File[] }>(data: T): FormData {
+  const formData = new FormData();
+  for (const key in data) {
+    if (data.hasOwnProperty(key)) {
+      const value = data[key];
+      if (key === "files" && Array.isArray(value) && value.every((v) => isFile(v))) {
+        const fileList = value as File[];
+        for (let i = 0; i < fileList.length; i++) {
+          formData.append(`files[${i}]`, fileList[i], fileList[i].name);
+        }
+      } else {
+        formData.append(key, String(value));
+      }
+    }
+  }
+
+  return formData;
+}
