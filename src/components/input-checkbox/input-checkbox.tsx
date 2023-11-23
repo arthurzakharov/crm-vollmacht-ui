@@ -12,6 +12,7 @@ interface Props extends PropsWithChildren {
   value: boolean;
   name: string;
   status: FieldStatus;
+  disabled?: boolean;
   onChange: (v: boolean) => void;
 }
 
@@ -21,7 +22,7 @@ const InputCheckbox: FC<Props> = (props) => {
   const onContentClick = (e: MouseEvent<HTMLDivElement>): void => {
     e.preventDefault();
     const element = e.target as HTMLElement;
-    if (element.tagName === "BUTTON" || element.tagName === "A") return;
+    if (element.tagName === "BUTTON" || element.tagName === "A" || props.disabled) return;
     props.onChange(!props.value);
   };
 
@@ -36,6 +37,7 @@ const InputCheckbox: FC<Props> = (props) => {
   return (
     <div data-id={props.name} className="input-checkbox">
       <input
+        disabled={props.disabled}
         type="checkbox"
         tabIndex={0}
         id={props.name}
@@ -47,7 +49,7 @@ const InputCheckbox: FC<Props> = (props) => {
       />
       <div className={contentCn()} onClick={onContentClick}>
         <div className="input-checkbox__checkbox-wrap">
-          <Checkbox value={props.value} focused={isFocused} />
+          <Checkbox disabled={props.disabled} value={props.value} focused={isFocused} />
         </div>
         <div className="input-checkbox__label">
           <Label htmlFor={props.name} size="s" status="neutral">
