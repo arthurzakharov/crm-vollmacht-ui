@@ -79,3 +79,15 @@ export function createFormData<T extends { files: File[] }>(data: T): FormData {
 
   return formData;
 }
+
+export function indexOfFirstTrue(arr: boolean[], index: number, direction: "before" | "after"): number {
+  if (index >= 0 && index < arr.length) {
+    const step = direction === "before" ? -1 : 1;
+    for (let i = index + step; direction === "before" ? i >= 0 : i < arr.length; i += step) {
+      if (arr[i]) {
+        return i;
+      }
+    }
+  }
+  return -1;
+}
