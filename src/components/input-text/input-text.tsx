@@ -49,11 +49,13 @@ const InputText: FC<Props> = (props) => {
   return (
     <div className="input-text">
       {isPopupVisible() && <div className="input-text__popup">{props.popup}</div>}
-      <div className="input-text__label">
-        <Label htmlFor={props.name} size="s" status="neutral">
-          {props.label}
-        </Label>
-      </div>
+      {props.label ? (
+        <div className="input-text__label">
+          <Label htmlFor={props.name} size="s" status="neutral">
+            {props.label}
+          </Label>
+        </div>
+      ) : null}
       <div className="input-text__wrap">
         <Input
           masked={props.masked}
