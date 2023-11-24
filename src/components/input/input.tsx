@@ -1,4 +1,4 @@
-import type { ChangeEvent, FC } from "react";
+import type { ChangeEvent, FC, HTMLInputTypeAttribute } from "react";
 import type { FieldStatus } from "../../types";
 import React from "react";
 import InputMask from "react-input-mask";
@@ -14,6 +14,7 @@ interface Props {
   disabled?: boolean;
   placeholder?: string;
   maxLength?: number;
+  type?: HTMLInputTypeAttribute;
   onChange: (v: string) => void;
   onFocus?: () => void;
   onBlur?: () => void;
@@ -46,6 +47,7 @@ const Input: FC<Props> = (props) => {
     />
   ) : (
     <input
+      type={props.type}
       maxLength={props.maxLength}
       value={props.value}
       name={props.name}

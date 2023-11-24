@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC, HTMLInputTypeAttribute } from "react";
 import type { FieldStatus } from "../../types";
 import React from "react";
 import { useToggle } from "usehooks-ts";
@@ -17,6 +17,7 @@ interface Props {
   masked?: boolean;
   disabled?: boolean;
   maxLength?: number;
+  type?: HTMLInputTypeAttribute;
   onChange: (v: string) => void;
   onFocus?: () => void;
   onBlur?: () => void;
@@ -66,6 +67,7 @@ const InputText: FC<Props> = (props) => {
           color="blue"
           disabled={props.disabled}
           maxLength={props.maxLength}
+          type={props.type}
           onChange={(v: string) => props.onChange(v)}
           onFocus={onInputFocus}
           onBlur={onInputBlur}
