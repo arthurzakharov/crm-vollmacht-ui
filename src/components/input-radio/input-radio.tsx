@@ -1,4 +1,4 @@
-import type { MouseEvent, FC } from "react";
+import type { MouseEvent } from "react";
 import type { FieldStatus, Option } from "../../types";
 import React, { useState } from "react";
 import Label from "../label";

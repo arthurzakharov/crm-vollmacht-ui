@@ -1,7 +1,7 @@
 import "../assets/css/variables.css";
 import "../assets/css/shared.css";
 
-export { default as AttachmentSection } from "./attachment-success";
+export { default as AttachmentSuccess } from "./attachment-success";
 export { default as Checkbox } from "./checkbox";
 export { default as CustomerInfo } from "./customer-info";
 export { default as DefaultLayout } from "./default-layout";
