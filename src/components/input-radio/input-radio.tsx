@@ -42,7 +42,7 @@ function InputRadio<T extends string = string>(props: Props<T>) {
             onFocus={(e) => setFocusedOption(e.target.value)}
             onBlur={() => setFocusedOption("")}
             onChange={(e) => {
-              console.log(e);
+              console.log("onChange", e);
               props.onChange(e.target.value as T);
             }}
           />
