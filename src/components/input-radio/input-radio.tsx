@@ -1,4 +1,4 @@
-import type { MouseEvent, ChangeEvent } from "react";
+import type { MouseEvent } from "react";
 import type { FieldStatus, Option } from "../../types";
 import React, { useState } from "react";
 import Label from "../label";
@@ -13,18 +13,16 @@ interface Props<T extends string = string> {
   sizeRadio: "m" | "l";
   sizeLabel: "s" | "m";
   disabled?: boolean;
-  onChange: (value: T, e?: ChangeEvent<HTMLElement> | MouseEvent<HTMLElement>) => void;
+  onChange: (value: T, type: string) => void;
 }
 
 function InputRadio<T extends string = string>(props: Props<T>) {
   const [focusedOption, setFocusedOption] = useState<string>("");
 
   const onOptionClick = (e: MouseEvent<HTMLDivElement>, value: T): void => {
-    console.log("onOptionClick", e);
     e.preventDefault();
-    props.options[0].value;
     if ((e.clientX === 0 && e.clientY === 0) || props.disabled) return;
-    props.onChange(value, e);
+    props.onChange(value, e.type);
   };
 
   return (
@@ -42,13 +40,9 @@ function InputRadio<T extends string = string>(props: Props<T>) {
             className="input-radio__element"
             onFocus={(e) => setFocusedOption(e.target.value)}
             onBlur={() => setFocusedOption("")}
-            onChange={(e) => {
-              console.log("onChange", e);
-              props.onChange(e.target.value as T, e);
-            }}
+            onChange={(e) => props.onChange(e.target.value as T, e.type)}
           />
           <div className="input-radio__box">
-            <span>X</span>
             <Radio
               value={props.value === option.value}
               focused={focusedOption === option.value}
