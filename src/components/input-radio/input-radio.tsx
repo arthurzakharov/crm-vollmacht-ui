@@ -20,7 +20,6 @@ function InputRadio<T extends string = string>(props: Props<T>) {
   const [focusedOption, setFocusedOption] = useState<string>("");
 
   const onOptionClick = (e: MouseEvent<HTMLDivElement>, value: T): void => {
-    console.log(e);
     e.preventDefault();
     props.options[0].value;
     if ((e.clientX === 0 && e.clientY === 0) || props.disabled) return;
@@ -42,7 +41,10 @@ function InputRadio<T extends string = string>(props: Props<T>) {
             className="input-radio__element"
             onFocus={(e) => setFocusedOption(e.target.value)}
             onBlur={() => setFocusedOption("")}
-            onChange={(e) => props.onChange(e.target.value as T)}
+            onChange={(e) => {
+              console.log(e);
+              props.onChange(e.target.value as T);
+            }}
           />
           <div className="input-radio__box">
             <Radio
