@@ -1,4 +1,4 @@
-import type { MouseEvent } from "react";
+import type { MouseEvent, ChangeEvent } from "react";
 import type { FieldStatus, Option } from "../../types";
 import React, { useState } from "react";
 import Label from "../label";
@@ -13,7 +13,7 @@ interface Props<T extends string = string> {
   sizeRadio: "m" | "l";
   sizeLabel: "s" | "m";
   disabled?: boolean;
-  onChange: (value: T) => void;
+  onChange: (value: T, e?: ChangeEvent<HTMLElement> | MouseEvent<HTMLElement>) => void;
 }
 
 function InputRadio<T extends string = string>(props: Props<T>) {
@@ -23,7 +23,7 @@ function InputRadio<T extends string = string>(props: Props<T>) {
     e.preventDefault();
     props.options[0].value;
     if ((e.clientX === 0 && e.clientY === 0) || props.disabled) return;
-    props.onChange(value);
+    props.onChange(value, e);
   };
 
   return (
@@ -41,10 +41,7 @@ function InputRadio<T extends string = string>(props: Props<T>) {
             className="input-radio__element"
             onFocus={(e) => setFocusedOption(e.target.value)}
             onBlur={() => setFocusedOption("")}
-            onChange={(e) => {
-              console.log("onChange", e);
-              props.onChange(e.target.value as T);
-            }}
+            onChange={(e) => props.onChange(e.target.value as T, e)}
           />
           <div className="input-radio__box">
             <Radio
