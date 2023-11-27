@@ -27,7 +27,7 @@ export default [
         extensions: [".png", ".css", ".ts", ".tsx"],
       }),
       commonjs(),
-      terser(),
+      // terser(),
       css({
         include: ["./src/**/*.css"],
         output: "styles.css",
