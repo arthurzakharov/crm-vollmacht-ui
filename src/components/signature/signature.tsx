@@ -18,6 +18,7 @@ interface Props {
   signature: string;
   saveSignature: (signature: string) => void;
   fetchSignature: () => void;
+  color?: string;
 }
 
 const Signature: FC<Props> = (props) => {
@@ -165,7 +166,7 @@ const Signature: FC<Props> = (props) => {
           ) : (
             <div className="signature__board" ref={ref}>
               <SignatureCanvas
-                penColor="blue"
+                penColor={props.color || "blue"}
                 dotSize={2}
                 minWidth={0.25}
                 maxWidth={2.75}
