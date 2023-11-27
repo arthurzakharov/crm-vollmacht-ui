@@ -48,6 +48,7 @@ function InputRadio<T extends string = string>(props: Props<T>) {
             }}
           />
           <div className="input-radio__box">
+            <span>X</span>
             <Radio
               value={props.value === option.value}
               focused={focusedOption === option.value}
