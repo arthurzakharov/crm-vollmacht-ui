@@ -77,11 +77,11 @@ function Question<Q extends string>(props: Props<Q>) {
     if (getQuestionState() !== "answered" && props.question.type !== "radio") {
       props.onChange(props.question, value);
     }
-    if (props.question.type === "radio") {
+    if (props.question.type === "radio" && type !== "click") {
       props.onChange(props.question, value);
-      if (type === "click") {
-        props.onNext(props.question, value);
-      }
+    }
+    if (props.question.type === "radio" && type === "click") {
+      props.onNext(props.question, value);
     }
   };
 
