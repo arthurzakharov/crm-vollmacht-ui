@@ -16,6 +16,18 @@
     opacity: 0.25;
 }
 
+.questionnaire-title--not-complete-at-all .status-icon {
+    background-color: var(--gray-1);
+}
+
+.questionnaire-title--not-fully-complete .status-icon {
+    background-color: var(--yellow-1);
+}
+
+.questionnaire-title--fully-complete .status-icon {
+    background-color: var(--green-1);
+}
+
 .questionnaire-title__icon {
     display: flex;
     margin-left: 10px;
