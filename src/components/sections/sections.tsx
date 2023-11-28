@@ -3,7 +3,7 @@ import type { Section } from "../../types";
 import React from "react";
 import AnimateHeight from "react-animate-height";
 import cn from "classnames";
-import arrowBlueSrc from "../../assets/png/arrow-blue/arrow-blue.png";
+import Arrow from "../../icons/arrow";
 import "./sections.css";
 
 interface Props<S, N> {
@@ -39,7 +39,7 @@ const Sections = <N extends string, S extends { name: N }>(props: Props<S, N>) =
             onClick={(e) => onTitleClick(e, item.section.name)}
           >
             <span className="sections__text">{item.title}</span>
-            <img alt="arrow" src={arrowBlueSrc} className="sections__arrow" />
+            <Arrow className="sections__arrow" />
           </button>
           <div className="sections__content">
             <hr className="sections__line" />

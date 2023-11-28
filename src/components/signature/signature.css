@@ -97,7 +97,7 @@
 
 .signature__auto-button {
   position: relative;
-  border: 1px solid var(--blue-4);
+  border: 1px solid var(--blue-1);
   border-radius: 4px;
   padding: 8px;
   background-color: var(--white-1);
@@ -105,11 +105,11 @@
   font-weight: 600;
   font-size: 11px;
   line-height: 14px;
-  color: var(--blue-4);
+  color: var(--blue-1);
 }
 
 .signature__auto-button:hover {
-  background-color: var(--blue-4);
+  background-color: var(--blue-1);
   color: var(--white-1);
   box-shadow: 0 10px 20px var(--black-2);
 }
