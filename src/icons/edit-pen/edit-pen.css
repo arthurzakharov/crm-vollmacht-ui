@@ -1,0 +1,7 @@
+.edit-pen path {
+    fill: var(--blue-1);
+}
+
+.edit-pen path:first-child {
+    opacity: 0.4;
+}

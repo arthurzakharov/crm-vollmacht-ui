@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import React from "react";
 import cn from "classnames";
-import penSrc from "../../assets/png/pen/pen.png";
+import EditPen from "../../icons/edit-pen";
 import "./customer-info.css";
 
 interface Props {
@@ -54,7 +54,7 @@ const CustomerInfo: FC<Props> = (props) => {
         {!props.isEditButtonHidden ? (
           <button type="button" tabIndex={0} className="customer-info__button" onClick={() => props.onClick()}>
             <span className="customer-info__text">ändern</span>
-            <img alt="pen-icon" src={penSrc} className="customer-info__icon" />
+            <EditPen className="customer-info__icon" />
           </button>
         ) : null}
       </div>
