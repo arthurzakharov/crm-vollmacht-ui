@@ -100,7 +100,7 @@ function Question<Q extends string>(props: Props<Q>) {
   };
 
   const onKeyPress = (e: KeyboardEvent): void => {
-    if (e.code === "Enter" && props.active) {
+    if (e.code === "Enter" && props.active === props.question.id) {
       removeFocusFromFocusableElement();
       props.onEnterKeyDown(props.question);
     }
@@ -111,7 +111,7 @@ function Question<Q extends string>(props: Props<Q>) {
     return () => {
       document.removeEventListener("keydown", onKeyPress);
     };
-  }, [props.active]);
+  }, [props.active, props.question]);
 
   return (
     <div className={getQuestionCn()}>
