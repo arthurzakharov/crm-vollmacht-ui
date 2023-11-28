@@ -31,6 +31,10 @@
   background-color: var(--orange-1);
 }
 
+.sections__line {
+  display: none;
+}
+
 .sections__title {
   cursor: pointer;
   margin-left: -5px;
@@ -86,6 +90,7 @@
   }
 
   .sections__line {
+    display: block;
     position: absolute;
     z-index: 1;
     left: -34px;
