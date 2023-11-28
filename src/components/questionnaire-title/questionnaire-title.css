@@ -17,15 +17,15 @@
 }
 
 .questionnaire-title--not-complete-at-all .status-icon {
-    background-color: var(--gray-1);
+    background-color: var(--gray-1) !important;
 }
 
 .questionnaire-title--not-fully-complete .status-icon {
-    background-color: var(--yellow-1);
+    background-color: var(--yellow-1) !important;
 }
 
 .questionnaire-title--fully-complete .status-icon {
-    background-color: var(--green-1);
+    background-color: var(--green-1) !important;
 }
 
 .questionnaire-title__icon {
