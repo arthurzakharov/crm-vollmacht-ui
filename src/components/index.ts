@@ -22,6 +22,7 @@ export { default as Loader } from "./loader";
 export { default as Logos } from "./logos";
 export { default as Main } from "./main";
 export { default as PlainLayout } from "./plain-layout";
+export { default as Question } from "./question";
 export { default as Radio } from "./radio";
 export { default as Sections } from "./sections";
 export { default as Sidebar } from "./sidebar";

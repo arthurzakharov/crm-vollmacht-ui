@@ -134,4 +134,6 @@ function Question<Q extends string>(props: Props<Q>) {
   );
 }
 
+Question.displayName = "Question";
+
 export default Question;
