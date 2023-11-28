@@ -11,6 +11,7 @@ interface Props<N extends string> {
   sectionTitle: string;
   sectionId: N;
   onClick: (name: N) => void;
+  isHidden?: boolean;
 }
 
 function QuestionnaireTitle<N extends string>(props: Props<N>) {
@@ -20,7 +21,7 @@ function QuestionnaireTitle<N extends string>(props: Props<N>) {
     props.onClick(props.sectionId);
   };
 
-  return (
+  return !props.isHidden ? (
     <div
       className={cn("questionnaire-title", {
         "questionnaire-title--is-inactive": props.isInactive,
@@ -36,7 +37,7 @@ function QuestionnaireTitle<N extends string>(props: Props<N>) {
         <StatusIcon status="success" size="s" />
       </div>
     </div>
-  );
+  ) : null;
 }
 
 QuestionnaireTitle.displayName = "QuestionnaireTitle";
