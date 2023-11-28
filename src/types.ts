@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ReactNode, HTMLInputTypeAttribute } from "react";
 
 export type Page = "home" | "remuneration" | "attachment" | "error";
 
@@ -23,4 +23,21 @@ export type Section<S> = {
 export interface Option<T extends string = string> {
   value: T;
   label: string;
+}
+
+export interface QuestionType<Q extends string, I> {
+  id: I;
+  type: "radio" | "input";
+  label: string;
+  placeholder?: string;
+  inputLabel?: string;
+  inputType?: HTMLInputTypeAttribute;
+  options?: {
+    label: string;
+    value: string;
+    flow?: Q[];
+  }[];
+  before?: string;
+  after?: string;
+  afterLabel?: string;
 }
