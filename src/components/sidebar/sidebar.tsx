@@ -15,13 +15,14 @@ type SidebarStep = {
 interface Props extends PropsWithChildren {
   currentPage: null | Page;
   formStep: null | HomeStep;
+  homeSectionNames: HomeStep[];
+  remunerationSectionNames: HomeStep[];
   attachmentSectionNames: AttachmentStep[];
   charge: string;
   reference: string;
   chargeTitle: string;
   referenceTitle: string;
   onClick: () => void;
-  isBirthDateEmpty?: boolean;
   isFormPersonalCorrect?: boolean;
   isFormAddressCorrect?: boolean;
   isCorrectInsurance?: boolean;
@@ -42,20 +43,34 @@ interface Props extends PropsWithChildren {
 const Sidebar: FC<Props> = (props) => {
   const [height, setHeight] = useState<Height>(0);
 
-  const getHomeSteps = (): SidebarStep[] => [
-    { key: "personal", title: "Angaben zur Person" },
-    { key: "address", title: "Kontaktdaten" },
-    { key: "checkout", title: "Vollmacht" },
-  ];
+  const getHomeSteps = (): SidebarStep[] => {
+    return props.homeSectionNames.map((name) => {
+      switch (name) {
+        case "personal":
+          return { key: "personal", title: "Angaben zur Person" };
+        case "address":
+          return { key: "address", title: "Kontaktdaten" };
+        case "checkout":
+          return { key: "checkout", title: "Vollmacht" };
+        case "remuneration":
+          return { key: "remuneration", title: "Vergütungsvereinbarung" };
+      }
+    });
+  };
 
   const getRemunerationSteps = (): SidebarStep[] => {
-    return props.isBirthDateEmpty
-      ? [
-          { key: "personal", title: "Angaben zur Person" },
-          { key: "address", title: "Kontaktdaten" },
-          { key: "remuneration", title: "Vergütungsvereinbarung" },
-        ]
-      : [{ key: "remuneration", title: "Vergütungsvereinbarung" }];
+    return props.remunerationSectionNames.map((name) => {
+      switch (name) {
+        case "personal":
+          return { key: "personal", title: "Angaben zur Person" };
+        case "address":
+          return { key: "address", title: "Kontaktdaten" };
+        case "checkout":
+          return { key: "checkout", title: "Vollmacht" };
+        case "remuneration":
+          return { key: "remuneration", title: "Vergütungsvereinbarung" };
+      }
+    });
   };
 
   const getAttachmentSteps = (): SidebarStep[] => {
