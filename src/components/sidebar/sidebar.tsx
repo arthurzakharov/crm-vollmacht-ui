@@ -16,7 +16,7 @@ interface Props extends PropsWithChildren {
   currentPage: null | Page;
   formStep: null | HomeStep;
   homeSectionNames: HomeStep[];
-  remunerationSectionNames: HomeStep[];
+  remunerationSectionNames?: HomeStep[];
   attachmentSectionNames: AttachmentStep[];
   charge: string;
   reference: string;
@@ -59,18 +59,20 @@ const Sidebar: FC<Props> = (props) => {
   };
 
   const getRemunerationSteps = (): SidebarStep[] => {
-    return props.remunerationSectionNames.map((name) => {
-      switch (name) {
-        case "personal":
-          return { key: "personal", title: "Angaben zur Person" };
-        case "address":
-          return { key: "address", title: "Kontaktdaten" };
-        case "checkout":
-          return { key: "checkout", title: "Vollmacht" };
-        case "remuneration":
-          return { key: "remuneration", title: "Vergütungsvereinbarung" };
-      }
-    });
+    return props.remunerationSectionNames
+      ? props.remunerationSectionNames.map((name) => {
+          switch (name) {
+            case "personal":
+              return { key: "personal", title: "Angaben zur Person" };
+            case "address":
+              return { key: "address", title: "Kontaktdaten" };
+            case "checkout":
+              return { key: "checkout", title: "Vollmacht" };
+            case "remuneration":
+              return { key: "remuneration", title: "Vergütungsvereinbarung" };
+          }
+        })
+      : [];
   };
 
   const getAttachmentSteps = (): SidebarStep[] => {
