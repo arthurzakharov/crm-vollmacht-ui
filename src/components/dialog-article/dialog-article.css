@@ -193,6 +193,18 @@
   list-style: disc;
 }
 
+.dialog-article ol {
+  padding-left: 1.875rem;
+  padding-right: 0;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  list-style: auto;
+}
+
+.dialog-article ol li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .dialog-article li {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
