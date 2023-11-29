@@ -2,7 +2,13 @@ import type { Page, WhereSecret } from "../../types";
 import type { Location, Params } from "react-router-dom";
 import { useEffect } from "react";
 
-const useGetSecretFromUrl = (page: Page, location: Location, params: Params, save: (secret: string) => void) => {
+const useGetSecretFromUrl = (
+  page: Page,
+  location: Location,
+  params: Params,
+  secretLength: number,
+  save: (secret: string) => void,
+) => {
   const secret = params.secret || "";
 
   const fromWhereGetSecret = (page: Page): WhereSecret => {
@@ -22,7 +28,7 @@ const useGetSecretFromUrl = (page: Page, location: Location, params: Params, sav
   };
 
   const isSecret = (secret: string): boolean => {
-    return secret.length === 100;
+    return secret.length === secretLength;
   };
 
   const getSecret = (page: Page, search: string, secret: string): string => {
