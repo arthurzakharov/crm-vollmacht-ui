@@ -75,13 +75,15 @@ const Sidebar: FC<Props> = (props) => {
       : [];
   };
 
+  // TODO: Names of sections should be passed with props
+
   const getAttachmentSteps = (): SidebarStep[] => {
     return props.attachmentSectionNames.map((name) => {
       switch (name) {
         case "insurance":
           return { key: "insurance", title: "Rechtsschutzversicherung" };
         case "files":
-          return { key: "files", title: "Behördenschreiben" };
+          return { key: "files", title: "Jobcenter Bescheid" };
         case "survey":
           return { key: "survey", title: "Weitere Informationen" };
       }
