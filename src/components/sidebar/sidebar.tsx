@@ -38,6 +38,7 @@ interface Props extends PropsWithChildren {
   postCode?: string;
   city?: string;
   isEditButtonHidden?: boolean;
+  isTimetableHidden?: boolean;
 }
 
 const Sidebar: FC<Props> = (props) => {
@@ -164,7 +165,7 @@ const Sidebar: FC<Props> = (props) => {
           <div className="sidebar__button">{props.children}</div>
         </AnimateHeight>
       )}
-      {props.currentPage === "attachment" ? (
+      {props.currentPage === "attachment" && !props.isTimetableHidden ? (
         <div className="sidebar__timetable">
           <p className="sidebar__info">Sekreteriat Öffnungszeiten</p>
           <p>Mo – Do: 8:30 Uhr bis 17 Uhr</p>
