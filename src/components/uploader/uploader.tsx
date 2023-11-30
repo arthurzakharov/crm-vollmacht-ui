@@ -15,6 +15,7 @@ import checkSrc from "../../assets/png/check/check.png";
 import "./uploader.css";
 
 interface Props {
+  message: string;
   filesToUpload: File[];
   status: ApiStatus;
   onReject: (fileRejection: FileRejection[]) => void;
@@ -75,11 +76,7 @@ const Uploader: FC<Props> = (props) => {
             <div {...getRootProps()} className="uploader__content">
               <input {...getInputProps()} />
               <div className={cn("uploader__wrapper", { "uploader__wrapper--pending": props.status === "pending" })}>
-                <div className="uploader__drop-title">
-                  <strong>Zuletzt erhaltenes Behördenschreiben</strong>
-                  <br />
-                  (alle Vorder- und Rückseiten sofern bedruckt)
-                </div>
+                <div className="uploader__drop-title" dangerouslySetInnerHTML={{ __html: props.message }} />
                 <ul className="uploader__file-list">
                   {props.filesToUpload.map((file: File, i: number) => (
                     <li key={`${file.name}-${i}`} className="uploader__file">
