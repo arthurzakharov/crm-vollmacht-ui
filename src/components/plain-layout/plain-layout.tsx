@@ -7,7 +7,7 @@ import "./plain-layout.css";
 
 interface Props {
   headerLogo: string;
-  headerPhone: string;
+  headerPhone?: string;
   footerLinks: FooterLink[];
   footerName: string;
   children: ReactNode[];
