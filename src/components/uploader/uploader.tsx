@@ -17,6 +17,7 @@ import "./uploader.css";
 interface Props {
   message: string;
   filesToUpload: File[];
+  showTitle: boolean;
   status: ApiStatus;
   onReject: (fileRejection: FileRejection[]) => void;
   onConfirm: () => void;
@@ -53,7 +54,7 @@ const Uploader: FC<Props> = (props) => {
 
   return (
     <div className="uploader">
-      {props.status === "fulfilled" ? (
+      {props.showTitle ? (
         <p className="uploader__title">
           Perfekt! Übermitteln Sie jetzt bitte <u>das letzte Schreiben</u> das Sie bereits erhalten haben.
         </p>
