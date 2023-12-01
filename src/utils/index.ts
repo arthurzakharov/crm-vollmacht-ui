@@ -91,3 +91,11 @@ export function indexOfFirstTrue(arr: boolean[], index: number, direction: "befo
   }
   return -1;
 }
+
+export const isProduction = (): boolean => {
+  return document.location.pathname.includes("/vollmacht");
+};
+
+export const path = (path: string): string => {
+  return isProduction() ? "/vollmacht" + path : path;
+};

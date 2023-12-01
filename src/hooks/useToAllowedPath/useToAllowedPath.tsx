@@ -7,6 +7,7 @@ import {
   getPathname,
   urlFromWindow,
   removeSecretFromUrlParams,
+  path,
 } from "../../utils";
 
 const useToAllowedPath = (
@@ -35,12 +36,12 @@ const useToAllowedPath = (
 
   const handleAttachmentCase = (): void => {
     const params = removeSecretFromUrlParams(search);
-    if (status === "fulfilled") navigate(`${allowedPath}/${secret}${params}${hash}`);
+    if (status === "fulfilled") navigate(`${path(allowedPath)}/${secret}${params}${hash}`);
   };
 
   const handleRemunerationCase = (): void => {
     const params = removeSecretFromUrlParams(search);
-    if (status === "fulfilled") navigate(`${allowedPath}/${secret}${params}${hash}`);
+    if (status === "fulfilled") navigate(`${path(allowedPath)}/${secret}${params}${hash}`);
   };
 
   const goToAllowedPath = () => {
