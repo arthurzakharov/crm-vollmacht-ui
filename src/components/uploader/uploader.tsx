@@ -15,6 +15,7 @@ import checkSrc from "../../assets/png/check/check.png";
 import "./uploader.css";
 
 interface Props {
+  uploadButtonText: string;
   message: string;
   filesToUpload: File[];
   showTitle: boolean;
@@ -108,7 +109,7 @@ const Uploader: FC<Props> = (props) => {
                 {!!props.filesToUpload.length && (
                   <>
                     <button type="button" tabIndex={0} className="uploader__button" onClick={onUpload}>
-                      Behördenschreiben übermitteln
+                      {props.uploadButtonText}
                     </button>
                   </>
                 )}
