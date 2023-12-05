@@ -25,8 +25,8 @@ export interface Option<T extends string = string> {
   label: string;
 }
 
-export interface QuestionType<Q extends string, I> {
-  id: I;
+export interface QuestionType<Q extends string> {
+  id: Q;
   type: "radio" | "input";
   label: string;
   placeholder?: string;

@@ -12,12 +12,12 @@ interface Props<Q extends string> {
   flow: Q[];
   active?: Q;
   value: string;
-  onChange: (question: QuestionType<Q, Q>, value: string) => void;
-  onNext: (question: QuestionType<Q, Q>, passedValue: string) => void;
-  onEnterKeyDown: (question: QuestionType<Q, Q>) => void;
-  onTitleClickInAnsweredState: (question: QuestionType<Q, Q>) => void;
-  onQuestionClickInAnsweredState: (question: QuestionType<Q, Q>, value: string) => void;
-  question: QuestionType<Q, Q>;
+  onChange: (question: QuestionType<Q>, value: string) => void;
+  onNext: (question: QuestionType<Q>, passedValue: string) => void;
+  onEnterKeyDown: (question: QuestionType<Q>) => void;
+  onTitleClickInAnsweredState: (question: QuestionType<Q>) => void;
+  onQuestionClickInAnsweredState: (question: QuestionType<Q>, value: string) => void;
+  question: QuestionType<Q>;
 }
 
 function Question<Q extends string>(props: Props<Q>) {
