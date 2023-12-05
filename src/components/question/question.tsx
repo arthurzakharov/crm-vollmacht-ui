@@ -123,7 +123,7 @@ function Question<Q extends string>(props: Props<Q>) {
       <div>{getQuestionComponent()}</div>
       {props.question.after ? <div className="question__after">{props.question.after}</div> : null}
       <div className="question__next">
-        <button type="button" tabIndex={0} onClick={() => props.onNext(props.question, "")}>
+        <button type="button" tabIndex={0} onClick={() => props.onNext(props.question, props.value)}>
           Weiter
         </button>
         <span>
