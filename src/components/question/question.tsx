@@ -13,7 +13,7 @@ interface Props<Q extends string> {
   active?: Q;
   value: string;
   onChange: (question: QuestionType<Q, Q>, value: string | boolean) => void;
-  onNext: (question: QuestionType<Q, Q>, passedValue?: string | boolean) => void;
+  onNext: (question: QuestionType<Q, Q>, passedValue: string | boolean) => void;
   onEnterKeyDown: (question: QuestionType<Q, Q>) => void;
   onTitleClickInAnsweredState: (question: QuestionType<Q, Q>) => void;
   onQuestionClickInAnsweredState: (question: QuestionType<Q, Q>, value: string | boolean) => void;
@@ -123,7 +123,7 @@ function Question<Q extends string>(props: Props<Q>) {
       <div>{getQuestionComponent()}</div>
       {props.question.after ? <div className="question__after">{props.question.after}</div> : null}
       <div className="question__next">
-        <button type="button" tabIndex={0} onClick={() => props.onNext(props.question)}>
+        <button type="button" tabIndex={0} onClick={() => props.onNext(props.question, "")}>
           Weiter
         </button>
         <span>
