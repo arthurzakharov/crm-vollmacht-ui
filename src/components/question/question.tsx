@@ -12,11 +12,11 @@ interface Props<Q extends string> {
   flow: Q[];
   active?: Q;
   value: string;
-  onChange: (question: QuestionType<Q, Q>, value: string | boolean) => void;
-  onNext: (question: QuestionType<Q, Q>, passedValue: string | boolean) => void;
+  onChange: (question: QuestionType<Q, Q>, value: string) => void;
+  onNext: (question: QuestionType<Q, Q>, passedValue: string) => void;
   onEnterKeyDown: (question: QuestionType<Q, Q>) => void;
   onTitleClickInAnsweredState: (question: QuestionType<Q, Q>) => void;
-  onQuestionClickInAnsweredState: (question: QuestionType<Q, Q>, value: string | boolean) => void;
+  onQuestionClickInAnsweredState: (question: QuestionType<Q, Q>, value: string) => void;
   question: QuestionType<Q, Q>;
 }
 
@@ -70,7 +70,7 @@ function Question<Q extends string>(props: Props<Q>) {
     }
   };
 
-  const onChange = (value: string | boolean, type?: string): void => {
+  const onChange = (value: string, type?: string): void => {
     if (getQuestionState() === "answered" && props.question.type !== "radio") {
       props.onQuestionClickInAnsweredState(props.question, value);
     }
