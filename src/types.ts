@@ -25,8 +25,8 @@ export interface Option<T extends string = string> {
   label: string;
 }
 
-export interface QuestionType {
-  id: string;
+export interface QuestionType<ALL_ID = string, ID = ALL_ID> {
+  id: ID;
   type: "radio" | "input";
   label: string;
   placeholder?: string;
@@ -35,7 +35,7 @@ export interface QuestionType {
   options?: {
     label: string;
     value: string;
-    flow?: string[];
+    flow?: ALL_ID[];
   }[];
   before?: string;
   after?: string;
