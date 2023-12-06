@@ -115,7 +115,7 @@ function Question<Q extends string>(props: Props<Q>) {
     return () => {
       document.removeEventListener("keydown", onKeyPress);
     };
-  }, [props.active, props.question]);
+  }, [props.active, props.question, props.value]);
 
   return (
     <div className={getQuestionCn()}>
