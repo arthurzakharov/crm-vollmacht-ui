@@ -13,8 +13,8 @@ interface Props<Q extends string> {
   active?: Q;
   value: string;
   onChange: (question: QuestionType<Q>, value: string) => void;
-  onNext: (question: QuestionType<Q>, passedValue: string) => void;
-  onEnterKeyDown: (question: QuestionType<Q>) => void;
+  onNext: (question: QuestionType<Q>, value: string) => void;
+  onEnterKeyDown: (question: QuestionType<Q>, value: string) => void;
   onTitleClickInAnsweredState: (question: QuestionType<Q>) => void;
   onContentClickInAnsweredState: (question: QuestionType<Q>) => void;
   question: QuestionType<Q>;
@@ -106,7 +106,7 @@ function Question<Q extends string>(props: Props<Q>) {
   const onKeyPress = (e: KeyboardEvent): void => {
     if (e.code === "Enter" && props.active === props.question.id) {
       removeFocusFromFocusableElement();
-      props.onEnterKeyDown(props.question);
+      props.onEnterKeyDown(props.question, props.value);
     }
   };
 
