@@ -8,19 +8,19 @@ import "./question.css";
 
 type QuestionState = "answered" | "active" | "not-answered";
 
-interface Props<ALL_ID extends string, ID extends ALL_ID> {
-  flow: ALL_ID[];
-  active?: ALL_ID;
+type Props = {
+  flow: string[];
+  active?: string;
   value: string;
-  onChange: (question: QuestionType<ALL_ID, ID>, value: string) => void;
-  onNext: (question: QuestionType<ALL_ID, ID>, value: string) => void;
-  onEnterKeyDown: (question: QuestionType<ALL_ID, ID>, value: string) => void;
-  onTitleClickInAnsweredState: (question: QuestionType<ALL_ID, ID>) => void;
-  onContentClickInAnsweredState: (question: QuestionType<ALL_ID, ID>) => void;
-  question: QuestionType<ALL_ID, ID>;
-}
+  onChange: (question: QuestionType, value: string) => void;
+  onNext: (question: QuestionType, value: string) => void;
+  onEnterKeyDown: (question: QuestionType, value: string) => void;
+  onTitleClickInAnsweredState: (question: QuestionType) => void;
+  onContentClickInAnsweredState: (question: QuestionType) => void;
+  question: QuestionType;
+};
 
-function Question<ALL_ID extends string, ID extends ALL_ID>(props: Props<ALL_ID, ID>) {
+const Question = (props: Props) => {
   const getQuestionState = (): QuestionState => {
     const questionIndex = props.flow.indexOf(props.question.id);
     const activeQuestionIndex = props.active ? props.flow.indexOf(props.active) : -1;
@@ -136,7 +136,7 @@ function Question<ALL_ID extends string, ID extends ALL_ID>(props: Props<ALL_ID,
       </div>
     </div>
   );
-}
+};
 
 Question.displayName = "Question";
 
