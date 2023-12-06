@@ -16,6 +16,7 @@ interface Props<Q extends string> {
   onNext: (question: QuestionType<Q>, passedValue: string) => void;
   onEnterKeyDown: (question: QuestionType<Q>) => void;
   onTitleClickInAnsweredState: (question: QuestionType<Q>) => void;
+  onContentClickInAnsweredState: (question: QuestionType<Q>) => void;
   question: QuestionType<Q>;
 }
 
@@ -88,6 +89,13 @@ function Question<Q extends string>(props: Props<Q>) {
     }
   };
 
+  const onContentClickInAnsweredState = (e: MouseEvent<HTMLDivElement>): void => {
+    if (getQuestionState() === "answered" && props.question.type === "input") {
+      e.preventDefault();
+      props.onContentClickInAnsweredState(props.question);
+    }
+  };
+
   const removeFocusFromFocusableElement = (): void => {
     const focusedElement = document.activeElement as HTMLElement;
     if (focusedElement) {
@@ -116,7 +124,7 @@ function Question<Q extends string>(props: Props<Q>) {
         {props.question.label}
       </p>
       {props.question.afterLabel ? <div className="question__after-label">{props.question.afterLabel}</div> : null}
-      <div>{getQuestionComponent()}</div>
+      <div onClick={onContentClickInAnsweredState}>{getQuestionComponent()}</div>
       {props.question.after ? <div className="question__after">{props.question.after}</div> : null}
       <div className="question__next">
         <button type="button" tabIndex={0} onClick={() => props.onNext(props.question, props.value)}>
