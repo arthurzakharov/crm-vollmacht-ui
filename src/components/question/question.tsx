@@ -16,7 +16,6 @@ interface Props<Q extends string> {
   onNext: (question: QuestionType<Q>, passedValue: string) => void;
   onEnterKeyDown: (question: QuestionType<Q>) => void;
   onTitleClickInAnsweredState: (question: QuestionType<Q>) => void;
-  onQuestionClickInAnsweredState: (question: QuestionType<Q>, value: string) => void;
   question: QuestionType<Q>;
 }
 
@@ -71,10 +70,7 @@ function Question<Q extends string>(props: Props<Q>) {
   };
 
   const onChange = (value: string, type?: string): void => {
-    if (getQuestionState() === "answered" && props.question.type !== "radio") {
-      props.onQuestionClickInAnsweredState(props.question, value);
-    }
-    if (getQuestionState() !== "answered" && props.question.type !== "radio") {
+    if (props.question.type === "input" && getQuestionState() === "active") {
       props.onChange(props.question, value);
     }
     if (props.question.type === "radio" && type !== "click") {
