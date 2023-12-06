@@ -8,19 +8,19 @@ import "./question.css";
 
 type QuestionState = "answered" | "active" | "not-answered";
 
-interface Props<Q extends string> {
-  flow: Q[];
-  active?: Q;
+interface Props<ALL_ID extends string, ID extends ALL_ID> {
+  flow: ALL_ID[];
+  active?: ALL_ID;
   value: string;
-  onChange: (question: QuestionType<Q>, value: string) => void;
-  onNext: (question: QuestionType<Q>, value: string) => void;
-  onEnterKeyDown: (question: QuestionType<Q>, value: string) => void;
-  onTitleClickInAnsweredState: (question: QuestionType<Q>) => void;
-  onContentClickInAnsweredState: (question: QuestionType<Q>) => void;
-  question: QuestionType<Q>;
+  onChange: (question: QuestionType<ALL_ID, ID>, value: string) => void;
+  onNext: (question: QuestionType<ALL_ID, ID>, value: string) => void;
+  onEnterKeyDown: (question: QuestionType<ALL_ID, ID>, value: string) => void;
+  onTitleClickInAnsweredState: (question: QuestionType<ALL_ID, ID>) => void;
+  onContentClickInAnsweredState: (question: QuestionType<ALL_ID, ID>) => void;
+  question: QuestionType<ALL_ID, ID>;
 }
 
-function Question<Q extends string>(props: Props<Q>) {
+function Question<ALL_ID extends string, ID extends ALL_ID>(props: Props<ALL_ID, ID>) {
   const getQuestionState = (): QuestionState => {
     const questionIndex = props.flow.indexOf(props.question.id);
     const activeQuestionIndex = props.active ? props.flow.indexOf(props.active) : -1;
