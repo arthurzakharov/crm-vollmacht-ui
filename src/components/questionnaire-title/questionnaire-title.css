@@ -12,6 +12,10 @@
     color: var(--blue-1);
 }
 
+.questionnaire-title .status-icon {
+    background-color: var(--gray-1) !important;
+}
+
 .questionnaire-title--is-inactive {
     opacity: 0.25;
 }
