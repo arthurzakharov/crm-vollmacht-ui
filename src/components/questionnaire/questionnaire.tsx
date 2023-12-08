@@ -84,4 +84,6 @@ const Questionnaire = (props: Props) => {
   );
 };
 
+Questionnaire.displayName = "Questionnaire";
+
 export default Questionnaire;
