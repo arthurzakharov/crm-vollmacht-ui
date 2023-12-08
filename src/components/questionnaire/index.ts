@@ -1,1 +1,1 @@
-export { default } from "./questionnaire.tsx";
+export { default } from "./questionnaire";
