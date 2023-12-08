@@ -35,7 +35,10 @@ export interface QuestionType<ALL_ID = string, ID = ALL_ID> {
   options?: {
     label: string;
     value: string;
-    flow?: ALL_ID[];
+    flow?: {
+      condition: string;
+      newFlow: ALL_ID[];
+    }[];
   }[];
   before?: string;
   after?: string;
