@@ -18,7 +18,7 @@ type Props = {
   actualFlow: string[];
   questions: { [key in string]: QuestionType };
   active?: string;
-  answers?: { [key in string]: string };
+  answers?: { [key in string]: undefined | string };
   onReturnToPrevQuestion: (question: QuestionType) => void;
   answerQuestion: (question: QuestionType, value: string) => void;
   goToNextQuestion: (question: QuestionType, value: string) => void;
@@ -68,7 +68,7 @@ const Questionnaire = (props: Props) => {
                 key={question.id}
                 flow={props.actualFlow}
                 active={props.active}
-                value={props.answers ? props.answers[question.id] : ""}
+                value={props.answers ? props.answers[question.id] || "" : ""}
                 onChange={(question, value) => props.answerQuestion(question, value)}
                 onNext={(question, value) => props.goToNextQuestion(question, value)}
                 onEnterKeyDown={(question, value) => props.goToNextQuestion(question, value)}
