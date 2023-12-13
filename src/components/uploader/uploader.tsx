@@ -30,6 +30,15 @@ const Uploader: FC<Props> = (props) => {
   const [alreadyUploadedFilesSize, setAlreadyUploadedFilesSize] = useState<number>(0);
 
   const onDrop = (acceptedFiles: File[], rejectedFiles: FileRejection[]): void => {
+    const newFilesSize = acceptedFiles.reduce((size, file) => size + file.size, 0);
+    if (alreadyUploadedFilesSize + newFilesSize > props.maxSize) {
+      props.onReject(
+        acceptedFiles.map((acceptedFile) => ({
+          file: acceptedFile,
+          errors: [],
+        })),
+      );
+    }
     if (rejectedFiles.length) {
       props.onReject(rejectedFiles);
     }
