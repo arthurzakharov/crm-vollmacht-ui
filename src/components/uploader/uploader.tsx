@@ -54,6 +54,11 @@ const Uploader: FC<Props> = (props) => {
     props.onConfirm();
   };
 
+  const bytesToMegabytes = (bytes: number): string => {
+    const megabytes = bytes / (1024 * 1024);
+    return parseFloat(megabytes.toFixed(1)) % 1 === 0 ? megabytes.toFixed(0) : megabytes.toFixed(1);
+  };
+
   return (
     <div className="uploader">
       {props.showTitle ? (
@@ -105,7 +110,10 @@ const Uploader: FC<Props> = (props) => {
                     Datei(en) auswählen /<br />
                     Dokumentenseite abfotografieren
                   </p>
-                  <p>Maximale Dateigröße pro Datei: 6 MB. Unterstützte Dateitypen: PDF, JPG, GIF, PNG.</p>
+                  <p>
+                    Maximale gesamte Dateigröße: {bytesToMegabytes(props.maxSize)} MB. Unterstützte Dateitypen: PDF,
+                    JPG, GIF, PNG.
+                  </p>
                 </div>
                 {!!props.filesToUpload.length && (
                   <>
