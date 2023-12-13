@@ -6,7 +6,7 @@ import Dropzone from "react-dropzone";
 import AnimateHeight from "react-animate-height";
 import cn from "classnames";
 import Loader from "../loader";
-import { fileSize } from "../../utils";
+import { fileSize, bytesToMegabytes } from "../../utils";
 import uploadSrc from "../../assets/png/upload/upload.png";
 import trashGraySrc from "../../assets/png/trash-gray/trash-gray.png";
 import trashBlueSrc from "../../assets/png/trash-blue/trash-blue.png";
@@ -52,11 +52,6 @@ const Uploader: FC<Props> = (props) => {
   const onUpload = (e: MouseEvent<HTMLButtonElement>): void => {
     e.stopPropagation();
     props.onConfirm();
-  };
-
-  const bytesToMegabytes = (bytes: number): string => {
-    const megabytes = bytes / (1024 * 1024);
-    return parseFloat(megabytes.toFixed(1)) % 1 === 0 ? megabytes.toFixed(0) : megabytes.toFixed(1);
   };
 
   return (

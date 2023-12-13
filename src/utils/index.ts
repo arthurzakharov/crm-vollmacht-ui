@@ -57,6 +57,11 @@ export const fileSize = (size: number): string => {
     : `${Math.abs(Math.round((size / 1000) * pow) / pow)}KB`;
 };
 
+export const bytesToMegabytes = (bytes: number): string => {
+  const megabytes = bytes / (1024 * 1024);
+  return parseFloat(megabytes.toFixed(1)) % 1 === 0 ? megabytes.toFixed(0) : megabytes.toFixed(1);
+};
+
 export function isFile(value: any): value is File {
   return value instanceof File;
 }
