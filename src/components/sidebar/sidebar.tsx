@@ -12,7 +12,10 @@ type SidebarStep = {
   title: string;
 };
 
-interface Props extends PropsWithChildren {
+type Props = {
+  mapping: {
+    [key in HomeStep | AttachmentStep]?: string;
+  };
   currentPage: null | Page;
   formStep: null | HomeStep;
   homeSectionNames: HomeStep[];
@@ -39,22 +42,22 @@ interface Props extends PropsWithChildren {
   city?: string;
   isEditButtonHidden?: boolean;
   isTimetableHidden?: boolean;
-}
+};
 
-const Sidebar: FC<Props> = (props) => {
+const Sidebar = (props: PropsWithChildren<Props>) => {
   const [height, setHeight] = useState<Height>(0);
 
   const getHomeSteps = (): SidebarStep[] => {
     return props.homeSectionNames.map((name) => {
       switch (name) {
         case "personal":
-          return { key: "personal", title: "Angaben zur Person" };
+          return { key: "personal", title: props.mapping.personal || "Angaben zur Person" };
         case "address":
-          return { key: "address", title: "Kontaktdaten" };
+          return { key: "address", title: props.mapping.address || "Kontaktdaten" };
         case "checkout":
-          return { key: "checkout", title: "Vollmacht" };
+          return { key: "checkout", title: props.mapping.checkout || "Vollmacht" };
         case "remuneration":
-          return { key: "remuneration", title: "Vergütungsvereinbarung" };
+          return { key: "remuneration", title: props.mapping.remuneration || "Vergütungsvereinbarung" };
       }
     });
   };
@@ -64,13 +67,13 @@ const Sidebar: FC<Props> = (props) => {
       ? props.remunerationSectionNames.map((name) => {
           switch (name) {
             case "personal":
-              return { key: "personal", title: "Angaben zur Person" };
+              return { key: "personal", title: props.mapping.personal || "Angaben zur Person" };
             case "address":
-              return { key: "address", title: "Kontaktdaten" };
+              return { key: "address", title: props.mapping.address || "Kontaktdaten" };
             case "checkout":
-              return { key: "checkout", title: "Vollmacht" };
+              return { key: "checkout", title: props.mapping.checkout || "Vollmacht" };
             case "remuneration":
-              return { key: "remuneration", title: "Vergütungsvereinbarung" };
+              return { key: "remuneration", title: props.mapping.remuneration || "Vergütungsvereinbarung" };
           }
         })
       : [];
@@ -82,11 +85,11 @@ const Sidebar: FC<Props> = (props) => {
     return props.attachmentSectionNames.map((name) => {
       switch (name) {
         case "insurance":
-          return { key: "insurance", title: "Rechtsschutzversicherung" };
+          return { key: "insurance", title: props.mapping.insurance || "Rechtsschutzversicherung" };
         case "files":
-          return { key: "files", title: "Jobcenter Bescheid" };
+          return { key: "files", title: props.mapping.files || "Jobcenter Bescheid" };
         case "survey":
-          return { key: "survey", title: "Weitere Informationen" };
+          return { key: "survey", title: props.mapping.survey || "Weitere Informationen" };
       }
     });
   };
