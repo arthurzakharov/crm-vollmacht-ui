@@ -1,5 +1,5 @@
-import type { FC, MouseEvent } from "react";
-import { FileRejection, useDropzone } from "react-dropzone";
+import { FC, MouseEvent, useState, useEffect } from "react";
+import { FileRejection } from "react-dropzone";
 import type { ApiStatus } from "../../types";
 import React from "react";
 import Dropzone from "react-dropzone";
@@ -27,9 +27,7 @@ interface Props {
 }
 
 const Uploader: FC<Props> = (props) => {
-  const drop = useDropzone();
-
-  console.log("drop", drop);
+  const [alreadyUploadedFilesSize, setAlreadyUploadedFilesSize] = useState<number>(0);
 
   const onDrop = (acceptedFiles: File[], rejectedFiles: FileRejection[]): void => {
     if (rejectedFiles.length) {
@@ -60,6 +58,15 @@ const Uploader: FC<Props> = (props) => {
     props.onConfirm();
   };
 
+  useEffect(() => {
+    const totalSize = props.filesToUpload.reduce((totalSize: number, file: File) => {
+      return totalSize + file.size;
+    }, 0);
+    setAlreadyUploadedFilesSize(totalSize);
+  }, [props.filesToUpload]);
+
+  console.log("alreadyUploadedFilesSize", alreadyUploadedFilesSize);
+
   return (
     <div className="uploader">
       {props.showTitle ? (
@@ -71,7 +78,7 @@ const Uploader: FC<Props> = (props) => {
         <Dropzone
           noKeyboard
           multiple
-          maxSize={props.maxSize}
+          maxSize={props.maxSize - alreadyUploadedFilesSize}
           accept={{
             "image/gif": [".gif"],
             "image/png": [".png"],
