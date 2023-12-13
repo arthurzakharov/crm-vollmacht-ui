@@ -35,14 +35,14 @@ export interface QuestionType<ALL_ID = string, ID = ALL_ID> {
   options?: {
     label: string;
     value: string;
-    flow?: QuestionFlowType<ALL_ID>[];
+    order?: QuestionOrderType<ALL_ID>[];
   }[];
   before?: string;
   after?: string;
   afterLabel?: string;
 }
 
-export interface QuestionFlowType<ALL_ID = string> {
+export interface QuestionOrderType<ALL_ID = string> {
   condition: string;
-  newFlow: ALL_ID[];
+  newOrder: ALL_ID[];
 }

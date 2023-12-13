@@ -14,8 +14,8 @@ type Props = {
   titleOnClick: (id: string) => void;
   sectionId: string;
   sectionTitle: string;
-  initialFlow: string[];
-  actualFlow: string[];
+  initialOrder: string[];
+  actualOrder: string[];
   questions: { [key in string]: QuestionType };
   active?: string;
   answers?: { [key in string]: undefined | string };
@@ -27,26 +27,26 @@ type Props = {
 const Questionnaire = (props: Props) => {
   const [questions, setQuestions] = useState<QuestionType[]>([]);
 
-  const getQuestionsBasedOnInitialFlow = (
+  const getQuestionsBasedOnInitialOrder = (
     questions: { [key in string]: QuestionType },
-    initialFlow: string[],
+    initialOrder: string[],
   ): QuestionType[] => {
-    return initialFlow.map((id) => questions[id]);
+    return initialOrder.map((id) => questions[id]);
   };
 
-  const getQuestionsBasedOnFlow = (questions: { [key in string]: QuestionType }, flow: string[]): QuestionType[] => {
-    return flow.map((id) => {
+  const getQuestionsBasedOnOrder = (questions: { [key in string]: QuestionType }, order: string[]): QuestionType[] => {
+    return order.map((id) => {
       return questions[id];
     });
   };
 
   useEffectOnce(() => {
-    setQuestions(getQuestionsBasedOnInitialFlow(props.questions, props.initialFlow));
+    setQuestions(getQuestionsBasedOnInitialOrder(props.questions, props.initialOrder));
   });
 
   useUpdateEffect(() => {
-    setQuestions(getQuestionsBasedOnFlow(props.questions, props.actualFlow));
-  }, [props.actualFlow, props.questions]);
+    setQuestions(getQuestionsBasedOnOrder(props.questions, props.actualOrder));
+  }, [props.actualOrder, props.questions]);
 
   return (
     <div className="questionnaire">
@@ -66,7 +66,7 @@ const Questionnaire = (props: Props) => {
             return (
               <Question
                 key={question.id}
-                flow={props.actualFlow}
+                order={props.actualOrder}
                 active={props.active}
                 value={props.answers ? props.answers[question.id] || "" : ""}
                 onChange={(question, value) => props.answerQuestion(question, value)}

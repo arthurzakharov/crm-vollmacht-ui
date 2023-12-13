@@ -9,7 +9,7 @@ import "./question.css";
 type QuestionState = "answered" | "active" | "not-answered";
 
 type Props = {
-  flow: string[];
+  order: string[];
   active?: string;
   value: string;
   onChange: (question: QuestionType, value: string) => void;
@@ -22,8 +22,8 @@ type Props = {
 
 const Question = (props: Props) => {
   const getQuestionState = (): QuestionState => {
-    const questionIndex = props.flow.indexOf(props.question.id);
-    const activeQuestionIndex = props.active ? props.flow.indexOf(props.active) : -1;
+    const questionIndex = props.order.indexOf(props.question.id);
+    const activeQuestionIndex = props.active ? props.order.indexOf(props.active) : -1;
     if (questionIndex < activeQuestionIndex) {
       return "answered";
     }
