@@ -1,5 +1,5 @@
 import type { FC, MouseEvent } from "react";
-import type { FileRejection } from "react-dropzone";
+import { FileRejection, useDropzone } from "react-dropzone";
 import type { ApiStatus } from "../../types";
 import React from "react";
 import Dropzone from "react-dropzone";
@@ -27,6 +27,10 @@ interface Props {
 }
 
 const Uploader: FC<Props> = (props) => {
+  const drop = useDropzone();
+
+  console.log("drop", drop);
+
   const onDrop = (acceptedFiles: File[], rejectedFiles: FileRejection[]): void => {
     if (rejectedFiles.length) {
       props.onReject(rejectedFiles);
@@ -41,6 +45,8 @@ const Uploader: FC<Props> = (props) => {
       });
       props.setFilesToUpload([...props.filesToUpload, ...newFilesToUpload]);
     }
+
+    console.log(acceptedFiles, rejectedFiles);
   };
 
   const onDelete = (e: MouseEvent<HTMLButtonElement>, fileName: string): void => {
