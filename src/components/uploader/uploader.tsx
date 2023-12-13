@@ -53,8 +53,6 @@ const Uploader: FC<Props> = (props) => {
       });
       props.setFilesToUpload([...props.filesToUpload, ...newFilesToUpload]);
     }
-
-    console.log(acceptedFiles, rejectedFiles);
   };
 
   const onDelete = (e: MouseEvent<HTMLButtonElement>, fileName: string): void => {
@@ -74,8 +72,6 @@ const Uploader: FC<Props> = (props) => {
     }, 0);
     setAlreadyUploadedFilesSize(totalSize);
   }, [props.filesToUpload]);
-
-  console.log("alreadyUploadedFilesSize", alreadyUploadedFilesSize);
 
   return (
     <div className="uploader">
