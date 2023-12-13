@@ -1,4 +1,4 @@
-import type { FC, PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import React, { useState } from "react";
 import cn from "classnames";
 import AnimateHeight from "react-animate-height";
@@ -7,13 +7,13 @@ import "./files.css";
 
 type GotLetter = "yes" | "no" | "";
 
-interface Props {
+type Props = {
   uncompletedText: string;
   completedText: string;
   questionText: string;
   areFilesUploaded: boolean;
   onCancel: () => {};
-}
+};
 
 function Files(props: PropsWithChildren<Props>) {
   const [gotLetter, setGotLetter] = useState<GotLetter>("");

@@ -20,6 +20,7 @@ interface Props {
   filesToUpload: File[];
   showTitle: boolean;
   status: ApiStatus;
+  maxSize: number;
   onReject: (fileRejection: FileRejection[]) => void;
   onConfirm: () => void;
   setFilesToUpload: (files: File[]) => void;
@@ -64,7 +65,7 @@ const Uploader: FC<Props> = (props) => {
         <Dropzone
           noKeyboard
           multiple
-          maxSize={6000000}
+          maxSize={props.maxSize}
           accept={{
             "image/gif": [".gif"],
             "image/png": [".png"],
