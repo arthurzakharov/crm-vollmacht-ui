@@ -41,7 +41,7 @@ const Questionnaire = (props: Props) => {
   };
 
   useEffectOnce(() => {
-    setQuestions(getQuestionsBasedOnInitialOrder(props.questions, props.initialOrder));
+    setQuestions(getQuestionsBasedOnInitialOrder(props.questions, props.initialOrder || []));
   });
 
   useUpdateEffect(() => {
