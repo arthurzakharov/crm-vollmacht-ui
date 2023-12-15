@@ -8,11 +8,11 @@ import "./files.css";
 type GotLetter = "yes" | "no" | "";
 
 type Props = {
-  uncompletedText: string;
-  completedText: string;
-  questionText: string;
-  areFilesUploaded: boolean;
-  onCancel: () => {};
+  completedText?: string;
+  uncompletedText?: string;
+  questionText?: string;
+  areFilesUploaded?: boolean;
+  onCancel?: () => {};
 };
 
 function Files(props: PropsWithChildren<Props>) {
@@ -20,19 +20,21 @@ function Files(props: PropsWithChildren<Props>) {
 
   const updateQuestionAnswer = (value: GotLetter): void => {
     setGotLetter(value as GotLetter);
-    if (value === "no") {
+    if (value === "no" && props.onCancel) {
       props.onCancel();
     }
   };
 
   const getDescription = (): string => {
-    return props.areFilesUploaded ? props.completedText : props.uncompletedText;
+    return props.uncompletedText === undefined || props.areFilesUploaded === undefined || props.areFilesUploaded
+      ? props.completedText || ""
+      : props.uncompletedText || "";
   };
 
   return (
     <div className="files">
       <p className="files__description" dangerouslySetInnerHTML={{ __html: getDescription() }} />
-      {!props.areFilesUploaded ? (
+      {!props.areFilesUploaded && !!props.questionText ? (
         <div className="files__questions">
           <p className="files__subtitle">{props.questionText}</p>
           <InputRadio<GotLetter>
