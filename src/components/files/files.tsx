@@ -8,10 +8,10 @@ import "./files.css";
 type GotLetter = "yes" | "no" | "";
 
 type Props = {
-  completedText?: string;
-  uncompletedText?: string;
+  completedText: string;
+  uncompletedText: string;
+  areFilesUploaded: boolean;
   questionText?: string;
-  areFilesUploaded?: boolean;
   onCancel?: () => {};
 };
 
@@ -26,9 +26,7 @@ function Files(props: PropsWithChildren<Props>) {
   };
 
   const getDescription = (): string => {
-    return props.uncompletedText === undefined || props.areFilesUploaded === undefined || props.areFilesUploaded
-      ? props.completedText || ""
-      : props.uncompletedText || "";
+    return props.areFilesUploaded ? props.completedText : props.uncompletedText;
   };
 
   return (
@@ -56,7 +54,7 @@ function Files(props: PropsWithChildren<Props>) {
         delay={150}
         animateOpacity
         easing="cubic-bezier(0.4, 0, 0.2, 1)"
-        height={gotLetter === "yes" || props.areFilesUploaded || props.areFilesUploaded === undefined ? "auto" : 0}
+        height={gotLetter === "yes" || props.areFilesUploaded ? "auto" : 0}
       >
         <div className={cn("files__upload", { "files__upload--single": props.areFilesUploaded })}>{props.children}</div>
       </AnimateHeight>
