@@ -31,6 +31,7 @@ const useToAllowedPath = (
 
   const handleHomeCase = (): void => {
     const params = addSecretAsFirstUrlParam(search, secret);
+    console.log("handleHomeCase", firstViewUrl, getPathname(firstViewUrl), params);
     navigate(`${getPathname(firstViewUrl)}${params}${hash}`);
   };
 
