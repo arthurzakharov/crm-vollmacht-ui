@@ -146,7 +146,7 @@ const Uploader: FC<Props> = (props) => {
           )}
         </Dropzone>
       </AnimateHeight>
-      {props.status === "fulfilled" && (
+      {props.status === "fulfilled" ? (
         <div className="uploader__uploaded-files">
           <h6>Bereits übermittelt</h6>
           <div>
@@ -154,6 +154,8 @@ const Uploader: FC<Props> = (props) => {
             <img alt="check" src={checkSrc} />
           </div>
         </div>
+      ) : (
+        <div>EMPTY</div>
       )}
     </div>
   );
