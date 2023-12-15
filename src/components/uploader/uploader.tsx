@@ -154,9 +154,7 @@ const Uploader: FC<Props> = (props) => {
             <img alt="check" src={checkSrc} />
           </div>
         </div>
-      ) : (
-        <div>EMPTY</div>
-      )}
+      ) : null}
     </div>
   );
 };
