@@ -54,9 +54,11 @@ function Files(props: PropsWithChildren<Props>) {
         delay={150}
         animateOpacity
         easing="cubic-bezier(0.4, 0, 0.2, 1)"
-        height={gotLetter === "yes" || props.areFilesUploaded ? "auto" : 0}
+        height={gotLetter === "yes" || !props.areFilesUploaded ? "auto" : 0}
       >
-        <div className={cn("files__upload", { "files__upload--single": props.areFilesUploaded })}>{props.children}</div>
+        <div className={cn("files__upload", { "files__upload--single": !props.areFilesUploaded })}>
+          {props.children}
+        </div>
       </AnimateHeight>
     </div>
   );
