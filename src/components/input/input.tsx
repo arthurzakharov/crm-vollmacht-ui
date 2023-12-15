@@ -48,6 +48,8 @@ const Input: FC<Props> = (props) => {
   ) : (
     <input
       type={props.type}
+      pattern={props.type === "number" ? "[0-9]*" : undefined}
+      inputMode={props.type === "number" ? "numeric" : undefined}
       maxLength={props.maxLength}
       value={props.value}
       name={props.name}
