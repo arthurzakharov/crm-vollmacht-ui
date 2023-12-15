@@ -8,10 +8,10 @@ import "./files.css";
 type GotLetter = "yes" | "no" | "";
 
 type Props = {
-  completedText: string;
   uncompletedText: string;
-  areFilesUploaded: boolean;
+  completedText: string;
   questionText?: string;
+  areFilesUploaded: boolean;
   onCancel?: () => {};
 };
 
@@ -32,7 +32,7 @@ function Files(props: PropsWithChildren<Props>) {
   return (
     <div className="files">
       <p className="files__description" dangerouslySetInnerHTML={{ __html: getDescription() }} />
-      {!props.areFilesUploaded && !!props.questionText ? (
+      {!props.areFilesUploaded && props.questionText ? (
         <div className="files__questions">
           <p className="files__subtitle">{props.questionText}</p>
           <InputRadio<GotLetter>
@@ -54,7 +54,7 @@ function Files(props: PropsWithChildren<Props>) {
         delay={150}
         animateOpacity
         easing="cubic-bezier(0.4, 0, 0.2, 1)"
-        height={gotLetter === "yes" || !props.areFilesUploaded ? "auto" : 0}
+        height={gotLetter === "yes" || props.areFilesUploaded ? "auto" : 0}
       >
         <div className={cn("files__upload", { "files__upload--single": props.areFilesUploaded })}>{props.children}</div>
       </AnimateHeight>
