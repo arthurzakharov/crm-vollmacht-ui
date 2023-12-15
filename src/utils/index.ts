@@ -34,7 +34,7 @@ export const allowedPathFromUrl = (path: string): AllowedPath => {
 };
 
 export const getPathname = (url: any): string => {
-  return isValidUrl(url) ? new URL(url).pathname : "";
+  return isValidUrl(url) ? new URL(url).pathname : "/";
 };
 
 export const urlFromWindow = (): string => {
