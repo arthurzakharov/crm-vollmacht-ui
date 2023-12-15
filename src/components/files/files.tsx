@@ -12,6 +12,7 @@ type Props = {
   completedText: string;
   questionText?: string;
   areFilesUploaded: boolean;
+  isChildVisible: boolean;
   onCancel?: () => {};
 };
 
@@ -54,7 +55,7 @@ function Files(props: PropsWithChildren<Props>) {
         delay={150}
         animateOpacity
         easing="cubic-bezier(0.4, 0, 0.2, 1)"
-        height={gotLetter === "yes" || props.areFilesUploaded ? "auto" : 0}
+        height={gotLetter === "yes" || props.isChildVisible ? "auto" : 0}
       >
         <div className={cn("files__upload", { "files__upload--single": props.areFilesUploaded })}>{props.children}</div>
       </AnimateHeight>
