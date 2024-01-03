@@ -37,6 +37,7 @@ export interface QuestionType<ALL_ID = string, ID = ALL_ID> {
     value: string;
     order?: QuestionOrderType<ALL_ID>[];
   }[];
+  order?: QuestionOrderType<ALL_ID>[];
   before?: string;
   after?: string;
   afterLabel?: string;
