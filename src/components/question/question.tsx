@@ -119,13 +119,19 @@ const Question = (props: Props) => {
 
   return (
     <div className={getQuestionCn()}>
-      {props.question.before ? <div className="question__before">{props.question.before}</div> : null}
+      {props.question.before ? (
+        <div className="question__before" dangerouslySetInnerHTML={{ __html: props.question.before }} />
+      ) : null}
       <p className="question__label" onClick={onTitleClickInAnsweredState}>
         {props.question.label}
       </p>
-      {props.question.afterLabel ? <div className="question__after-label">{props.question.afterLabel}</div> : null}
+      {props.question.afterLabel ? (
+        <div className="question__after-label" dangerouslySetInnerHTML={{ __html: props.question.afterLabel }} />
+      ) : null}
       <div onClick={onContentClickInAnsweredState}>{getQuestionComponent()}</div>
-      {props.question.after ? <div className="question__after">{props.question.after}</div> : null}
+      {props.question.after ? (
+        <div className="question__after" dangerouslySetInnerHTML={{ __html: props.question.after }} />
+      ) : null}
       <div className="question__next">
         <button type="button" tabIndex={0} onClick={() => props.onNext(props.question, props.value)}>
           Weiter
