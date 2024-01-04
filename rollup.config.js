@@ -25,6 +25,7 @@ export default [
       peerDepsExternal(),
       resolve({
         extensions: [".png", ".css", ".ts", ".tsx"],
+        exclude: ["src/stories/**"],
       }),
       commonjs(),
       terser(),
