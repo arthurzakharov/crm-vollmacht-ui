@@ -6,6 +6,7 @@ import dts from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
 import image from "@rollup/plugin-image";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import del from "rollup-plugin-delete";
 
 const packageJson = require("./package.json");
 
@@ -20,6 +21,7 @@ export default [
       },
     ],
     plugins: [
+      del({ targets: "dist/*" }),
       image(),
       typescript(),
       peerDepsExternal(),
@@ -40,7 +42,7 @@ export default [
   {
     input: "dist/cjs/types/src/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
-    plugins: [dts.default()],
+    plugins: [del({ targets: ["dist/cjs/types/src/stories"] }), dts.default()],
     external: [/\.css$/],
   },
 ];
