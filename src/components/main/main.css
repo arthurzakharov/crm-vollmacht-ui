@@ -46,17 +46,17 @@
   color: var(--blue-1);
 }
 
-.main--attachment .main__subtitle {
+.main__subtitle {
   margin-bottom: 0.3125rem;
   font-size: 1rem;
   font-weight: 600;
 }
 
-.main--attachment .main__text {
+.main__text {
   font-weight: 200;
 }
 
-.main--attachment .main__line {
+.main__line {
   display: block;
   border: none;
   width: 100%;
