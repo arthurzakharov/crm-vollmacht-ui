@@ -31,19 +31,21 @@ const Main: FC<Props> = (props) => {
   return (
     <div className={main()}>
       <h1 className="main__title">{props.formTitle}</h1>
-      {props.formSubtitle ? <h2 className="main__subtitle">{props.formSubtitle}</h2> : null}
-      {props.formSubtitle ? <p className="main__text">{props.formText}</p> : null}
       {!isAttachment(props.page) && isPortableDevice && (
-        <div className="main__info">
-          <p className="main__client">
-            <strong>{props.chargeTitle}</strong>
-            <span dangerouslySetInnerHTML={{ __html: props.charge }} />
-          </p>
-          <p className="main__client">
-            <strong>{props.referenceTitle}</strong>
-            <span dangerouslySetInnerHTML={{ __html: props.reference }} />
-          </p>
-        </div>
+        <>
+          {props.formSubtitle ? <h2 className="main__subtitle">{props.formSubtitle}</h2> : null}
+          {props.formSubtitle ? <p className="main__text">{props.formText}</p> : null}
+          <div className="main__info">
+            <p className="main__client">
+              <strong>{props.chargeTitle}</strong>
+              <span dangerouslySetInnerHTML={{ __html: props.charge }} />
+            </p>
+            <p className="main__client">
+              <strong>{props.referenceTitle}</strong>
+              <span dangerouslySetInnerHTML={{ __html: props.reference }} />
+            </p>
+          </div>
+        </>
       )}
       {isAttachment(props.page) ? (
         <div className="main__content">
