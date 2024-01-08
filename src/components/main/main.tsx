@@ -10,7 +10,7 @@ interface Props extends PropsWithChildren {
   page: null | Page;
   formTitle: string;
   formSubtitle: string;
-  formText?: string;
+  formText: string;
   charge: string;
   reference: string;
   chargeTitle: string;
