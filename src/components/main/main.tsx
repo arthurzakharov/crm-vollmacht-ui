@@ -11,6 +11,7 @@ interface Props extends PropsWithChildren {
   formTitle: string;
   formSubtitle: string;
   formText: string;
+  formStep: string;
   charge: string;
   reference: string;
   chargeTitle: string;
@@ -37,9 +38,6 @@ const Main: FC<Props> = (props) => {
       <h1 className={mainTitle()}>{props.formTitle}</h1>
       {!isAttachment(props.page) && isPortableDevice && (
         <>
-          {props.formSubtitle ? <h2 className="main__subtitle">{props.formSubtitle}</h2> : null}
-          {props.formText ? <p className="main__text">{props.formText}</p> : null}
-          {props.formSubtitle || props.formText ? <hr className="main__line" /> : null}
           <div className="main__info">
             <p className="main__client">
               <strong>{props.chargeTitle}</strong>
@@ -61,7 +59,10 @@ const Main: FC<Props> = (props) => {
         </div>
       ) : (
         <div className="main__content">
-          <h2 className="main__subtitle">{props.formSubtitle}</h2>
+          {props.formSubtitle ? <h2 className="main__subtitle">{props.formSubtitle}</h2> : null}
+          {props.formText ? <p className="main__text">{props.formText}</p> : null}
+          {props.formSubtitle || props.formText ? <hr className="main__line" /> : null}
+          {props.formStep ? <h4 className="main__step">{props.formStep}</h4> : null}
           {props.children}
         </div>
       )}
