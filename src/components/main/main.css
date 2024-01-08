@@ -6,6 +6,10 @@
   padding: 1.25rem 1rem;
 }
 
+.main--home .main__title.main--title--no-text-under {
+  padding-bottom: 0.5rem;
+}
+
 .main--home .main__content {
   padding: 1.375rem 1rem 1.875rem;
 }
@@ -25,6 +29,10 @@
 
 .main--attachment .main__title {
   padding-bottom: 1.1875rem;
+}
+
+.main--attachment .main__title.main--title--no-text-under {
+  padding-bottom: 0.5rem;
 }
 
 .main--attachment .main__content {
@@ -91,6 +99,10 @@
     padding: 1.25rem 1.5rem;
   }
 
+  .main--home .main__title.main--title--no-text-under {
+    padding-bottom: 0.5rem;
+  }
+
   .main--home .main__content {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -98,6 +110,10 @@
 
   .main--attachment {
     padding: 1.875rem 2.5rem 1.5rem;
+  }
+
+  .main--attachment .main__title.main--title--no-text-under {
+    padding-bottom: 0.5rem;
   }
 
   .main__info {
@@ -114,6 +130,10 @@
     padding: 1.375rem 1.875rem 1.375rem;
   }
 
+  .main--home .main__title.main--title--no-text-under {
+    padding-bottom: 0.5rem;
+  }
+
   .main--home .main__content {
     padding-left: 1.875rem;
     padding-right: 1.875rem;
@@ -121,6 +141,10 @@
 
   .main--attachment {
     padding: 2.1875rem 2.5rem 1.5rem;
+  }
+
+  .main--attachment .main__title.main--title--no-text-under {
+    padding-bottom: 0.5rem;
   }
 
   .main__info {
@@ -147,6 +171,10 @@
     padding: 1.5rem 1.375rem 0.75rem;
   }
 
+  .main--home .main__title.main--title--no-text-under {
+    padding-bottom: 0.5rem;
+  }
+
   .main--home .main__content {
     padding-top: 0.75rem;
     padding-left: 1.375rem;
@@ -156,11 +184,23 @@
   .main--attachment {
     padding: 1.5rem 1.875rem;
   }
+
+  .main--attachment .main__title.main--title--no-text-under {
+    padding-bottom: 0.5rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .main--home .main__title {
     padding: 1.5rem 1.625rem 0.75rem;
+  }
+
+  .main--home .main__title.main--title--no-text-under {
+    padding-bottom: 0.5rem;
+  }
+
+  .main--attachment .main__title.main--title--no-text-under {
+    padding-bottom: 0.5rem;
   }
 
   .main--home .main__content {
@@ -172,6 +212,14 @@
 @media screen and (min-width: 1440px) {
   .main--home .main__title {
     padding: 1.5rem 1.875rem 0.75rem;
+  }
+
+  .main--home .main__title.main--title--no-text-under {
+    padding-bottom: 0.5rem;
+  }
+
+  .main--attachment .main__title.main--title--no-text-under {
+    padding-bottom: 0.5rem;
   }
 
   .main--home .main__content {

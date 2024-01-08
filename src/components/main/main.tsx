@@ -28,13 +28,18 @@ const Main: FC<Props> = (props) => {
     return cn("main", isAttachment(props.page) ? "main--attachment" : "main--home");
   };
 
+  const mainTitle = (): string => {
+    return cn("main__title", { "main--title--no-text-under": !props.formSubtitle && !props.formText });
+  };
+
   return (
     <div className={main()}>
-      <h1 className="main__title">{props.formTitle}</h1>
+      <h1 className={mainTitle()}>{props.formTitle}</h1>
       {!isAttachment(props.page) && isPortableDevice && (
         <>
           {props.formSubtitle ? <h2 className="main__subtitle">{props.formSubtitle}</h2> : null}
-          {props.formSubtitle ? <p className="main__text">{props.formText}</p> : null}
+          {props.formText ? <p className="main__text">{props.formText}</p> : null}
+          {props.formSubtitle || props.formText ? <hr className="main__line" /> : null}
           <div className="main__info">
             <p className="main__client">
               <strong>{props.chargeTitle}</strong>
@@ -50,7 +55,7 @@ const Main: FC<Props> = (props) => {
       {isAttachment(props.page) ? (
         <div className="main__content">
           {props.formSubtitle ? <h2 className="main__subtitle">{props.formSubtitle}</h2> : null}
-          {props.formSubtitle ? <p className="main__text">{props.formText}</p> : null}
+          {props.formText ? <p className="main__text">{props.formText}</p> : null}
           <hr className="main__line" />
           {props.children}
         </div>
