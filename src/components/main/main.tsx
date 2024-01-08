@@ -31,6 +31,8 @@ const Main: FC<Props> = (props) => {
   return (
     <div className={main()}>
       <h1 className="main__title">{props.formTitle}</h1>
+      {props.formSubtitle ? <h2 className="main__subtitle">{props.formSubtitle}</h2> : null}
+      {props.formSubtitle ? <p className="main__text">{props.formText}</p> : null}
       {!isAttachment(props.page) && isPortableDevice && (
         <div className="main__info">
           <p className="main__client">
@@ -45,7 +47,7 @@ const Main: FC<Props> = (props) => {
       )}
       {isAttachment(props.page) ? (
         <div className="main__content">
-          <h2 className="main__subtitle">{props.formSubtitle}</h2>
+          {props.formSubtitle ? <h2 className="main__subtitle">{props.formSubtitle}</h2> : null}
           {props.formSubtitle ? <p className="main__text">{props.formText}</p> : null}
           <hr className="main__line" />
           {props.children}
