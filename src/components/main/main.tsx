@@ -10,6 +10,7 @@ interface Props extends PropsWithChildren {
   page: null | Page;
   formTitle: string;
   formSubtitle: string;
+  formText?: string;
   charge: string;
   reference: string;
   chargeTitle: string;
@@ -44,8 +45,8 @@ const Main: FC<Props> = (props) => {
       )}
       {isAttachment(props.page) ? (
         <div className="main__content">
-          <h2 className="main__subtitle">Danke für Ihr Vertrauen</h2>
-          <p className="main__text">Für eine schnelle Bearbeitung benötigen wir noch folgende Informationen.</p>
+          <h2 className="main__subtitle">{props.formSubtitle}</h2>
+          {props.formSubtitle ? <p className="main__text">{props.formText}</p> : null}
           <hr className="main__line" />
           {props.children}
         </div>

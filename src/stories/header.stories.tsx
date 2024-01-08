@@ -7,19 +7,21 @@ type Story = StoryObj<typeof Header>;
 const meta: Meta<typeof Header> = {
   title: "Header",
   component: Header,
-};
-
-export const WithTelephoneNumber: Story = {
-  args: {
-    logo: logoSrc,
-    tel: "030 / 20 898 12 11",
+  argTypes: {
+    logo: {
+      description: "Path to logo image",
+    },
+    tel: {
+      description: "Phone number. If not passed phone section is hidden",
+    },
   },
 };
 
-export const WithoutTelephoneNumber: Story = {
+export const Default: Story = {
+  name: "Header",
   args: {
     logo: logoSrc,
-    tel: undefined,
+    tel: "030 / 20 898 12 11",
   },
 };
 
