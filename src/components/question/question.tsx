@@ -126,8 +126,13 @@ const Question = (props: Props) => {
     if (state === "active" && props.question.type === "input") {
       const inputElement = document.getElementById(props.question.id);
       if (inputElement) {
-        inputElement.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
         inputElement.focus();
+      }
+    }
+    if (state === "active") {
+      const inputElement = document.getElementById(props.question.id);
+      if (inputElement) {
+        inputElement.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
       }
     }
   }, [state]);
