@@ -28,7 +28,12 @@ function InputRadio<T extends string = string>(props: Props<T>) {
   return (
     <div className="input-radio">
       {props.options.map((option: Option<T>) => (
-        <div key={option.value} className="input-radio__option" onClick={(e) => onOptionClick(e, option.value)}>
+        <div
+          id={props.name}
+          key={option.value}
+          className="input-radio__option"
+          onClick={(e) => onOptionClick(e, option.value)}
+        >
           <input
             id={option.value}
             value={option.value}
