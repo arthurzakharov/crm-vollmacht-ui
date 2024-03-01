@@ -129,6 +129,12 @@ const Question = (props: Props) => {
         inputElement.focus();
       }
     }
+    if (state === "active") {
+      const inputElement = document.getElementById(props.question.id);
+      if (inputElement) {
+        inputElement.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+      }
+    }
   }, [state]);
 
   return (
