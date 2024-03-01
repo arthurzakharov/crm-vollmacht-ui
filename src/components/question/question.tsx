@@ -1,6 +1,6 @@
 import type { ReactNode, MouseEvent } from "react";
 import type { QuestionType } from "../../types";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import cn from "classnames";
 import InputRadio from "../input-radio";
 import InputText from "../input-text";
@@ -21,20 +21,10 @@ type Props = {
 };
 
 const Question = (props: Props) => {
-  const getQuestionState = (): QuestionState => {
-    const questionIndex = props.order.indexOf(props.question.id);
-    const activeQuestionIndex = props.active ? props.order.indexOf(props.active) : -1;
-    if (questionIndex < activeQuestionIndex) {
-      return "answered";
-    }
-    if (questionIndex > activeQuestionIndex) {
-      return "not-answered";
-    }
-    return "active";
-  };
+  const [state, setState] = useState<QuestionState>();
 
   const getQuestionCn = (): string => {
-    return cn("question", `question--${getQuestionState()}`);
+    return cn("question", `question--${state}`);
   };
 
   const getQuestionComponent = (): ReactNode | null => {
@@ -42,7 +32,7 @@ const Question = (props: Props) => {
       case "radio":
         return (
           <InputRadio
-            disabled={getQuestionState() === "not-answered"}
+            disabled={state === "not-answered"}
             options={props.question.options || []}
             value={props.value}
             name={props.question.id}
@@ -55,7 +45,7 @@ const Question = (props: Props) => {
       case "input":
         return (
           <InputText
-            disabled={getQuestionState() === "not-answered"}
+            disabled={state === "not-answered"}
             label={props.question.inputLabel || ""}
             value={props.value}
             name={props.question.id}
@@ -71,7 +61,7 @@ const Question = (props: Props) => {
   };
 
   const onChange = (value: string, type?: string): void => {
-    if (props.question.type === "input" && getQuestionState() === "active") {
+    if (props.question.type === "input" && state === "active") {
       props.onChange(props.question, value);
     }
     if (props.question.type === "radio" && type !== "click") {
@@ -83,14 +73,14 @@ const Question = (props: Props) => {
   };
 
   const onTitleClickInAnsweredState = (e: MouseEvent<HTMLDivElement>): void => {
-    if (getQuestionState() === "answered") {
+    if (state === "answered") {
       e.preventDefault();
       props.onTitleClickInAnsweredState(props.question);
     }
   };
 
   const onContentClickInAnsweredState = (e: MouseEvent<HTMLDivElement>): void => {
-    if (getQuestionState() === "answered" && props.question.type === "input") {
+    if (state === "answered" && props.question.type === "input") {
       e.preventDefault();
       props.onContentClickInAnsweredState(props.question);
     }
@@ -116,6 +106,30 @@ const Question = (props: Props) => {
       document.removeEventListener("keydown", onKeyPress);
     };
   }, [props.active, props.question, props.value]);
+
+  useEffect(() => {
+    const getQuestionState = (): QuestionState => {
+      const questionIndex = props.order.indexOf(props.question.id);
+      const activeQuestionIndex = props.active ? props.order.indexOf(props.active) : -1;
+      if (questionIndex < activeQuestionIndex) {
+        return "answered";
+      }
+      if (questionIndex > activeQuestionIndex) {
+        return "not-answered";
+      }
+      return "active";
+    };
+    setState(getQuestionState());
+  }, [props.order, props.question, props.active]);
+
+  useEffect(() => {
+    if (state === "active" && props.question.type === "input") {
+      const inputElement = document.getElementById(props.question.id);
+      if (inputElement) {
+        inputElement.focus();
+      }
+    }
+  }, [state]);
 
   return (
     <div className={getQuestionCn()}>
