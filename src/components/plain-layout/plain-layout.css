@@ -3,6 +3,15 @@
   padding: 16px 16px 12px;
 }
 
+.plain-layout__loading {
+  height: 31.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-1);
+  box-shadow: 0 0.625rem 1.25rem var(--black-2);
+}
+
 @media screen and (min-width: 768px) {
   .plain-layout {
     margin-left: auto;
