@@ -20,7 +20,7 @@ const Header: FC<Props> = (props) => {
 
   return (
     <header className="header">
-      <img alt="logo-icon" src={props.logo} className="header__logo" />
+      {props.logo ? <img alt="logo-icon" src={props.logo} className="header__logo" /> : <div />}
       {props.tel ? (
         <button tabIndex={0} className="header__link" onClick={onClick}>
           <img alt="phone-icon" src={phoneSrc} className="header__phone" />
