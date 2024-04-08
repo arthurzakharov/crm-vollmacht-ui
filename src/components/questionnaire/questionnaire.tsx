@@ -1,6 +1,5 @@
 import type { QuestionType } from "../../types";
-import React, { useState } from "react";
-import { useEffectOnce, useUpdateEffect } from "usehooks-ts";
+import React, { useState, useEffect } from "react";
 import AnimateHeightBlock from "../animate-height-block";
 import Question from "../question";
 import QuestionnaireTitle from "../questionnaire-title";
@@ -40,11 +39,11 @@ const Questionnaire = (props: Props) => {
     });
   };
 
-  useEffectOnce(() => {
+  useEffect(() => {
     setQuestions(getQuestionsBasedOnInitialOrder(props.questions, props.initialOrder || []));
-  });
+  }, []);
 
-  useUpdateEffect(() => {
+  useEffect(() => {
     setQuestions(getQuestionsBasedOnOrder(props.questions, props.actualOrder));
   }, [props.actualOrder, props.questions]);
 

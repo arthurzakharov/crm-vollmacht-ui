@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
 import React, { useEffect, useState, useRef, Fragment } from "react";
-import { useLockedBody, useOnClickOutside } from "usehooks-ts";
+import { useScrollLock, useOnClickOutside } from "usehooks-ts";
 import cn from "classnames";
 import "./dialog.css";
 
@@ -19,7 +19,7 @@ interface Props {
 }
 
 const Dialog: FC<Props> = (props) => {
-  const [locked, setLocked] = useLockedBody(false, "root");
+  const { isLocked, lock, unlock } = useScrollLock({ autoLock: false, lockTarget: "#root" });
   const [isMounted, setIsMounted] = useState<boolean>(false);
   const [isClosing, setIsClosing] = useState<boolean>(true);
   const [localDialog, setLocalDialog] = useState<string | null>(null);
@@ -45,10 +45,10 @@ const Dialog: FC<Props> = (props) => {
     if (props.name && !isMounted) {
       setIsMounted(true);
       setIsClosing(false);
-      setLocked(!locked);
+      isLocked ? unlock() : lock();
     }
     if (!props.name && isMounted) {
-      setLocked(!locked);
+      isLocked ? unlock() : lock();
       setTimeout(() => {
         setIsMounted(false);
         setLocalDialog(null);
