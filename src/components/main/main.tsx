@@ -9,13 +9,13 @@ type Page = "home" | "remuneration" | "attachment" | "error";
 interface Props extends PropsWithChildren {
   page: null | Page;
   formTitle: string;
-  formSubtitle: string;
-  formText: string;
+  formSubtitle?: string;
+  formText?: string;
   formStep: string;
-  charge: string;
-  reference: string;
-  chargeTitle: string;
-  referenceTitle: string;
+  charge?: string;
+  reference?: string;
+  chargeTitle?: string;
+  referenceTitle?: string;
 }
 
 const Main: FC<Props> = (props) => {
@@ -39,14 +39,18 @@ const Main: FC<Props> = (props) => {
       {!isAttachment(props.page) && isPortableDevice && (
         <>
           <div className="main__info">
-            <p className="main__client">
-              <strong>{props.chargeTitle}</strong>
-              <span dangerouslySetInnerHTML={{ __html: props.charge }} />
-            </p>
-            <p className="main__client">
-              <strong>{props.referenceTitle}</strong>
-              <span dangerouslySetInnerHTML={{ __html: props.reference }} />
-            </p>
+            {props.charge && props.chargeTitle ? (
+              <p className="main__client">
+                <strong>{props.chargeTitle}</strong>
+                <span dangerouslySetInnerHTML={{ __html: props.charge }} />
+              </p>
+            ) : null}
+            {props.reference && props.referenceTitle ? (
+              <p className="main__client">
+                <strong>{props.referenceTitle}</strong>
+                <span dangerouslySetInnerHTML={{ __html: props.reference }} />
+              </p>
+            ) : null}
           </div>
         </>
       )}
