@@ -5,6 +5,7 @@ import "./form-navigation-button.css";
 
 interface Props {
   type: "backward" | "forward";
+  text?: string;
   disabled?: boolean;
   onClick: () => void;
 }
@@ -17,6 +18,11 @@ const FormNavigationButton: FC<Props> = (props) => {
     });
   };
 
+  const getText = (): string => {
+    if (props.text) return props.text;
+    return props.type === "forward" ? "Weiter" : "Zurück";
+  };
+
   return (
     <button
       type="button"
@@ -25,7 +31,7 @@ const FormNavigationButton: FC<Props> = (props) => {
       className={formNavigationButton()}
       onClick={() => props.onClick()}
     >
-      {props.type === "forward" ? "Weiter" : "Zurück"}
+      {getText()}
       {props.type === "forward" && <div />}
     </button>
   );
