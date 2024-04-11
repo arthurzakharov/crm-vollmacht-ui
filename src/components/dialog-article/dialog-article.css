@@ -241,6 +241,11 @@
   text-decoration: none;
 }
 
+.dialog-article button {
+  font-weight: 300;
+  color: var(--blue-1);
+}
+
 .dialog-article cite {
   margin-bottom: 0.75rem;
 }
