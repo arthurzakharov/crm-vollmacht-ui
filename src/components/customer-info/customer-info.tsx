@@ -30,7 +30,7 @@ const CustomerInfo: FC<Props> = (props) => {
         ) : null}
       </div>
       {props.list.map((listItem, index) => (
-        <p>{listItem}</p>
+        <p key={index}>{listItem}</p>
       ))}
     </div>
   );
