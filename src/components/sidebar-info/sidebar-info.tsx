@@ -15,15 +15,7 @@ interface Props {
   chargeTitle: string;
   referenceTitle: string;
   onClick: () => void;
-  firstName?: string;
-  lastName?: string;
-  birthName?: string;
-  birthDate?: string;
-  birthCity?: string;
-  street?: string;
-  houseNumber?: string;
-  postCode?: string;
-  city?: string;
+  list: string[];
   isEditButtonHidden?: boolean;
 }
 
@@ -57,15 +49,7 @@ const SidebarInfo: FC<Props> = (props) => {
             <CustomerInfo
               version="sidebar"
               onClick={props.onClick}
-              firstName={props.firstName}
-              lastName={props.lastName}
-              birthName={props.birthName}
-              birthDate={props.birthDate}
-              birthCity={props.birthCity}
-              street={props.street}
-              houseNumber={props.houseNumber}
-              postCode={props.postCode}
-              city={props.city}
+              list={props.list}
               isEditButtonHidden={props.isEditButtonHidden}
             />
           </div>

@@ -31,15 +31,7 @@ type Props = {
   isCorrectInsurance?: boolean;
   isCorrectFiles?: boolean;
   isCorrectSurvey?: boolean;
-  firstName?: string;
-  lastName?: string;
-  birthName?: string;
-  birthDate?: string;
-  birthCity?: string;
-  street?: string;
-  houseNumber?: string;
-  postCode?: string;
-  city?: string;
+  list: string[];
   isEditButtonHidden?: boolean;
   isTimetableHidden?: boolean;
 };
@@ -152,15 +144,7 @@ const Sidebar = (props: PropsWithChildren<Props>) => {
         chargeTitle={props.chargeTitle}
         referenceTitle={props.referenceTitle}
         onClick={props.onClick}
-        firstName={props.firstName}
-        lastName={props.lastName}
-        birthName={props.birthName}
-        birthDate={props.birthDate}
-        birthCity={props.birthCity}
-        street={props.street}
-        houseNumber={props.houseNumber}
-        postCode={props.postCode}
-        city={props.city}
+        list={props.list}
         isEditButtonHidden={props.isEditButtonHidden}
       />
       {props.currentPage !== "attachment" && (

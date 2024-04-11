@@ -7,15 +7,7 @@ import "./customer-info.css";
 interface Props {
   version: "form" | "sidebar";
   onClick: () => void;
-  firstName?: string;
-  lastName?: string;
-  birthName?: string;
-  birthDate?: string;
-  birthCity?: string;
-  street?: string;
-  houseNumber?: string;
-  postCode?: string;
-  city?: string;
+  list: string[];
   isEditButtonHidden?: boolean;
 }
 
@@ -24,27 +16,6 @@ const CustomerInfo: FC<Props> = (props) => {
     return cn("customer-info", {
       "customer-info--sidebar": props.version === "sidebar",
     });
-  };
-
-  const getFirstLine = (): string => {
-    if (!!props.firstName || !!props.lastName || !!props.birthName) {
-      return `${props.firstName || ""} ${props.lastName || ""} ${props.birthName || ""}`;
-    }
-    return "";
-  };
-
-  const getSecondLine = (): string => {
-    if (!!props.birthDate || !!props.birthCity) {
-      return `Geb in ${props.birthDate || ""} ${props.birthCity || ""}`;
-    }
-    return "";
-  };
-
-  const getThirdLine = (): string => {
-    if (!!props.street || !!props.houseNumber || !!props.postCode || !!props.city) {
-      return `${props.street || ""} ${props.houseNumber || ""}, ${props.postCode || ""} ${props.city || ""}`;
-    }
-    return "";
   };
 
   return (
@@ -58,9 +29,9 @@ const CustomerInfo: FC<Props> = (props) => {
           </button>
         ) : null}
       </div>
-      {!!getFirstLine() ? <p>{getFirstLine()}</p> : null}
-      {!!getSecondLine() ? <p>{getSecondLine()}</p> : null}
-      {!!getThirdLine() ? <p>{getThirdLine()}</p> : null}
+      {props.list.map((listItem, index) => (
+        <p>{listItem}</p>
+      ))}
     </div>
   );
 };
