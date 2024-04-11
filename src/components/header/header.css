@@ -31,7 +31,7 @@
 }
 
 .header__hours {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: flex-start;
   gap: 5px;
@@ -60,6 +60,10 @@
 
   .header__number {
     margin-left: 12px;
+    display: inline;
+  }
+
+  .header__hours {
     display: inline;
   }
 }
