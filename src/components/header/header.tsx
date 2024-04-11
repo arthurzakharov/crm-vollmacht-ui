@@ -1,10 +1,12 @@
 import React, { FC } from "react";
 import phoneSrc from "../../assets/png/phone/phone.png";
 import "./header.css";
+import CheckInCircle from "../../icons/check-in-circle";
 
 interface Props {
   logo: string;
   tel?: string;
+  workingHours?: string;
 }
 
 const Header: FC<Props> = (props) => {
@@ -30,6 +32,12 @@ const Header: FC<Props> = (props) => {
           <img alt="phone-icon" src={phoneSrc} className="header__phone" />
           <span className="header__number">{props.tel}</span>
         </button>
+      ) : null}
+      {props.workingHours ? (
+        <div className="header__hours">
+          <CheckInCircle />
+          <span>{props.workingHours}</span>
+        </div>
       ) : null}
     </header>
   );

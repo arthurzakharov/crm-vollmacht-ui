@@ -22,6 +22,22 @@
   display: none;
 }
 
+.header__hours {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0c6658;
+}
+
+.header__hours svg {
+  width: 15px;
+}
+
 @media screen and (min-width: 768px) {
   .header__link {
     display: flex;
