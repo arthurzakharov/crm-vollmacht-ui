@@ -27,18 +27,20 @@ const Header: FC<Props> = (props) => {
       ) : (
         <div className="header__logo" />
       )}
-      {props.tel ? (
-        <button tabIndex={0} className="header__link" onClick={onClick}>
-          <img alt="phone-icon" src={phoneSrc} className="header__phone" />
-          <span className="header__number">{props.tel}</span>
-        </button>
-      ) : null}
-      {props.workingHours ? (
-        <div className="header__hours">
-          <CheckInCircle />
-          <span>{props.workingHours}</span>
-        </div>
-      ) : null}
+      <div className="header__info">
+        {props.tel ? (
+          <button tabIndex={0} className="header__link" onClick={onClick}>
+            <img alt="phone-icon" src={phoneSrc} className="header__phone" />
+            <span className="header__number">{props.tel}</span>
+          </button>
+        ) : null}
+        {props.workingHours ? (
+          <div className="header__hours">
+            <CheckInCircle />
+            <span>{props.workingHours}</span>
+          </div>
+        ) : null}
+      </div>
     </header>
   );
 };
