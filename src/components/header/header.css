@@ -64,6 +64,6 @@
   }
 
   .header__hours {
-    display: inline;
+    display: flex;
   }
 }
