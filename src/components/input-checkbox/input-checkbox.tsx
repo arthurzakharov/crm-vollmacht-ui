@@ -21,7 +21,6 @@ const InputCheckbox: FC<Props> = (props) => {
 
   const onContentClick = (e: MouseEvent<HTMLDivElement>): void => {
     e.preventDefault();
-    console.log();
     const element = e.target as HTMLElement;
     if (element.tagName === "BUTTON" || element.tagName === "A" || props.disabled) return;
     props.onChange(!props.value);
