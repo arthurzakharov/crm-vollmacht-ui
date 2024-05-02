@@ -1,5 +1,4 @@
-import type { FC } from "react";
-import React from "react";
+import React, { FC } from "react";
 import "./footer.css";
 
 interface Props {

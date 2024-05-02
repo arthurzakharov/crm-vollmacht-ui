@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 import { Footer } from "../components";
 
 type Story = StoryObj<typeof Footer>;
@@ -16,15 +15,15 @@ export const Default: Story = {
     links: [
       {
         text: "Allgemeine Informationen",
-        onClick: fn(),
+        onClick: () => {},
       },
       {
         text: "Datenschutz",
-        onClick: fn(),
+        onClick: () => {},
       },
       {
         text: "Impressum",
-        onClick: fn(),
+        onClick: () => {},
       },
     ],
   },
