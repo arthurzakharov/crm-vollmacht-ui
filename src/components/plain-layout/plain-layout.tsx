@@ -1,5 +1,4 @@
 import type { FC, ReactNode } from "react";
-import type { FooterLink } from "../footer/footer";
 import React, { Fragment } from "react";
 import Header from "../header";
 import Footer from "../footer";
@@ -9,7 +8,10 @@ import "./plain-layout.css";
 interface Props {
   headerLogo: string;
   headerPhone?: string;
-  footerLinks: FooterLink[];
+  footerLinks: {
+    text: string;
+    onClick: () => void;
+  }[];
   footerName: string;
   rejected: boolean;
   fulfilled: boolean;
