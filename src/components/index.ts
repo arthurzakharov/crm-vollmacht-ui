@@ -11,7 +11,7 @@ export { default as DialogArticle } from "./dialog-article";
 export { default as ErrorScreen } from "./error-screen";
 export { default as Files } from "./files";
 export { default as Footer } from "./footer";
-export { default as FormNavigationButton } from "./form-navigation-button";
+export { default as NavigationButton } from "./navigation-button";
 export { default as FormRow } from "./form-row";
 export { default as Header } from "./header";
 export { default as Input } from "./input";

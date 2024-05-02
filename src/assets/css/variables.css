@@ -63,6 +63,21 @@
   --red-1: #e74c3c;
   --yellow-1: #ffc702;
 
+  --text-accent-primary: #004473;
+  --text-secondary: #bdbdbd;
+
+  --forward-btn: #ff8d02;
+  --forward-btn-hover: #ffac02;
+  --forward-btn-text: #ffffff;
+
+  --backward-btn: #e1e8ed;
+  --backward-btn-background: #ffffff;
+  --backward-btn-hover: #bdc4c9;
+
+  --btn-shadow: 0 10px 20px #00000019;
+
+  --footer-line: #efefef;
+
   --max-width-tablet: 48rem;
   --max-width-laptop: 60.5rem;
   --max-width-pc: 68.75rem;
