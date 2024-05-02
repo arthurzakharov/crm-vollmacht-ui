@@ -1,5 +1,7 @@
 :root {
     --text-accent-primary: #004473;
+    --text-secondary: #bdbdbd;
+    --footer-line: #efefef;
 }
 
 .icon-decorator {

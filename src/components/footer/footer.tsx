@@ -2,14 +2,12 @@ import type { FC } from "react";
 import React from "react";
 import "./footer.css";
 
-export type FooterLink = {
-  text: string;
-  onClick: () => void;
-};
-
 interface Props {
   name: string;
-  links: FooterLink[];
+  links: {
+    text: string;
+    onClick: () => void;
+  }[];
 }
 
 const Footer: FC<Props> = (props) => (
@@ -20,10 +18,10 @@ const Footer: FC<Props> = (props) => (
         © {new Date().getFullYear()} {props.name}
       </span>
       <ul className="footer__links">
-        {props.links.map((link: FooterLink) => (
-          <li key={link.text} className="footer__link">
-            <button type="button" tabIndex={0} onClick={link.onClick}>
-              {link.text}
+        {props.links.map(({ text, onClick }) => (
+          <li key={text} className="footer__link">
+            <button type="button" tabIndex={0} onClick={onClick}>
+              {text}
             </button>
             <div className="footer__separator" />
           </li>
@@ -32,7 +30,5 @@ const Footer: FC<Props> = (props) => (
     </div>
   </footer>
 );
-
-Footer.displayName = "Footer";
 
 export default Footer;
