@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import EditPen from "../icons/edit-pen";
-import IconDecorator from "./decorators/icon-decorator";
+import EditPen from "../../icons/edit-pen";
+import IconDecorator from "../decorators/icon-decorator";
 
 type Story = StoryObj<typeof EditPen>;
 

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { NavigationButton } from "../components";
+import { NavigationButton } from "../../components";
 
 type Story = StoryObj<typeof NavigationButton>;
 
