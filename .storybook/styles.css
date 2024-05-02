@@ -1,3 +1,8 @@
 :root {
     --text-accent-primary: #004473;
 }
+
+.icon-decorator {
+    width: 64px;
+    color: #004473;
+}
