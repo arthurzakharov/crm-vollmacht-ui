@@ -15,9 +15,12 @@
     "rollup": "rollup -c --bundleConfigAsCjs",
     "release": "node ./publish.js",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_f51591aa20938e1"
   },
-  "author": "arthurzakharov",
+  "author": {
+    "name": "arthurzakharov"
+  },
   "license": "MIT",
   "type": "module",
   "keywords": [
@@ -42,6 +45,7 @@
     "@types/react-input-mask": "^3.0.5",
     "@types/react-signature-canvas": "^1.0.5",
     "@vitejs/plugin-react": "^4.2.1",
+    "chromatic": "^11.3.0",
     "classnames": "^2.3.2",
     "prettier": "^3.1.0",
     "react": "^18.2.0",
@@ -72,5 +76,9 @@
     "react-router-dom": "^6.18.0",
     "react-signature-canvas": "^1.0.6",
     "usehooks-ts": "^3.1.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/arthurzakharov/ovm-ui/issues"
+  },
+  "homepage": "https://github.com/arthurzakharov/ovm-ui#readme"
 }
