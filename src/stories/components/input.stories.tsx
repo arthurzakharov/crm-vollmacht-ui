@@ -6,7 +6,7 @@ import React, { useState } from "react";
 type Story = StoryObj<typeof Input>;
 
 const meta: Meta<typeof Input> = {
-  title: "Input",
+  title: "COMPONENTS/Input",
   component: Input,
 };
 

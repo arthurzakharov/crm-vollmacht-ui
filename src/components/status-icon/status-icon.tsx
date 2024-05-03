@@ -1,11 +1,9 @@
-import type { FC } from "react";
-import type { FieldStatus } from "../../types";
-import React from "react";
+import React, { FC } from "react";
 import cn from "classnames";
 import "./status-icon.css";
 
 interface Props {
-  status: FieldStatus;
+  status: "success" | "error";
   size: "s" | "m" | "l";
   idle?: boolean;
 }
@@ -25,7 +23,5 @@ const StatusIcon: FC<Props> = (props) => {
 
   return <div className={statusIcon()} />;
 };
-
-StatusIcon.displayName = "StatusIcon";
 
 export default StatusIcon;

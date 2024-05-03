@@ -5,7 +5,7 @@ import logoSrc from "../assets/logo.png";
 type Story = StoryObj<typeof Header>;
 
 const meta: Meta<typeof Header> = {
-  title: "Header",
+  title: "COMPONENTS/Header",
   component: Header,
 };
 

@@ -2,3 +2,7 @@
     width: 64px;
     color: #004473;
 }
+
+.max-width-decorator {
+    max-width: 670px;
+}

@@ -3,10 +3,8 @@ import iconTuvSrc from "../../assets/jpeg/tuv/tuv.jpeg";
 import iconTlsSrc from "../../assets/png/tls/tls.png";
 import "./logos.css";
 
-type Logo = "tuv" | "tls";
-
 interface Props {
-  show: Logo[];
+  show: ("tuv" | "tls")[];
 }
 
 const Logos: FC<Props> = (props) => (
@@ -27,7 +25,5 @@ const Logos: FC<Props> = (props) => (
     })}
   </div>
 );
-
-Logos.displayName = "Logos";
 
 export default Logos;

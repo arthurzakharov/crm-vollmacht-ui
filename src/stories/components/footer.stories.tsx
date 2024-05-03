@@ -4,7 +4,7 @@ import { Footer } from "../../components";
 type Story = StoryObj<typeof Footer>;
 
 const meta: Meta<typeof Footer> = {
-  title: "Footer",
+  title: "COMPONENTS/Footer",
   component: Footer,
 };
 
