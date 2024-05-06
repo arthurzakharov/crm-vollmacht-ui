@@ -4,20 +4,22 @@ import "./status-icon.css";
 
 interface Props {
   status: "success" | "error";
-  size: "s" | "m" | "l";
+  size?: "s" | "m" | "l";
   idle?: boolean;
 }
 
 const StatusIcon: FC<Props> = (props) => {
+  const { status, size = "m", idle = false } = props;
+
   const statusIcon = (): string => {
     return cn("status-icon", {
-      "status-icon--success": props.status === "success",
-      "status-icon--error": props.status === "error",
-      "status-icon--s": props.size === "s",
-      "status-icon--m": props.size === "m",
-      "status-icon--l": props.size === "l",
-      "status-icon--idle": !!props.idle,
-      "status-icon--active": !props.idle,
+      "status-icon--success": status === "success",
+      "status-icon--error": status === "error",
+      "status-icon--s": size === "s",
+      "status-icon--m": size === "m",
+      "status-icon--l": size === "l",
+      "status-icon--idle": !!idle,
+      "status-icon--active": !idle,
     });
   };
 
