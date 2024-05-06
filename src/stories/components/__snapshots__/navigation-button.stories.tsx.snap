@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/NavigationButton Default smoke-test 1`] = `
+<button type="button"
+        tabindex="0"
+        class="navigation-button navigation-button--forward"
+>
+  Weiter
+  <div>
+  </div>
+</button>
+`;

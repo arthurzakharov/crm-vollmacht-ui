@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/StatusIcon Active smoke-test 1`] = `
+<div class="status-icon status-icon--success status-icon--l status-icon--active">
+</div>
+`;
+
+exports[`COMPONENTS/StatusIcon DefaultValues smoke-test 1`] = `
+<div class="status-icon status-icon--success status-icon--m status-icon--active">
+</div>
+`;
+
+exports[`COMPONENTS/StatusIcon Idle smoke-test 1`] = `
+<div class="status-icon status-icon--success status-icon--l status-icon--idle">
+</div>
+`;
+
+exports[`COMPONENTS/StatusIcon SizeL smoke-test 1`] = `
+<div class="status-icon status-icon--success status-icon--l status-icon--active">
+</div>
+`;
+
+exports[`COMPONENTS/StatusIcon SizeM smoke-test 1`] = `
+<div class="status-icon status-icon--success status-icon--m status-icon--active">
+</div>
+`;
+
+exports[`COMPONENTS/StatusIcon SizeS smoke-test 1`] = `
+<div class="status-icon status-icon--success status-icon--s status-icon--active">
+</div>
+`;
+
+exports[`COMPONENTS/StatusIcon StatusError smoke-test 1`] = `
+<div class="status-icon status-icon--error status-icon--l status-icon--active">
+</div>
+`;
+
+exports[`COMPONENTS/StatusIcon StatusSuccess smoke-test 1`] = `
+<div class="status-icon status-icon--success status-icon--l status-icon--active">
+</div>
+`;

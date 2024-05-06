@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { Logos } from "../../components";
 import MaxWidthDecorator from "../decorators/max-width-decorator";
 
@@ -13,10 +13,38 @@ const meta: Meta<typeof Logos> = {
   decorators: [MaxWidthDecorator],
 };
 
-export const Default: Story = {
-  name: "Logos",
+export const TlsAndTuv: Story = {
+  name: "TlsAndTuv",
   args: {
     show: ["tls", "tuv"],
+  },
+};
+
+export const TlsOnly: Story = {
+  name: "Tls Only",
+  args: {
+    show: ["tls"],
+  },
+};
+
+export const TuvOnly: Story = {
+  name: "Tuv Only",
+  args: {
+    show: ["tuv"],
+  },
+};
+
+export const NoLogos: Story = {
+  name: "No Logos",
+  args: {
+    show: [],
+  },
+};
+
+export const DefaultValues: Story = {
+  name: "Default Values",
+  args: {
+    show: undefined,
   },
 };
 

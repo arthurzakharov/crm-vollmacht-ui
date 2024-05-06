@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/Input Default smoke-test 1`] = `
+<input name="input"
+       id="input"
+       class="input input--gray input--neutral"
+       placeholder="TT/MM/JJJJ"
+       value
+>
+`;

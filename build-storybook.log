@@ -1,51 +1,59 @@
 
-> crm-vollmacht-ui@0.0.208 build-storybook
-> storybook build --output-dir /var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2
+> crm-vollmacht-ui@0.0.210 build-storybook
+> storybook build --output-dir /var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt
 
-@storybook/cli v8.0.9
+@storybook/cli v8.0.10
 
-info => Cleaning outputDir: ../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2
+info => Cleaning outputDir: ../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt
 info => Loading presets
+WARN The "@storybook/addon-mdx-gfm" addon is meant as a migration assistant for Storybook 8.0; and will likely be removed in a future version.
+WARN It's recommended you read this document:
+WARN https://storybook.js.org/docs/react/writing-docs/mdx#lack-of-github-flavored-markdown-gfm
+WARN 
+WARN Once you've made the necessary changes, you can remove the addon from your package.json and storybook config.
 info => Building manager..
-info => Manager built (186 ms)
+info => Manager built (163 ms)
 info => Building preview..
 vite v5.2.8 building for production...
 transforming...
-✓ 237 modules transformed.
+✓ 241 modules transformed.
 rendering chunks...
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/file-H5La6Zp3.png                      5.97 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/tls-DtFCbRob.png                       8.37 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/submitted-DLA5AjN9.png                 9.72 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/iframe.html                                  12.95 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/tuv-CtX_AAqI.jpeg                     17.63 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/logo-D_dhQE0z.png                     36.31 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/preview-CyfHf8bh.css                   0.13 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/uploader-DKR-zhtw.css                 40.73 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/preview-B4GcaC1c.js                    0.07 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/preview-CL7wUbAc.js                    0.12 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/icon-decorator-HnRhiDiI.js             0.14 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/check-in-circle.stories-BivzvUke.js    0.48 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/preview-CZcwlUq2.js                    0.66 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/check-in-circle-CAPM-Bz4.js            0.73 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/index-DrFu-skq.js                      0.77 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/edit-pen.stories-ml6bCZEr.js           0.81 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/preview-CYD85dwb.js                    0.84 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/arrow.stories-CgGlDZWg.js              0.85 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/jsx-runtime-DFnSfiB4.js                0.92 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/input.stories-CK8_xkIC.js              1.22 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/footer.stories-4h_3YTCA.js             1.26 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/entry-preview-BHUx712n.js              1.65 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/preview-Ih3kd8Y7.js                    2.48 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/preview-B63p-W8V.js                    3.10 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/preview-DNpCpRPf.js                    3.34 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/header.stories-DCJXwDOu.js             4.31 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/iframe-Bpblx2Z7.js                     4.66 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/index-DQ2WTIsS.js                      7.41 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/preview-BAz7FMXc.js                    7.62 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/preview-sVLxC_Lr.js                    8.07 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/uploader-DKBYEJ1i.js                  32.95 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/index-Do1b98Yj.js                    133.97 kB
-../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2/assets/index-EEjW_ugn.js                    580.65 kB
-✓ built in 3.21s
-info => Preview built (3.48 s)
-info => Output directory: /var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--2070-ViO3P3R2yBg2
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/file-H5La6Zp3.png                        5.97 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/tls-DtFCbRob.png                         8.37 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/submitted-DLA5AjN9.png                   9.72 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/iframe.html                                    12.95 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/tuv-CtX_AAqI.jpeg                       17.63 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/logo-D_dhQE0z.png                       36.31 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/preview-Dwy9fTdY.css                     0.08 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/uploader-BpQuvVJg.css                   41.07 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/preview-B4GcaC1c.js                      0.07 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/preview-DyuA9bWm.js                      0.12 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/icon-decorator-HnRhiDiI.js               0.14 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/check-in-circle.stories-BivzvUke.js      0.48 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/preview-CZcwlUq2.js                      0.66 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/check-in-circle-CAPM-Bz4.js              0.73 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/index-DrFu-skq.js                        0.77 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/edit-pen.stories-ml6bCZEr.js             0.81 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/preview-CYD85dwb.js                      0.84 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/arrow.stories-CgGlDZWg.js                0.85 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/status-icon.stories-DY-5XcPI.js          0.86 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/jsx-runtime-DFnSfiB4.js                  0.92 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/navigation-button.stories-CR5mEA6D.js    1.02 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/logos.stories-BU3mtB7H.js                1.14 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/input.stories-68Jphpzy.js                1.24 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/footer.stories-L9JmeOvn.js               1.27 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/entry-preview-BHUx712n.js                1.65 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/preview-Ih3kd8Y7.js                      2.48 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/preview-B63p-W8V.js                      3.10 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/preview-DNpCpRPf.js                      3.34 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/header.stories-rrBbg4Hm.js               4.32 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/iframe-tAbkE6Pt.js                       5.29 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/index-DQ2WTIsS.js                        7.41 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/preview-BAz7FMXc.js                      7.62 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/preview-sVLxC_Lr.js                      8.07 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/uploader-DYDAdkmH.js                    32.95 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/index-Do1b98Yj.js                      133.97 kB
+../../../../../var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt/assets/index-EEjW_ugn.js                      580.65 kB
+✓ built in 2.84s
+info => Preview built (3.08 s)
+info => Output directory: /var/folders/0k/z70p2hps2yb_h3rd2_ny3fvm0000gn/T/chromatic--12268-YBfBkwKGYuqt
