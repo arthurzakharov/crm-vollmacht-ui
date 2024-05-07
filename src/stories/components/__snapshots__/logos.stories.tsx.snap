@@ -23,29 +23,6 @@ exports[`COMPONENTS/Logos DefaultValues smoke-test 1`] = `
 </div>
 `;
 
-exports[`COMPONENTS/Logos DefaultValues smoke-test 2`] = `
-<div style="max-width: 320px;">
-  <div class="logos">
-    <div class="logos__tls">
-      <img alt="tls-icon"
-           src="/src/assets/png/tls/tls.png"
-           class="logos__icon"
-      >
-      <span class="logos__text">
-        Höchste
-      </span>
-      <span class="logos__text">
-        Datensicherheit.
-      </span>
-    </div>
-    <img alt="tuv-icon"
-         src="/src/assets/jpeg/tuv/tuv.jpeg"
-         class="logos__tuv"
-    >
-  </div>
-</div>
-`;
-
 exports[`COMPONENTS/Logos NoLogos smoke-test 1`] = `
 <div style="max-width: 320px;">
   <div class="logos">
@@ -91,29 +68,6 @@ exports[`COMPONENTS/Logos TlsOnly smoke-test 1`] = `
         Datensicherheit.
       </span>
     </div>
-  </div>
-</div>
-`;
-
-exports[`COMPONENTS/Logos TlsOnly smoke-test 2`] = `
-<div style="max-width: 320px;">
-  <div class="logos">
-    <div class="logos__tls">
-      <img alt="tls-icon"
-           src="/src/assets/png/tls/tls.png"
-           class="logos__icon"
-      >
-      <span class="logos__text">
-        Höchste
-      </span>
-      <span class="logos__text">
-        Datensicherheit.
-      </span>
-    </div>
-    <img alt="tuv-icon"
-         src="/src/assets/jpeg/tuv/tuv.jpeg"
-         class="logos__tuv"
-    >
   </div>
 </div>
 `;
