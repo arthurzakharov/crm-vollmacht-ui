@@ -1,11 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENTS/NavigationButton Default smoke-test 1`] = `
+exports[`COMPONENTS/NavigationButton DefaultValues smoke-test 1`] = `
 <button type="button"
         tabindex="0"
         class="navigation-button navigation-button--forward"
 >
   Weiter
+  <div>
+  </div>
+</button>
+`;
+
+exports[`COMPONENTS/NavigationButton Disabled play-test 1`] = `
+<button type="button"
+        tabindex="0"
+        disabled
+        class="navigation-button navigation-button--forward"
+>
+  Weiter
+  <div>
+  </div>
+</button>
+`;
+
+exports[`COMPONENTS/NavigationButton TypeBackward smoke-test 1`] = `
+<button type="button"
+        tabindex="0"
+        class="navigation-button navigation-button--backward"
+>
+  Zurück
+</button>
+`;
+
+exports[`COMPONENTS/NavigationButton TypeForward play-test 1`] = `
+<button type="button"
+        tabindex="0"
+        class="navigation-button navigation-button--forward"
+>
+  Weiter
+  <div>
+  </div>
+</button>
+`;
+
+exports[`COMPONENTS/NavigationButton WithCustomText smoke-test 1`] = `
+<button type="button"
+        tabindex="0"
+        class="navigation-button navigation-button--forward"
+>
+  Some custom text
   <div>
   </div>
 </button>

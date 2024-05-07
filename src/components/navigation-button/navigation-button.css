@@ -17,6 +17,10 @@
   box-shadow: var(--btn-shadow);
 }
 
+.navigation-button:disabled {
+  cursor: not-allowed;
+}
+
 .navigation-button--backward {
   border: 1px solid var(--backward-btn);
   background-color: var(--backward-btn-background);
@@ -28,7 +32,7 @@
   color: color-mix(in srgb, var(--backward-btn) 60%, transparent);
 }
 
-.navigation-button--backward:hover {
+.navigation-button--backward:hover:not(:disabled) {
   background-color: var(--backward-btn);
   border-color: var(--backward-btn);
   color: var(--backward-btn-hover);
@@ -51,7 +55,7 @@
   background-color: color-mix(in srgb, var(--forward-btn) 60%, transparent);
 }
 
-.navigation-button--forward:hover {
+.navigation-button--forward:hover:not(:disabled) {
   background-color: var(--forward-btn-hover);
   border-color: var(--forward-btn-hover);
 }

@@ -34,7 +34,7 @@ export const WithLinks: Story = {
       if (args.links) {
         for (const link of args.links) {
           await userEvent.click(canvas.getByText(link.text));
-          await expect(link.onClick).toHaveBeenCalledOnce();
+          await expect(link.onClick).toHaveBeenNthCalledWith(1);
         }
       }
     });

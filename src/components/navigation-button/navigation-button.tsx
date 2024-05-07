@@ -10,27 +10,29 @@ interface Props {
 }
 
 const NavigationButton: FC<Props> = (props) => {
+  const { type, text = "", disabled = false, onClick } = props;
+
   const navigationButtonCn = (): string => {
     return cn("navigation-button", {
-      "navigation-button--backward": props.type === "backward",
-      "navigation-button--forward": props.type === "forward",
+      "navigation-button--backward": type === "backward",
+      "navigation-button--forward": type === "forward",
     });
   };
 
   const getText = (): string => {
-    if (props.text) return props.text;
-    return props.type === "forward" ? "Weiter" : "Zurück";
+    if (text) return text;
+    return type === "forward" ? "Weiter" : "Zurück";
   };
 
-  const onClick = (e: MouseEvent<HTMLButtonElement>): void => {
+  const onClickHandler = (e: MouseEvent<HTMLButtonElement>): void => {
     e.currentTarget.blur();
-    props.onClick();
+    onClick();
   };
 
   return (
-    <button type="button" tabIndex={0} disabled={props.disabled} className={navigationButtonCn()} onClick={onClick}>
+    <button type="button" tabIndex={0} disabled={disabled} className={navigationButtonCn()} onClick={onClickHandler}>
       {getText()}
-      {props.type === "forward" && <div />}
+      {type === "forward" && <div />}
     </button>
   );
 };
