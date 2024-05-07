@@ -5,6 +5,11 @@ exports[`COMPONENTS/StatusIcon Active smoke-test 1`] = `
 </div>
 `;
 
+exports[`COMPONENTS/StatusIcon Active smoke-test 2`] = `
+<div class="status-icon status-icon--success status-icon--l status-icon--active">
+</div>
+`;
+
 exports[`COMPONENTS/StatusIcon DefaultValues smoke-test 1`] = `
 <div class="status-icon status-icon--success status-icon--m status-icon--active">
 </div>
@@ -16,6 +21,11 @@ exports[`COMPONENTS/StatusIcon Idle smoke-test 1`] = `
 `;
 
 exports[`COMPONENTS/StatusIcon SizeL smoke-test 1`] = `
+<div class="status-icon status-icon--success status-icon--l status-icon--active">
+</div>
+`;
+
+exports[`COMPONENTS/StatusIcon SizeL smoke-test 2`] = `
 <div class="status-icon status-icon--success status-icon--l status-icon--active">
 </div>
 `;
@@ -32,6 +42,11 @@ exports[`COMPONENTS/StatusIcon SizeS smoke-test 1`] = `
 
 exports[`COMPONENTS/StatusIcon StatusError smoke-test 1`] = `
 <div class="status-icon status-icon--error status-icon--l status-icon--active">
+</div>
+`;
+
+exports[`COMPONENTS/StatusIcon StatusError smoke-test 2`] = `
+<div class="status-icon status-icon--success status-icon--l status-icon--active">
 </div>
 `;
 

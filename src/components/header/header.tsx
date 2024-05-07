@@ -14,6 +14,8 @@ interface Props {
 }
 
 const Header: FC<Props> = (props) => {
+  const { logo, tel = "", descriptions = [] } = props;
+
   const getTelForLink = (tel: string): string => {
     return "tel:+49" + tel.replace(/^0|[^0-9.]/g, "");
   };
@@ -23,26 +25,22 @@ const Header: FC<Props> = (props) => {
   };
 
   const onClick = (): void => {
-    if (props.tel) {
-      window.open(getTelForLink(props.tel), "_self");
+    if (tel) {
+      window.open(getTelForLink(tel), "_self");
     }
   };
 
   return (
     <header className="header">
-      {props.logo ? (
-        <img alt="logo-icon" src={props.logo} className="header__logo" />
-      ) : (
-        <div className="header__logo" />
-      )}
+      {logo ? <img alt="logo-icon" src={logo} className="header__logo" /> : <div className="header__logo" />}
       <div className="header__info">
-        {props.tel ? (
+        {tel && (
           <button tabIndex={0} className="header__link" onClick={onClick}>
             <img alt="phone-icon" src={phoneSrc} className="header__phone" />
-            <span className="header__number">{props.tel}</span>
+            <span className="header__number">{tel}</span>
           </button>
-        ) : null}
-        {props.descriptions?.map((description, index) => (
+        )}
+        {descriptions.map((description, index) => (
           <div key={index} className={getDescriptionCn(description.size)}>
             <CheckInCircle />
             <span>{description.value}</span>
