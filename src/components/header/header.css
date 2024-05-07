@@ -49,11 +49,11 @@
   font-size: 12px;
 }
 
-.header__description--m svg {
+.header__description--m > svg {
   width: 15px;
 }
 
-.header__description--s svg {
+.header__description--s > svg {
   width: 12px;
 }
 
