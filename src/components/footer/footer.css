@@ -55,7 +55,7 @@
     border: none;
     margin-bottom: 10px;
     height: 2px;
-    background-color: var(--footer-line);
+    background-color: var(--line-secondary);
   }
 
   .footer__content {

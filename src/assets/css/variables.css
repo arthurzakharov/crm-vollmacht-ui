@@ -64,6 +64,7 @@
   --yellow-1: #ffc702;
 
   --text-accent-primary: #004473;
+  --text-primary: #333333;
   --text-secondary: #bdbdbd;
 
   --input-primary: #4f8aab;
@@ -83,9 +84,13 @@
   --backward-btn-background: #ffffff;
   --backward-btn-hover: #bdc4c9;
 
+  --background-primary: #f4f7f9;
+  --background-secondary: #ffffff;
+
   --btn-shadow: 0 10px 20px #00000019;
 
-  --footer-line: #efefef;
+  --line-primary: #bdc4c9;
+  --line-secondary: #efefef;
 
   --max-width-tablet: 48rem;
   --max-width-laptop: 60.5rem;

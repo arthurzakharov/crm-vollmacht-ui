@@ -1,12 +1,17 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { within, userEvent, fn, expect, waitFor } from "@storybook/test";
+import { within, userEvent, fn, expect } from "@storybook/test";
 import Footer from "@components/footer";
+import MaxWidthDecorator from "@stories/decorators/max-width-decorator";
 
 type Story = StoryObj<typeof Footer>;
 
 const meta: Meta<typeof Footer> = {
   title: "COMPONENTS/Footer",
   component: Footer,
+  parameters: {
+    MaxWidthDecorator: 1100,
+  },
+  decorators: [MaxWidthDecorator],
 };
 
 export const WithLinks: Story = {
