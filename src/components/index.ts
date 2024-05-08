@@ -18,6 +18,7 @@ export { default as InputCheckbox } from "@components/input-checkbox";
 export { default as InputRadio } from "@components/input-radio";
 export { default as InputText } from "@components/input-text";
 export { default as Label } from "@components/label";
+export { default as LayoutWithoutSidebar } from "@components/layout-without-sidebar";
 export { default as Loader } from "@components/loader";
 export { default as Logos } from "@components/logos";
 export { default as Main } from "@components/main";
