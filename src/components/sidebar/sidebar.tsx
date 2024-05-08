@@ -32,7 +32,7 @@ type Props = {
   isCorrectFiles?: boolean;
   isCorrectSurvey?: boolean;
   list: string[];
-  isEditButtonHidden?: boolean;
+  isEditButtonVisible?: boolean;
   isTimetableHidden?: boolean;
 };
 
@@ -145,7 +145,7 @@ const Sidebar = (props: PropsWithChildren<Props>) => {
         referenceTitle={props.referenceTitle}
         onClick={props.onClick}
         list={props.list}
-        isEditButtonHidden={props.isEditButtonHidden}
+        isEditButtonVisible={props.isEditButtonVisible}
       />
       {props.currentPage !== "attachment" && (
         <AnimateHeight duration={250} delay={125} animateOpacity easing="cubic-bezier(0.4, 0, 0.2, 1)" height={height}>

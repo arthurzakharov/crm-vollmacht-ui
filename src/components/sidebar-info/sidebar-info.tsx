@@ -4,7 +4,7 @@ import type { HomeStep, Page } from "../../types";
 import React from "react";
 import { useEffect, useState } from "react";
 import AnimateHeight from "react-animate-height";
-import CustomerInfo from "../customer-info";
+import { CustomerInfo } from "../customer-info";
 import "./sidebar-info.css";
 
 interface Props {
@@ -16,7 +16,7 @@ interface Props {
   referenceTitle: string;
   onClick: () => void;
   list: string[];
-  isEditButtonHidden?: boolean;
+  isEditButtonVisible?: boolean;
 }
 
 const SidebarInfo: FC<Props> = (props) => {
@@ -50,7 +50,7 @@ const SidebarInfo: FC<Props> = (props) => {
               version="sidebar"
               onClick={props.onClick}
               list={props.list}
-              isEditButtonHidden={props.isEditButtonHidden}
+              isEditButtonVisible={props.isEditButtonVisible}
             />
           </div>
         </AnimateHeight>
