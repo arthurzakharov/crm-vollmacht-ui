@@ -48,11 +48,11 @@
   color: var(--blue-1);
 }
 
-.sections__title--opened .sections__arrow {
+.sections__title--opened svg {
   transform: rotate(180deg);
 }
 
-.sections__title--closed .sections__arrow {
+.sections__title--closed svg {
   transform: rotate(0deg);
 }
 
@@ -60,7 +60,7 @@
   user-select: none;
 }
 
-.sections__arrow {
+.sections__title svg {
   display: block;
   margin-left: 16px;
   width: 12px;

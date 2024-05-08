@@ -1,1 +1,1 @@
-export { LayoutWithoutSidebar, LayoutWithoutSidebarProps } from "@layouts/layout-without-sidebar";
+export { LayoutWithoutSidebar } from "@layouts/layout-without-sidebar";

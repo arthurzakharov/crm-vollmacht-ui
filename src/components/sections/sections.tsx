@@ -39,7 +39,7 @@ const Sections = <N extends string, S extends { name: N }>(props: Props<S, N>) =
             onClick={(e) => onTitleClick(e, item.section.name)}
           >
             <span className="sections__text">{item.title}</span>
-            <Arrow className="sections__arrow" />
+            <Arrow />
           </button>
           <div className="sections__content">
             <hr className="sections__line" />
