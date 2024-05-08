@@ -13,7 +13,7 @@ export interface HeaderProps {
   }[];
 }
 
-export const Header: FC<HeaderProps> = (props) => {
+const Header: FC<HeaderProps> = (props) => {
   const { logo, tel = "", descriptions = [] } = props;
 
   const getTelForLink = (tel: string): string => {
@@ -50,3 +50,5 @@ export const Header: FC<HeaderProps> = (props) => {
     </header>
   );
 };
+
+export default Header;

@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren } from "react";
-import { Header, HeaderProps } from "@components/header";
-import { Footer, FooterProps } from "@components/footer";
+import Header, { HeaderProps } from "@components/header";
+import Footer, { FooterProps } from "@components/footer";
 import "./layout-without-sidebar.css";
 
 export interface LayoutWithoutSidebarProps {
@@ -8,7 +8,7 @@ export interface LayoutWithoutSidebarProps {
   footer: FooterProps;
 }
 
-export const LayoutWithoutSidebar: FC<PropsWithChildren<LayoutWithoutSidebarProps>> = (props) => {
+const LayoutWithoutSidebar: FC<PropsWithChildren<LayoutWithoutSidebarProps>> = (props) => {
   const { header, footer, children } = props;
 
   return (
@@ -23,3 +23,5 @@ export const LayoutWithoutSidebar: FC<PropsWithChildren<LayoutWithoutSidebarProp
     </div>
   );
 };
+
+export default LayoutWithoutSidebar;

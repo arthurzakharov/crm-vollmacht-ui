@@ -1,1 +1,1 @@
-export { LayoutWithoutSidebar } from "@layouts/layout-without-sidebar";
+export { default as LayoutWithoutSidebar } from "@layouts/layout-without-sidebar";

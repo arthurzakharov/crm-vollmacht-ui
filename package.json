@@ -1,6 +1,6 @@
 {
   "name": "crm-vollmacht-ui",
-  "version": "0.0.223",
+  "version": "0.0.224",
   "description": "ovm ui components library",
   "main": "dist/cjs/index.js",
   "files": [

@@ -9,7 +9,7 @@ export interface FooterProps {
   }[];
 }
 
-export const Footer: FC<FooterProps> = (props) => {
+const Footer: FC<FooterProps> = (props) => {
   const { name, links = [] } = props;
 
   const onClickHandler = (e: MouseEvent<HTMLButtonElement>, cb: () => void): void => {
@@ -38,3 +38,5 @@ export const Footer: FC<FooterProps> = (props) => {
     </footer>
   );
 };
+
+export default Footer;
