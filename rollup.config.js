@@ -43,10 +43,6 @@ export default [
             replacement: path.resolve(__dirname, "./src/icons"),
           },
           {
-            find: "@layouts",
-            replacement: path.resolve(__dirname, "./src/layouts"),
-          },
-          {
             find: "@stories",
             replacement: path.resolve(__dirname, "./src/stories"),
           },
