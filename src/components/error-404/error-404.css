@@ -1,4 +1,4 @@
-.error-screen {
+.error-404 {
   padding: 12px 16px 12px;
   background-color: var(--background-secondary);
   font-family: "Open Sans", sans-serif;
@@ -8,33 +8,33 @@
   color: var(--text-primary);
 }
 
-.error-screen__h1 {
+.error-404__h1 {
   margin-bottom: 24px;
   font-weight: 400;
   font-size: 30px;
 }
 
-.error-screen__h2 {
+.error-404__h2 {
   margin-bottom: 28px;
   font-weight: 600;
   font-size: 21px;
 }
 
-.error-screen__h3 {
+.error-404__h3 {
   margin-bottom: 8px;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.5;
 }
 
-.error-screen__table {
+.error-404__table {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-.error-screen__th,
-.error-screen__td {
+.error-404__th,
+.error-404__td {
   padding: 8px;
   vertical-align: top;
   border-top: 1px solid var(--line-primary);
@@ -42,29 +42,29 @@
   line-height: 1.5;
 }
 
-.error-screen__th {
+.error-404__th {
   text-align: left;
   font-weight: 600;
 }
 
-.error-screen__td {
+.error-404__td {
   font-weight: 300;
 }
 
 @media screen and (min-width: 768px) {
-  .error-screen {
+  .error-404 {
     padding: 16px 30px 16px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .error-screen {
+  .error-404 {
     padding: 20px 30px 20px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .error-screen {
+  .error-404 {
     padding: 24px 30px 24px;
   }
 }

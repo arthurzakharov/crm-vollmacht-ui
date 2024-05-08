@@ -1,12 +1,12 @@
 import { Meta, StoryObj } from "@storybook/react";
-import ErrorScreen from "@components/error-screen";
+import Error404 from "@components/error-404";
 import MaxWidthDecorator from "@stories/decorators/max-width-decorator";
 
-type Story = StoryObj<typeof ErrorScreen>;
+type Story = StoryObj<typeof Error404>;
 
-const meta: Meta<typeof ErrorScreen> = {
-  title: "COMPONENTS/ErrorScreen",
-  component: ErrorScreen,
+const meta: Meta<typeof Error404> = {
+  title: "COMPONENTS/Error404",
+  component: Error404,
   parameters: {
     MaxWidthDecorator: 1100,
   },
@@ -14,7 +14,7 @@ const meta: Meta<typeof ErrorScreen> = {
 };
 
 export const Default: Story = {
-  name: "ErrorScreen",
+  name: "Error404",
   args: {
     title: "Entschuldigung, da ist wohl etwas schief gelaufen!",
     subtitle: "Fehler 404",

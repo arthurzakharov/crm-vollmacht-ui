@@ -8,7 +8,7 @@ export { default as CustomerInfo } from "@components/customer-info";
 export { default as DefaultLayout } from "@components/default-layout";
 export { default as Dialog } from "@components/dialog";
 export { default as DialogArticle } from "@components/dialog-article";
-export { default as ErrorScreen } from "@components/error-screen";
+export { default as Error404 } from "src/components/error-404";
 export { default as Files } from "@components/files";
 export { default as Footer } from "@components/footer";
 export { default as NavigationButton } from "@components/navigation-button";
