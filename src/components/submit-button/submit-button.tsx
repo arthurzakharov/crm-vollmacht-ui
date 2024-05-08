@@ -22,7 +22,7 @@ const SubmitButton: FC<Props> = (props) => {
     <button type="button" tabIndex={0} disabled={props.isSigning} className={submitButtonCn()} onClick={props.onClick}>
       {props.isSigning && (
         <div className="submit-button__loader">
-          <Loader color="white" />
+          <Loader color="secondary" />
         </div>
       )}
       {props.text}

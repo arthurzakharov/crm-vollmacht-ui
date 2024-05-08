@@ -4,7 +4,7 @@ import phoneSrc from "@assets/png/phone/phone.png";
 import CheckInCircle from "@icons/check-in-circle";
 import "./header.css";
 
-interface Props {
+export interface HeaderProps {
   logo: string;
   tel?: string;
   descriptions?: {
@@ -13,7 +13,7 @@ interface Props {
   }[];
 }
 
-const Header: FC<Props> = (props) => {
+export const Header: FC<HeaderProps> = (props) => {
   const { logo, tel = "", descriptions = [] } = props;
 
   const getTelForLink = (tel: string): string => {
@@ -50,5 +50,3 @@ const Header: FC<Props> = (props) => {
     </header>
   );
 };
-
-export default Header;

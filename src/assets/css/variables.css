@@ -76,6 +76,9 @@
   --error: #e74c3c;
   --focus: #ff8d02;
 
+  --loader-primary: #ff8d02;
+  --loader-secondary: #ffffff;
+
   --forward-btn: #ff8d02;
   --forward-btn-hover: #ffac02;
   --forward-btn-text: #ffffff;

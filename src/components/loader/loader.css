@@ -1,18 +1,18 @@
 .loader {
-  width: 2.5rem;
-  height: 3.125rem;
+  width: 40px;
+  height: 50px;
 }
 
-.loader--orange .loader__rect {
-  fill: var(--orange-1);
+.loader--primary .loader__rect {
+  fill: var(--loader-primary);
 }
 
-.loader--white .loader__rect {
-  fill: var(--white-1);
+.loader--secondary .loader__rect {
+  fill: var(--loader-secondary);
 }
 
 .loader__rect {
-  width: 0.25rem;
-  height: 0.625rem;
+  width: 4px;
+  height: 10px;
   opacity: 0.2;
 }

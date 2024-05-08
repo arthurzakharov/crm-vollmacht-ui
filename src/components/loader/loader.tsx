@@ -1,16 +1,15 @@
-import type { FC } from "react";
-import React from "react";
+import React, { FC } from "react";
 import cn from "classnames";
 import "./loader.css";
 
 interface Props {
-  color: string;
+  color: "primary" | "secondary";
 }
 
 const Loader: FC<Props> = (props) => {
-  const loaderCn = (): string => {
-    return cn("loader", `loader--${props.color}`);
-  };
+  const { color } = props;
+
+  const loaderCn = (): string => cn("loader", `loader--${color}`);
 
   return (
     <svg viewBox="0 0 24 30" className={loaderCn()}>
@@ -95,7 +94,5 @@ const Loader: FC<Props> = (props) => {
     </svg>
   );
 };
-
-Loader.displayName = "Loader";
 
 export default Loader;

@@ -139,7 +139,7 @@ const Uploader: FC<Props> = (props) => {
               </div>
               {props.status === "pending" && (
                 <div className="uploader__loader">
-                  <Loader color="orange" />
+                  <Loader color="primary" />
                 </div>
               )}
             </div>

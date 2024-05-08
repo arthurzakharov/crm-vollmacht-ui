@@ -34,6 +34,7 @@
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
       "@icons/*": ["src/icons/*"],
+      "@layouts/*": ["src/layouts/*"],
       "@stories/*": ["src/stories/*"],
       "@utils/*": ["src/utils/*"],
       "@types": ["src/types.ts"]

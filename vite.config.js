@@ -10,6 +10,7 @@ export default defineConfig({
       "@components": path.resolve(__dirname, "./src/components"),
       "@hooks": path.resolve(__dirname, "./src/hooks"),
       "@icons": path.resolve(__dirname, "./src/icons"),
+      "@layouts": path.resolve(__dirname, "./src/layouts"),
       "@stories": path.resolve(__dirname, "./src/stories"),
       "@utils": path.resolve(__dirname, "./src/utils"),
       "@types": path.resolve(__dirname, "./src/types.ts"),

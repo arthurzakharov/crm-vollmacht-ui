@@ -137,7 +137,7 @@ const Signature: FC<Props> = (props) => {
     return props.signature !== "" || (props.signature === "" && props.submitClickCount !== 0);
   };
 
-  const getStatusIconStateInManualMode = (): FieldStatus => {
+  const getStatusIconStateInManualMode = (): "success" | "error" => {
     if (props.signature !== "") return "success";
     if (props.signature === "" && props.submitClickCount !== 0) return "error";
     return "success";
@@ -155,7 +155,7 @@ const Signature: FC<Props> = (props) => {
                 <img className="signature__image" src={HEADER + signatureAuto} alt="signature" />
               ) : (
                 <div className="signature__loader">
-                  <Loader color="orange" />
+                  <Loader color="primary" />
                 </div>
               )}
               <hr className="signature__line" />
