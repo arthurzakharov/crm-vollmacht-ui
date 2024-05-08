@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { within, userEvent, fn, expect, waitFor } from "@storybook/test";
-import { Footer } from "../../components";
+import Footer from "@components/footer";
 
 type Story = StoryObj<typeof Footer>;
 

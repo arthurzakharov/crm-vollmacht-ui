@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { fn, within, userEvent, expect } from "@storybook/test";
-import { NavigationButton } from "../../components";
+import NavigationButton from "@components/navigation-button";
 
 type Story = StoryObj<typeof NavigationButton>;
 

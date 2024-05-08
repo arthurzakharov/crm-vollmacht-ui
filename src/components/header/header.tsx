@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import cn from "classnames";
-import phoneSrc from "../../assets/png/phone/phone.png";
-import CheckInCircle from "../../icons/check-in-circle";
+import phoneSrc from "@assets/png/phone/phone.png";
+import CheckInCircle from "@icons/check-in-circle";
 import "./header.css";
 
 interface Props {

@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC, HTMLInputTypeAttribute, MouseEvent, useRef, KeyboardEvent } from "react";
 import InputMask, { ReactInputMask } from "react-input-mask";
 import cn from "classnames";
-import { FieldStatus } from "../../types";
+import { FieldStatus } from "@types";
 import "./input.css";
 
 interface Props {

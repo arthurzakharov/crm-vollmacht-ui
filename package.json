@@ -46,6 +46,7 @@
     "@storybook/react-vite": "^8.0.10",
     "@storybook/test": "^8.0.10",
     "@storybook/test-runner": "^0.17.0",
+    "@types/node": "^20.12.10",
     "@types/react": "^18.2.37",
     "@types/react-input-mask": "^3.0.5",
     "@types/react-signature-canvas": "^1.0.5",
