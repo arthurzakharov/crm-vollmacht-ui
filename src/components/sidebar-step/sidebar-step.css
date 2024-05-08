@@ -1,0 +1,23 @@
+.sidebar-step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text-accent-primary);
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 1200px) {
+  .sidebar-steps {
+    padding: 13px 26px 26px 26px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sidebar-steps {
+    padding: 15px 30px 30px 30px;
+  }
+}

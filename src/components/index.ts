@@ -29,6 +29,7 @@ export { default as Radio } from "../components/radio";
 export { default as Sections } from "../components/sections";
 export { default as Sidebar } from "../components/sidebar";
 export { default as SidebarInfo } from "../components/sidebar-info";
+export * from "../components/sidebar-step";
 export { default as Signature } from "../components/signature";
 export * from "../components/status-icon";
 export { default as SubmitButton } from "../components/submit-button";
