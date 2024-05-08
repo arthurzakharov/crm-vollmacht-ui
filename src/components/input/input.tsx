@@ -4,7 +4,7 @@ import cn from "classnames";
 import { FieldStatus } from "../../types";
 import "./input.css";
 
-interface Props {
+export interface InputProps {
   value: string;
   name: string;
   color: "primary" | "secondary";
@@ -21,7 +21,7 @@ interface Props {
 
 interface RefMask extends ReactInputMask, HTMLInputElement {}
 
-const Input: FC<Props> = (props) => {
+export const Input: FC<InputProps> = (props) => {
   const {
     value,
     name,
@@ -131,7 +131,3 @@ const Input: FC<Props> = (props) => {
     />
   );
 };
-
-Input.displayName = "Input";
-
-export default Input;

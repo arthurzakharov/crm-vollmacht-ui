@@ -3,11 +3,11 @@ import iconTuvSrc from "../../assets/jpeg/tuv/tuv.jpeg";
 import iconTlsSrc from "../../assets/png/tls/tls.png";
 import "./logos.css";
 
-interface Props {
+export interface LogosProps {
   show?: ("tuv" | "tls")[];
 }
 
-const Logos: FC<Props> = (props) => {
+export const Logos: FC<LogosProps> = (props) => {
   const { show = ["tls", "tuv"] } = props;
 
   return (
@@ -29,5 +29,3 @@ const Logos: FC<Props> = (props) => {
     </div>
   );
 };
-
-export default Logos;

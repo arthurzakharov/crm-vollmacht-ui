@@ -5,7 +5,7 @@ import { useToggle } from "usehooks-ts";
 import cn from "classnames";
 import Checkbox from "../checkbox";
 import Label from "../label";
-import StatusIcon from "../status-icon";
+import { StatusIcon } from "../status-icon";
 import "./input-checkbox.css";
 
 interface Props extends PropsWithChildren {

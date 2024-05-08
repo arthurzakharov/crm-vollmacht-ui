@@ -5,7 +5,7 @@ import React from "react";
 import Dropzone from "react-dropzone";
 import AnimateHeight from "react-animate-height";
 import cn from "classnames";
-import Loader from "../loader";
+import { Loader } from "../loader";
 import { fileSize, bytesToMegabytes } from "../../utils";
 import uploadSrc from "../../assets/png/upload/upload.png";
 import trashGraySrc from "../../assets/png/trash-gray/trash-gray.png";

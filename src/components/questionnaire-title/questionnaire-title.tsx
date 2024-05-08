@@ -1,6 +1,6 @@
 import React, { MouseEvent } from "react";
 import cn from "classnames";
-import StatusIcon from "../status-icon";
+import { StatusIcon } from "../status-icon";
 import "./questionnaire-title.css";
 
 interface Props<N extends string> {

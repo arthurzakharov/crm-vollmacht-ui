@@ -2,14 +2,14 @@ import React, { FC, MouseEvent } from "react";
 import cn from "classnames";
 import "./navigation-button.css";
 
-interface Props {
+export interface NavigationButtonProps {
   type: "backward" | "forward";
   text?: string;
   disabled?: boolean;
   onClick: () => void;
 }
 
-const NavigationButton: FC<Props> = (props) => {
+export const NavigationButton: FC<NavigationButtonProps> = (props) => {
   const { type, text = "", disabled = false, onClick } = props;
 
   const navigationButtonCn = (): string => {
@@ -36,5 +36,3 @@ const NavigationButton: FC<Props> = (props) => {
     </button>
   );
 };
-
-export default NavigationButton;

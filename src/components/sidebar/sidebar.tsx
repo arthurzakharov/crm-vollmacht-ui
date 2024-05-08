@@ -2,9 +2,9 @@ import type { FC, PropsWithChildren } from "react";
 import type { Page, HomeStep, AttachmentStep } from "../../types";
 import React, { useEffect, useState } from "react";
 import AnimateHeight, { Height } from "react-animate-height";
-import StatusIcon from "../status-icon";
+import { StatusIcon } from "../status-icon";
 import SidebarInfo from "../sidebar-info";
-import Logos from "../logos";
+import { Logos } from "../logos";
 import "./sidebar.css";
 
 type SidebarStep = {

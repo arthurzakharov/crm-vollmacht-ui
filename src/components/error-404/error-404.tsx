@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import "./error-404.css";
 
-interface Props {
+export interface Error404Props {
   title: string;
   subtitle: string;
   tableTitle: string;
@@ -11,7 +11,7 @@ interface Props {
   }[];
 }
 
-const Error404: FC<Props> = (props) => {
+export const Error404: FC<Error404Props> = (props) => {
   const { title, subtitle, tableTitle, tableRows } = props;
   return (
     <section className="error-404">
@@ -31,5 +31,3 @@ const Error404: FC<Props> = (props) => {
     </section>
   );
 };
-
-export default Error404;

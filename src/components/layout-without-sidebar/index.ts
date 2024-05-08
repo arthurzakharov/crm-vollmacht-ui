@@ -1,1 +1,1 @@
-export { default } from "./layout-without-sidebar";
+export * from "./layout-without-sidebar";

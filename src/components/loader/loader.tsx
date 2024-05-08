@@ -2,11 +2,11 @@ import React, { FC } from "react";
 import cn from "classnames";
 import "./loader.css";
 
-interface Props {
+export interface LoaderProps {
   color: "primary" | "secondary";
 }
 
-const Loader: FC<Props> = (props) => {
+export const Loader: FC<LoaderProps> = (props) => {
   const { color } = props;
 
   const loaderCn = (): string => cn("loader", `loader--${color}`);
@@ -94,5 +94,3 @@ const Loader: FC<Props> = (props) => {
     </svg>
   );
 };
-
-export default Loader;

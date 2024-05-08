@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { fn, within, userEvent, expect } from "@storybook/test";
-import Input from "../../components/input";
+import { Input } from "../../components";
 import MaxWidthDecorator from "../decorators/max-width-decorator";
 
 type Story = StoryObj<typeof Input>;

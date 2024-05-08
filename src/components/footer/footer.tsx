@@ -1,7 +1,7 @@
 import React, { FC, MouseEvent } from "react";
 import "./footer.css";
 
-interface FooterProps {
+export interface FooterProps {
   name: string;
   links?: {
     text: string;
@@ -9,7 +9,7 @@ interface FooterProps {
   }[];
 }
 
-const Footer: FC<FooterProps> = (props) => {
+export const Footer: FC<FooterProps> = (props) => {
   const { name, links = [] } = props;
 
   const onClickHandler = (e: MouseEvent<HTMLButtonElement>, cb: () => void): void => {
@@ -38,5 +38,3 @@ const Footer: FC<FooterProps> = (props) => {
     </footer>
   );
 };
-
-export default Footer;

@@ -1,27 +1,14 @@
 import React, { FC, PropsWithChildren } from "react";
-import Header from "../header";
-import Footer from "../footer";
+import { Header, HeaderProps } from "../header";
+import { Footer, FooterProps } from "../footer";
 import "./layout-without-sidebar.css";
 
-interface LayoutWithoutSidebarProps {
-  header: {
-    logo: string;
-    tel?: string;
-    descriptions?: {
-      size: "s" | "m";
-      value: string;
-    }[];
-  };
-  footer: {
-    name: string;
-    links?: {
-      text: string;
-      onClick: () => void;
-    }[];
-  };
+export interface LayoutWithoutSidebarProps {
+  header: HeaderProps;
+  footer: FooterProps;
 }
 
-const LayoutWithoutSidebar: FC<PropsWithChildren<LayoutWithoutSidebarProps>> = (props) => {
+export const LayoutWithoutSidebar: FC<PropsWithChildren<LayoutWithoutSidebarProps>> = (props) => {
   const { header, footer, children } = props;
 
   return (
@@ -36,5 +23,3 @@ const LayoutWithoutSidebar: FC<PropsWithChildren<LayoutWithoutSidebarProps>> = (
     </div>
   );
 };
-
-export default LayoutWithoutSidebar;

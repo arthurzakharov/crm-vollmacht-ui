@@ -2,13 +2,13 @@ import React, { FC } from "react";
 import cn from "classnames";
 import "./status-icon.css";
 
-interface Props {
+export interface StatusIconProps {
   status: "success" | "error";
   size?: "s" | "m" | "l";
   idle?: boolean;
 }
 
-const StatusIcon: FC<Props> = (props) => {
+export const StatusIcon: FC<StatusIconProps> = (props) => {
   const { status, size = "m", idle = false } = props;
 
   const statusIcon = (): string => {
@@ -18,12 +18,10 @@ const StatusIcon: FC<Props> = (props) => {
       "status-icon--s": size === "s",
       "status-icon--m": size === "m",
       "status-icon--l": size === "l",
-      "status-icon--idle": !!idle,
+      "status-icon--idle": idle,
       "status-icon--active": !idle,
     });
   };
 
   return <div className={statusIcon()} />;
 };
-
-export default StatusIcon;
