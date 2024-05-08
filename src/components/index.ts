@@ -7,7 +7,7 @@ export { default as Checkbox } from "@components/checkbox";
 export { default as CustomerInfo } from "@components/customer-info";
 export { default as Dialog } from "@components/dialog";
 export { default as DialogArticle } from "@components/dialog-article";
-export { default as Error404 } from "src/components/error-404";
+export { default as Error404 } from "@components/error-404";
 export { default as Files } from "@components/files";
 export { Footer, FooterProps } from "@components/footer";
 export { default as NavigationButton } from "@components/navigation-button";
