@@ -4,7 +4,7 @@ import phoneSrc from "@assets/png/phone/phone.png";
 import CheckInCircle from "@icons/check-in-circle";
 import "./header.css";
 
-export interface HeaderProps {
+interface HeaderProps {
   logo: string;
   tel?: string;
   descriptions?: {

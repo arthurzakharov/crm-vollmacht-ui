@@ -1,7 +1,7 @@
 import React, { FC, MouseEvent } from "react";
 import "./footer.css";
 
-export interface FooterProps {
+interface FooterProps {
   name: string;
   links?: {
     text: string;
