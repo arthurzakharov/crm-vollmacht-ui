@@ -43,7 +43,7 @@ const InputText: FC<Props> = (props) => {
   const isStatusIconVisible = (): boolean =>
     !props.disabled && (props.status === "error" || props.status === "success");
 
-  const getStatusIconState = (): FieldStatus => {
+  const getStatusIconState = (): "error" | "success" => {
     return props.status === "error" ? "error" : "success";
   };
 
@@ -64,7 +64,7 @@ const InputText: FC<Props> = (props) => {
           name={props.name}
           placeholder={props.placeholder}
           status={props.status}
-          color="blue"
+          color="primary"
           disabled={props.disabled}
           maxLength={props.maxLength}
           type={props.type}

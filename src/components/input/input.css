@@ -1,13 +1,13 @@
 .input {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 14px;
+  line-height: 1.4;
   width: 100%;
-  height: 2.5rem;
-  border: 0.125rem solid transparent;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.75rem;
+  height: 40px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 4px 12px;
   outline: none;
   transition:
     border-color 150ms ease-in-out,
@@ -15,43 +15,40 @@
     padding-right 150ms ease-in-out;
 }
 
-.input--blue {
-  color: var(--blue-3);
+.input--primary {
+  color: var(--input-primary);
 }
 
-.input--gray {
-  color: var(--gray-2);
+.input--secondary {
+  color: var(--input-secondary);
 }
 
-.input--neutral {
-  border-color: var(--gray-5);
-}
-
-.input--success {
-  padding-right: 2.25rem;
-  border-color: var(--gray-5);
+.input--neutral,
+.input--success,
+.input--error:disabled {
+  border-color: var(--input-border);
 }
 
 .input--error {
-  padding-right: 2.25rem;
-  border-color: var(--red-1);
+  border-color: var(--error);
 }
 
-.input--error:disabled {
-  border-color: var(--gray-5);
+.input--success,
+.input--error {
+  padding-right: 36px;
 }
 
 .input:disabled {
-  background-color: var(--gray-7);
+  background-color: var(--input-disabled);
   cursor: not-allowed;
 }
 
 .input:focus {
-  border-color: var(--orange-1);
+  border-color: var(--focus);
 }
 
 .input::placeholder {
-  color: var(--gray-22);
+  color: var(--input-placeholder);
   font-weight: 400;
 }
 

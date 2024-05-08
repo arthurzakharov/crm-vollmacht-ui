@@ -1,10 +1,103 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENTS/Input Default smoke-test 1`] = `
-<input name="input"
-       id="input"
-       class="input input--gray input--neutral"
-       placeholder="TT/MM/JJJJ"
-       value
->
+exports[`COMPONENTS/Input ColorPrimary smoke-test 1`] = `
+<div style="max-width: 280px;">
+  <input name="input"
+         id="input"
+         class="input input--primary input--neutral"
+         placeholder="TT/MM/JJJJ"
+         value="19/03/1988"
+  >
+</div>
+`;
+
+exports[`COMPONENTS/Input ColorSecondary smoke-test 1`] = `
+<div style="max-width: 280px;">
+  <input name="input"
+         id="input"
+         class="input input--secondary input--neutral"
+         placeholder="TT/MM/JJJJ"
+         value="19/03/1988"
+  >
+</div>
+`;
+
+exports[`COMPONENTS/Input DefaultValues smoke-test 1`] = `
+<div style="max-width: 280px;">
+  <input type="text"
+         name="input"
+         id="input"
+         placeholder
+         class="input input--primary input--neutral"
+         value
+  >
+</div>
+`;
+
+exports[`COMPONENTS/Input Demo smoke-test 1`] = `
+<div style="max-width: 280px;">
+  <input name="input"
+         id="input"
+         class="input input--primary input--neutral"
+         placeholder="TT/MM/JJJJ"
+         value
+  >
+</div>
+`;
+
+exports[`COMPONENTS/Input Masked play-test 1`] = `
+<div style="max-width: 280px;">
+  <input name="input"
+         id="input"
+         class="input input--primary input--neutral"
+         placeholder="TT/MM/JJJJ"
+         value="11/12/1999"
+  >
+</div>
+`;
+
+exports[`COMPONENTS/Input NotMasked play-test 1`] = `
+<div style="max-width: 280px;">
+  <input type="text"
+         maxlength="12"
+         name="input"
+         id="input"
+         placeholder="TT/MM/JJJJ"
+         class="input input--primary input--neutral"
+         value="test"
+  >
+</div>
+`;
+
+exports[`COMPONENTS/Input StatusError smoke-test 1`] = `
+<div style="max-width: 280px;">
+  <input name="input"
+         id="input"
+         class="input input--primary input--error"
+         placeholder="TT/MM/JJJJ"
+         value="19/03/1988"
+  >
+</div>
+`;
+
+exports[`COMPONENTS/Input StatusNeutral smoke-test 1`] = `
+<div style="max-width: 280px;">
+  <input name="input"
+         id="input"
+         class="input input--primary input--neutral"
+         placeholder="TT/MM/JJJJ"
+         value="19/03/1988"
+  >
+</div>
+`;
+
+exports[`COMPONENTS/Input StatusSuccess smoke-test 1`] = `
+<div style="max-width: 280px;">
+  <input name="input"
+         id="input"
+         class="input input--primary input--success"
+         placeholder="TT/MM/JJJJ"
+         value="19/03/1988"
+  >
+</div>
 `;

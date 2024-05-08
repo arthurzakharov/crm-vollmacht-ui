@@ -66,6 +66,15 @@
   --text-accent-primary: #004473;
   --text-secondary: #bdbdbd;
 
+  --input-primary: #4f8aab;
+  --input-secondary: #333333;
+  --input-placeholder: #757575;
+  --input-border: #e1e8ed;
+  --input-disabled: #f4f4f4;
+
+  --error: #e74c3c;
+  --focus: #ff8d02;
+
   --forward-btn: #ff8d02;
   --forward-btn-hover: #ffac02;
   --forward-btn-text: #ffffff;
