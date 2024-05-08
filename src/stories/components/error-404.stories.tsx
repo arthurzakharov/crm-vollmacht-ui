@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Error404 from "@components/error-404";
-import MaxWidthDecorator from "@stories/decorators/max-width-decorator";
+import Error404 from "../../components/error-404";
+import MaxWidthDecorator from "../decorators/max-width-decorator";
 
 type Story = StoryObj<typeof Error404>;
 

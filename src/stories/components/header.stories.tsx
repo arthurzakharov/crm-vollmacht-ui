@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Header from "@components/header";
-import logoSrc from "@stories/assets/logo.png";
+import Header from "../../components/header";
+import logoSrc from "../assets/logo.png";
 
 type Story = StoryObj<typeof Header>;
 

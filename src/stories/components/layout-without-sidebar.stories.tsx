@@ -1,9 +1,9 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import LayoutWithoutSidebar from "@components/layout-without-sidebar";
-import MaxWidthDecorator from "@stories/decorators/max-width-decorator";
-import logoSrc from "@stories/assets/logo.png";
+import LayoutWithoutSidebar from "../../components/layout-without-sidebar";
+import MaxWidthDecorator from "../decorators/max-width-decorator";
+import logoSrc from "../assets/logo.png";
 
 type Story = StoryObj<typeof LayoutWithoutSidebar>;
 

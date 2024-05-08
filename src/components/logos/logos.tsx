@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import iconTuvSrc from "@assets/jpeg/tuv/tuv.jpeg";
-import iconTlsSrc from "@assets/png/tls/tls.png";
+import iconTuvSrc from "../../assets/jpeg/tuv/tuv.jpeg";
+import iconTlsSrc from "../../assets/png/tls/tls.png";
 import "./logos.css";
 
 interface Props {

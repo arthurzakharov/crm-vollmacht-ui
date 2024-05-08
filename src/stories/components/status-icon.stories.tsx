@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import StatusIcon from "@components/status-icon";
+import StatusIcon from "../../components/status-icon";
 
 type Story = StoryObj<typeof StatusIcon>;
 

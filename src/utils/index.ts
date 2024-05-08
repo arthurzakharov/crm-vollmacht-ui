@@ -1,4 +1,4 @@
-import { AllowedPath } from "@types";
+import { AllowedPath } from "../types";
 
 export const addSecretAsFirstUrlParam = (search: string, secret: string): string => {
   if (!search && !secret) return "";
