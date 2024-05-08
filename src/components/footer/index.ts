@@ -1,1 +1,1 @@
-export { Footer, FooterProps } from "./footer";
+export * from "./footer";

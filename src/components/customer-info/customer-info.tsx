@@ -25,7 +25,7 @@ const CustomerInfo: FC<Props> = (props) => {
         {!props.isEditButtonHidden ? (
           <button type="button" tabIndex={0} className="customer-info__button" onClick={() => props.onClick()}>
             <span className="customer-info__text">ändern</span>
-            <EditPen className="customer-info__icon" />
+            <EditPen />
           </button>
         ) : null}
       </div>
