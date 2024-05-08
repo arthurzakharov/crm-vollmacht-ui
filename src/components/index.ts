@@ -4,7 +4,7 @@ import "../assets/css/shared.css";
 export { default as AnimateHeightBlock } from "../components/animate-height-block";
 export { default as AttachmentSuccess } from "../components/attachment-success";
 export { default as Checkbox } from "../components/checkbox";
-export { default as CustomerInfo } from "../components/customer-info";
+export * from "../components/customer-info";
 export { default as Dialog } from "../components/dialog";
 export { default as DialogArticle } from "../components/dialog-article";
 export * from "../components/error-404";

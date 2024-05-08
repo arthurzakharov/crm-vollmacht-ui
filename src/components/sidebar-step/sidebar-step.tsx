@@ -9,6 +9,7 @@ export interface SidebarStepProps {
 
 export const SidebarStep: FC<SidebarStepProps> = (props) => {
   const { text, isCorrect } = props;
+
   return (
     <div className="sidebar-step">
       <p>{text}</p>

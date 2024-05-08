@@ -1,20 +1,21 @@
-import type { FC } from "react";
-import React from "react";
+import React, { FC } from "react";
 import cn from "classnames";
 import EditPen from "../../icons/edit-pen";
 import "./customer-info.css";
 
-interface Props {
+export interface CustomerInfoProps {
   version: "form" | "sidebar";
-  onClick: () => void;
   list: string[];
-  isEditButtonHidden?: boolean;
+  isEditButtonHidden: boolean;
+  onClick: () => void;
 }
 
-const CustomerInfo: FC<Props> = (props) => {
+export const CustomerInfo: FC<CustomerInfoProps> = (props) => {
+  const { version, list, isEditButtonHidden, onClick } = props;
+
   const customerInfoCn = (): string => {
     return cn("customer-info", {
-      "customer-info--sidebar": props.version === "sidebar",
+      "customer-info--sidebar": version === "sidebar",
     });
   };
 
@@ -22,20 +23,16 @@ const CustomerInfo: FC<Props> = (props) => {
     <div className={customerInfoCn()}>
       <div className="customer-info__navigation">
         Ihre Angaben
-        {!props.isEditButtonHidden ? (
-          <button type="button" tabIndex={0} className="customer-info__button" onClick={() => props.onClick()}>
+        {!isEditButtonHidden ? (
+          <button type="button" tabIndex={0} className="customer-info__button" onClick={() => onClick()}>
             <span className="customer-info__text">ändern</span>
             <EditPen />
           </button>
         ) : null}
       </div>
-      {props.list.map((listItem, index) => (
+      {list.map((listItem, index) => (
         <p key={index}>{listItem}</p>
       ))}
     </div>
   );
 };
-
-CustomerInfo.displayName = "CustomerInfo";
-
-export default CustomerInfo;
