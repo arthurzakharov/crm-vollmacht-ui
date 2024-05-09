@@ -1,6 +1,6 @@
 import type { QuestionType } from "../../types";
 import React, { useState, useEffect } from "react";
-import AnimateHeightBlock from "../animate-height-block";
+import { AnimateHeight } from "../animate-height";
 import Question from "../question";
 import QuestionnaireTitle from "../questionnaire-title";
 import "./questionnaire.css";
@@ -59,7 +59,7 @@ const Questionnaire = (props: Props) => {
         sectionId={props.sectionId}
         onClick={props.titleOnClick}
       />
-      <AnimateHeightBlock closed={props.questionnaireIsClosed}>
+      <AnimateHeight closed={props.questionnaireIsClosed}>
         <div>
           {questions.map((question: QuestionType) => {
             return (
@@ -78,7 +78,7 @@ const Questionnaire = (props: Props) => {
             );
           })}
         </div>
-      </AnimateHeightBlock>
+      </AnimateHeight>
     </div>
   );
 };

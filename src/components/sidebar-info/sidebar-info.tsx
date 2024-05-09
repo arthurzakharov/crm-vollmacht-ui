@@ -1,64 +1,34 @@
-import type { FC } from "react";
-import type { Height } from "react-animate-height";
-import type { HomeStep, Page } from "../../types";
-import React from "react";
-import { useEffect, useState } from "react";
-import AnimateHeight from "react-animate-height";
-import { CustomerInfo } from "../customer-info";
+import React, { FC } from "react";
+import { AnimateHeight } from "../animate-height";
+import { CustomerInfo, CustomerInfoProps } from "../customer-info";
 import "./sidebar-info.css";
 
-interface Props {
-  formStep: null | HomeStep;
-  currentPage: null | Page;
-  charge: string;
-  reference: string;
-  chargeTitle: string;
-  referenceTitle: string;
-  onClick: () => void;
-  list: string[];
-  isEditButtonVisible?: boolean;
+export interface SidebarInfoProps {
+  infoList: [string, string][];
+  isCustomerInfoVisible?: boolean;
+  customerInfo?: Omit<CustomerInfoProps, "version">;
 }
 
-const SidebarInfo: FC<Props> = (props) => {
-  const [height, setHeight] = useState<Height>(0);
-  const [isOpened, setIsOpened] = useState<boolean>(false);
-
-  useEffect(() => {
-    setHeight(isOpened ? "auto" : 0);
-  }, [isOpened]);
-
-  useEffect(() => {
-    setIsOpened(props.formStep === "checkout" || props.formStep === "remuneration");
-  }, [props.formStep]);
+export const SidebarInfo: FC<SidebarInfoProps> = (props) => {
+  const { infoList, customerInfo, isCustomerInfoVisible } = props;
 
   return (
     <div className="sidebar-info">
       <div>
-        <p className="sidebar-info__text">
-          <strong>{props.chargeTitle}</strong>
-          <span dangerouslySetInnerHTML={{ __html: props.charge }} />
-        </p>
-        <p className="sidebar-info__text">
-          <strong>{props.referenceTitle}</strong>
-          <span dangerouslySetInnerHTML={{ __html: props.reference }} />
-        </p>
+        {infoList.map(([key, value]) => (
+          <p key={key} className="sidebar-info__text">
+            <strong>{key}</strong>
+            <span dangerouslySetInnerHTML={{ __html: value }} />
+          </p>
+        ))}
       </div>
-      {props.currentPage !== "attachment" && (
-        <AnimateHeight duration={250} delay={125} animateOpacity easing="cubic-bezier(0.4, 0, 0.2, 1)" height={height}>
+      {customerInfo ? (
+        <AnimateHeight animateOpacity closed={!isCustomerInfoVisible}>
           <div className="sidebar-info__wrap">
-            <CustomerInfo
-              version="sidebar"
-              onClick={props.onClick}
-              list={props.list}
-              isEditButtonVisible={props.isEditButtonVisible}
-            />
+            <CustomerInfo version="sidebar" {...customerInfo} />
           </div>
         </AnimateHeight>
-      )}
+      ) : null}
     </div>
   );
 };
-
-SidebarInfo.displayName = "SidebarInfo";
-
-export default SidebarInfo;

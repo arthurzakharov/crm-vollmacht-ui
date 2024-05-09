@@ -3,7 +3,7 @@ import type { Page, HomeStep, AttachmentStep } from "../../types";
 import React, { useEffect, useState } from "react";
 import AnimateHeight, { Height } from "react-animate-height";
 import { StatusIcon } from "../status-icon";
-import SidebarInfo from "../sidebar-info";
+import { SidebarInfo } from "../sidebar-info";
 import { Logos } from "../logos";
 import "./sidebar.css";
 
@@ -136,17 +136,17 @@ const Sidebar = (props: PropsWithChildren<Props>) => {
           </div>
         ))}
       </div>
-      <SidebarInfo
-        formStep={props.formStep}
-        currentPage={props.currentPage}
-        charge={props.charge}
-        reference={props.reference}
-        chargeTitle={props.chargeTitle}
-        referenceTitle={props.referenceTitle}
-        onClick={props.onClick}
-        list={props.list}
-        isEditButtonVisible={props.isEditButtonVisible}
-      />
+      {/*<SidebarInfo*/}
+      {/*  formStep={props.formStep}*/}
+      {/*  currentPage={props.currentPage}*/}
+      {/*  charge={props.charge}*/}
+      {/*  reference={props.reference}*/}
+      {/*  chargeTitle={props.chargeTitle}*/}
+      {/*  referenceTitle={props.referenceTitle}*/}
+      {/*  onClick={props.onClick}*/}
+      {/*  list={props.list}*/}
+      {/*  isEditButtonVisible={props.isEditButtonVisible}*/}
+      {/*/>*/}
       {props.currentPage !== "attachment" && (
         <AnimateHeight duration={250} delay={125} animateOpacity easing="cubic-bezier(0.4, 0, 0.2, 1)" height={height}>
           <div className="sidebar__button">{props.children}</div>

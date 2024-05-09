@@ -1,1 +1,1 @@
-export { default } from "./sidebar-info";
+export * from "./sidebar-info";

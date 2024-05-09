@@ -1,7 +1,7 @@
 import "../assets/css/variables.css";
 import "../assets/css/shared.css";
 
-export { default as AnimateHeightBlock } from "../components/animate-height-block";
+export * from "./animate-height";
 export { default as AttachmentSuccess } from "../components/attachment-success";
 export { default as Checkbox } from "../components/checkbox";
 export * from "../components/customer-info";
@@ -28,7 +28,7 @@ export { default as QuestionnaireTitle } from "../components/questionnaire-title
 export { default as Radio } from "../components/radio";
 export { default as Sections } from "../components/sections";
 export { default as Sidebar } from "../components/sidebar";
-export { default as SidebarInfo } from "../components/sidebar-info";
+export * from "../components/sidebar-info";
 export * from "../components/sidebar-step";
 export { default as Signature } from "../components/signature";
 export * from "../components/status-icon";
