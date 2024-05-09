@@ -12,6 +12,8 @@ export interface SidebarInfoProps {
 export const SidebarInfo: FC<SidebarInfoProps> = (props) => {
   const { infoList, customerInfo, isCustomerInfoVisible } = props;
 
+  console.log("customerInfo", customerInfo);
+
   return (
     <div className="sidebar-info">
       <div>
@@ -25,7 +27,12 @@ export const SidebarInfo: FC<SidebarInfoProps> = (props) => {
       {customerInfo ? (
         <AnimateHeight animateOpacity closed={!isCustomerInfoVisible}>
           <div className="sidebar-info__wrap">
-            <CustomerInfo version="sidebar" {...customerInfo} />
+            <CustomerInfo
+              version="sidebar"
+              list={customerInfo.list}
+              isEditButtonVisible={customerInfo.isEditButtonVisible}
+              onClick={customerInfo.onClick}
+            />
           </div>
         </AnimateHeight>
       ) : null}
