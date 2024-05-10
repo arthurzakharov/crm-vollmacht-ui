@@ -13,8 +13,6 @@ export interface CustomerInfoProps {
 export const CustomerInfo: FC<CustomerInfoProps> = (props) => {
   const { version, list, isEditButtonVisible = false, onClick } = props;
 
-  console.log("list", list);
-
   const customerInfoCn = (): string => {
     return cn("customer-info", {
       "customer-info--sidebar": version === "sidebar",
@@ -37,9 +35,9 @@ export const CustomerInfo: FC<CustomerInfoProps> = (props) => {
           </button>
         ) : null}
       </div>
-      {/*{list.map((listItem, index) => (*/}
-      {/*  <p key={index}>{listItem}</p>*/}
-      {/*))}*/}
+      {list.map((listItem, index) => (
+        <p key={index}>{listItem}</p>
+      ))}
     </div>
   );
 };
