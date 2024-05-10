@@ -27,7 +27,7 @@ export { default as Questionnaire } from "../components/questionnaire";
 export { default as QuestionnaireTitle } from "../components/questionnaire-title";
 export { default as Radio } from "../components/radio";
 export { default as Sections } from "../components/sections";
-export { default as Sidebar } from "../components/sidebar";
+export * from "../components/sidebar";
 export * from "../components/sidebar-info";
 export * from "../components/sidebar-step";
 export { default as Signature } from "../components/signature";
