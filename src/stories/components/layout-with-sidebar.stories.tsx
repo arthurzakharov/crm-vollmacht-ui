@@ -1,15 +1,15 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { LayoutWithoutSidebar } from "../../components";
+import { LayoutWithSidebar } from "../../components";
 import MaxWidthDecorator from "../decorators/max-width-decorator";
 import logoSrc from "../assets/logo.png";
 
-type Story = StoryObj<typeof LayoutWithoutSidebar>;
+type Story = StoryObj<typeof LayoutWithSidebar>;
 
-const meta: Meta<typeof LayoutWithoutSidebar> = {
-  title: "LAYOUTS/LayoutWithoutSidebar",
-  component: LayoutWithoutSidebar,
+const meta: Meta<typeof LayoutWithSidebar> = {
+  title: "LAYOUTS/LayoutWithSidebar",
+  component: LayoutWithSidebar,
   parameters: {
     MaxWidthDecorator: 1100,
   },
@@ -24,6 +24,23 @@ const meta: Meta<typeof LayoutWithoutSidebar> = {
           value: "Mo-Fr von 8:00 - 20:00",
         },
       ],
+    },
+    sidebar: {
+      title: "Ihre Übersicht",
+      steps: [
+        ["1. Angaben zur Person", true],
+        ["2. Ihre Kontaktdaten", false],
+        ["3. Vergütungsvereinbarung", false],
+        ["4. Vollmacht", false],
+      ],
+      info: {
+        infoList: [
+          ["Value 1: ", "xxx-xxx-xxx-xxx"],
+          ["Value 2: ", "yyy-yyy-yyy-yyy"],
+        ],
+        isCustomerInfoVisible: false,
+      },
+      logos: ["tls", "tuv"],
     },
     footer: {
       name: "legal-one",
@@ -45,7 +62,7 @@ const meta: Meta<typeof LayoutWithoutSidebar> = {
   },
   render: (args) => {
     return (
-      <LayoutWithoutSidebar {...args}>
+      <LayoutWithSidebar {...args}>
         <div
           style={{
             height: 300,
@@ -54,13 +71,13 @@ const meta: Meta<typeof LayoutWithoutSidebar> = {
             backgroundSize: "56.57px 56.57px",
           }}
         />
-      </LayoutWithoutSidebar>
+      </LayoutWithSidebar>
     );
   },
 };
 
 export const Default: Story = {
-  name: "LayoutWithoutSidebar",
+  name: "LayoutWithSidebar",
 };
 
 export default meta;
