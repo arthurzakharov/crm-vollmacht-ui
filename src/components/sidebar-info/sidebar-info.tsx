@@ -17,12 +17,12 @@ export const SidebarInfo: FC<SidebarInfoProps> = (props) => {
   return (
     <div className="sidebar-info">
       <div>
-        {infoList.map(([key, value]) => (
-          <p key={key} className="sidebar-info__text">
-            <strong>{key}</strong>
-            <span dangerouslySetInnerHTML={{ __html: value }} />
-          </p>
-        ))}
+        {/*{infoList.map(([key, value]) => (*/}
+        {/*  <p key={key} className="sidebar-info__text">*/}
+        {/*    <strong>{key}</strong>*/}
+        {/*    <span dangerouslySetInnerHTML={{ __html: value }} />*/}
+        {/*  </p>*/}
+        {/*))}*/}
       </div>
       {customerInfo ? (
         <AnimateHeight animateOpacity closed={!isCustomerInfoVisible}>
