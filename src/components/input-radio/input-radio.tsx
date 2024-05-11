@@ -2,7 +2,7 @@ import type { MouseEvent } from "react";
 import type { FieldStatus, Option } from "../../types";
 import React, { useState } from "react";
 import Label from "../label";
-import Radio from "../radio";
+import { Radio } from "../radio";
 import "./input-radio.css";
 
 interface Props<T extends string = string> {

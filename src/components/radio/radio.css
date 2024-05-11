@@ -3,7 +3,7 @@
   border-radius: 50%;
   border-width: 2px;
   border-style: solid;
-  background-color: var(--white-1);
+  background-color: var(--background-secondary);
   transition: border-color 150ms ease-in-out;
 }
 
@@ -18,7 +18,7 @@
   width: 70%;
   height: 70%;
   border-radius: 50%;
-  background-color: var(--white-1);
+  background-color: var(--background-secondary);
   transition: background-color 150ms ease-in-out;
 }
 
@@ -38,30 +38,27 @@
 }
 
 .radio--error {
-  border-color: var(--red-1);
-}
-
-.radio--neutral,
-.radio--success {
-  border-color: var(--gray-5);
-}
-
-.radio--disabled.radio--error {
-  border-color: var(--gray-5);
-}
-
-.radio--checked:before {
-  background-color: var(--orange-1);
+  border-color: var(--error);
 }
 
 .radio--checked.radio--error:before {
-  background-color: var(--red-1);
+  background-color: var(--error);
 }
 
-.radio--checked.radio--disabled:before {
-  background-color: var(--gray-5);
+.radio--checked:before {
+  background-color: var(--focus);
 }
 
 .radio--focused {
-  border-color: var(--orange-1);
+  border-color: var(--focus) !important;
+}
+
+.radio--neutral,
+.radio--success,
+.radio--disabled.radio--error{
+  border-color: var(--input-border);
+}
+
+.radio--checked.radio--disabled:before {
+  background-color: var(--input-border);
 }

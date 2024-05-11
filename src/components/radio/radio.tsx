@@ -1,10 +1,9 @@
-import type { FC } from "react";
-import type { FieldStatus } from "../../types";
-import React from "react";
+import React, { FC } from "react";
 import cn from "classnames";
+import { FieldStatus } from "../../types";
 import "./radio.css";
 
-interface Props {
+export interface RadioProps {
   value: boolean;
   size: "s" | "l" | "m";
   status: FieldStatus;
@@ -12,24 +11,21 @@ interface Props {
   disabled?: boolean;
 }
 
-const Radio: FC<Props> = (props) => {
-  const radioCn = (): string => {
-    return cn("radio", {
-      "radio--s": props.size === "s",
-      "radio--m": props.size === "m",
-      "radio--l": props.size === "l",
-      "radio--error": props.status === "error",
-      "radio--neutral": props.status === "neutral",
-      "radio--success": props.status === "success",
-      "radio--checked": props.value,
-      "radio--focused": !!props.focused,
-      "radio--disabled": !!props.disabled,
+export const Radio: FC<RadioProps> = (props) => {
+  const { value, size, status, focused = false, disabled = false } = props;
+
+  const radioCn = (): string =>
+    cn("radio", {
+      "radio--s": size === "s",
+      "radio--m": size === "m",
+      "radio--l": size === "l",
+      "radio--error": status === "error",
+      "radio--neutral": status === "neutral",
+      "radio--success": status === "success",
+      "radio--checked": value,
+      "radio--focused": focused,
+      "radio--disabled": disabled,
     });
-  };
 
   return <div className={radioCn()} />;
 };
-
-Radio.displayName = "Radio";
-
-export default Radio;

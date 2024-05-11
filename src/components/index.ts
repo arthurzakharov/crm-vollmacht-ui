@@ -26,7 +26,7 @@ export { default as Main } from "../components/main";
 export { default as Question } from "../components/question";
 export { default as Questionnaire } from "../components/questionnaire";
 export { default as QuestionnaireTitle } from "../components/questionnaire-title";
-export { default as Radio } from "../components/radio";
+export * from "../components/radio";
 export { default as Sections } from "../components/sections";
 export * from "../components/sidebar";
 export * from "../components/sidebar-info";
