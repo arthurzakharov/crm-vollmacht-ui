@@ -76,7 +76,7 @@
 
 .input-checkbox__content--error > .input-checkbox__label::before {
   opacity: 1;
-  background-color: color-mix(in srgb, var(--red-1) 20%, transparent);
+  background-color: color-mix(in srgb, var(--error) 20%, transparent);
   transition:
     background-color 150ms ease-in-out,
     opacity 150ms ease-in-out;
