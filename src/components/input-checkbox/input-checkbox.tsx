@@ -3,7 +3,7 @@ import type { FieldStatus } from "../../types";
 import React from "react";
 import { useToggle } from "usehooks-ts";
 import cn from "classnames";
-import Checkbox from "../checkbox";
+import { Checkbox } from "../checkbox";
 import { Label } from "../label";
 import { StatusIcon } from "../status-icon";
 import "./input-checkbox.css";

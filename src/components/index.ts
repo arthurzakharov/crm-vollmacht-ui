@@ -3,7 +3,7 @@ import "../assets/css/shared.css";
 
 export * from "./animate-height";
 export { default as AttachmentSuccess } from "../components/attachment-success";
-export { default as Checkbox } from "../components/checkbox";
+export * from "../components/checkbox";
 export * from "../components/customer-info";
 export { default as Dialog } from "../components/dialog";
 export { default as DialogArticle } from "../components/dialog-article";

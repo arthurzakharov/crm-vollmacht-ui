@@ -1,15 +1,15 @@
 .checkbox {
+  --invisible-line: 0 0 0 0 #fff;
   display: inline-block;
   position: relative;
   z-index: 1;
   height: 20px;
   width: 20px;
-  background-color: var(--gray-14);
+  background-color: var(--input-checkbox);
   border: none;
   border-radius: 2px;
-  box-shadow:
-    inset -1px 0 2px -1px var(--gray-2),
-    inset 1px 1px 2px -1px var(--gray-2);
+  box-shadow: var(--checkbox-shadow);
+
   outline: 2px solid transparent;
   transition: outline-color 150ms ease-in-out;
 }
@@ -19,22 +19,26 @@
   position: absolute;
   height: 0;
   width: 3px;
-  background-color: var(--orange-1);
+  background-color: var(--focus);
   display: inline-block;
   transform-origin: left top;
   border-radius: 2px;
   content: " ";
 }
 
+.checkbox--not-checked:before,
+.checkbox--checked:before {
+  left: 7px;
+  box-shadow: var(--invisible-line);
+  transform: rotate(-135deg);
+}
+
 .checkbox--focused {
-  outline-color: var(--orange-1);
+  outline-color: var(--focus);
 }
 
 .checkbox--not-checked:before {
   top: 11px;
-  left: 7px;
-  box-shadow: 0 0 0 0 var(--white-1);
-  transform: rotate(-135deg);
 }
 
 .checkbox--not-checked:after {
@@ -45,9 +49,6 @@
 
 .checkbox--checked:before {
   top: 18px;
-  left: 7px;
-  box-shadow: 0 0 0 0 var(--white-1);
-  transform: rotate(-135deg);
   height: 18px;
   animation: dotTopCheck 150ms ease 150ms both;
 }

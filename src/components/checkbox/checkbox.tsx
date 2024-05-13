@@ -1,27 +1,23 @@
-import type { FC } from "react";
-import React from "react";
+import React, { FC } from "react";
 import cn from "classnames";
 import "./checkbox.css";
 
-interface Props {
+export interface CheckboxProps {
   value: boolean;
   focused?: boolean;
   disabled?: boolean;
 }
 
-const Checkbox: FC<Props> = (props) => {
-  const checkboxCn = (): string => {
-    return cn("checkbox", {
-      "checkbox--checked": props.value,
-      "checkbox--not-checked": !props.value,
-      "checkbox--focused": !!props.focused,
-      "checkbox--disabled": !!props.disabled,
+export const Checkbox: FC<CheckboxProps> = (props) => {
+  const { value, focused = false, disabled = false } = props;
+
+  const checkboxCn = (): string =>
+    cn("checkbox", {
+      "checkbox--checked": value,
+      "checkbox--not-checked": !value,
+      "checkbox--focused": focused,
+      "checkbox--disabled": disabled,
     });
-  };
 
   return <div className={checkboxCn()} />;
 };
-
-Checkbox.displayName = "Checkbox";
-
-export default Checkbox;
