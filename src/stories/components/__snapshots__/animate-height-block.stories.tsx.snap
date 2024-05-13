@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/AnimateHeight Closed smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div aria-hidden="true"
+       class="rah-static rah-static--height-zero "
+       style="height: 0px; overflow: hidden;"
+  >
+    <div style="transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1) 500ms; opacity: 0; display: none;">
+      <div style="height: 300px; background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/AnimateHeight DefaultValues smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div aria-hidden="false"
+       class="rah-static rah-static--height-auto "
+       style="height: auto; overflow: visible;"
+  >
+    <div>
+      <div style="height: 300px; background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/AnimateHeight Opened smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div aria-hidden="false"
+       class="rah-static rah-static--height-auto "
+       style="height: auto; overflow: visible;"
+  >
+    <div style="transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1) 500ms;">
+      <div style="height: 300px; background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;

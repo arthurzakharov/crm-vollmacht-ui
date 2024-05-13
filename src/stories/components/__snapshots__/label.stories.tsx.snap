@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/Label DefaultValues smoke-test 1`] = `
+<label for="test"
+       data-size="m"
+       data-status="neutral"
+       class="label label--m label--neutral"
+>
+  Label text
+</label>
+`;
+
+exports[`COMPONENTS/Label SizeM smoke-test 1`] = `
+<label for="test"
+       data-size="m"
+       data-status="neutral"
+       class="label label--m label--neutral"
+>
+  Label text
+</label>
+`;
+
+exports[`COMPONENTS/Label SizeS smoke-test 1`] = `
+<label for="test"
+       data-size="s"
+       data-status="neutral"
+       class="label label--s label--neutral"
+>
+  Label text
+</label>
+`;
+
+exports[`COMPONENTS/Label StatusError smoke-test 1`] = `
+<label for="test"
+       data-size="m"
+       data-status="error"
+       class="label label--m label--error"
+>
+  Label text
+</label>
+`;
+
+exports[`COMPONENTS/Label StatusNeutral smoke-test 1`] = `
+<label for="test"
+       data-size="m"
+       data-status="neutral"
+       class="label label--m label--neutral"
+>
+  Label text
+</label>
+`;
+
+exports[`COMPONENTS/Label StatusSuccess smoke-test 1`] = `
+<label for="test"
+       data-size="m"
+       data-status="success"
+       class="label label--m label--success"
+>
+  Label text
+</label>
+`;

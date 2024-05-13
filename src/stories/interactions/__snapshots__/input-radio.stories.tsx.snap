@@ -1,0 +1,535 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`INTERACTIONS/InputRadio DefaultValues smoke-test 1`] = `
+<div class="input-radio">
+  <div class="input-radio__option">
+    <input id="female"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="female"
+           checked
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral radio--checked">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="female"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Frau
+      </label>
+    </div>
+  </div>
+  <div class="input-radio__option">
+    <input id="male"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="male"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="male"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Herr
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputRadio Demo play-test 1`] = `
+<div class="input-radio">
+  <div class="input-radio__option">
+    <input id="female"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="female"
+           checked
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral radio--checked radio--focused">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="female"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Frau
+      </label>
+    </div>
+  </div>
+  <div class="input-radio__option">
+    <input id="male"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="male"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="male"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Herr
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputRadio Disabled smoke-test 1`] = `
+<div class="input-radio">
+  <div class="input-radio__option">
+    <input id="female"
+           disabled
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="female"
+           checked
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral radio--checked radio--disabled">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="female"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Frau
+      </label>
+    </div>
+  </div>
+  <div class="input-radio__option">
+    <input id="male"
+           disabled
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="male"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral radio--disabled">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="male"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Herr
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputRadio EmptyOptions smoke-test 1`] = `
+<div class="input-radio">
+</div>
+`;
+
+exports[`INTERACTIONS/InputRadio EmptyValue smoke-test 1`] = `
+<div class="input-radio">
+  <div class="input-radio__option">
+    <input id="female"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="female"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="female"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Frau
+      </label>
+    </div>
+  </div>
+  <div class="input-radio__option">
+    <input id="male"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="male"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="male"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Herr
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputRadio SizeLabelM smoke-test 1`] = `
+<div class="input-radio">
+  <div class="input-radio__option">
+    <input id="female"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="female"
+           checked
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral radio--checked">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="female"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Frau
+      </label>
+    </div>
+  </div>
+  <div class="input-radio__option">
+    <input id="male"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="male"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="male"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Herr
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputRadio SizeLabelS smoke-test 1`] = `
+<div class="input-radio">
+  <div class="input-radio__option">
+    <input id="female"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="female"
+           checked
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral radio--checked">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="female"
+             data-size="s"
+             data-status="neutral"
+             class="label label--s label--neutral"
+      >
+        Frau
+      </label>
+    </div>
+  </div>
+  <div class="input-radio__option">
+    <input id="male"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="male"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="male"
+             data-size="s"
+             data-status="neutral"
+             class="label label--s label--neutral"
+      >
+        Herr
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputRadio SizeRadioL smoke-test 1`] = `
+<div class="input-radio">
+  <div class="input-radio__option">
+    <input id="female"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="female"
+           checked
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--l radio--neutral radio--checked">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="female"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Frau
+      </label>
+    </div>
+  </div>
+  <div class="input-radio__option">
+    <input id="male"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="male"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--l radio--neutral">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="male"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Herr
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputRadio SizeRadioM smoke-test 1`] = `
+<div class="input-radio">
+  <div class="input-radio__option">
+    <input id="female"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="female"
+           checked
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral radio--checked">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="female"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Frau
+      </label>
+    </div>
+  </div>
+  <div class="input-radio__option">
+    <input id="male"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="male"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="male"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Herr
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputRadio StatusError smoke-test 1`] = `
+<div class="input-radio">
+  <div class="input-radio__option">
+    <input id="female"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="female"
+           checked
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--error radio--checked">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="female"
+             data-size="m"
+             data-status="error"
+             class="label label--m label--error"
+      >
+        Frau
+      </label>
+    </div>
+  </div>
+  <div class="input-radio__option">
+    <input id="male"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="male"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--error">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="male"
+             data-size="m"
+             data-status="error"
+             class="label label--m label--error"
+      >
+        Herr
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputRadio StatusNeutral smoke-test 1`] = `
+<div class="input-radio">
+  <div class="input-radio__option">
+    <input id="female"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="female"
+           checked
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral radio--checked">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="female"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Frau
+      </label>
+    </div>
+  </div>
+  <div class="input-radio__option">
+    <input id="male"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="male"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--neutral">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="male"
+             data-size="m"
+             data-status="neutral"
+             class="label label--m label--neutral"
+      >
+        Herr
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputRadio StatusSuccess smoke-test 1`] = `
+<div class="input-radio">
+  <div class="input-radio__option">
+    <input id="female"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="female"
+           checked
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--success radio--checked">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="female"
+             data-size="m"
+             data-status="success"
+             class="label label--m label--success"
+      >
+        Frau
+      </label>
+    </div>
+  </div>
+  <div class="input-radio__option">
+    <input id="male"
+           type="radio"
+           tabindex="0"
+           class="input-radio__element"
+           value="male"
+    >
+    <div class="input-radio__box">
+      <div class="radio radio--m radio--success">
+      </div>
+    </div>
+    <div class="input-radio__label">
+      <label for="male"
+             data-size="m"
+             data-status="success"
+             class="label label--m label--success"
+      >
+        Herr
+      </label>
+    </div>
+  </div>
+</div>
+`;

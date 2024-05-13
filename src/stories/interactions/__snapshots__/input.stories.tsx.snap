@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENTS/Input ColorPrimary smoke-test 1`] = `
+exports[`INTERACTIONS/Input ColorPrimary smoke-test 1`] = `
 <div style="max-width: 280px;">
   <input name="input"
          id="input"
@@ -11,7 +11,7 @@ exports[`COMPONENTS/Input ColorPrimary smoke-test 1`] = `
 </div>
 `;
 
-exports[`COMPONENTS/Input ColorSecondary smoke-test 1`] = `
+exports[`INTERACTIONS/Input ColorSecondary smoke-test 1`] = `
 <div style="max-width: 280px;">
   <input name="input"
          id="input"
@@ -22,7 +22,7 @@ exports[`COMPONENTS/Input ColorSecondary smoke-test 1`] = `
 </div>
 `;
 
-exports[`COMPONENTS/Input DefaultValues smoke-test 1`] = `
+exports[`INTERACTIONS/Input DefaultValues smoke-test 1`] = `
 <div style="max-width: 280px;">
   <input type="text"
          name="input"
@@ -34,7 +34,7 @@ exports[`COMPONENTS/Input DefaultValues smoke-test 1`] = `
 </div>
 `;
 
-exports[`COMPONENTS/Input Demo smoke-test 1`] = `
+exports[`INTERACTIONS/Input Demo smoke-test 1`] = `
 <div style="max-width: 280px;">
   <input name="input"
          id="input"
@@ -45,7 +45,7 @@ exports[`COMPONENTS/Input Demo smoke-test 1`] = `
 </div>
 `;
 
-exports[`COMPONENTS/Input Masked play-test 1`] = `
+exports[`INTERACTIONS/Input Masked play-test 1`] = `
 <div style="max-width: 280px;">
   <input name="input"
          id="input"
@@ -56,7 +56,7 @@ exports[`COMPONENTS/Input Masked play-test 1`] = `
 </div>
 `;
 
-exports[`COMPONENTS/Input NotMasked play-test 1`] = `
+exports[`INTERACTIONS/Input NotMasked play-test 1`] = `
 <div style="max-width: 280px;">
   <input type="text"
          maxlength="12"
@@ -69,7 +69,7 @@ exports[`COMPONENTS/Input NotMasked play-test 1`] = `
 </div>
 `;
 
-exports[`COMPONENTS/Input StatusError smoke-test 1`] = `
+exports[`INTERACTIONS/Input StatusError smoke-test 1`] = `
 <div style="max-width: 280px;">
   <input name="input"
          id="input"
@@ -80,7 +80,7 @@ exports[`COMPONENTS/Input StatusError smoke-test 1`] = `
 </div>
 `;
 
-exports[`COMPONENTS/Input StatusNeutral smoke-test 1`] = `
+exports[`INTERACTIONS/Input StatusNeutral smoke-test 1`] = `
 <div style="max-width: 280px;">
   <input name="input"
          id="input"
@@ -91,7 +91,7 @@ exports[`COMPONENTS/Input StatusNeutral smoke-test 1`] = `
 </div>
 `;
 
-exports[`COMPONENTS/Input StatusSuccess smoke-test 1`] = `
+exports[`INTERACTIONS/Input StatusSuccess smoke-test 1`] = `
 <div style="max-width: 280px;">
   <input name="input"
          id="input"

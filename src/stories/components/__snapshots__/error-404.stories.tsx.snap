@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/Error404 Default smoke-test 1`] = `
+<div style="max-width: 1100px;">
+  <section class="error-404">
+    <h1 class="error-404__h1">
+      Entschuldigung, da ist wohl etwas schief gelaufen!
+    </h1>
+    <h2 class="error-404__h2">
+      Fehler 404
+    </h2>
+    <h3 class="error-404__h3">
+      Bitte kontaktieren Sie uns doch per:
+    </h3>
+    <table class="error-404__table">
+      <tbody>
+        <tr>
+          <th class="error-404__th">
+            E-Mail:
+          </th>
+          <td class="error-404__td">
+            info@rightmart.de
+          </td>
+        </tr>
+        <tr>
+          <th class="error-404__th">
+            Telefon:
+          </th>
+          <td class="error-404__td">
+            +49 (0)421 / 33 100 310
+          </td>
+        </tr>
+        <tr>
+          <th class="error-404__th">
+            Fax:
+          </th>
+          <td class="error-404__td">
+            +49 (0)421 / 33 100 380
+          </td>
+        </tr>
+        <tr>
+          <th class="error-404__th">
+            Post:
+          </th>
+          <td class="error-404__td">
+            rightmart Rechtsanwaltsgesellschaft mbH
+            <br>
+            Clara-Jaschke-Straße 1
+            <br>
+            28199 Bremen
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+`;

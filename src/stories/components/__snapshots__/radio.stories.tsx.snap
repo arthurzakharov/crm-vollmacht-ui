@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/Radio Checked smoke-test 1`] = `
+<div class="radio radio--l radio--neutral radio--checked">
+</div>
+`;
+
+exports[`COMPONENTS/Radio Disabled smoke-test 1`] = `
+<div class="radio radio--l radio--neutral radio--checked radio--disabled">
+</div>
+`;
+
+exports[`COMPONENTS/Radio Focused smoke-test 1`] = `
+<div class="radio radio--l radio--neutral radio--checked radio--focused">
+</div>
+`;
+
+exports[`COMPONENTS/Radio NotChecked smoke-test 1`] = `
+<div class="radio radio--l radio--neutral">
+</div>
+`;
+
+exports[`COMPONENTS/Radio SizeL smoke-test 1`] = `
+<div class="radio radio--l radio--neutral radio--checked">
+</div>
+`;
+
+exports[`COMPONENTS/Radio SizeM smoke-test 1`] = `
+<div class="radio radio--m radio--neutral radio--checked">
+</div>
+`;
+
+exports[`COMPONENTS/Radio SizeS smoke-test 1`] = `
+<div class="radio radio--s radio--neutral radio--checked">
+</div>
+`;
+
+exports[`COMPONENTS/Radio StatusError smoke-test 1`] = `
+<div class="radio radio--l radio--error radio--checked">
+</div>
+`;
+
+exports[`COMPONENTS/Radio StatusNeutral smoke-test 1`] = `
+<div class="radio radio--l radio--neutral radio--checked">
+</div>
+`;
+
+exports[`COMPONENTS/Radio StatusSuccess smoke-test 1`] = `
+<div class="radio radio--l radio--success radio--checked">
+</div>
+`;

@@ -1,0 +1,340 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`INTERACTIONS/InputCheckbox Checked smoke-test 1`] = `
+<div style="max-width: 600px;">
+  <div data-id="ageement"
+       class="input-checkbox"
+  >
+    <input type="checkbox"
+           tabindex="0"
+           id="ageement"
+           class="input-checkbox__element"
+           checked
+    >
+    <div class="input-checkbox__content input-checkbox__content--neutral">
+      <div class="input-checkbox__checkbox-wrap">
+        <div class="checkbox checkbox--checked">
+        </div>
+      </div>
+      <div class="input-checkbox__label">
+        <label for="ageement"
+               data-size="s"
+               data-status="neutral"
+               class="label label--s label--neutral"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum incidunt magnam, quae quam quisquam sapiente unde. Accusantium adipisci blanditiis commodi consectetur consequuntur, cum cumque debitis deserunt dolor doloremque error
+          <button type="button">
+            explicabo
+          </button>
+          fuga fugit harum, illum ipsam, ipsum iste labore minima necessitatibus non numquam odio pariatur quam quas
+          <a href>
+            quibusdam
+          </a>
+          quos reiciendis rem repellendus reprehenderit repudiandae saepe sint sit ut veritatis voluptatibus voluptatum. Aliquid animi corporis ducimus earum, excepturi expedita ipsam maxime quaerat quas vitae. Aspernatur assumenda at consequuntur dolorum et, eveniet illum in, incidunt inventore itaque necessitatibus nihil odio, officia porro quas similique sit temporibus ut vero vitae! A adipisci, atque aut culpa cumque dicta dolorem ducimus ea error est expedita illo laudantium magnam natus non nulla porro qui, vero voluptas!
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputCheckbox DefaultValues smoke-test 1`] = `
+<div style="max-width: 600px;">
+  <div data-id="ageement"
+       class="input-checkbox"
+  >
+    <input type="checkbox"
+           tabindex="0"
+           id="ageement"
+           class="input-checkbox__element"
+    >
+    <div class="input-checkbox__content input-checkbox__content--neutral">
+      <div class="input-checkbox__checkbox-wrap">
+        <div class="checkbox checkbox--not-checked">
+        </div>
+      </div>
+      <div class="input-checkbox__label">
+        <label for="ageement"
+               data-size="s"
+               data-status="neutral"
+               class="label label--s label--neutral"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum incidunt magnam, quae quam quisquam sapiente unde. Accusantium adipisci blanditiis commodi consectetur consequuntur, cum cumque debitis deserunt dolor doloremque error
+          <button type="button">
+            explicabo
+          </button>
+          fuga fugit harum, illum ipsam, ipsum iste labore minima necessitatibus non numquam odio pariatur quam quas
+          <a href>
+            quibusdam
+          </a>
+          quos reiciendis rem repellendus reprehenderit repudiandae saepe sint sit ut veritatis voluptatibus voluptatum. Aliquid animi corporis ducimus earum, excepturi expedita ipsam maxime quaerat quas vitae. Aspernatur assumenda at consequuntur dolorum et, eveniet illum in, incidunt inventore itaque necessitatibus nihil odio, officia porro quas similique sit temporibus ut vero vitae! A adipisci, atque aut culpa cumque dicta dolorem ducimus ea error est expedita illo laudantium magnam natus non nulla porro qui, vero voluptas!
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputCheckbox Demo play-test 1`] = `
+<div style="max-width: 600px;">
+  <div data-id="ageement"
+       class="input-checkbox"
+  >
+    <input type="checkbox"
+           tabindex="0"
+           id="ageement"
+           class="input-checkbox__element"
+    >
+    <div class="input-checkbox__content input-checkbox__content--neutral">
+      <div class="input-checkbox__checkbox-wrap">
+        <div class="checkbox checkbox--not-checked">
+        </div>
+      </div>
+      <div class="input-checkbox__label">
+        <label for="ageement"
+               data-size="s"
+               data-status="neutral"
+               class="label label--s label--neutral"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum incidunt magnam, quae quam quisquam sapiente unde. Accusantium adipisci blanditiis commodi consectetur consequuntur, cum cumque debitis deserunt dolor doloremque error
+          <button type="button">
+            explicabo
+          </button>
+          fuga fugit harum, illum ipsam, ipsum iste labore minima necessitatibus non numquam odio pariatur quam quas
+          <a href>
+            quibusdam
+          </a>
+          quos reiciendis rem repellendus reprehenderit repudiandae saepe sint sit ut veritatis voluptatibus voluptatum. Aliquid animi corporis ducimus earum, excepturi expedita ipsam maxime quaerat quas vitae. Aspernatur assumenda at consequuntur dolorum et, eveniet illum in, incidunt inventore itaque necessitatibus nihil odio, officia porro quas similique sit temporibus ut vero vitae! A adipisci, atque aut culpa cumque dicta dolorem ducimus ea error est expedita illo laudantium magnam natus non nulla porro qui, vero voluptas!
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputCheckbox Disabled smoke-test 1`] = `
+<div style="max-width: 600px;">
+  <div data-id="ageement"
+       class="input-checkbox"
+  >
+    <input disabled
+           type="checkbox"
+           tabindex="0"
+           id="ageement"
+           class="input-checkbox__element"
+    >
+    <div class="input-checkbox__content input-checkbox__content--neutral">
+      <div class="input-checkbox__checkbox-wrap">
+        <div class="checkbox checkbox--not-checked checkbox--disabled">
+        </div>
+      </div>
+      <div class="input-checkbox__label">
+        <label for="ageement"
+               data-size="s"
+               data-status="neutral"
+               class="label label--s label--neutral"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum incidunt magnam, quae quam quisquam sapiente unde. Accusantium adipisci blanditiis commodi consectetur consequuntur, cum cumque debitis deserunt dolor doloremque error
+          <button type="button">
+            explicabo
+          </button>
+          fuga fugit harum, illum ipsam, ipsum iste labore minima necessitatibus non numquam odio pariatur quam quas
+          <a href>
+            quibusdam
+          </a>
+          quos reiciendis rem repellendus reprehenderit repudiandae saepe sint sit ut veritatis voluptatibus voluptatum. Aliquid animi corporis ducimus earum, excepturi expedita ipsam maxime quaerat quas vitae. Aspernatur assumenda at consequuntur dolorum et, eveniet illum in, incidunt inventore itaque necessitatibus nihil odio, officia porro quas similique sit temporibus ut vero vitae! A adipisci, atque aut culpa cumque dicta dolorem ducimus ea error est expedita illo laudantium magnam natus non nulla porro qui, vero voluptas!
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputCheckbox Enabled smoke-test 1`] = `
+<div style="max-width: 600px;">
+  <div data-id="ageement"
+       class="input-checkbox"
+  >
+    <input type="checkbox"
+           tabindex="0"
+           id="ageement"
+           class="input-checkbox__element"
+    >
+    <div class="input-checkbox__content input-checkbox__content--neutral">
+      <div class="input-checkbox__checkbox-wrap">
+        <div class="checkbox checkbox--not-checked">
+        </div>
+      </div>
+      <div class="input-checkbox__label">
+        <label for="ageement"
+               data-size="s"
+               data-status="neutral"
+               class="label label--s label--neutral"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum incidunt magnam, quae quam quisquam sapiente unde. Accusantium adipisci blanditiis commodi consectetur consequuntur, cum cumque debitis deserunt dolor doloremque error
+          <button type="button">
+            explicabo
+          </button>
+          fuga fugit harum, illum ipsam, ipsum iste labore minima necessitatibus non numquam odio pariatur quam quas
+          <a href>
+            quibusdam
+          </a>
+          quos reiciendis rem repellendus reprehenderit repudiandae saepe sint sit ut veritatis voluptatibus voluptatum. Aliquid animi corporis ducimus earum, excepturi expedita ipsam maxime quaerat quas vitae. Aspernatur assumenda at consequuntur dolorum et, eveniet illum in, incidunt inventore itaque necessitatibus nihil odio, officia porro quas similique sit temporibus ut vero vitae! A adipisci, atque aut culpa cumque dicta dolorem ducimus ea error est expedita illo laudantium magnam natus non nulla porro qui, vero voluptas!
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputCheckbox NotChecked smoke-test 1`] = `
+<div style="max-width: 600px;">
+  <div data-id="ageement"
+       class="input-checkbox"
+  >
+    <input type="checkbox"
+           tabindex="0"
+           id="ageement"
+           class="input-checkbox__element"
+    >
+    <div class="input-checkbox__content input-checkbox__content--neutral">
+      <div class="input-checkbox__checkbox-wrap">
+        <div class="checkbox checkbox--not-checked">
+        </div>
+      </div>
+      <div class="input-checkbox__label">
+        <label for="ageement"
+               data-size="s"
+               data-status="neutral"
+               class="label label--s label--neutral"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum incidunt magnam, quae quam quisquam sapiente unde. Accusantium adipisci blanditiis commodi consectetur consequuntur, cum cumque debitis deserunt dolor doloremque error
+          <button type="button">
+            explicabo
+          </button>
+          fuga fugit harum, illum ipsam, ipsum iste labore minima necessitatibus non numquam odio pariatur quam quas
+          <a href>
+            quibusdam
+          </a>
+          quos reiciendis rem repellendus reprehenderit repudiandae saepe sint sit ut veritatis voluptatibus voluptatum. Aliquid animi corporis ducimus earum, excepturi expedita ipsam maxime quaerat quas vitae. Aspernatur assumenda at consequuntur dolorum et, eveniet illum in, incidunt inventore itaque necessitatibus nihil odio, officia porro quas similique sit temporibus ut vero vitae! A adipisci, atque aut culpa cumque dicta dolorem ducimus ea error est expedita illo laudantium magnam natus non nulla porro qui, vero voluptas!
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputCheckbox StatusError smoke-test 1`] = `
+<div style="max-width: 600px;">
+  <div data-id="ageement"
+       class="input-checkbox"
+  >
+    <input type="checkbox"
+           tabindex="0"
+           id="ageement"
+           class="input-checkbox__element"
+    >
+    <div class="input-checkbox__content input-checkbox__content--error">
+      <div class="input-checkbox__checkbox-wrap">
+        <div class="checkbox checkbox--not-checked">
+        </div>
+      </div>
+      <div class="input-checkbox__label">
+        <label for="ageement"
+               data-size="s"
+               data-status="neutral"
+               class="label label--s label--neutral"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum incidunt magnam, quae quam quisquam sapiente unde. Accusantium adipisci blanditiis commodi consectetur consequuntur, cum cumque debitis deserunt dolor doloremque error
+          <button type="button">
+            explicabo
+          </button>
+          fuga fugit harum, illum ipsam, ipsum iste labore minima necessitatibus non numquam odio pariatur quam quas
+          <a href>
+            quibusdam
+          </a>
+          quos reiciendis rem repellendus reprehenderit repudiandae saepe sint sit ut veritatis voluptatibus voluptatum. Aliquid animi corporis ducimus earum, excepturi expedita ipsam maxime quaerat quas vitae. Aspernatur assumenda at consequuntur dolorum et, eveniet illum in, incidunt inventore itaque necessitatibus nihil odio, officia porro quas similique sit temporibus ut vero vitae! A adipisci, atque aut culpa cumque dicta dolorem ducimus ea error est expedita illo laudantium magnam natus non nulla porro qui, vero voluptas!
+        </label>
+      </div>
+    </div>
+    <div class="input-checkbox__icon">
+      <div class="status-icon status-icon--error status-icon--m status-icon--active">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputCheckbox StatusNeutral smoke-test 1`] = `
+<div style="max-width: 600px;">
+  <div data-id="ageement"
+       class="input-checkbox"
+  >
+    <input type="checkbox"
+           tabindex="0"
+           id="ageement"
+           class="input-checkbox__element"
+    >
+    <div class="input-checkbox__content input-checkbox__content--neutral">
+      <div class="input-checkbox__checkbox-wrap">
+        <div class="checkbox checkbox--not-checked">
+        </div>
+      </div>
+      <div class="input-checkbox__label">
+        <label for="ageement"
+               data-size="s"
+               data-status="neutral"
+               class="label label--s label--neutral"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum incidunt magnam, quae quam quisquam sapiente unde. Accusantium adipisci blanditiis commodi consectetur consequuntur, cum cumque debitis deserunt dolor doloremque error
+          <button type="button">
+            explicabo
+          </button>
+          fuga fugit harum, illum ipsam, ipsum iste labore minima necessitatibus non numquam odio pariatur quam quas
+          <a href>
+            quibusdam
+          </a>
+          quos reiciendis rem repellendus reprehenderit repudiandae saepe sint sit ut veritatis voluptatibus voluptatum. Aliquid animi corporis ducimus earum, excepturi expedita ipsam maxime quaerat quas vitae. Aspernatur assumenda at consequuntur dolorum et, eveniet illum in, incidunt inventore itaque necessitatibus nihil odio, officia porro quas similique sit temporibus ut vero vitae! A adipisci, atque aut culpa cumque dicta dolorem ducimus ea error est expedita illo laudantium magnam natus non nulla porro qui, vero voluptas!
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputCheckbox StatusSuccess smoke-test 1`] = `
+<div style="max-width: 600px;">
+  <div data-id="ageement"
+       class="input-checkbox"
+  >
+    <input type="checkbox"
+           tabindex="0"
+           id="ageement"
+           class="input-checkbox__element"
+    >
+    <div class="input-checkbox__content input-checkbox__content--success">
+      <div class="input-checkbox__checkbox-wrap">
+        <div class="checkbox checkbox--not-checked">
+        </div>
+      </div>
+      <div class="input-checkbox__label">
+        <label for="ageement"
+               data-size="s"
+               data-status="neutral"
+               class="label label--s label--neutral"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum incidunt magnam, quae quam quisquam sapiente unde. Accusantium adipisci blanditiis commodi consectetur consequuntur, cum cumque debitis deserunt dolor doloremque error
+          <button type="button">
+            explicabo
+          </button>
+          fuga fugit harum, illum ipsam, ipsum iste labore minima necessitatibus non numquam odio pariatur quam quas
+          <a href>
+            quibusdam
+          </a>
+          quos reiciendis rem repellendus reprehenderit repudiandae saepe sint sit ut veritatis voluptatibus voluptatum. Aliquid animi corporis ducimus earum, excepturi expedita ipsam maxime quaerat quas vitae. Aspernatur assumenda at consequuntur dolorum et, eveniet illum in, incidunt inventore itaque necessitatibus nihil odio, officia porro quas similique sit temporibus ut vero vitae! A adipisci, atque aut culpa cumque dicta dolorem ducimus ea error est expedita illo laudantium magnam natus non nulla porro qui, vero voluptas!
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;

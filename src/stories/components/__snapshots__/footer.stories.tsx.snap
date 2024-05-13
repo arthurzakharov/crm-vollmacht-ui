@@ -1,67 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`COMPONENTS/Footer DefaultValues smoke-test 1`] = `
-<footer class="footer">
-  <hr class="footer__line">
-  <div class="footer__content">
-    <span>
-      © 2024 legal-one
-    </span>
-    <ul class="footer__links">
-    </ul>
-  </div>
-</footer>
+<div style="max-width: 1100px;">
+  <footer class="footer">
+    <hr class="footer__line">
+    <div class="footer__content">
+      <span>
+        © 2024 legal-one
+      </span>
+      <ul class="footer__links">
+      </ul>
+    </div>
+  </footer>
+</div>
 `;
 
 exports[`COMPONENTS/Footer WithEmptyLinks smoke-test 1`] = `
-<footer class="footer">
-  <hr class="footer__line">
-  <div class="footer__content">
-    <span>
-      © 2024 legal-one
-    </span>
-    <ul class="footer__links">
-    </ul>
-  </div>
-</footer>
+<div style="max-width: 1100px;">
+  <footer class="footer">
+    <hr class="footer__line">
+    <div class="footer__content">
+      <span>
+        © 2024 legal-one
+      </span>
+      <ul class="footer__links">
+      </ul>
+    </div>
+  </footer>
+</div>
 `;
 
 exports[`COMPONENTS/Footer WithLinks play-test 1`] = `
-<footer class="footer">
-  <hr class="footer__line">
-  <div class="footer__content">
-    <span>
-      © 2024 legal-one
-    </span>
-    <ul class="footer__links">
-      <li class="footer__link">
-        <button type="button"
-                tabindex="0"
-        >
-          Allgemeine Informationen
-        </button>
-        <div class="footer__separator">
-        </div>
-      </li>
-      <li class="footer__link">
-        <button type="button"
-                tabindex="0"
-        >
-          Datenschutz
-        </button>
-        <div class="footer__separator">
-        </div>
-      </li>
-      <li class="footer__link">
-        <button type="button"
-                tabindex="0"
-        >
-          Impressum
-        </button>
-        <div class="footer__separator">
-        </div>
-      </li>
-    </ul>
-  </div>
-</footer>
+<div style="max-width: 1100px;">
+  <footer class="footer">
+    <hr class="footer__line">
+    <div class="footer__content">
+      <span>
+        © 2024 legal-one
+      </span>
+      <ul class="footer__links">
+        <li class="footer__link">
+          <button type="button"
+                  tabindex="0"
+          >
+            Allgemeine Informationen
+          </button>
+          <div class="footer__separator">
+          </div>
+        </li>
+        <li class="footer__link">
+          <button type="button"
+                  tabindex="0"
+          >
+            Datenschutz
+          </button>
+          <div class="footer__separator">
+          </div>
+        </li>
+        <li class="footer__link">
+          <button type="button"
+                  tabindex="0"
+          >
+            Impressum
+          </button>
+          <div class="footer__separator">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>
 `;

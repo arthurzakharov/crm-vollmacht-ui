@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`COMPONENTS/NavigationButton DefaultValues smoke-test 1`] = `
+exports[`INTERACTIONS/NavigationButton DefaultValues smoke-test 1`] = `
 <button type="button"
         tabindex="0"
         class="navigation-button navigation-button--forward"
@@ -11,7 +11,7 @@ exports[`COMPONENTS/NavigationButton DefaultValues smoke-test 1`] = `
 </button>
 `;
 
-exports[`COMPONENTS/NavigationButton Disabled play-test 1`] = `
+exports[`INTERACTIONS/NavigationButton Disabled play-test 1`] = `
 <button type="button"
         tabindex="0"
         disabled
@@ -23,7 +23,7 @@ exports[`COMPONENTS/NavigationButton Disabled play-test 1`] = `
 </button>
 `;
 
-exports[`COMPONENTS/NavigationButton TypeBackward smoke-test 1`] = `
+exports[`INTERACTIONS/NavigationButton TypeBackward smoke-test 1`] = `
 <button type="button"
         tabindex="0"
         class="navigation-button navigation-button--backward"
@@ -32,7 +32,7 @@ exports[`COMPONENTS/NavigationButton TypeBackward smoke-test 1`] = `
 </button>
 `;
 
-exports[`COMPONENTS/NavigationButton TypeForward play-test 1`] = `
+exports[`INTERACTIONS/NavigationButton TypeForward play-test 1`] = `
 <button type="button"
         tabindex="0"
         class="navigation-button navigation-button--forward"
@@ -43,7 +43,7 @@ exports[`COMPONENTS/NavigationButton TypeForward play-test 1`] = `
 </button>
 `;
 
-exports[`COMPONENTS/NavigationButton WithCustomText smoke-test 1`] = `
+exports[`INTERACTIONS/NavigationButton WithCustomText smoke-test 1`] = `
 <button type="button"
         tabindex="0"
         class="navigation-button navigation-button--forward"
