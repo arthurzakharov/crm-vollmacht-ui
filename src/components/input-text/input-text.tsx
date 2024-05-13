@@ -3,7 +3,7 @@ import type { FieldStatus } from "../../types";
 import React from "react";
 import { useToggle } from "usehooks-ts";
 import { Input } from "../input";
-import Label from "../label";
+import { Label } from "../label";
 import { StatusIcon } from "../status-icon";
 import "./input-text.css";
 

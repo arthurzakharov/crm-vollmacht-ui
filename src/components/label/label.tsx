@@ -1,33 +1,29 @@
-import type { PropsWithChildren, FC } from "react";
-import type { FieldStatus } from "../../types";
-import React from "react";
+import React, { PropsWithChildren, FC } from "react";
+import { FieldStatus } from "../../types";
 import cn from "classnames";
 import "./label.css";
 
-interface Props extends PropsWithChildren {
+export interface LabelProps {
   htmlFor: string;
-  size: "s" | "m";
-  status: FieldStatus;
+  size?: "s" | "m";
+  status?: FieldStatus;
 }
 
-const Label: FC<Props> = (props) => {
-  const labelCn = (): string => {
-    return cn("label", {
-      "label--s": props.size === "s",
-      "label--m": props.size === "m",
-      "label--neutral": props.status === "neutral",
-      "label--success": props.status === "success",
-      "label--error": props.status === "error",
+export const Label: FC<PropsWithChildren<LabelProps>> = (props) => {
+  const { htmlFor, size = "m", status = "neutral", children } = props;
+
+  const labelCn = (): string =>
+    cn("label", {
+      "label--s": size === "s",
+      "label--m": size === "m",
+      "label--neutral": status === "neutral",
+      "label--success": status === "success",
+      "label--error": status === "error",
     });
-  };
 
   return (
-    <label htmlFor={props.htmlFor} data-size={props.size} data-status={props.status} className={labelCn()}>
-      {props.children}
+    <label htmlFor={htmlFor} data-size={size} data-status={status} className={labelCn()}>
+      {children}
     </label>
   );
 };
-
-Label.displayName = "Label";
-
-export default Label;

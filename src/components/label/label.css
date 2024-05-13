@@ -20,18 +20,18 @@
 
 .label--success,
 .label--neutral {
-  color: var(--gray-2);
+  color: var(--text-primary);
 }
 
 .label--error {
-  color: var(--red-1);
+  color: var(--error);
 }
 
 .label button,
 .label a {
   position: relative;
   z-index: 1;
-  color: var(--blue-1);
+  color: var(--link);
 }
 
 .label a:hover {

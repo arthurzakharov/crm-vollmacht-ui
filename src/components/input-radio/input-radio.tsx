@@ -1,6 +1,6 @@
 import React, { MouseEvent, useState } from "react";
 import { FieldStatus, Option } from "../../types";
-import Label from "../label";
+import { Label } from "../label";
 import { Radio } from "../radio";
 import "./input-radio.css";
 
