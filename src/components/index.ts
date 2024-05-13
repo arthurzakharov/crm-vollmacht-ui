@@ -15,7 +15,7 @@ export { default as FormRow } from "../components/form-row";
 export * from "../components/header";
 export * from "../components/input";
 export { default as InputCheckbox } from "../components/input-checkbox";
-export { default as InputRadio } from "../components/input-radio";
+export * from "../components/input-radio";
 export { default as InputText } from "../components/input-text";
 export { default as Label } from "../components/label";
 export * from "../components/layout-with-sidebar";

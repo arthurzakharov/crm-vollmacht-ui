@@ -2,7 +2,7 @@ import type { PropsWithChildren } from "react";
 import React, { useState } from "react";
 import cn from "classnames";
 import AnimateHeight from "react-animate-height";
-import InputRadio from "../input-radio";
+import { InputRadio } from "../input-radio";
 import "./files.css";
 
 type GotLetter = "yes" | "no" | "";

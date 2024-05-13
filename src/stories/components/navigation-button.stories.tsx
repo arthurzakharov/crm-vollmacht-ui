@@ -5,7 +5,7 @@ import { NavigationButton } from "../../components";
 type Story = StoryObj<typeof NavigationButton>;
 
 const meta: Meta<typeof NavigationButton> = {
-  title: "COMPONENTS/NavigationButton",
+  title: "INTERACTIONS/NavigationButton",
   component: NavigationButton,
 };
 

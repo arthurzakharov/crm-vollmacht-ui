@@ -2,7 +2,7 @@ import type { ReactNode, MouseEvent } from "react";
 import type { QuestionType } from "../../types";
 import React, { useEffect, useState } from "react";
 import cn from "classnames";
-import InputRadio from "../input-radio";
+import { InputRadio } from "../input-radio";
 import InputText from "../input-text";
 import "./question.css";
 

@@ -7,7 +7,7 @@ import MaxWidthDecorator from "../decorators/max-width-decorator";
 type Story = StoryObj<typeof Input>;
 
 const meta: Meta<typeof Input> = {
-  title: "COMPONENTS/Input",
+  title: "INTERACTIONS/Input",
   component: Input,
   parameters: {
     MaxWidthDecorator: 280,

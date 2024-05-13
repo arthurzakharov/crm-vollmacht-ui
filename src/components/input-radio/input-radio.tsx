@@ -1,35 +1,44 @@
-import type { MouseEvent } from "react";
-import type { FieldStatus, Option } from "../../types";
-import React, { useState } from "react";
+import React, { MouseEvent, useState } from "react";
+import { FieldStatus, Option } from "../../types";
 import Label from "../label";
 import { Radio } from "../radio";
 import "./input-radio.css";
 
-interface Props<T extends string = string> {
+export interface InputRadioProps<T extends string> {
   options: Option<T>[];
   value: T;
   name: string;
-  status: FieldStatus;
-  sizeRadio: "m" | "l";
-  sizeLabel: "s" | "m";
+  status?: FieldStatus;
+  sizeRadio?: "m" | "l";
+  sizeLabel?: "s" | "m";
   disabled?: boolean;
-  onChange: (value: T, type: string) => void;
+  onChange: (v: T, t: string) => void;
 }
 
-function InputRadio<T extends string = string>(props: Props<T>) {
+export const InputRadio = <T extends string>(props: InputRadioProps<T>) => {
+  const {
+    options,
+    value,
+    name,
+    status = "neutral",
+    sizeRadio = "m",
+    sizeLabel = "m",
+    disabled = false,
+    onChange,
+  } = props;
   const [focusedOption, setFocusedOption] = useState<string>("");
 
   const onOptionClick = (e: MouseEvent<HTMLDivElement>, value: T): void => {
     e.preventDefault();
-    if ((e.clientX === 0 && e.clientY === 0) || props.disabled) return;
-    props.onChange(value, e.type);
+    if ((e.clientX === 0 && e.clientY === 0) || disabled) return;
+    onChange(value, e.type);
   };
 
   return (
     <div className="input-radio">
-      {props.options.map((option: Option<T>) => (
+      {options.map((option: Option<T>) => (
         <div
-          id={props.name}
+          id={name}
           key={option.value}
           className="input-radio__option"
           onClick={(e) => onOptionClick(e, option.value)}
@@ -37,27 +46,27 @@ function InputRadio<T extends string = string>(props: Props<T>) {
           <input
             id={option.value}
             value={option.value}
-            name={props.name}
-            disabled={props.disabled}
+            name={name}
+            disabled={disabled}
             type="radio"
             tabIndex={0}
-            checked={props.value === option.value}
+            checked={value === option.value}
             className="input-radio__element"
             onFocus={(e) => setFocusedOption(e.target.value)}
             onBlur={() => setFocusedOption("")}
-            onChange={(e) => props.onChange(e.target.value as T, e.type)}
+            onChange={(e) => onChange(e.target.value as T, e.type)}
           />
           <div className="input-radio__box">
             <Radio
-              value={props.value === option.value}
+              value={value === option.value}
               focused={focusedOption === option.value}
-              disabled={props.disabled}
-              status={props.status}
-              size={props.sizeRadio}
+              disabled={disabled}
+              status={status}
+              size={sizeRadio}
             />
           </div>
           <div className="input-radio__label">
-            <Label htmlFor={option.value} size={props.sizeLabel} status={props.status}>
+            <Label htmlFor={option.value} size={sizeLabel} status={status}>
               {option.label}
             </Label>
           </div>
@@ -65,8 +74,4 @@ function InputRadio<T extends string = string>(props: Props<T>) {
       ))}
     </div>
   );
-}
-
-InputRadio.displayName = "InputRadio";
-
-export default InputRadio;
+};
