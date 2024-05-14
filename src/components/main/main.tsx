@@ -13,7 +13,7 @@ export interface MainProps {
   infoList?: [string, string][];
 }
 
-const Main: FC<PropsWithChildren<MainProps>> = (props) => {
+export const Main: FC<PropsWithChildren<MainProps>> = (props) => {
   const { page, title, subtitle = "", text = "", step = "", infoList = [], children } = props;
   const isPortableDevice = useMediaQuery("(max-width: 1023px)");
 
