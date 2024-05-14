@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { expect, fireEvent, fn, userEvent, within } from "@storybook/test";
+import { expect, fn, within } from "@storybook/test";
 import { InputCheckbox } from "../../components";
 import MaxWidthDecorator from "../decorators/max-width-decorator";
+import { Delayed } from "../utils";
 
 type Story = StoryObj<typeof InputCheckbox>;
 
@@ -50,23 +51,23 @@ export const Demo: Story = {
     const button = within(canvasElement).getByRole("button");
     const link = within(canvasElement).getByRole("link");
     await step("Click to ", async () => {
-      await userEvent.click(content);
+      await Delayed.click(content);
       await expect(args.onChange).toHaveBeenNthCalledWith(1, true);
     });
     await step("Use keyboard to select", async () => {
-      await userEvent.tab();
+      await Delayed.tab();
       await expect(checkbox).toHaveFocus();
-      await userEvent.keyboard("[Space]");
+      await Delayed.keyboard("[Space]");
       await expect(args.onChange).toHaveBeenNthCalledWith(2, false);
       await expect(checkbox).toHaveFocus();
-      await userEvent.tab();
+      await Delayed.tab();
       await expect(checkbox).not.toHaveFocus();
     });
     await step("Click on button and link in passed child", async () => {
-      await userEvent.click(button);
+      await Delayed.click(button);
       await expect(button).not.toHaveFocus();
       await expect(args.onChange).toHaveBeenCalledTimes(2);
-      await userEvent.click(link);
+      await Delayed.click(link);
       await expect(button).not.toHaveFocus();
       await expect(args.onChange).toHaveBeenCalledTimes(2);
     });

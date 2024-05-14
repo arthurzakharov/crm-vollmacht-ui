@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { fn, within, userEvent, expect } from "@storybook/test";
+import { fn, within, expect } from "@storybook/test";
 import { CustomerInfo } from "../../components";
 import MaxWidthDecorator from "../decorators/max-width-decorator";
+import { Delayed } from "../utils";
 
 type Story = StoryObj<typeof CustomerInfo>;
 
@@ -56,13 +57,13 @@ export const EditButtonVisible: Story = {
   play: async ({ args, canvasElement, step }) => {
     const button = within(canvasElement).getByRole("button");
     await step("Click edit button, focus not active", async () => {
-      await userEvent.click(button);
+      await Delayed.click(button);
       await expect(args.onClick).toHaveBeenNthCalledWith(1);
       await expect(button).not.toHaveFocus();
     });
     await step("Click with keyboard, focus not active", async () => {
-      await userEvent.tab();
-      await userEvent.keyboard("[Space]");
+      await Delayed.tab();
+      await Delayed.keyboard("[Space]");
       await expect(args.onClick).toHaveBeenNthCalledWith(2);
       await expect(button).not.toHaveFocus();
     });
