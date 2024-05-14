@@ -22,7 +22,7 @@ export * from "../components/layout-with-sidebar";
 export * from "../components/layout-without-sidebar";
 export * from "../components/loader";
 export * from "../components/logos";
-export { default as Main } from "../components/main";
+export * from "../components/main";
 export { default as Question } from "../components/question";
 export { default as Questionnaire } from "../components/questionnaire";
 export { default as QuestionnaireTitle } from "../components/questionnaire-title";
