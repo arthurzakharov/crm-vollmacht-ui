@@ -2,8 +2,10 @@ import React, { FC } from "react";
 import cn from "classnames";
 import "./status-icon.css";
 
+export type StatusIconType = "success" | "error";
+
 export interface StatusIconProps {
-  status: "success" | "error";
+  status: StatusIconType;
   size?: "s" | "m" | "l";
   idle?: boolean;
 }

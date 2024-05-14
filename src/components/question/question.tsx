@@ -3,7 +3,7 @@ import type { QuestionType } from "../../types";
 import React, { useEffect, useState } from "react";
 import cn from "classnames";
 import { InputRadio } from "../input-radio";
-import InputText from "../input-text";
+import { InputText } from "../input-text";
 import "./question.css";
 
 type QuestionState = "answered" | "active" | "not-answered";

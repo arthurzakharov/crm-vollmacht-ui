@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`INTERACTIONS/InputText DefaultValues smoke-test 1`] = `
+<div style="max-width: 300px;">
+  <div class="input-text">
+    <div class="input-text__label">
+      <label for="firstName"
+             data-size="s"
+             data-status="neutral"
+             class="label label--s label--neutral"
+      >
+        First name
+      </label>
+    </div>
+    <div class="input-text__wrap">
+      <input type="text"
+             maxlength="12"
+             name="firstName"
+             id="firstName"
+             placeholder
+             class="input input--primary input--success"
+             value
+      >
+      <div class="input-text__icon">
+        <div class="status-icon status-icon--success status-icon--l status-icon--active">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`INTERACTIONS/InputText Demo smoke-test 1`] = `
+<div style="max-width: 300px;">
+  <div class="input-text">
+    <div class="input-text__label">
+      <label for="firstName"
+             data-size="s"
+             data-status="neutral"
+             class="label label--s label--neutral"
+      >
+        First name
+      </label>
+    </div>
+    <div class="input-text__wrap">
+      <input type="text"
+             maxlength="12"
+             name="firstName"
+             id="firstName"
+             placeholder
+             class="input input--primary input--success"
+             value
+      >
+      <div class="input-text__icon">
+        <div class="status-icon status-icon--success status-icon--l status-icon--active">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

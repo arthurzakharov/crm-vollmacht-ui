@@ -16,7 +16,7 @@ export * from "../components/header";
 export * from "../components/input";
 export * from "../components/input-checkbox";
 export * from "../components/input-radio";
-export { default as InputText } from "../components/input-text";
+export * from "../components/input-text";
 export * from "../components/label";
 export * from "../components/layout-with-sidebar";
 export * from "../components/layout-without-sidebar";

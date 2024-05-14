@@ -15,8 +15,8 @@
   left: 0;
   bottom: 38px;
   width: 100%;
-  background-color: var(--red-1);
-  color: var(--white-1);
+  background-color: var(--error);
+  color: var(--background-secondary);
   text-align: center;
   line-height: 1.6;
 }
@@ -30,7 +30,7 @@
   bottom: -5px;
   height: 0;
   width: 0;
-  border-color: var(--red-1) transparent transparent;
+  border-color: var(--error) transparent transparent;
   border-style: solid;
   border-width: 6px 6px 0;
 }
