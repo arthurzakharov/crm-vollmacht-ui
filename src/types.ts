@@ -1,6 +1,6 @@
 import type { ReactNode, HTMLInputTypeAttribute } from "react";
 
-export type Page = "home" | "remuneration" | "attachment" | "error";
+export type Screen = "home" | "remuneration" | "attachment" | "error";
 
 export type HomeStep = "personal" | "address" | "checkout" | "remuneration";
 

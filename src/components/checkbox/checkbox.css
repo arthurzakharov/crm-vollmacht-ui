@@ -8,7 +8,7 @@
   background-color: var(--input-checkbox);
   border: none;
   border-radius: 2px;
-  box-shadow: var(--checkbox-shadow);
+  box-shadow: var(--shadow-inner-secondary);
 
   outline: 2px solid transparent;
   transition: outline-color 150ms ease-in-out;

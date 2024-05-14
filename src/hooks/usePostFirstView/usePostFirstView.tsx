@@ -1,9 +1,9 @@
-import type { Page, ApiStatus } from "../../types";
+import type { Screen, ApiStatus } from "../../types";
 import { useEffect } from "react";
 
 const usePostFirstView = (
   firstViewUrl: null | string,
-  currentPage: null | Page,
+  currentPage: null | Screen,
   isAuthenticationResolved: ApiStatus,
   postUrl: (url: string) => void,
 ) => {

@@ -1,9 +1,9 @@
-import type { Page, WhereSecret } from "../../types";
+import type { Screen, WhereSecret } from "../../types";
 import type { Location, Params } from "react-router-dom";
 import { useEffect } from "react";
 
 const useGetSecretFromUrl = (
-  page: Page,
+  page: Screen,
   location: Location,
   params: Params,
   secretLength: number,
@@ -11,7 +11,7 @@ const useGetSecretFromUrl = (
 ) => {
   const secret = params.secret || "";
 
-  const fromWhereGetSecret = (page: Page): WhereSecret => {
+  const fromWhereGetSecret = (page: Screen): WhereSecret => {
     switch (page) {
       case "home":
         return "query";
@@ -31,7 +31,7 @@ const useGetSecretFromUrl = (
     return secret.length === secretLength;
   };
 
-  const getSecret = (page: Page, search: string, secret: string): string => {
+  const getSecret = (page: Screen, search: string, secret: string): string => {
     switch (fromWhereGetSecret(page)) {
       case "query":
         const querySecret = secretFromUrlParam(search);

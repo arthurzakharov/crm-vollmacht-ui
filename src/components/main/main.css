@@ -80,7 +80,7 @@
 
 .main__info {
   padding: 12px 16px;
-  box-shadow: var(--sidebar-info-shadow);
+  box-shadow: var(--shadow-inner-primary);
   background-color: var(--background-tertiary);
 }
 

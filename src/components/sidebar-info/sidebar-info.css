@@ -1,6 +1,6 @@
 .sidebar-info {
   padding: 12px 22px;
-  box-shadow: var(--sidebar-info-shadow);
+  box-shadow: var(--shadow-inner-primary);
   background-color: var(--background-tertiary);
 }
 
