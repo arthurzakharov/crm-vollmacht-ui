@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { expect, fn, within, mocks } from "@storybook/test";
+import { expect, fn, within, userEvent } from "@storybook/test";
 import { InputText } from "../../components";
-import { Delayed } from "../utils";
 import MaxWidthDecorator from "../decorators/max-width-decorator";
 
 type Story = StoryObj<typeof InputText>;
@@ -46,16 +45,16 @@ export const Demo: Story = {
       await expect(within(canvasElement).queryByTestId("input-text-label")).toBeInTheDocument();
     });
     await step("Focus input field calls onFocus and onBlur", async () => {
-      await Delayed.tab();
+      await userEvent.tab();
       await expect(input).toHaveFocus();
-      await Delayed.tab();
+      await userEvent.tab();
       await expect(input).not.toHaveFocus();
       await expect(args.onBlur).toHaveBeenNthCalledWith(1);
       await expect(args.onFocus).toHaveBeenNthCalledWith(1);
     });
     await step("Type some text", async () => {
-      await Delayed.tab();
-      await Delayed.type(input, "test");
+      await userEvent.tab();
+      await userEvent.type(input, "test");
       await expect(args.onChange).toHaveBeenNthCalledWith(1, "t");
       await expect(args.onChange).toHaveBeenNthCalledWith(2, "te");
       await expect(args.onChange).toHaveBeenNthCalledWith(3, "tes");
@@ -76,9 +75,9 @@ export const EnabledStatusNeutral: Story = {
     });
     await step("Popup is not visible if field is neutral even if it is focused", async () => {
       await expect(within(canvasElement).queryByTestId("input-text-popup")).not.toBeInTheDocument();
-      await Delayed.tab();
+      await userEvent.tab();
       await expect(within(canvasElement).queryByTestId("input-text-popup")).not.toBeInTheDocument();
-      await Delayed.tab();
+      await userEvent.tab();
       await expect(within(canvasElement).queryByTestId("input-text-popup")).not.toBeInTheDocument();
     });
   },
@@ -96,9 +95,9 @@ export const EnabledStatusSuccess: Story = {
     });
     await step("Popup is not visible if field is success even if it is focused", async () => {
       await expect(within(canvasElement).queryByTestId("input-text-popup")).not.toBeInTheDocument();
-      await Delayed.tab();
+      await userEvent.tab();
       await expect(within(canvasElement).queryByTestId("input-text-popup")).not.toBeInTheDocument();
-      await Delayed.tab();
+      await userEvent.tab();
       await expect(within(canvasElement).queryByTestId("input-text-popup")).not.toBeInTheDocument();
     });
   },
@@ -116,9 +115,9 @@ export const EnabledStatusError: Story = {
     });
     await step("Popup is visible if field is error and it is focused", async () => {
       await expect(within(canvasElement).queryByTestId("input-text-popup")).not.toBeInTheDocument();
-      await Delayed.tab();
+      await userEvent.tab();
       await expect(within(canvasElement).queryByTestId("input-text-popup")).toBeInTheDocument();
-      await Delayed.tab();
+      await userEvent.tab();
       await expect(within(canvasElement).queryByTestId("input-text-popup")).not.toBeInTheDocument();
     });
   },
@@ -190,9 +189,9 @@ export const DefaultValues: Story = {
     const input = within(canvasElement).getByRole("textbox");
     await step("Click will not call onFocus and onBlur if they are not passed", async () => {
       // TODO: find out how to mock undefined handlers
-      await Delayed.tab();
+      await userEvent.tab();
       await expect(input).toHaveFocus();
-      await Delayed.tab();
+      await userEvent.tab();
       await expect(input).not.toHaveFocus();
       await expect(args.onBlur).toBeCalled();
       await expect(args.onFocus).toBeCalled();

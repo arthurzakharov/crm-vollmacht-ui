@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { fn, within, expect } from "@storybook/test";
+import { fn, within, expect, userEvent } from "@storybook/test";
 import { NavigationButton } from "../../components";
-import { Delayed } from "../utils";
 
 type Story = StoryObj<typeof NavigationButton>;
 
@@ -21,11 +20,11 @@ export const TypeForward: Story = {
   play: async ({ args, canvasElement, step }) => {
     const canvas = within(canvasElement);
     await step("Click in not disabled state", async () => {
-      await Delayed.click(canvas.getByRole("button"));
+      await userEvent.click(canvas.getByRole("button"));
       await expect(args.onClick).toHaveBeenNthCalledWith(1);
     });
     await step("Button is not in focus after click", async () => {
-      await Delayed.click(canvas.getByRole("button"));
+      await userEvent.click(canvas.getByRole("button"));
       await expect(canvas.getByRole("button")).not.toHaveFocus();
     });
   },
@@ -62,7 +61,7 @@ export const Disabled: Story = {
   play: async ({ args, canvasElement, step }) => {
     const canvas = within(canvasElement);
     await step("Click in not disabled state", async () => {
-      await Delayed.click(canvas.getByRole("button"));
+      await userEvent.click(canvas.getByRole("button"));
       await expect(args.onClick).not.toBeCalled();
     });
   },

@@ -1,8 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { within, fn, expect } from "@storybook/test";
+import { within, fn, expect, userEvent } from "@storybook/test";
 import { Footer } from "../../components";
 import MaxWidthDecorator from "../decorators/max-width-decorator";
-import { Delayed } from "../utils";
 
 type Story = StoryObj<typeof Footer>;
 
@@ -39,7 +38,7 @@ export const WithLinks: Story = {
     await step("Clicking links one by one, check if CBs are fired", async () => {
       if (args.links) {
         for (const link of args.links) {
-          await Delayed.click(canvas.getByText(link.text));
+          await userEvent.click(canvas.getByText(link.text));
           await expect(link.onClick).toHaveBeenNthCalledWith(1);
         }
       }

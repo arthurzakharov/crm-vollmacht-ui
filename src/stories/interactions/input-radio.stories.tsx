@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { expect, fn, within } from "@storybook/test";
+import { expect, fn, within, fireEvent, userEvent } from "@storybook/test";
 import { InputRadio } from "../../components";
-import { Delayed } from "../utils";
 
 type VALUES = "female" | "male" | "";
 
@@ -48,16 +47,16 @@ export const Demo: Story = {
       await expect(male).not.toBeChecked();
     });
     await step("Click male", async () => {
-      await Delayed.click(male, {
+      await fireEvent.click(male, {
         clientX: 1,
         clientY: 2,
       });
       await expect(args.onChange).toHaveBeenNthCalledWith(1, "male", "click");
     });
     await step("Use Tab to select value", async () => {
-      await Delayed.tab();
-      await Delayed.keyboard("[ArrowRight]");
-      await Delayed.keyboard("[ArrowRight]");
+      await userEvent.tab();
+      await userEvent.keyboard("[ArrowRight]");
+      await userEvent.keyboard("[ArrowRight]");
       await expect(args.onChange).toHaveBeenNthCalledWith(2, "male", "change");
       await expect(args.onChange).toHaveBeenNthCalledWith(3, "female", "change");
     });

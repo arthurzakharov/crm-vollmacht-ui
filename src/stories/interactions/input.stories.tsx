@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { fn, within, expect } from "@storybook/test";
+import { fn, within, expect, userEvent } from "@storybook/test";
 import { Input } from "../../components";
 import MaxWidthDecorator from "../decorators/max-width-decorator";
-import { Delayed } from "../utils";
 
 type Story = StoryObj<typeof Input>;
 
@@ -96,15 +95,15 @@ export const Masked: Story = {
   play: async ({ args, canvasElement, step }) => {
     const input = within(canvasElement).getByRole("textbox");
     await step("Focus in and out", async () => {
-      await Delayed.tab();
-      await Delayed.tab();
+      await userEvent.tab();
+      await userEvent.tab();
       await expect(args.onFocus).toHaveBeenNthCalledWith(1);
       await expect(args.onBlur).toHaveBeenNthCalledWith(1);
       await expect(args.onChange).toHaveBeenNthCalledWith(1, "TT/MM/JJJJ");
       await expect(args.onChange).toHaveBeenNthCalledWith(2, "");
     });
     await step("Type", async () => {
-      await Delayed.type(input, "12122000");
+      await userEvent.type(input, "12122000");
       await expect(args.onChange).toHaveBeenNthCalledWith(3, "TT/MM/JJJJ");
       await expect(args.onChange).toHaveBeenNthCalledWith(4, "1T/MM/JJJJ");
       await expect(args.onChange).toHaveBeenNthCalledWith(5, "12/MM/JJJJ");
@@ -114,55 +113,55 @@ export const Masked: Story = {
       await expect(args.onChange).toHaveBeenNthCalledWith(9, "12/12/20JJ");
       await expect(args.onChange).toHaveBeenNthCalledWith(10, "12/12/200J");
       await expect(args.onChange).toHaveBeenNthCalledWith(11, "12/12/2000");
-      await Delayed.tab();
+      await userEvent.tab();
     });
     await step("Check that caret always returns to first not entered number", async () => {
-      await Delayed.tab();
-      await Delayed.type(input, "{backspace}");
-      await Delayed.type(input, "{backspace}");
-      await Delayed.type(input, "{backspace}");
+      await userEvent.tab();
+      await userEvent.type(input, "{backspace}");
+      await userEvent.type(input, "{backspace}");
+      await userEvent.type(input, "{backspace}");
       await expect(args.onChange).toHaveBeenNthCalledWith(14, "12/12/2JJJ");
-      await Delayed.tab();
-      await Delayed.click(input);
-      await Delayed.keyboard("8");
+      await userEvent.tab();
+      await userEvent.click(input);
+      await userEvent.keyboard("8");
       await expect(args.onChange).toHaveBeenNthCalledWith(15, "12/12/28JJ");
-      await Delayed.tab();
+      await userEvent.tab();
     });
     await step("Press ArrowUp and ArrowDown does not move caret", async () => {
-      await Delayed.click(input);
-      await Delayed.keyboard("[ArrowUp]");
-      await Delayed.keyboard("8");
+      await userEvent.click(input);
+      await userEvent.keyboard("[ArrowUp]");
+      await userEvent.keyboard("8");
       await expect(args.onChange).toHaveBeenNthCalledWith(16, "12/12/288J");
-      await Delayed.type(input, "{backspace}");
+      await userEvent.type(input, "{backspace}");
       await expect(args.onChange).toHaveBeenNthCalledWith(17, "12/12/28JJ");
-      await Delayed.keyboard("[ArrowDown]");
-      await Delayed.keyboard("8");
+      await userEvent.keyboard("[ArrowDown]");
+      await userEvent.keyboard("8");
       await expect(args.onChange).toHaveBeenNthCalledWith(18, "12/12/288J");
-      await Delayed.type(input, "{backspace}");
-      await Delayed.type(input, "{backspace}");
-      await Delayed.type(input, "{backspace}");
+      await userEvent.type(input, "{backspace}");
+      await userEvent.type(input, "{backspace}");
+      await userEvent.type(input, "{backspace}");
       await expect(args.onChange).toHaveBeenNthCalledWith(21, "12/12/JJJJ");
-      await Delayed.tab();
+      await userEvent.tab();
     });
     await step("Press ArrowLeft and ArrowRight move caret", async () => {
-      await Delayed.click(input);
-      await Delayed.keyboard("[ArrowRight]");
-      await Delayed.keyboard("2");
+      await userEvent.click(input);
+      await userEvent.keyboard("[ArrowRight]");
+      await userEvent.keyboard("2");
       await expect(args.onChange).toHaveBeenNthCalledWith(22, "12/12/2JJJ");
-      await Delayed.keyboard("[ArrowLeft]");
-      await Delayed.keyboard("[ArrowLeft]");
-      await Delayed.keyboard("[ArrowLeft]");
-      await Delayed.keyboard("[ArrowLeft]");
-      await Delayed.keyboard("1");
+      await userEvent.keyboard("[ArrowLeft]");
+      await userEvent.keyboard("[ArrowLeft]");
+      await userEvent.keyboard("[ArrowLeft]");
+      await userEvent.keyboard("[ArrowLeft]");
+      await userEvent.keyboard("1");
       await expect(args.onChange).toHaveBeenNthCalledWith(23, "11/12/2JJJ");
-      await Delayed.keyboard("[ArrowRight]");
-      await Delayed.keyboard("[ArrowRight]");
-      await Delayed.keyboard("[ArrowRight]");
-      await Delayed.keyboard("1");
+      await userEvent.keyboard("[ArrowRight]");
+      await userEvent.keyboard("[ArrowRight]");
+      await userEvent.keyboard("[ArrowRight]");
+      await userEvent.keyboard("1");
       await expect(args.onChange).toHaveBeenNthCalledWith(24, "11/12/1JJJ");
-      await Delayed.keyboard("9");
-      await Delayed.keyboard("9");
-      await Delayed.keyboard("9");
+      await userEvent.keyboard("9");
+      await userEvent.keyboard("9");
+      await userEvent.keyboard("9");
       await expect(args.onChange).toHaveBeenNthCalledWith(27, "11/12/1999");
     });
   },
@@ -177,19 +176,19 @@ export const NotMasked: Story = {
   play: async ({ args, canvasElement, step }) => {
     const input = within(canvasElement).getByRole("textbox");
     await step("Focus in and out", async () => {
-      await Delayed.tab();
-      await Delayed.tab();
+      await userEvent.tab();
+      await userEvent.tab();
       await expect(args.onFocus).toHaveBeenNthCalledWith(1);
       await expect(args.onBlur).toHaveBeenNthCalledWith(1);
       await expect(args.onChange).not.toBeCalled();
     });
     await step("Type", async () => {
-      await Delayed.type(input, "test");
+      await userEvent.type(input, "test");
       await expect(args.onChange).toHaveBeenNthCalledWith(1, "t");
       await expect(args.onChange).toHaveBeenNthCalledWith(2, "te");
       await expect(args.onChange).toHaveBeenNthCalledWith(3, "tes");
       await expect(args.onChange).toHaveBeenNthCalledWith(4, "test");
-      await Delayed.tab();
+      await userEvent.tab();
     });
   },
 };
