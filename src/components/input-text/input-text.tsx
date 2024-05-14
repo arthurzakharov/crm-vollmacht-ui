@@ -2,14 +2,15 @@ import React, { FC, HTMLInputTypeAttribute } from "react";
 import { useToggle } from "usehooks-ts";
 import { Input } from "../input";
 import { Label } from "../label";
-import { StatusIcon, StatusIconType } from "../status-icon";
+import { StatusIcon } from "../status-icon";
+import { FieldStatus } from "../../types";
 import "./input-text.css";
 
 export interface InputTextProps {
   label: string;
   value: string;
   name: string;
-  status?: StatusIconType;
+  status: FieldStatus;
   popup?: string;
   placeholder?: string;
   masked?: boolean;
@@ -26,7 +27,7 @@ export const InputText: FC<InputTextProps> = (props) => {
     label,
     value,
     name,
-    status = "success",
+    status = "neutral",
     popup = "",
     placeholder = "",
     masked = false,
@@ -34,32 +35,30 @@ export const InputText: FC<InputTextProps> = (props) => {
     maxLength = 12,
     type = "text",
     onChange,
-    onFocus = () => {},
-    onBlur = () => {},
+    onFocus,
+    onBlur,
   } = props;
   const [isFocused, toggleIsFocused] = useToggle(false);
 
   const onInputFocus = (): void => {
-    onFocus();
+    onFocus && onFocus();
     toggleIsFocused();
   };
 
   const onInputBlur = (): void => {
-    onBlur();
+    onBlur && onBlur();
     toggleIsFocused();
   };
 
-  const isPopupVisible = (): boolean => !!popup && status === "error" && isFocused;
-
-  const isStatusIconVisible = (): boolean => !disabled && (status === "error" || status === "success");
-
-  const getStatusIconState = (): "error" | "success" => (status === "error" ? "error" : "success");
-
   return (
     <div className="input-text">
-      {isPopupVisible() && <div className="input-text__popup">{popup}</div>}
+      {status === "error" && isFocused ? (
+        <div data-testid="input-text-popup" className="input-text__popup">
+          {popup}
+        </div>
+      ) : null}
       {label ? (
-        <div className="input-text__label">
+        <div data-testid="input-text-label" className="input-text__label">
           <Label htmlFor={name} size="s" status="neutral">
             {label}
           </Label>
@@ -80,11 +79,11 @@ export const InputText: FC<InputTextProps> = (props) => {
           onFocus={onInputFocus}
           onBlur={onInputBlur}
         />
-        {isStatusIconVisible() && (
-          <div className="input-text__icon">
-            <StatusIcon status={getStatusIconState()} size="l" />
+        {!disabled && (status === "error" || status === "success") ? (
+          <div data-testid="input-text-icon" className="input-text__icon">
+            <StatusIcon status={status} size="l" />
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );

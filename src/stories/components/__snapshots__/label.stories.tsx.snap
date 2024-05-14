@@ -2,8 +2,6 @@
 
 exports[`COMPONENTS/Label DefaultValues smoke-test 1`] = `
 <label for="test"
-       data-size="m"
-       data-status="neutral"
        class="label label--m label--neutral"
 >
   Label text
@@ -12,8 +10,6 @@ exports[`COMPONENTS/Label DefaultValues smoke-test 1`] = `
 
 exports[`COMPONENTS/Label SizeM smoke-test 1`] = `
 <label for="test"
-       data-size="m"
-       data-status="neutral"
        class="label label--m label--neutral"
 >
   Label text
@@ -22,8 +18,6 @@ exports[`COMPONENTS/Label SizeM smoke-test 1`] = `
 
 exports[`COMPONENTS/Label SizeS smoke-test 1`] = `
 <label for="test"
-       data-size="s"
-       data-status="neutral"
        class="label label--s label--neutral"
 >
   Label text
@@ -32,8 +26,6 @@ exports[`COMPONENTS/Label SizeS smoke-test 1`] = `
 
 exports[`COMPONENTS/Label StatusError smoke-test 1`] = `
 <label for="test"
-       data-size="m"
-       data-status="error"
        class="label label--m label--error"
 >
   Label text
@@ -42,8 +34,6 @@ exports[`COMPONENTS/Label StatusError smoke-test 1`] = `
 
 exports[`COMPONENTS/Label StatusNeutral smoke-test 1`] = `
 <label for="test"
-       data-size="m"
-       data-status="neutral"
        class="label label--m label--neutral"
 >
   Label text
@@ -52,8 +42,6 @@ exports[`COMPONENTS/Label StatusNeutral smoke-test 1`] = `
 
 exports[`COMPONENTS/Label StatusSuccess smoke-test 1`] = `
 <label for="test"
-       data-size="m"
-       data-status="success"
        class="label label--m label--success"
 >
   Label text

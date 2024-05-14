@@ -16,8 +16,6 @@ exports[`INTERACTIONS/InputRadio DefaultValues smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="female"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Frau
@@ -37,8 +35,6 @@ exports[`INTERACTIONS/InputRadio DefaultValues smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="male"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Herr
@@ -64,8 +60,6 @@ exports[`INTERACTIONS/InputRadio Demo play-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="female"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Frau
@@ -85,8 +79,6 @@ exports[`INTERACTIONS/InputRadio Demo play-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="male"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Herr
@@ -113,8 +105,6 @@ exports[`INTERACTIONS/InputRadio Disabled smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="female"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Frau
@@ -135,8 +125,6 @@ exports[`INTERACTIONS/InputRadio Disabled smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="male"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Herr
@@ -166,8 +154,6 @@ exports[`INTERACTIONS/InputRadio EmptyValue smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="female"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Frau
@@ -187,8 +173,6 @@ exports[`INTERACTIONS/InputRadio EmptyValue smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="male"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Herr
@@ -214,8 +198,6 @@ exports[`INTERACTIONS/InputRadio SizeLabelM smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="female"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Frau
@@ -235,8 +217,6 @@ exports[`INTERACTIONS/InputRadio SizeLabelM smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="male"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Herr
@@ -262,8 +242,6 @@ exports[`INTERACTIONS/InputRadio SizeLabelS smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="female"
-             data-size="s"
-             data-status="neutral"
              class="label label--s label--neutral"
       >
         Frau
@@ -283,8 +261,6 @@ exports[`INTERACTIONS/InputRadio SizeLabelS smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="male"
-             data-size="s"
-             data-status="neutral"
              class="label label--s label--neutral"
       >
         Herr
@@ -310,8 +286,6 @@ exports[`INTERACTIONS/InputRadio SizeRadioL smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="female"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Frau
@@ -331,8 +305,6 @@ exports[`INTERACTIONS/InputRadio SizeRadioL smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="male"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Herr
@@ -358,8 +330,6 @@ exports[`INTERACTIONS/InputRadio SizeRadioM smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="female"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Frau
@@ -379,8 +349,6 @@ exports[`INTERACTIONS/InputRadio SizeRadioM smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="male"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Herr
@@ -406,8 +374,6 @@ exports[`INTERACTIONS/InputRadio StatusError smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="female"
-             data-size="m"
-             data-status="error"
              class="label label--m label--error"
       >
         Frau
@@ -427,8 +393,6 @@ exports[`INTERACTIONS/InputRadio StatusError smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="male"
-             data-size="m"
-             data-status="error"
              class="label label--m label--error"
       >
         Herr
@@ -454,8 +418,6 @@ exports[`INTERACTIONS/InputRadio StatusNeutral smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="female"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Frau
@@ -475,8 +437,6 @@ exports[`INTERACTIONS/InputRadio StatusNeutral smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="male"
-             data-size="m"
-             data-status="neutral"
              class="label label--m label--neutral"
       >
         Herr
@@ -502,8 +462,6 @@ exports[`INTERACTIONS/InputRadio StatusSuccess smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="female"
-             data-size="m"
-             data-status="success"
              class="label label--m label--success"
       >
         Frau
@@ -523,8 +481,6 @@ exports[`INTERACTIONS/InputRadio StatusSuccess smoke-test 1`] = `
     </div>
     <div class="input-radio__label">
       <label for="male"
-             data-size="m"
-             data-status="success"
              class="label label--m label--success"
       >
         Herr

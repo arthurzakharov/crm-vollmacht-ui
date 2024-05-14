@@ -22,7 +22,7 @@ export const Label: FC<PropsWithChildren<LabelProps>> = (props) => {
     });
 
   return (
-    <label htmlFor={htmlFor} data-size={size} data-status={status} className={labelCn()}>
+    <label htmlFor={htmlFor} className={labelCn()}>
       {children}
     </label>
   );
