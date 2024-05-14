@@ -25,6 +25,16 @@ exports[`COMPONENTS/Radio SizeL smoke-test 1`] = `
 </div>
 `;
 
+exports[`COMPONENTS/Radio SizeL smoke-test 2`] = `
+<div class="radio radio--l radio--neutral radio--checked">
+</div>
+`;
+
+exports[`COMPONENTS/Radio SizeL smoke-test 3`] = `
+<div class="radio radio--l radio--neutral radio--checked">
+</div>
+`;
+
 exports[`COMPONENTS/Radio SizeM smoke-test 1`] = `
 <div class="radio radio--m radio--neutral radio--checked">
 </div>
@@ -46,6 +56,16 @@ exports[`COMPONENTS/Radio StatusNeutral smoke-test 1`] = `
 `;
 
 exports[`COMPONENTS/Radio StatusSuccess smoke-test 1`] = `
+<div class="radio radio--l radio--success radio--checked">
+</div>
+`;
+
+exports[`COMPONENTS/Radio StatusSuccess smoke-test 2`] = `
+<div class="radio radio--l radio--success radio--checked">
+</div>
+`;
+
+exports[`COMPONENTS/Radio StatusSuccess smoke-test 3`] = `
 <div class="radio radio--l radio--success radio--checked">
 </div>
 `;

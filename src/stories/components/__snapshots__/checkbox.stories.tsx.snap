@@ -34,3 +34,13 @@ exports[`COMPONENTS/Checkbox NotFocused smoke-test 1`] = `
 <div class="checkbox checkbox--checked">
 </div>
 `;
+
+exports[`COMPONENTS/Checkbox NotFocused smoke-test 2`] = `
+<div class="checkbox checkbox--checked">
+</div>
+`;
+
+exports[`COMPONENTS/Checkbox NotFocused smoke-test 3`] = `
+<div class="checkbox checkbox--checked">
+</div>
+`;

@@ -22,6 +22,28 @@ exports[`INTERACTIONS/Input ColorSecondary smoke-test 1`] = `
 </div>
 `;
 
+exports[`INTERACTIONS/Input ColorSecondary smoke-test 2`] = `
+<div style="max-width: 280px;">
+  <input name="input"
+         id="input"
+         class="input input--secondary input--neutral"
+         placeholder="TT/MM/JJJJ"
+         value="19/03/1988"
+  >
+</div>
+`;
+
+exports[`INTERACTIONS/Input ColorSecondary smoke-test 3`] = `
+<div style="max-width: 280px;">
+  <input name="input"
+         id="input"
+         class="input input--secondary input--neutral"
+         placeholder="TT/MM/JJJJ"
+         value="19/03/1988"
+  >
+</div>
+`;
+
 exports[`INTERACTIONS/Input DefaultValues smoke-test 1`] = `
 <div style="max-width: 280px;">
   <input type="text"
@@ -70,6 +92,28 @@ exports[`INTERACTIONS/Input NotMasked play-test 1`] = `
 `;
 
 exports[`INTERACTIONS/Input StatusError smoke-test 1`] = `
+<div style="max-width: 280px;">
+  <input name="input"
+         id="input"
+         class="input input--primary input--error"
+         placeholder="TT/MM/JJJJ"
+         value="19/03/1988"
+  >
+</div>
+`;
+
+exports[`INTERACTIONS/Input StatusError smoke-test 2`] = `
+<div style="max-width: 280px;">
+  <input name="input"
+         id="input"
+         class="input input--primary input--error"
+         placeholder="TT/MM/JJJJ"
+         value="19/03/1988"
+  >
+</div>
+`;
+
+exports[`INTERACTIONS/Input StatusError smoke-test 3`] = `
 <div style="max-width: 280px;">
   <input name="input"
          id="input"

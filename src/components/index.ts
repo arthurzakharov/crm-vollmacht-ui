@@ -11,7 +11,7 @@ export * from "../components/error-404";
 export { default as Files } from "../components/files";
 export * from "../components/footer";
 export * from "../components/navigation-button";
-export { default as FormRow } from "../components/form-row";
+export * from "../components/form-row";
 export * from "../components/header";
 export * from "../components/input";
 export * from "../components/input-checkbox";

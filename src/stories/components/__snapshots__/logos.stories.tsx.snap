@@ -82,3 +82,25 @@ exports[`COMPONENTS/Logos TuvOnly smoke-test 1`] = `
   </div>
 </div>
 `;
+
+exports[`COMPONENTS/Logos TuvOnly smoke-test 2`] = `
+<div style="max-width: 320px;">
+  <div class="logos">
+    <img alt="tuv-icon"
+         src="/src/assets/jpeg/tuv/tuv.jpeg"
+         class="logos__tuv"
+    >
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Logos TuvOnly smoke-test 3`] = `
+<div style="max-width: 320px;">
+  <div class="logos">
+    <img alt="tuv-icon"
+         src="/src/assets/jpeg/tuv/tuv.jpeg"
+         class="logos__tuv"
+    >
+  </div>
+</div>
+`;

@@ -19,6 +19,44 @@ exports[`COMPONENTS/CustomerInfo DefaultValues smoke-test 1`] = `
 </div>
 `;
 
+exports[`COMPONENTS/CustomerInfo DefaultValues smoke-test 2`] = `
+<div style="max-width: 295px;">
+  <div class="customer-info">
+    <div class="customer-info__navigation">
+      Ihre Angaben
+    </div>
+    <p>
+      Arthur Zakharov
+    </p>
+    <p>
+      Geb in 12/12/2000
+    </p>
+    <p>
+      Marienstr. 7, 01067 Dresden
+    </p>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/CustomerInfo DefaultValues smoke-test 3`] = `
+<div style="max-width: 295px;">
+  <div class="customer-info">
+    <div class="customer-info__navigation">
+      Ihre Angaben
+    </div>
+    <p>
+      Arthur Zakharov
+    </p>
+    <p>
+      Geb in 12/12/2000
+    </p>
+    <p>
+      Marienstr. 7, 01067 Dresden
+    </p>
+  </div>
+</div>
+`;
+
 exports[`COMPONENTS/CustomerInfo EditButtonHidden smoke-test 1`] = `
 <div style="max-width: 295px;">
   <div class="customer-info">
@@ -81,6 +119,26 @@ exports[`COMPONENTS/CustomerInfo EditButtonVisible play-test 1`] = `
 `;
 
 exports[`COMPONENTS/CustomerInfo EmptyList smoke-test 1`] = `
+<div style="max-width: 295px;">
+  <div class="customer-info">
+    <div class="customer-info__navigation">
+      Ihre Angaben
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/CustomerInfo EmptyList smoke-test 2`] = `
+<div style="max-width: 295px;">
+  <div class="customer-info">
+    <div class="customer-info__navigation">
+      Ihre Angaben
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/CustomerInfo EmptyList smoke-test 3`] = `
 <div style="max-width: 295px;">
   <div class="customer-info">
     <div class="customer-info__navigation">
