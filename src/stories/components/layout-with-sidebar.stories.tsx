@@ -3,6 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { LayoutWithSidebar } from "../../components";
 import MaxWidthDecorator from "../decorators/max-width-decorator";
+import Placeholder from "../helpers/placeholder";
 import logoSrc from "../assets/logo.png";
 
 type Story = StoryObj<typeof LayoutWithSidebar>;
@@ -63,14 +64,7 @@ const meta: Meta<typeof LayoutWithSidebar> = {
   render: (args) => {
     return (
       <LayoutWithSidebar {...args}>
-        <div
-          style={{
-            height: 300,
-            backgroundImage:
-              "linear-gradient(45deg, #d3d3d3 25%, transparent 25%, transparent 50%, #d3d3d3 50%, #d3d3d3 75%, transparent 75%, transparent 100%)",
-            backgroundSize: "56.57px 56.57px",
-          }}
-        />
+        <Placeholder />
       </LayoutWithSidebar>
     );
   },

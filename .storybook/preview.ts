@@ -5,6 +5,7 @@ import "./styles.css";
 
 const preview: Preview = {
   parameters: {
+    viewport: { defaultViewport: "default" },
     controls: {
       expanded: true,
       matchers: {
