@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from "react";
+import React, { ReactNode, useEffect, Fragment } from "react";
 import { LayoutWithSidebar } from "../layout-with-sidebar";
 import { HeaderProps } from "../header";
 import { Main, MainProps } from "../main";
@@ -35,7 +35,13 @@ export const HomeScreen = <T extends string>({ step, header, main, sidebar, foot
 
   return (
     <LayoutWithSidebar header={header} sidebar={sidebar} footer={footer}>
-      <Main {...main}>{steps.filter((homeStep) => homeStep.step === step).map((homeStep) => getStep(homeStep))}</Main>
+      <Main {...main}>
+        {steps
+          .filter((homeStep) => homeStep.step === step)
+          .map((homeStep) => (
+            <Fragment key={homeStep.step}>{getStep(homeStep)}</Fragment>
+          ))}
+      </Main>
     </LayoutWithSidebar>
   );
 };
