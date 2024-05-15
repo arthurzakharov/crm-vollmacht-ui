@@ -1,7 +1,7 @@
 import React, { FC, Fragment, ReactNode } from "react";
 import { Logos, LogosProps } from "../logos";
 import { Signature, SignatureProps } from "../signature";
-import { NavigationButton, NavigationButtonType } from "../navigation-button";
+import { NavigationButton, NavigationButtonProps } from "../navigation-button";
 import { InputCheckbox, InputCheckboxProps } from "../input-checkbox";
 import "./step-checkout.css";
 
@@ -10,7 +10,7 @@ export type StepCheckoutRow = {
   logos?: LogosProps;
   signature?: SignatureProps;
   paragraph?: ReactNode;
-  navigation?: { type: NavigationButtonType; onClick: () => void }[];
+  navigation?: NavigationButtonProps[];
   checkboxes?: InputCheckboxProps[];
 };
 
