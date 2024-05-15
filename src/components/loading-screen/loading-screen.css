@@ -1,0 +1,8 @@
+.loading-screen {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-secondary);
+    box-shadow: var(--shadow-primary);
+}

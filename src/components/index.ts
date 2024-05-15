@@ -22,6 +22,7 @@ export * from "../components/label";
 export * from "../components/layout-with-sidebar";
 export * from "../components/layout-without-sidebar";
 export * from "../components/loader";
+export * from "../components/loading-screen";
 export * from "../components/logos";
 export * from "../components/main";
 export { default as Question } from "../components/question";
