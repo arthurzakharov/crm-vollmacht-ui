@@ -1,0 +1,9 @@
+.step-form__content {
+    margin-bottom: 30px;
+}
+
+.step-form__action {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}

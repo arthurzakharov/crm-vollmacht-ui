@@ -2,8 +2,10 @@ import React, { FC, MouseEvent } from "react";
 import cn from "classnames";
 import "./navigation-button.css";
 
+export type NavigationButtonType = "backward" | "forward";
+
 export interface NavigationButtonProps {
-  type: "backward" | "forward";
+  type: NavigationButtonType;
   text?: string;
   disabled?: boolean;
   onClick: () => void;

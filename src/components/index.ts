@@ -36,5 +36,6 @@ export * from "../components/sidebar-info";
 export * from "../components/sidebar-step";
 export { default as Signature } from "../components/signature";
 export * from "../components/status-icon";
+export * from "../components/step-form";
 export { default as SubmitButton } from "../components/submit-button";
 export { default as Uploader } from "../components/uploader";
