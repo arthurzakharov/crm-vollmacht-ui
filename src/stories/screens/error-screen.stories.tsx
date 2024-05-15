@@ -1,111 +1,68 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Header } from "../../components";
+import { fn } from "@storybook/test";
+import { ErrorScreen } from "../../components";
 import logoSrc from "../assets/logo.png";
 
-type Story = StoryObj<typeof Header>;
+type Story = StoryObj<typeof ErrorScreen>;
 
-const meta: Meta<typeof Header> = {
-  title: "COMPONENTS/Header",
-  component: Header,
+const meta: Meta<typeof ErrorScreen> = {
+  title: "SCREENS/ErrorScreen",
+  component: ErrorScreen,
 };
 
-export const WithPhone: Story = {
-  name: "With Phone",
+export const Default: Story = {
+  name: "Error Screen",
   args: {
-    logo: logoSrc,
-    tel: "030 / 20 898 12 11",
-    descriptions: undefined,
-  },
-};
-
-export const WithoutPhone: Story = {
-  name: "Without Phone",
-  args: {
-    logo: logoSrc,
-    tel: undefined,
-    descriptions: undefined,
-  },
-};
-
-export const WithoutDescriptions: Story = {
-  name: "Without Descriptions",
-  args: {
-    logo: logoSrc,
-    tel: undefined,
-    descriptions: undefined,
-  },
-};
-
-export const WithDescriptionSizeS: Story = {
-  name: "With Descriptions Size S",
-  args: {
-    logo: logoSrc,
-    tel: undefined,
-    descriptions: [
-      {
-        size: "s",
-        value: "Kostenlose Erstberatung",
-      },
-    ],
-  },
-};
-
-export const WithDescriptionSizeM: Story = {
-  name: "With Descriptions Size M",
-  args: {
-    logo: logoSrc,
-    tel: undefined,
-    descriptions: [
-      {
-        size: "m",
-        value: "Mo-Fr von 8:00 - 20:00",
-      },
-    ],
-  },
-};
-
-export const WithDescriptionAllSize: Story = {
-  name: "With Descriptions All Size",
-  args: {
-    logo: logoSrc,
-    tel: undefined,
-    descriptions: [
-      {
-        size: "m",
-        value: "Mo-Fr von 8:00 - 20:00",
-      },
-      {
-        size: "s",
-        value: "Kostenlose Erstberatung",
-      },
-    ],
-  },
-};
-
-export const WithAllItems: Story = {
-  name: "With All Items",
-  args: {
-    logo: logoSrc,
-    tel: "030 / 20 898 12 11",
-    descriptions: [
-      {
-        size: "m",
-        value: "Mo-Fr von 8:00 - 20:00",
-      },
-      {
-        size: "s",
-        value: "Kostenlose Erstberatung",
-      },
-    ],
-  },
-};
-
-export const DefaultValues: Story = {
-  name: "Default Values",
-  args: {
-    logo: logoSrc,
-    tel: undefined,
-    descriptions: undefined,
+    header: {
+      logo: logoSrc,
+      tel: "030 / 20 898 12 11",
+      descriptions: [
+        {
+          size: "m",
+          value: "Mo-Fr von 8:00 - 20:00",
+        },
+      ],
+    },
+    footer: {
+      name: "legal-one",
+      links: [
+        {
+          text: "Allgemeine Informationen",
+          onClick: fn(),
+        },
+        {
+          text: "Datenschutz",
+          onClick: fn(),
+        },
+        {
+          text: "Impressum",
+          onClick: fn(),
+        },
+      ],
+    },
+    error: {
+      title: "Entschuldigung, da ist wohl etwas schief gelaufen!",
+      subtitle: "Fehler 404",
+      tableTitle: "Bitte kontaktieren Sie uns doch per:",
+      tableRows: [
+        {
+          key: "E-Mail:",
+          value: "info@rightmart.de",
+        },
+        {
+          key: "Telefon:",
+          value: "+49 (0)421 / 33 100 310",
+        },
+        {
+          key: "Fax:",
+          value: "+49 (0)421 / 33 100 380",
+        },
+        {
+          key: "Post:",
+          value: "rightmart Rechtsanwaltsgesellschaft mbH<br />Clara-Jaschke-Straße 1<br />28199 Bremen",
+        },
+      ],
+    },
   },
 };
 
