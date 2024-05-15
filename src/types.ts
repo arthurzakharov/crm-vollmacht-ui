@@ -2,8 +2,6 @@ import type { ReactNode, HTMLInputTypeAttribute } from "react";
 
 export type Screen = "home" | "remuneration" | "attachment" | "error";
 
-export type HomeStep = "personal" | "address" | "checkout" | "remuneration";
-
 export type AttachmentStep = "insurance" | "files" | "survey";
 
 export type WhereSecret = "query" | "path";

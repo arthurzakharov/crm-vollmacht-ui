@@ -7,7 +7,7 @@ import { FooterProps } from "../footer";
 import { StepForm, StepFormProps } from "../step-form";
 import { StepCheckout, StepCheckoutProps } from "../step-checkout";
 
-export type HomeStep<T> = {
+export type HomeStepType<T> = {
   step: T;
   type: "form" | "checkbox";
   form?: StepFormProps;
@@ -20,7 +20,7 @@ export interface HomeScreenProps<T> {
   main: MainProps;
   sidebar: SidebarProps;
   footer: FooterProps;
-  steps: HomeStep<T>[];
+  steps: HomeStepType<T>[];
   onMount: (v: string) => void;
 }
 
@@ -37,7 +37,7 @@ export const HomeScreen = <T extends string>({
     onMount("personal-info");
   }, []);
 
-  const getStep = (homeStep: HomeStep<T>): ReactNode => {
+  const getStep = (homeStep: HomeStepType<T>): ReactNode => {
     switch (homeStep.type) {
       case "form":
         return homeStep.form ? <StepForm {...homeStep.form} /> : null;
