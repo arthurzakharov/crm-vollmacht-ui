@@ -15,6 +15,7 @@ export * from "../components/footer";
 export * from "../components/navigation-button";
 export * from "../components/form-row";
 export * from "../components/header";
+export * from "../components/home-screen";
 export * from "../components/input";
 export * from "../components/input-checkbox";
 export * from "../components/input-radio";

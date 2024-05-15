@@ -7,7 +7,7 @@ import submittedSrc from "../assets/submitted.png";
 type Story = StoryObj<typeof AttachmentSuccessScreen>;
 
 const meta: Meta<typeof AttachmentSuccessScreen> = {
-  title: "SCREENS/AttachmentSuccessScreen",
+  title: "SCREENS/HomeScreen",
   component: AttachmentSuccessScreen,
   args: {
     header: {
