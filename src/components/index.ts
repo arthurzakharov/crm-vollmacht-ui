@@ -2,7 +2,8 @@ import "../assets/css/variables.css";
 import "../assets/css/shared.css";
 
 export * from "./animate-height";
-export { default as AttachmentSuccess } from "../components/attachment-success";
+export * from "../components/attachment-success";
+export * from "../components/attachment-success-screen";
 export * from "../components/checkbox";
 export * from "../components/customer-info";
 export { default as Dialog } from "../components/dialog";

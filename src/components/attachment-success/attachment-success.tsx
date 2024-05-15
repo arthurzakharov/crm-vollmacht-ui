@@ -1,25 +1,20 @@
-import React from "react";
-import submittedSrc from "../../assets/png/submitted/submitted.png";
+import React, { FC } from "react";
 import "./attachment-success.css";
 
-interface Props {
+export interface AttachmentSuccessProps {
+  icon: string;
+  title: string;
   text: string[];
 }
 
-function AttachmentSuccess(props: Props) {
-  return (
-    <div className="attachment-success">
-      <img alt="submitted" src={submittedSrc} className="attachment-success__image" />
-      <h6 className="attachment-success__title">Vielen Dank!</h6>
-      {props.text.map((t: string, index: number) => (
-        <p key={`as-${index}`} className="attachment-success__text">
-          {t}
-        </p>
-      ))}
-    </div>
-  );
-}
-
-AttachmentSuccess.displayName = "AttachmentSuccess";
-
-export default AttachmentSuccess;
+export const AttachmentSuccess: FC<AttachmentSuccessProps> = ({ icon, title, text }) => (
+  <div className="attachment-success">
+    <img alt="submitted" src={icon} className="attachment-success__image" />
+    <h6 className="attachment-success__title">{title}</h6>
+    {text.map((t: string, index: number) => (
+      <p key={`as-${index}`} className="attachment-success__text">
+        {t}
+      </p>
+    ))}
+  </div>
+);

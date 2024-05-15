@@ -66,6 +66,7 @@
   --text-accent-primary: #004473;
   --text-primary: #333333;
   --text-secondary: #bdbdbd;
+  --text-tertiary: #bcbebe;
 
   --input-primary: #4f8aab;
   --input-secondary: #333333;
@@ -75,6 +76,7 @@
   --input-checkbox: #d6d6d6;
 
   --error: #e74c3c;
+  --success: #2ecc71;
   --focus: #ff8d02;
   --link: #006699;
 

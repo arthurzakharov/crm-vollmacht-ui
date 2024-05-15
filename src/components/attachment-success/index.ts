@@ -1,1 +1,1 @@
-export { default } from "./attachment-success";
+export * from "./attachment-success";
