@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useEffect } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { LayoutWithSidebar } from "../layout-with-sidebar";
 import { HeaderProps } from "../header";
 import { Main, MainProps } from "../main";
@@ -7,29 +7,37 @@ import { FooterProps } from "../footer";
 import { StepForm, StepFormProps } from "../step-form";
 import { StepCheckout, StepCheckoutProps } from "../step-checkout";
 
-export type HomeStep = {
-  step: string;
+export type HomeStep<T> = {
+  step: T;
   type: "form" | "checkbox";
   form?: StepFormProps;
   checkbox?: StepCheckoutProps;
 };
 
-export interface HomeScreenProps {
-  step: string;
+export interface HomeScreenProps<T> {
+  step: T;
   header: HeaderProps;
   main: MainProps;
   sidebar: SidebarProps;
   footer: FooterProps;
-  steps: HomeStep[];
+  steps: HomeStep<T>[];
   onMount: (v: string) => void;
 }
 
-export const HomeScreen: FC<HomeScreenProps> = ({ step, header, main, sidebar, footer, steps, onMount }) => {
+export const HomeScreen = <T extends string>({
+  step,
+  header,
+  main,
+  sidebar,
+  footer,
+  steps,
+  onMount,
+}: HomeScreenProps<T>) => {
   useEffect(() => {
     onMount("personal-info");
   }, []);
 
-  const getStep = (homeStep: HomeStep): ReactNode => {
+  const getStep = (homeStep: HomeStep<T>): ReactNode => {
     switch (homeStep.type) {
       case "form":
         return homeStep.form ? <StepForm {...homeStep.form} /> : null;
