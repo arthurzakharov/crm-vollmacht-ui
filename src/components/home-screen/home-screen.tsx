@@ -21,22 +21,9 @@ export interface HomeScreenProps<T extends string> {
   sidebar: SidebarProps;
   footer: FooterProps;
   steps: HomeStepType<T>[];
-  onMount: () => void;
 }
 
-export const HomeScreen = <T extends string>({
-  step,
-  header,
-  main,
-  sidebar,
-  footer,
-  steps,
-  onMount,
-}: HomeScreenProps<T>) => {
-  useEffect(() => {
-    onMount();
-  }, []);
-
+export const HomeScreen = <T extends string>({ step, header, main, sidebar, footer, steps }: HomeScreenProps<T>) => {
   const getStep = (homeStep: HomeStepType<T>): ReactNode => {
     switch (homeStep.type) {
       case "form":
