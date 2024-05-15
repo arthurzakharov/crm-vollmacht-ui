@@ -38,5 +38,5 @@ export * from "../components/signature";
 export * from "../components/status-icon";
 export * from "../components/step-checkout";
 export * from "../components/step-form";
-export { default as SubmitButton } from "../components/submit-button";
+export * from "../components/submit-button";
 export { default as Uploader } from "../components/uploader";

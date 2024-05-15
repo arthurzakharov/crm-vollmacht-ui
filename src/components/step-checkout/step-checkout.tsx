@@ -3,15 +3,17 @@ import { Logos, LogosProps } from "../logos";
 import { Signature, SignatureProps } from "../signature";
 import { NavigationButton, NavigationButtonProps } from "../navigation-button";
 import { InputCheckbox, InputCheckboxProps } from "../input-checkbox";
+import { SubmitButton, SubmitButtonProps } from "../submit-button";
 import "./step-checkout.css";
 
 export type StepCheckoutRow = {
-  type: "signature" | "logos" | "paragraph" | "navigation" | "checkboxes";
+  type: "signature" | "logos" | "paragraph" | "navigation" | "checkboxes" | "submit";
   logos?: LogosProps;
   signature?: SignatureProps;
   paragraph?: ReactNode;
   navigation?: NavigationButtonProps[];
   checkboxes?: InputCheckboxProps[];
+  submit?: SubmitButtonProps;
 };
 
 export interface StepCheckoutProps {
@@ -39,6 +41,12 @@ export const StepCheckout: FC<StepCheckoutProps> = ({ rows }) => {
             {row.navigation.map((btn, index) => (
               <NavigationButton key={`nav-btn-${index}`} {...btn} />
             ))}
+          </div>
+        ) : null;
+      case "submit":
+        return row.submit ? (
+          <div className="step-checkout__action">
+            <SubmitButton {...row.submit} />
           </div>
         ) : null;
       case "signature":

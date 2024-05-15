@@ -4,14 +4,14 @@ import cn from "classnames";
 import { Loader } from "../loader";
 import "./submit-button.css";
 
-interface Props {
+export interface SubmitButtonProps {
   isSigning: boolean;
   text: string;
   onClick: (e: MouseEvent<HTMLButtonElement>) => Promise<void>;
   isSidebarVersion?: boolean;
 }
 
-const SubmitButton: FC<Props> = (props) => {
+export const SubmitButton: FC<SubmitButtonProps> = (props) => {
   const submitButtonCn = (): string => {
     return cn("submit-button", props.isSigning ? "submit-button--loading" : "submit-button--idle", {
       "submit-button--sidebar-version": !!props.isSidebarVersion,
@@ -29,7 +29,3 @@ const SubmitButton: FC<Props> = (props) => {
     </button>
   );
 };
-
-SubmitButton.displayName = "SubmitButton";
-
-export default SubmitButton;
