@@ -6,8 +6,11 @@ import { InputCheckbox, InputCheckboxProps } from "../input-checkbox";
 import { SubmitButton, SubmitButtonProps } from "../submit-button";
 import "./step-checkout.css";
 
+export type StepCheckoutType = "signature" | "logos" | "paragraph" | "navigation" | "checkboxes" | "submit";
+
 export type StepCheckoutRow = {
-  type: "signature" | "logos" | "paragraph" | "navigation" | "checkboxes" | "submit";
+  isHidden?: boolean;
+  type: StepCheckoutType;
   logos?: LogosProps;
   signature?: SignatureProps;
   paragraph?: ReactNode;
@@ -70,9 +73,11 @@ export const StepCheckout: FC<StepCheckoutProps> = ({ rows }) => {
 
   return (
     <div className="step-checkout">
-      {rows.map((row, rowIndex) => (
-        <Fragment key={`step-checkout-row-${rowIndex}`}>{getRows(row)}</Fragment>
-      ))}
+      {rows
+        .filter((row) => !row.isHidden)
+        .map((row, i) => (
+          <Fragment key={`row-${i}`}>{getRows(row)}</Fragment>
+        ))}
     </div>
   );
 };

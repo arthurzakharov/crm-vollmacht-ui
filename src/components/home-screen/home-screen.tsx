@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, Fragment } from "react";
+import React, { ReactNode, Fragment } from "react";
 import { LayoutWithSidebar } from "../layout-with-sidebar";
 import { HeaderProps } from "../header";
 import { Main, MainProps } from "../main";
