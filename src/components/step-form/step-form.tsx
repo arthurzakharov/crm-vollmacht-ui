@@ -7,15 +7,13 @@ import "./step-form.css";
 
 export type StepFormInput = {
   type: "radio" | "text";
-  radio?: InputRadioProps<any>;
+  radio?: InputRadioProps<string>;
   text?: InputTextProps;
 };
 
-export type StepFormNavigation = { type: NavigationButtonType; onClick: () => void };
-
 export interface StepFormProps {
   input: StepFormInput[][];
-  navigation: StepFormNavigation[];
+  navigation: { type: NavigationButtonType; onClick: () => void }[];
 }
 
 export const StepForm: FC<StepFormProps> = ({ input, navigation }) => {

@@ -11,7 +11,7 @@ import "./signature.css";
 
 const HEADER = "data:image/png;base64,";
 
-interface Props {
+export interface SignatureProps {
   submitClickCount: number;
   status: ApiStatus;
   fullName: string;
@@ -21,7 +21,7 @@ interface Props {
   color?: string;
 }
 
-const Signature: FC<Props> = (props) => {
+export const Signature: FC<SignatureProps> = (props) => {
   const [autoMode, toggleAutoMode] = useState<boolean>(true);
   const [pad, setPad] = useState<SignatureCanvas | null>(null);
   const [signatureAuto, setSignatureAuto] = useState<string>("");
@@ -214,7 +214,3 @@ const Signature: FC<Props> = (props) => {
     </div>
   );
 };
-
-Signature.displayName = "Signature";
-
-export default Signature;

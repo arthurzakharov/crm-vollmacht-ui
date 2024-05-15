@@ -1,0 +1,54 @@
+.step-checkout {}
+
+.step-checkout__info {
+    margin-bottom: 10px;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text-primary);
+    hyphens: manual;
+    white-space: pre-line;
+}
+
+.step-checkout__info button {
+    padding: 2px;
+    border-radius: 2px;
+    color: var(--text-accent-primary);
+}
+
+.step-checkout__action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 25px;
+    margin-bottom: 28px;
+}
+
+.step-checkout__action > button {
+    flex-grow: 1;
+}
+
+.step-checkout__logos {
+    margin-top: 28px;
+}
+
+.step-checkout__signature {
+    margin-bottom: 25px;
+}
+
+.step-checkout__checkboxes {
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .step-checkout__action {
+        align-items: center;
+    }
+
+    .step-checkout__action > button {
+        max-width: 360px;
+    }
+}

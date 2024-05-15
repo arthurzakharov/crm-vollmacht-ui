@@ -7,7 +7,7 @@ import { Label } from "../label";
 import { StatusIcon } from "../status-icon";
 import "./input-checkbox.css";
 
-export interface InputCheckboxProps {
+export interface InputCheckboxProps extends PropsWithChildren {
   value: boolean;
   name: string;
   status?: FieldStatus;
@@ -15,7 +15,7 @@ export interface InputCheckboxProps {
   onChange: (v: boolean) => void;
 }
 
-export const InputCheckbox: FC<PropsWithChildren<InputCheckboxProps>> = (props) => {
+export const InputCheckbox: FC<InputCheckboxProps> = (props) => {
   const { value, name, status = "neutral", disabled = false, onChange, children } = props;
 
   const [isFocused, toggleFocused] = useToggle(false);
