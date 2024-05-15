@@ -7,21 +7,21 @@ import { FooterProps } from "../footer";
 import { StepForm, StepFormProps } from "../step-form";
 import { StepCheckout, StepCheckoutProps } from "../step-checkout";
 
-export type HomeStepType<T> = {
+export type HomeStepType<T extends string> = {
   step: T;
   type: "form" | "checkbox";
   form?: StepFormProps;
   checkbox?: StepCheckoutProps;
 };
 
-export interface HomeScreenProps<T> {
+export interface HomeScreenProps<T extends string> {
   step: T;
   header: HeaderProps;
   main: MainProps;
   sidebar: SidebarProps;
   footer: FooterProps;
   steps: HomeStepType<T>[];
-  onMount: (v: string) => void;
+  onMount: () => void;
 }
 
 export const HomeScreen = <T extends string>({
@@ -34,7 +34,7 @@ export const HomeScreen = <T extends string>({
   onMount,
 }: HomeScreenProps<T>) => {
   useEffect(() => {
-    onMount("personal-info");
+    onMount();
   }, []);
 
   const getStep = (homeStep: HomeStepType<T>): ReactNode => {
