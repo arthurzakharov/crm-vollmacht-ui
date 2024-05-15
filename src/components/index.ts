@@ -8,6 +8,7 @@ export * from "../components/customer-info";
 export { default as Dialog } from "../components/dialog";
 export { default as DialogArticle } from "../components/dialog-article";
 export * from "../components/error-404";
+export * from "../components/error-screen";
 export { default as Files } from "../components/files";
 export * from "../components/footer";
 export * from "../components/navigation-button";
