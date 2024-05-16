@@ -95,8 +95,10 @@
   --background-primary: #f4f7f9;
   --background-secondary: #ffffff;
   --background-tertiary: #f8fafb;
+  --background-overlay: #ff8d027a;
 
   --shadow-primary: 0 10px 20px #00000019;
+  --shadow-secondary:  0 19px 38px #0000004c, 0 15px 12px #00000038;
   --shadow-inner-primary: inset 0 9px 8px -10px rgba(0, 0, 0, 0.1), inset 0 -9px 8px -10px rgba(0, 0, 0, 0.1);
   --shadow-inner-secondary: inset -1px 0 2px -1px var(--text-primary), inset 1px 1px 2px -1px var(--text-primary);
 

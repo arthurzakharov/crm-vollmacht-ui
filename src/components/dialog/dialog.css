@@ -71,10 +71,8 @@
     padding: 24px;
     display: flex;
     flex-direction: column;
-    background-color: var(--white-1);
-    box-shadow:
-            0 19px 38px var(--black-4),
-            0 15px 12px var(--black-5);
+    background-color: var(--background-secondary);
+    box-shadow: var(--shadow-secondary);
     overflow: auto;
 }
 
@@ -105,14 +103,14 @@
     }
     to {
         opacity: 1;
-        background-color: var(--black-3);
+        background-color: var(--background-overlay);
     }
 }
 
 @keyframes close-bg {
     from {
         opacity: 1;
-        background-color: var(--black-3);
+        background-color: var(--background-overlay);
     }
     to {
         opacity: 0;
