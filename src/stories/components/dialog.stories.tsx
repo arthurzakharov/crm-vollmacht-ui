@@ -9,16 +9,10 @@ type Story = StoryObj<typeof Dialog>;
 const meta: Meta<typeof Dialog> = {
   title: "COMPONENTS/Dialog",
   component: Dialog,
-  argTypes: {
-    name: {
-      control: "radio",
-      options: ["dialog1", "dialog2", "empty"],
-    },
-  },
   args: {
     dialogs: [
       {
-        name: "dialog1",
+        name: "dialog",
         element: (
           <div>
             <h2>Dialog (1)</h2>
@@ -26,18 +20,9 @@ const meta: Meta<typeof Dialog> = {
           </div>
         ),
       },
-      {
-        name: "dialog2",
-        element: (
-          <div>
-            <h2>Dialog (2)</h2>
-            <Placeholder />
-          </div>
-        ),
-      },
     ],
-    lockTarget: "#storybook-root",
-    name: "dialog1",
+    lockTarget: "#root",
+    name: "dialog",
     position: "top",
     size: "m",
     onOverlayClick: fn(),
@@ -49,12 +34,14 @@ const meta: Meta<typeof Dialog> = {
     const [size, setSize] = useState<DialogSize | undefined>(args.size);
 
     const onOverlayClick = () => {
-      setName(undefined);
+      setPosition(undefined);
+      setSize(undefined);
+      args.onOverlayClick();
     };
 
     const onClose = () => {
-      setPosition(undefined);
-      setSize(undefined);
+      setName(undefined);
+      args.onClose();
     };
 
     return (
@@ -63,13 +50,49 @@ const meta: Meta<typeof Dialog> = {
   },
 };
 
-export const Default: Story = {
+export const PositionTop: Story = {
+  name: "Position Top",
+  args: {
+    position: "top",
+  },
+};
+
+export const PositionCenter: Story = {
+  name: "Position Center",
   args: {
     position: "center",
-    name: "dialog2",
   },
+};
 
-  name: "Dialog",
+export const SizeS: Story = {
+  name: "Size S",
+  args: {
+    size: "s",
+  },
+};
+
+export const SizeM: Story = {
+  name: "Size M",
+  args: {
+    size: "m",
+  },
+};
+
+export const NameIsUndefined: Story = {
+  name: "Name Is undefined",
+  args: {
+    name: undefined,
+  },
+};
+
+export const DefaultValues: Story = {
+  name: "Default Values",
+  args: {
+    lockTarget: undefined,
+    name: undefined,
+    position: undefined,
+    size: undefined,
+  },
 };
 
 export default meta;
