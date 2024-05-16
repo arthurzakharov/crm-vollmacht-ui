@@ -1,11 +1,11 @@
-import { QuestionType } from "../../types";
 import React, { useState, useEffect } from "react";
 import { AnimateHeight } from "../animate-height";
-import Question from "../question";
-import QuestionnaireTitle from "../questionnaire-title";
+import { Question } from "../question";
+import { QuestionnaireTitle } from "../questionnaire-title";
+import { QuestionType } from "../../types";
 import "./questionnaire.css";
 
-type Props = {
+export type QuestionnaireProps = {
   questionnaireIsClosed: boolean;
   completionState: "not-complete-at-all" | "not-fully-complete" | "fully-complete";
   titleIsHidden?: boolean;
@@ -23,7 +23,7 @@ type Props = {
   goToNextQuestion: (question: QuestionType, value: string) => void;
 };
 
-const Questionnaire = (props: Props) => {
+export const Questionnaire = (props: QuestionnaireProps) => {
   const [questions, setQuestions] = useState<QuestionType[]>([]);
 
   const getQuestionsBasedOnInitialOrder = (
@@ -82,7 +82,3 @@ const Questionnaire = (props: Props) => {
     </div>
   );
 };
-
-Questionnaire.displayName = "Questionnaire";
-
-export default Questionnaire;

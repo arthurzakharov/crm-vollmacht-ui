@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { LayoutWithSidebar } from "../../components";
+import { LayoutWithSidebar } from "../../layouts";
 import MaxWidthDecorator from "../decorators/max-width-decorator";
 import Placeholder from "../helpers/placeholder";
 import logoSrc from "../assets/logo.png";

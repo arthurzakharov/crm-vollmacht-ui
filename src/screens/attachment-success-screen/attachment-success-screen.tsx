@@ -1,11 +1,15 @@
 import React, { FC, useEffect } from "react";
 import { useBoolean } from "usehooks-ts";
-import { AnimateHeight } from "../../components/animate-height";
-import { AttachmentSuccess, AttachmentSuccessProps } from "../../components/attachment-success";
-import { FooterProps } from "../../components/footer";
-import { HeaderProps } from "../../components/header";
-import { MainProps, Main } from "../../components/main";
-import { LayoutWithoutSidebar } from "../../components/layout-without-sidebar";
+import {
+  AnimateHeight,
+  AttachmentSuccess,
+  AttachmentSuccessProps,
+  FooterProps,
+  HeaderProps,
+  MainProps,
+  Main,
+} from "../../components";
+import { LayoutWithoutSidebar } from "../../layouts";
 import { fakeAwait } from "../../utils";
 
 export interface AttachmentSuccessScreenProps {

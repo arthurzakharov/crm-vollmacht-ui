@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { FormRow, InputText } from "../../components";
+import { FormRow } from "../../components";
+import { InputText } from "../../form-elements";
 import MaxWidthDecorator from "../decorators/max-width-decorator";
 
 type Story = StoryObj<typeof FormRow>;

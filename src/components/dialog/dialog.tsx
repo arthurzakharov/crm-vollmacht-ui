@@ -1,5 +1,4 @@
-import { FC, ReactNode } from "react";
-import React, { useEffect, useState, useRef, Fragment } from "react";
+import React, { useEffect, useState, useRef, Fragment, FC, ReactNode } from "react";
 import { useScrollLock, useOnClickOutside } from "usehooks-ts";
 import cn from "classnames";
 import "./dialog.css";
@@ -9,7 +8,7 @@ type DialogRecord = {
   element: ReactNode;
 };
 
-interface Props {
+export interface DialogProps {
   dialogs: DialogRecord[];
   name: null | string;
   position: null | string;
@@ -18,7 +17,7 @@ interface Props {
   onClose: () => void;
 }
 
-const Dialog: FC<Props> = (props) => {
+export const Dialog: FC<DialogProps> = (props) => {
   const { isLocked, lock, unlock } = useScrollLock({ autoLock: false, lockTarget: "#root" });
   const [isMounted, setIsMounted] = useState<boolean>(false);
   const [isClosing, setIsClosing] = useState<boolean>(true);
@@ -67,7 +66,3 @@ const Dialog: FC<Props> = (props) => {
     </div>
   ) : null;
 };
-
-Dialog.displayName = "Dialog";
-
-export default Dialog;

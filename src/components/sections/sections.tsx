@@ -1,19 +1,18 @@
-import { MouseEvent } from "react";
-import { Section } from "../../types";
-import React from "react";
+import React, { MouseEvent } from "react";
 import AnimateHeight from "react-animate-height";
 import cn from "classnames";
 import { Arrow } from "../../icons";
+import { Section } from "../../types";
 import "./sections.css";
 
-interface Props<S, N> {
+export interface SectionsProps<S, N> {
   activeSection: null | N;
   onTitleClick: (name: N) => void;
   list: Section<S>[];
   animateOpacity?: boolean;
 }
 
-const Sections = <N extends string, S extends { name: N }>(props: Props<S, N>) => {
+export const Sections = <N extends string, S extends { name: N }>(props: SectionsProps<S, N>) => {
   const titleCn = (name: N): string => {
     return cn("sections__title", {
       "sections__title--opened": name === props.activeSection,
@@ -58,7 +57,3 @@ const Sections = <N extends string, S extends { name: N }>(props: Props<S, N>) =
     </ul>
   );
 };
-
-Sections.displayName = "Sections";
-
-export default Sections;

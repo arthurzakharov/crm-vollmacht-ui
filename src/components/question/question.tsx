@@ -1,14 +1,12 @@
-import { ReactNode, MouseEvent } from "react";
-import { QuestionType } from "../../types";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, ReactNode, MouseEvent } from "react";
 import cn from "classnames";
-import { InputRadio } from "../input-radio";
-import { InputText } from "../input-text";
+import { InputRadio, InputText } from "../../form-elements";
+import { QuestionType } from "../../types";
 import "./question.css";
 
 type QuestionState = "answered" | "active" | "not-answered";
 
-type Props = {
+export type QuestionProps = {
   order: string[];
   active?: string;
   value: string;
@@ -20,7 +18,7 @@ type Props = {
   question: QuestionType;
 };
 
-const Question = (props: Props) => {
+export const Question = (props: QuestionProps) => {
   const [state, setState] = useState<QuestionState>();
 
   const getQuestionCn = (): string => {
@@ -164,7 +162,3 @@ const Question = (props: Props) => {
     </div>
   );
 };
-
-Question.displayName = "Question";
-
-export default Question;

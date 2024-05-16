@@ -1,5 +1,4 @@
-import { FC, MouseEvent } from "react";
-import React from "react";
+import React, { FC, MouseEvent } from "react";
 import cn from "classnames";
 import { Loader } from "../loader";
 import "./submit-button.css";

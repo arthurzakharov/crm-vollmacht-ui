@@ -1,9 +1,8 @@
-import { FC, PropsWithChildren } from "react";
-import React, { useState } from "react";
+import React, { useState, FC, PropsWithChildren } from "react";
 import useMoveFocus from "../../hooks/useMoveFocus";
 import "./dialog-article.css";
 
-interface Props extends PropsWithChildren {
+export interface DialogArticleProps extends PropsWithChildren {
   hasNoCloseButton?: boolean;
   cancelButton?: string;
   confirmButton?: string;
@@ -12,7 +11,7 @@ interface Props extends PropsWithChildren {
   onClose: () => void;
 }
 
-const DialogArticle: FC<Props> = (props) => {
+export const DialogArticle: FC<DialogArticleProps> = (props) => {
   const [tabIndex, setTabIndex] = useState<-1 | 0>(0);
   const buttonRef = useMoveFocus<HTMLDivElement>();
 
@@ -56,7 +55,3 @@ const DialogArticle: FC<Props> = (props) => {
     </article>
   );
 };
-
-DialogArticle.displayName = "DialogArticle";
-
-export default DialogArticle;

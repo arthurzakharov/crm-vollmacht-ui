@@ -1,12 +1,11 @@
-import { FC, MouseEvent, useState, useEffect } from "react";
+import React, { FC, MouseEvent, useState, useEffect } from "react";
 import { FileRejection } from "react-dropzone";
-import { ApiStatus } from "../../types";
-import React from "react";
 import Dropzone from "react-dropzone";
 import AnimateHeight from "react-animate-height";
 import cn from "classnames";
 import { Loader } from "../loader";
 import { fileSize, bytesToMegabytes } from "../../utils";
+import { ApiStatus } from "../../types";
 import uploadSrc from "../../assets/png/upload/upload.png";
 import trashGraySrc from "../../assets/png/trash-gray/trash-gray.png";
 import trashBlueSrc from "../../assets/png/trash-blue/trash-blue.png";
@@ -14,7 +13,7 @@ import fileSrc from "../../assets/png/file/file.png";
 import checkSrc from "../../assets/png/check/check.png";
 import "./uploader.css";
 
-interface Props {
+export interface UploaderProps {
   uploadButtonText: string;
   message: string;
   filesToUpload: File[];
@@ -26,7 +25,7 @@ interface Props {
   setFilesToUpload: (files: File[]) => void;
 }
 
-const Uploader: FC<Props> = (props) => {
+export const Uploader: FC<UploaderProps> = (props) => {
   const [alreadyUploadedFilesSize, setAlreadyUploadedFilesSize] = useState<number>(0);
 
   const onDrop = (acceptedFiles: File[], rejectedFiles: FileRejection[]): void => {
@@ -158,7 +157,3 @@ const Uploader: FC<Props> = (props) => {
     </div>
   );
 };
-
-Uploader.displayName = "Uploader";
-
-export default Uploader;

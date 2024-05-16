@@ -1,22 +1,21 @@
-import { PropsWithChildren } from "react";
-import React, { useState } from "react";
+import React, { useState, PropsWithChildren } from "react";
 import cn from "classnames";
 import AnimateHeight from "react-animate-height";
-import { InputRadio } from "../input-radio";
+import { InputRadio } from "../../form-elements";
 import "./files.css";
 
 type GotLetter = "yes" | "no" | "";
 
-type Props = {
+export interface FilesProps extends PropsWithChildren {
   uncompletedText: string;
   completedText: string;
   questionText?: string;
   areFilesUploaded: boolean;
   isChildVisible: boolean;
   onCancel?: () => {};
-};
+}
 
-function Files(props: PropsWithChildren<Props>) {
+export function Files(props: FilesProps) {
   const [gotLetter, setGotLetter] = useState<GotLetter>("");
 
   const updateQuestionAnswer = (value: GotLetter): void => {
@@ -62,7 +61,3 @@ function Files(props: PropsWithChildren<Props>) {
     </div>
   );
 }
-
-Files.displayName = "Files";
-
-export default Files;

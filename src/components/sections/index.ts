@@ -1,1 +1,1 @@
-export { default } from "./sections";
+export * from "./sections";

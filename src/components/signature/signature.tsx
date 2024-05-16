@@ -1,11 +1,10 @@
-import { FC, MouseEvent } from "react";
-import { ApiStatus, FieldStatus } from "../../types";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState, FC, MouseEvent } from "react";
 import { useWindowSize } from "usehooks-ts";
 import SignatureCanvas from "react-signature-canvas";
 import { Loader } from "../loader";
 import { StatusIcon } from "../status-icon";
 import useDimensions from "../../hooks/useDimensions";
+import { ApiStatus } from "../../types";
 import checkLineSrc from "../../assets/png/check-line/check-line.png";
 import "./signature.css";
 

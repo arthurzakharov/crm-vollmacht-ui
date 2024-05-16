@@ -3,7 +3,7 @@ import cn from "classnames";
 import { StatusIcon } from "../status-icon";
 import "./questionnaire-title.css";
 
-interface Props<N extends string> {
+export interface QuestionnaireTitleProps<N extends string> {
   isInactive: boolean;
   isNotCompleteAtAll: boolean;
   isNotFullyComplete: boolean;
@@ -14,7 +14,7 @@ interface Props<N extends string> {
   isHidden?: boolean;
 }
 
-function QuestionnaireTitle<N extends string>(props: Props<N>) {
+export function QuestionnaireTitle<N extends string>(props: QuestionnaireTitleProps<N>) {
   const onClickTitle = (e: MouseEvent<HTMLButtonElement>): void => {
     const button = e.currentTarget as HTMLButtonElement;
     button.blur();
@@ -39,7 +39,3 @@ function QuestionnaireTitle<N extends string>(props: Props<N>) {
     </div>
   ) : null;
 }
-
-QuestionnaireTitle.displayName = "QuestionnaireTitle";
-
-export default QuestionnaireTitle;

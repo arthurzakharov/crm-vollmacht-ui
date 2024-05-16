@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { Loader, LayoutWithoutSidebar, FooterProps, HeaderProps } from "../../components";
+import { Loader, FooterProps, HeaderProps } from "../../components";
+import { LayoutWithoutSidebar } from "../../layouts";
 import "./loading-screen.css";
 
 export interface LoadingScreenProps {
