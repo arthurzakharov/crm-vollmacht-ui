@@ -1,5 +1,5 @@
-import type { Screen, WhereSecret } from "../../types";
-import type { Location, Params } from "react-router-dom";
+import { Screen, WhereSecret } from "../../types";
+import { Location, Params } from "react-router-dom";
 import { useEffect } from "react";
 
 const useGetSecretFromUrl = (

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Arrow = () => (
+export const Arrow = () => (
   <svg focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
     <path
       opacity="0.4"
@@ -13,5 +13,3 @@ const Arrow = () => (
     />
   </svg>
 );
-
-export default Arrow;

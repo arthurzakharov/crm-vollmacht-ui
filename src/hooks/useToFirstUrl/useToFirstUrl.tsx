@@ -1,5 +1,5 @@
-import type { ApiStatus } from "../../types";
-import type { Location } from "react-router-dom";
+import { ApiStatus } from "../../types";
+import { Location } from "react-router-dom";
 import { useEffect } from "react";
 import { addSecretAsFirstUrlParam, getOrigin, removeSecretFromUrlParams } from "../../utils";
 

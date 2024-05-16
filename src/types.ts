@@ -1,4 +1,4 @@
-import type { ReactNode, HTMLInputTypeAttribute } from "react";
+import { ReactNode, HTMLInputTypeAttribute } from "react";
 
 export type Screen = "home" | "remuneration" | "attachment" | "error";
 

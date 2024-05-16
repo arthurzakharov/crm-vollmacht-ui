@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { AttachmentSuccessScreen } from "../../components";
+import { AttachmentSuccessScreen } from "../../screens";
 import logoSrc from "../assets/logo.png";
 import submittedSrc from "../assets/submitted.png";
 

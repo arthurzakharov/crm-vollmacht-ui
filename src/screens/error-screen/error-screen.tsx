@@ -1,8 +1,5 @@
 import React, { FC } from "react";
-import { Error404, Error404Props } from "../error-404";
-import { LayoutWithoutSidebar } from "../layout-without-sidebar";
-import { FooterProps } from "../footer";
-import { HeaderProps } from "../header";
+import { Error404, Error404Props, LayoutWithoutSidebar, FooterProps, HeaderProps } from "../../components";
 
 export interface ErrorScreenProps {
   header: HeaderProps;

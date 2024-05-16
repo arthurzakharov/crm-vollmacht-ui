@@ -1,9 +1,9 @@
-import type { MouseEvent } from "react";
-import type { Section } from "../../types";
+import { MouseEvent } from "react";
+import { Section } from "../../types";
 import React from "react";
 import AnimateHeight from "react-animate-height";
 import cn from "classnames";
-import Arrow from "../../icons/arrow";
+import { Arrow } from "../../icons";
 import "./sections.css";
 
 interface Props<S, N> {

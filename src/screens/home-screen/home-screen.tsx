@@ -1,11 +1,11 @@
 import React, { ReactNode, Fragment } from "react";
-import { LayoutWithSidebar } from "../layout-with-sidebar";
-import { HeaderProps } from "../header";
-import { Main, MainProps } from "../main";
-import { SidebarProps } from "../sidebar";
-import { FooterProps } from "../footer";
-import { StepForm, StepFormProps } from "../step-form";
-import { StepCheckout, StepCheckoutProps } from "../step-checkout";
+import { LayoutWithSidebar } from "../../components/layout-with-sidebar";
+import { HeaderProps } from "../../components/header";
+import { Main, MainProps } from "../../components/main";
+import { SidebarProps } from "../../components/sidebar";
+import { FooterProps } from "../../components/footer";
+import { StepForm, StepFormProps } from "../../components/step-form";
+import { StepCheckout, StepCheckoutProps } from "../../components/step-checkout";
 
 export type HomeStepType<T extends string> = {
   step: T;

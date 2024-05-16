@@ -1,6 +1,6 @@
 import React, { FC, MouseEvent } from "react";
 import cn from "classnames";
-import EditPen from "../../icons/edit-pen";
+import { EditPen } from "../../icons";
 import "./customer-info.css";
 
 export interface CustomerInfoProps {

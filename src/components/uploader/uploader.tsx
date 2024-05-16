@@ -1,6 +1,6 @@
 import { FC, MouseEvent, useState, useEffect } from "react";
 import { FileRejection } from "react-dropzone";
-import type { ApiStatus } from "../../types";
+import { ApiStatus } from "../../types";
 import React from "react";
 import Dropzone from "react-dropzone";
 import AnimateHeight from "react-animate-height";

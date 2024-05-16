@@ -1,4 +1,4 @@
-import type { Screen, ApiStatus } from "../../types";
+import { Screen, ApiStatus } from "../../types";
 import { useEffect } from "react";
 
 const usePostFirstView = (

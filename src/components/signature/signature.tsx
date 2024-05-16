@@ -1,5 +1,5 @@
-import type { FC, MouseEvent } from "react";
-import type { ApiStatus, FieldStatus } from "../../types";
+import { FC, MouseEvent } from "react";
+import { ApiStatus, FieldStatus } from "../../types";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useWindowSize } from "usehooks-ts";
 import SignatureCanvas from "react-signature-canvas";

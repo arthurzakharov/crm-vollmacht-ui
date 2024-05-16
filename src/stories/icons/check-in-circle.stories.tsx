@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import CheckInCircle from "../../icons/check-in-circle";
+import { Meta, StoryObj } from "@storybook/react";
+import { CheckInCircle } from "../../icons";
 import IconDecorator from "../decorators/icon-decorator";
 
 type Story = StoryObj<typeof CheckInCircle>;

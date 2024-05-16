@@ -1,4 +1,4 @@
-import type { ApiStatus } from "../../types";
+import { ApiStatus } from "../../types";
 import { useEffect } from "react";
 
 const useGetAuthenticate = (

@@ -1,4 +1,4 @@
-import type { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import React, { useState } from "react";
 import cn from "classnames";
 import AnimateHeight from "react-animate-height";

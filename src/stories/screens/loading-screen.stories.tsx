@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { LoadingScreen } from "../../components";
+import { LoadingScreen } from "../../screens";
 import logoSrc from "../assets/logo.png";
 
 type Story = StoryObj<typeof LoadingScreen>;

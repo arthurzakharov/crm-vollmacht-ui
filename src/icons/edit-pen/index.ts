@@ -1,1 +1,1 @@
-export { default } from "./edit-pen";
+export * from "./edit-pen";

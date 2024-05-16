@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import Arrow from "../../icons/arrow";
+import { Meta, StoryObj } from "@storybook/react";
+import { Arrow } from "../../icons";
 import IconDecorator from "../decorators/icon-decorator";
 
 type Story = StoryObj<typeof Arrow>;

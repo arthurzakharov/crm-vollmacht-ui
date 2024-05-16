@@ -1,5 +1,5 @@
-import type { ApiStatus } from "../../types";
-import type { Location, NavigateFunction } from "react-router-dom";
+import { ApiStatus } from "../../types";
+import { Location, NavigateFunction } from "react-router-dom";
 import { useEffect } from "react";
 import {
   addSecretAsFirstUrlParam,

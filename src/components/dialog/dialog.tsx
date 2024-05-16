@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import React, { useEffect, useState, useRef, Fragment } from "react";
 import { useScrollLock, useOnClickOutside } from "usehooks-ts";
 import cn from "classnames";

@@ -1,1 +1,1 @@
-export { default } from "./check-in-circle";
+export * from "./check-in-circle";

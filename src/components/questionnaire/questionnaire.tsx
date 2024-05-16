@@ -1,4 +1,4 @@
-import type { QuestionType } from "../../types";
+import { QuestionType } from "../../types";
 import React, { useState, useEffect } from "react";
 import { AnimateHeight } from "../animate-height";
 import Question from "../question";
