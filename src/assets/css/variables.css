@@ -92,6 +92,17 @@
   --backward-btn-background: #ffffff;
   --backward-btn-hover: #bdc4c9;
 
+  --confirm-btn-background: #2ecc71;
+  --confirm-btn-border: #29b765;
+  --confirm-btn-text: #ffffff;
+
+  --cancel-btn-background: #ffffff;
+  --cancel-btn-background-hover: #f4f7f9;
+  --cancel-btn-border: #e4ebf0;
+  --cancel-btn-text: #006699;
+
+  --modal-close: #004473;
+
   --background-primary: #f4f7f9;
   --background-secondary: #ffffff;
   --background-tertiary: #f8fafb;
@@ -104,6 +115,7 @@
 
   --line-primary: #bdc4c9;
   --line-secondary: #efefef;
+  --line-tertiary: #f1f4f4;
 
   --max-width-tablet: 48rem;
   --max-width-laptop: 60.5rem;

@@ -1,3 +1,4 @@
+import { MouseEvent } from "react";
 import { AllowedPath } from "../types";
 
 export const addSecretAsFirstUrlParam = (search: string, secret: string): string => {
@@ -103,4 +104,9 @@ export const isProduction = (): boolean => {
 
 export const path = (path: string): string => {
   return isProduction() ? "/vollmacht" + path : path;
+};
+
+export const blurOnClick = (e: MouseEvent<HTMLButtonElement>, cb: () => void): void => {
+  e.currentTarget.blur();
+  cb();
 };

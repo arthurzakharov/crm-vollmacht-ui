@@ -1,16 +1,16 @@
 .dialog-article {
   position: relative;
   overflow-y: auto;
-  max-height: calc(100vh - 3.5rem);
-  padding-right: 1.25rem;
-  margin-right: -1.25rem;
+  max-height: calc(100vh - 56px);
+  padding-right: 20px;
+  margin-right: -20px;
 }
 
 .dialog-article__panel {
   position: fixed;
-  top: 1.75rem;
-  right: 1.625rem;
-  left: 1.625rem;
+  top: 28px;
+  right: 26px;
+  left: 26px;
   line-height: 0;
 }
 
@@ -19,8 +19,8 @@
   left: calc(100%);
   transform: translateX(-100%);
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
   border: none;
   background-color: transparent;
 }
@@ -31,11 +31,11 @@
   content: "";
   position: absolute;
   z-index: 1;
-  top: 0.4375rem;
+  top: 7px;
   left: 0;
   width: 100%;
-  height: 0.125rem;
-  background-color: var(--blue-2);
+  height: 2px;
+  background-color: var(--modal-close);
 }
 
 .dialog-article__close::before {
@@ -47,70 +47,69 @@
 }
 
 .dialog-article__footer {
-  margin-top: 1.25rem;
-  border-top: 0.0625rem solid var(--gray-3);
-  padding-top: 1.25rem;
+  margin-top: 20px;
+  border-top: 1px solid var(--line-tertiary);
+  padding-top: 20px;
   display: flex;
   justify-content: flex-end;
 }
 
 .dialog-article__button:not(:first-of-type) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .dialog-article__button {
-  border: 0.125rem solid transparent;
-  border-radius: 0.25rem;
-  padding: 0.625rem 0.9375rem;
-  font-family:
-    Titillium Web,
-    sans-serif;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-family: "Titillium Web", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.125;
   transition:
     background-color 150ms ease-in-out,
     border-color 150ms ease-in-out;
 }
 
-.dialog-article__button--cancel {
-  color: var(--blue-1);
-  border-color: var(--gray-19);
+.dialog-article__button--cancel.dialog-article__button {
+  color: var(--cancel-btn-text);
+  border-color: var(--cancel-btn-border);
+  background-color: var(--cancel-btn-background);
 }
 
-.dialog-article__button--cancel:hover {
-  background-color: var(--white-3);
-  border-color: var(--gray-20);
+.dialog-article__button--cancel.dialog-article__button:hover {
+  background-color: var(--cancel-btn-background-hover);
+  border-color: var(--cancel-btn-border);
 }
 
-.dialog-article__button--cancel:focus:not(:active) {
-  outline-offset: -0.125rem;
+.dialog-article__button--cancel.dialog-article__button:focus:not(:active) {
+  outline-offset: -2px;
 }
 
-.dialog-article__button--confirm {
-  color: var(--white-1);
-  background-color: var(--green-1);
-  border-color: var(--green-3);
+.dialog-article__button--confirm.dialog-article__button {
+  color: var(--confirm-btn-text);
+  background-color: var(--confirm-btn-background);
+  border-color: var(--confirm-btn-border);
 }
 
-.dialog-article__button--confirm:hover {
-  background-color: var(--green-3);
-  border-color: var(--green-4);
+.dialog-article__button--confirm.dialog-article__button:hover {
+  background-color: var(--confirm-btn-border);
+  border-color: var(--confirm-btn-background);
 }
 
-.dialog-article__button--confirm:focus:not(:active) {
-  outline-offset: -0.125rem;
+.dialog-article__button--confirm.dialog-article__button:focus:not(:active) {
+  outline-offset: -2px;
 }
 
 .dialog-article .cmp {
-  margin-top: 0.75rem;
+  margin-top: 12px;
 }
 
 .dialog-article .cmp .cmpvendorlist {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 10pt;
-  color: var(--gray-13);
+  color: #4b4b4b;
 }
 
 .dialog-article .cmp .cmpvendorlist ul,
@@ -119,12 +118,12 @@
 }
 
 .dialog-article .cmp .cmpvendorlist a {
-  color: var(--orange-1);
+  color: #ff8d02;
   text-decoration: none;
 }
 
 .dialog-article .cmp .cmpvendorlistheadertext {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -137,59 +136,61 @@
 }
 
 .dialog-article .cmp .cmpvendorinfohl {
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
+}
+
+.dialog-article h1,
+.dialog-article h2,
+.dialog-article h3,
+.dialog-article h4 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  color: var(--text-accent-primary);
 }
 
 .dialog-article h1 {
-  margin-bottom: 1.25rem;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  font-size: 1.75rem;
+  margin-bottom: 20px;
+  font-size: 28px;
   line-height: 1.25;
-  color: var(--blue-1);
 }
 
 .dialog-article h2 {
-  margin-bottom: 0.3125rem;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-size: 24px;
   line-height: 1.6;
-  color: var(--blue-1);
 }
 
 .dialog-article h3 {
-  margin-bottom: 0.3125rem;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  font-size: 1.25rem;
+  margin-bottom: 5px;
+  font-size: 20px;
   line-height: 1.6;
-  color: var(--blue-1);
 }
 
 .dialog-article h4 {
-  margin-bottom: 0.3125rem;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
+  margin-bottom: 5px;
+  font-size: 16px;
   line-height: 1.6;
-  color: var(--blue-1);
+}
+
+.dialog-article p,
+.dialog-article li,
+.dialog-article table {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
 }
 
 .dialog-article p {
-  margin-bottom: 0.75rem;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: var(--gray-2);
+  margin-bottom: 12px;
 }
 
 .dialog-article ul {
-  padding-left: 1.875rem;
+  padding-left: 30px;
   padding-right: 0;
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
   list-style: disc;
 }
 
@@ -197,7 +198,7 @@
   padding-left: 16px;
   padding-right: 0;
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
   list-style: auto;
 }
 
@@ -205,26 +206,13 @@
   margin-bottom: 16px;
 }
 
-.dialog-article li {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: var(--gray-2);
-}
-
 .dialog-article table {
   border-collapse: collapse;
   border-spacing: 0;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: var(--gray-2);
 }
 
 .dialog-article td {
-  padding-right: 0.5rem;
+  padding-right: 8px;
 }
 
 .dialog-article td:last-of-type {
@@ -237,17 +225,17 @@
 
 .dialog-article a {
   font-weight: 300;
-  color: var(--blue-1);
+  color: var(--link);
   text-decoration: none;
 }
 
 .dialog-article button {
   font-weight: 300;
-  color: var(--blue-1);
+  color: var(--link);
 }
 
 .dialog-article cite {
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
 }
 
 .dialog-article strong {
