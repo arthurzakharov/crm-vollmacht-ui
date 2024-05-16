@@ -59,7 +59,12 @@ export const Idle: Story = {
     await step("Button is not disable while idle", async () => {
       await userEvent.click(button);
       await expect(button).not.toBeDisabled();
-      await expect(args.onClick).toHaveBeenCalledOnce();
+      await expect(args.onClick).toHaveBeenNthCalledWith(1);
+    });
+    await step("Button is not in focus after click", async () => {
+      await userEvent.click(button);
+      await expect(args.onClick).toHaveBeenNthCalledWith(2);
+      await expect(button).not.toHaveFocus();
     });
   },
 };

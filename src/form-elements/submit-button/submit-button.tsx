@@ -8,7 +8,7 @@ export type SubmitButtonVersion = "main" | "sidebar";
 export interface SubmitButtonProps {
   loading: boolean;
   text: string;
-  onClick: (e: MouseEvent<HTMLButtonElement>) => Promise<void>;
+  onClick: () => Promise<void>;
   version?: SubmitButtonVersion;
 }
 
@@ -22,8 +22,14 @@ export const SubmitButton: FC<SubmitButtonProps> = (props) => {
       "submit-button--sidebar-version": version === "sidebar",
     });
 
+  const onClickHandler = async (e: MouseEvent<HTMLButtonElement>): Promise<void> => {
+    e.preventDefault();
+    e.currentTarget.blur();
+    await onClick();
+  };
+
   return (
-    <button type="button" tabIndex={0} disabled={loading} className={submitButtonCn()} onClick={onClick}>
+    <button type="button" tabIndex={0} disabled={loading} className={submitButtonCn()} onClick={onClickHandler}>
       {loading && (
         <div className="submit-button__loader">
           <Loader color="secondary" />
