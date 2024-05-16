@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/FormRow With1Element smoke-test 1`] = `
+<div style="max-width: 600px;">
+  <div class="form-row">
+    <div class="input-text">
+      <div data-testid="input-text-label"
+           class="input-text__label"
+      >
+        <label for="firstName"
+               class="label label--s label--neutral"
+        >
+          Firt name
+        </label>
+      </div>
+      <div class="input-text__wrap">
+        <input type="text"
+               maxlength="12"
+               name="firstName"
+               id="firstName"
+               placeholder
+               class="input input--primary input--neutral"
+               value
+        >
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/FormRow With2Elements smoke-test 1`] = `
+<div style="max-width: 600px;">
+  <div class="form-row">
+    <div class="input-text">
+      <div data-testid="input-text-label"
+           class="input-text__label"
+      >
+        <label for="firstName"
+               class="label label--s label--neutral"
+        >
+          Firt name
+        </label>
+      </div>
+      <div class="input-text__wrap">
+        <input type="text"
+               maxlength="12"
+               name="firstName"
+               id="firstName"
+               placeholder
+               class="input input--primary input--neutral"
+               value
+        >
+      </div>
+    </div>
+    <div class="input-text">
+      <div data-testid="input-text-label"
+           class="input-text__label"
+      >
+        <label for="lastName"
+               class="label label--s label--neutral"
+        >
+          Last name
+        </label>
+      </div>
+      <div class="input-text__wrap">
+        <input type="text"
+               maxlength="12"
+               name="lastName"
+               id="lastName"
+               placeholder
+               class="input input--primary input--neutral"
+               value
+        >
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/Main DefaultValues smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div class="main main--home">
+    <h1 class="main__title main--title--no-text-under">
+      This is some title text
+    </h1>
+    <div class="main__content">
+      <div style="height: 200px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Main MobileWithInfoList smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div class="main main--home">
+    <h1 class="main__title">
+      This is some title text
+    </h1>
+    <div class="main__content">
+      <h2 class="main__subtitle">
+        This is some subtitle text
+      </h2>
+      <p class="main__text">
+        This is some text
+      </p>
+      <hr class="main__line">
+      <h4 class="main__step">
+        Step name
+      </h4>
+      <div style="height: 200px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Main MobileWithInfoListEmpty smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div class="main main--home">
+    <h1 class="main__title">
+      This is some title text
+    </h1>
+    <div class="main__content">
+      <h2 class="main__subtitle">
+        This is some subtitle text
+      </h2>
+      <p class="main__text">
+        This is some text
+      </p>
+      <hr class="main__line">
+      <h4 class="main__step">
+        Step name
+      </h4>
+      <div style="height: 200px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Main NoSubtitle smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div class="main main--home">
+    <h1 class="main__title">
+      This is some title text
+    </h1>
+    <div class="main__content">
+      <p class="main__text">
+        This is some text
+      </p>
+      <hr class="main__line">
+      <h4 class="main__step">
+        Step name
+      </h4>
+      <div style="height: 200px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Main NoText smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div class="main main--home">
+    <h1 class="main__title">
+      This is some title text
+    </h1>
+    <div class="main__content">
+      <h2 class="main__subtitle">
+        This is some subtitle text
+      </h2>
+      <hr class="main__line">
+      <h4 class="main__step">
+        Step name
+      </h4>
+      <div style="height: 200px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Main ScreenAttachment smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div class="main main--attachment">
+    <h1 class="main__title">
+      This is some title text
+    </h1>
+    <div class="main__content">
+      <h2 class="main__subtitle">
+        This is some subtitle text
+      </h2>
+      <p class="main__text">
+        This is some text
+      </p>
+      <hr class="main__line">
+      <div style="height: 200px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Main ScreenHome smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div class="main main--home">
+    <h1 class="main__title">
+      This is some title text
+    </h1>
+    <div class="main__content">
+      <h2 class="main__subtitle">
+        This is some subtitle text
+      </h2>
+      <p class="main__text">
+        This is some text
+      </p>
+      <hr class="main__line">
+      <h4 class="main__step">
+        Step name
+      </h4>
+      <div style="height: 200px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Main ScreenNonAttachmentNoLine smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div class="main main--home">
+    <h1 class="main__title main--title--no-text-under">
+      This is some title text
+    </h1>
+    <div class="main__content">
+      <h4 class="main__step">
+        Step name
+      </h4>
+      <div style="height: 200px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Main ScreenNonAttachmentNoStep smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div class="main main--home">
+    <h1 class="main__title">
+      This is some title text
+    </h1>
+    <div class="main__content">
+      <h2 class="main__subtitle">
+        This is some subtitle text
+      </h2>
+      <p class="main__text">
+        This is some text
+      </p>
+      <hr class="main__line">
+      <div style="height: 200px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Main ScreenNonAttachmentSubtitle smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div class="main main--home">
+    <h1 class="main__title">
+      This is some title text
+    </h1>
+    <div class="main__content">
+      <h2 class="main__subtitle">
+        This is some subtitle text
+      </h2>
+      <hr class="main__line">
+      <h4 class="main__step">
+        Step name
+      </h4>
+      <div style="height: 200px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Main ScreenNonAttachmentText smoke-test 1`] = `
+<div style="max-width: 768px;">
+  <div class="main main--home">
+    <h1 class="main__title">
+      This is some title text
+    </h1>
+    <div class="main__content">
+      <p class="main__text">
+        This is some text
+      </p>
+      <hr class="main__line">
+      <h4 class="main__step">
+        Step name
+      </h4>
+      <div style="height: 200px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;

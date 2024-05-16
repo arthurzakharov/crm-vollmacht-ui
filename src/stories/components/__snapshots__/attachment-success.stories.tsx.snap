@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/AttachmentSuccess Default smoke-test 1`] = `
+<div style="max-width: 600px;">
+  <div class="attachment-success">
+    <img alt="submitted"
+         src="/src/stories/assets/submitted.png"
+         class="attachment-success__image"
+    >
+    <h6 class="attachment-success__title">
+      Vielen Dank!
+    </h6>
+    <p class="attachment-success__text">
+      Wir haben Ihre Informationen erhalten und werden diese umgehend bearbeiten.
+    </p>
+    <p class="attachment-success__text">
+      Sobald neue Erkentnisse vorliegen, setzen wir uns mit Ihnen in Verbindung.
+    </p>
+  </div>
+</div>
+`;

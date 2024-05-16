@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FORM ELEMENTS/Checkbox Checked smoke-test 1`] = `
+<div class="checkbox checkbox--checked">
+</div>
+`;
+
+exports[`FORM ELEMENTS/Checkbox DefaultValues smoke-test 1`] = `
+<div class="checkbox checkbox--checked">
+</div>
+`;
+
+exports[`FORM ELEMENTS/Checkbox Disabled smoke-test 1`] = `
+<div class="checkbox checkbox--checked checkbox--disabled">
+</div>
+`;
+
+exports[`FORM ELEMENTS/Checkbox Enabled smoke-test 1`] = `
+<div class="checkbox checkbox--checked">
+</div>
+`;
+
+exports[`FORM ELEMENTS/Checkbox Focused smoke-test 1`] = `
+<div class="checkbox checkbox--checked checkbox--focused">
+</div>
+`;
+
+exports[`FORM ELEMENTS/Checkbox NotChecked smoke-test 1`] = `
+<div class="checkbox checkbox--not-checked">
+</div>
+`;
+
+exports[`FORM ELEMENTS/Checkbox NotFocused smoke-test 1`] = `
+<div class="checkbox checkbox--checked">
+</div>
+`;

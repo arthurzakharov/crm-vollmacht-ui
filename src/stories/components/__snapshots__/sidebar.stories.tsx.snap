@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/Sidebar WithInfoSection smoke-test 1`] = `
+<div style="max-width: 345px;">
+  <div class="sidebar">
+    <h6 class="sidebar__title">
+      Ihre Übersicht
+    </h6>
+    <div class="sidebar__steps">
+      <div class="sidebar-step">
+        <p>
+          1. Angaben zur Person
+        </p>
+        <div class="status-icon status-icon--success status-icon--s status-icon--active">
+        </div>
+      </div>
+      <div class="sidebar-step">
+        <p>
+          2. Ihre Kontaktdaten
+        </p>
+        <div class="status-icon status-icon--success status-icon--s status-icon--idle">
+        </div>
+      </div>
+      <div class="sidebar-step">
+        <p>
+          3. Vergütungsvereinbarung
+        </p>
+        <div class="status-icon status-icon--success status-icon--s status-icon--idle">
+        </div>
+      </div>
+      <div class="sidebar-step">
+        <p>
+          4. Vollmacht
+        </p>
+        <div class="status-icon status-icon--success status-icon--s status-icon--idle">
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-info">
+      <div>
+        <p class="sidebar-info__text">
+          <strong>
+            Value 1:
+          </strong>
+          <span>
+            xxx-xxx-xxx-xxx
+          </span>
+        </p>
+        <p class="sidebar-info__text">
+          <strong>
+            Value 2:
+          </strong>
+          <span>
+            yyy-yyy-yyy-yyy
+          </span>
+        </p>
+      </div>
+      <div aria-hidden="false"
+           class="rah-static rah-static--height-auto "
+           style="height: auto; overflow: visible;"
+      >
+        <div style="transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;">
+          <div class="sidebar-info__wrap">
+            <div class="customer-info customer-info--sidebar">
+              <div class="customer-info__navigation">
+                Ihre Angaben
+                <button type="button"
+                        tabindex="0"
+                        class="customer-info__button"
+                >
+                  <span>
+                    ändern
+                  </span>
+                  <svg focusable="false"
+                       role="img"
+                       xmlns="http://www.w3.org/2000/svg"
+                       viewbox="0 0 512 512"
+                  >
+                    <path opacity="0.4"
+                          fill="currentColor"
+                          d="M498 142.08l-56.6 56.55-128-128 56.55-56.55a48 48 0 0 1 67.91 0L498 74.17a48 48 0 0 1 0 67.91z"
+                    >
+                    </path>
+                    <path fill="currentColor"
+                          d="M12.85 371.11L.15 485.33a24 24 0 0 0 26.49 26.51l114.14-12.6 278-278-128-128z"
+                    >
+                    </path>
+                  </svg>
+                </button>
+              </div>
+              <p>
+                Arthur Zakharov
+              </p>
+              <p>
+                Geb in 12/12/2000
+              </p>
+              <p>
+                Marienstr. 7, 01067 Dresden
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar__logos">
+      <div class="logos">
+        <div class="logos__tls">
+          <img alt="tls-icon"
+               src="/src/assets/png/tls/tls.png"
+               class="logos__icon"
+          >
+          <span class="logos__text">
+            Höchste
+          </span>
+          <span class="logos__text">
+            Datensicherheit.
+          </span>
+        </div>
+        <img alt="tuv-icon"
+             src="/src/assets/jpeg/tuv/tuv.jpeg"
+             class="logos__tuv"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Sidebar WithoutInfoSection smoke-test 1`] = `
+<div style="max-width: 345px;">
+  <div class="sidebar">
+    <h6 class="sidebar__title">
+      Ihre Übersicht
+    </h6>
+    <div class="sidebar__steps">
+      <div class="sidebar-step">
+        <p>
+          1. Angaben zur Person
+        </p>
+        <div class="status-icon status-icon--success status-icon--s status-icon--active">
+        </div>
+      </div>
+      <div class="sidebar-step">
+        <p>
+          2. Ihre Kontaktdaten
+        </p>
+        <div class="status-icon status-icon--success status-icon--s status-icon--idle">
+        </div>
+      </div>
+      <div class="sidebar-step">
+        <p>
+          3. Vergütungsvereinbarung
+        </p>
+        <div class="status-icon status-icon--success status-icon--s status-icon--idle">
+        </div>
+      </div>
+      <div class="sidebar-step">
+        <p>
+          4. Vollmacht
+        </p>
+        <div class="status-icon status-icon--success status-icon--s status-icon--idle">
+        </div>
+      </div>
+    </div>
+    <div class="sidebar__logos">
+      <div class="logos">
+        <div class="logos__tls">
+          <img alt="tls-icon"
+               src="/src/assets/png/tls/tls.png"
+               class="logos__icon"
+          >
+          <span class="logos__text">
+            Höchste
+          </span>
+          <span class="logos__text">
+            Datensicherheit.
+          </span>
+        </div>
+        <img alt="tuv-icon"
+             src="/src/assets/jpeg/tuv/tuv.jpeg"
+             class="logos__tuv"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+`;
