@@ -105,7 +105,7 @@ export const Input: FC<InputProps> = (props) => {
       className={inputCn()}
       disabled={disabled}
       mask="99/99/9999"
-      maskPlaceholder="TT/MM/JJJJ"
+      maskPlaceholder="__/__/____"
       placeholder={placeholder}
       onClick={onDateClick}
       onKeyDown={onDateKeyDown}
