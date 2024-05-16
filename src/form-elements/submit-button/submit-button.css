@@ -3,9 +3,9 @@
   position: relative;
   width: 100%;
   border-radius: 4px;
-  border: 1px solid var(--orange-1);
+  border: 1px solid var(--forward-btn);
   padding: 14px 8px;
-  background-color: var(--orange-1);
+  background-color: var(--forward-btn);
   font-family: "Titillium Web", sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -14,7 +14,7 @@
 }
 
 .submit-button--idle {
-  color: var(--white-1);
+  color: var(--forward-btn-text);
 }
 
 .submit-button--loading {
@@ -28,14 +28,14 @@
 
 .submit-button:disabled {
   cursor: not-allowed;
-  background-color: var(--orange-3);
-  border-color: var(--orange-3);
+  background-color: var(--forward-btn-disabled);
+  border-color: var(--forward-btn-disabled);
 }
 
 .submit-button:hover:not(:disabled) {
-  background-color: var(--orange-5);
-  border-color: var(--orange-5);
-  box-shadow: 0 10px 20px var(--black-2);
+  background-color: var(--forward-btn-hover);
+  border-color: var(--forward-btn-hover);
+  box-shadow: var(--shadow-primary);
 }
 
 .submit-button:focus {
@@ -57,7 +57,7 @@
 }
 
 .submit-button:focus:after {
-  border-color: var(--white-1);
+  border-color: var(--forward-btn-text);
 }
 
 .submit-button:active:after {
