@@ -12,42 +12,51 @@ export interface DialogArticleProps extends PropsWithChildren {
 }
 
 export const DialogArticle: FC<DialogArticleProps> = (props) => {
+  const {
+    hasNoCloseButton = false,
+    cancelButton = "",
+    confirmButton = "",
+    onCancel,
+    onConfirm,
+    onClose,
+    children,
+  } = props;
   const [tabIndex, setTabIndex] = useState<-1 | 0>(0);
   const buttonRef = useMoveFocus<HTMLDivElement>();
 
   const isFooterShown = (): boolean => {
-    return (!!props.cancelButton && !!props.onCancel) || (!!props.confirmButton && !!props.onConfirm);
+    return (!!cancelButton && !!onCancel) || (!!confirmButton && !!onConfirm);
   };
 
   return (
     <article className="dialog-article">
-      {!props.hasNoCloseButton && (
+      {!hasNoCloseButton ? (
         <div className="dialog-article__panel">
           <div ref={buttonRef} tabIndex={tabIndex} onBlur={() => setTabIndex(-1)} />
-          <button type="button" tabIndex={0} className="dialog-article__close" onClick={() => props.onClose()} />
+          <button type="button" tabIndex={0} className="dialog-article__close" onClick={() => onClose()} />
         </div>
-      )}
-      {props.children}
+      ) : null}
+      {children}
       {isFooterShown() && (
         <div className="dialog-article__footer">
-          {props.cancelButton && props.onCancel && (
+          {cancelButton && onCancel && (
             <button
               type="button"
               tabIndex={0}
               className="dialog-article__button dialog-article__button--cancel"
-              onClick={() => props.onCancel && props.onCancel()}
+              onClick={() => onCancel && onCancel()}
             >
-              {props.cancelButton}
+              {cancelButton}
             </button>
           )}
-          {props.confirmButton && props.onConfirm && (
+          {confirmButton && onConfirm && (
             <button
               type="button"
               tabIndex={0}
               className="dialog-article__button dialog-article__button--confirm"
-              onClick={() => props.onConfirm && props.onConfirm()}
+              onClick={() => onConfirm && onConfirm()}
             >
-              {props.confirmButton}
+              {confirmButton}
             </button>
           )}
         </div>
