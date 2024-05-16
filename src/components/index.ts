@@ -21,5 +21,4 @@ export * from "./sidebar-info";
 export * from "./sidebar-step";
 export * from "./signature";
 export * from "./status-icon";
-export * from "./submit-button";
 export * from "./uploader";

@@ -6,7 +6,7 @@ import logoSrc from "../assets/logo.png";
 type Story = StoryObj<typeof LoadingScreen>;
 
 const meta: Meta<typeof LoadingScreen> = {
-  title: "SCREENS/LoadingScreen",
+  title: "SCREENS/Loading Screen",
   component: LoadingScreen,
 };
 

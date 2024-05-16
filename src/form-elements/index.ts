@@ -5,3 +5,4 @@ export * from "./input-radio";
 export * from "./input-text";
 export * from "./navigation-button";
 export * from "./radio";
+export * from "./submit-button";

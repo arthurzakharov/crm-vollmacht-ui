@@ -1,6 +1,13 @@
 import React, { FC, Fragment, ReactNode } from "react";
-import { Logos, LogosProps, Signature, SignatureProps, SubmitButton, SubmitButtonProps } from "../../components";
-import { NavigationButton, NavigationButtonProps, InputCheckbox, InputCheckboxProps } from "../../form-elements";
+import { Logos, LogosProps, Signature, SignatureProps } from "../../components";
+import {
+  NavigationButton,
+  NavigationButtonProps,
+  InputCheckbox,
+  InputCheckboxProps,
+  SubmitButton,
+  SubmitButtonProps,
+} from "../../form-elements";
 import "./step-checkout.css";
 
 export type StepCheckoutType = "signature" | "logos" | "paragraph" | "navigation" | "checkboxes" | "submit";

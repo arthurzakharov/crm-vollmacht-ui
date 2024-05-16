@@ -6,12 +6,8 @@ import logoSrc from "../assets/logo.png";
 type Story = StoryObj<typeof ErrorScreen>;
 
 const meta: Meta<typeof ErrorScreen> = {
-  title: "SCREENS/ErrorScreen",
+  title: "SCREENS/Error Screen",
   component: ErrorScreen,
-};
-
-export const Default: Story = {
-  name: "Error Screen",
   args: {
     header: {
       logo: logoSrc,
@@ -64,6 +60,10 @@ export const Default: Story = {
       ],
     },
   },
+};
+
+export const Default: Story = {
+  name: "Error Screen",
 };
 
 export default meta;

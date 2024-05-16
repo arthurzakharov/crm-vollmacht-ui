@@ -7,6 +7,7 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
+    "@storybook/addon-interactions",
     "@storybook/addon-form-elements",
     "@chromatic-com/storybook",
     "@storybook/addon-mdx-gfm",
