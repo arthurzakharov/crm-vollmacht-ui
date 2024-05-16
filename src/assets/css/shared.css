@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: var(--white-3);
+  background-color: var(--background-primary);
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
@@ -32,7 +32,7 @@ a:hover {
 }
 
 a:focus:not(:active) {
-  outline-color: var(--orange-1);
+  outline-color: var(--focus);
   outline-offset: 0;
   transition: outline-color 150ms ease-in-out 50ms;
 }
@@ -57,7 +57,7 @@ button:hover,
 
 button:focus:not(:active),
 *[role="button"]:focus:not(:active) {
-  outline-color: var(--orange-1);
+  outline-color: var(--focus);
   outline-offset: 0;
   transition: outline-color 150ms ease-in-out 50ms;
 }

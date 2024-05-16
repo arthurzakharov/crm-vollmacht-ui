@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, Fragment, FC, ReactNode } from "react";
-import { useScrollLock, useOnClickOutside, useToggle } from "usehooks-ts";
+import { useScrollLock, useOnClickOutside } from "usehooks-ts";
 import cn from "classnames";
 import "./dialog.css";
 
@@ -25,8 +25,8 @@ export interface DialogProps {
 export const Dialog: FC<DialogProps> = (props) => {
   const { dialogs, lockTarget = "#root", name = "", position = "top", size = "m", onOverlayClick, onClose } = props;
   const { isLocked, lock, unlock } = useScrollLock({ autoLock: false, lockTarget });
-  const [isMounted, toggleIsMounted] = useToggle(false);
-  const [isClosing, toggleIsClosing] = useToggle(true);
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+  const [isClosing, setIsClosing] = useState<boolean>(true);
   const [localDialog, setLocalDialog] = useState<string | null>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -45,14 +45,14 @@ export const Dialog: FC<DialogProps> = (props) => {
   useEffect(() => {
     if (name) setLocalDialog(name);
     if (name && !isMounted) {
-      toggleIsMounted();
-      toggleIsClosing();
+      setIsMounted(true);
+      setIsClosing(false);
       isLocked ? unlock() : lock();
     }
     if (!name && isMounted) {
       isLocked ? unlock() : lock();
       setTimeout(() => {
-        toggleIsMounted();
+        setIsMounted(false);
         setLocalDialog(null);
         onClose();
       }, 300);
