@@ -1,4 +1,5 @@
 import { MouseEvent } from "react";
+import { NavigateFunction } from "react-router-dom";
 import { AllowedPath, Screen } from "../types";
 
 export const addSecretAsFirstUrlParam = (search: string, secret: string): string => {
@@ -247,4 +248,35 @@ export const convertDateFormat = (dateString: string): string => {
 export const blurAfterClick = (e: MouseEvent<HTMLButtonElement>, cb: () => void): void => {
   e.currentTarget.blur();
   cb();
+};
+
+export const onScreenInParamsMode = (current: Screen | null, previous: Screen | null): void => {
+  const screen = searchParams().get("page");
+  if (current !== previous && current !== screen && current) updatePageUrlParameter(current);
+};
+
+// const screen = getActualScreenFromUrl(isAttachment(), isRemuneration());
+// const secret = getActualSecretFromUrl(isAttachment(), isRemuneration());
+
+export const onScreenInPagesMode = (
+  current: Screen | null,
+  baseUrl: string,
+  screen: string,
+  secret: string,
+  navigate: NavigateFunction,
+): void => {
+  const { hash } = new URL(location.href);
+  const search = searchParams();
+  if (screen && current !== screen && current === "home") {
+    search.append("secret", secret);
+    navigate(`${baseUrl}?${sortSearchParams(search).toString()}${hash}`);
+  }
+  if (screen && current !== screen && current === "attachment") {
+    search.delete("secret");
+    navigate(`${baseUrl}attachment/${secret}?${sortSearchParams(search).toString()}${hash}`);
+  }
+  if (screen && current !== screen && current === "remuneration") {
+    search.delete("secret");
+    navigate(`${baseUrl}remuneration/${secret}?${sortSearchParams(search).toString()}${hash}`);
+  }
 };
