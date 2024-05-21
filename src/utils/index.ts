@@ -211,3 +211,26 @@ export const download = async (fileName: string, baseUrl: string) => {
 export const getPath = (path: string, baseUrl: string): string => {
   return baseUrl === "/" ? baseUrl + path + "/" : baseUrl + "/" + path + "/";
 };
+
+export const searchParams = (): URLSearchParams => {
+  const { search } = new URL(location.href);
+  return new URLSearchParams(search);
+};
+
+export const getActualScreenFromUrl = (isAttachment: boolean, isRemuneration: boolean): Screen => {
+  if (isAttachment) return "attachment";
+  if (isRemuneration) return "remuneration";
+  return "home";
+};
+
+export const getActualSecretFromUrl = (isAttachment: boolean, isRemuneration: boolean): string => {
+  if (isAttachment) {
+    const match = location.pathname.match(/\/attachment\/([a-zA-Z0-9]+)/);
+    return match ? match[1] : "";
+  }
+  if (isRemuneration) {
+    const match = location.pathname.match(/\/remuneration\/([a-zA-Z0-9]+)/);
+    return match ? match[1] : "";
+  }
+  return searchParams().get("secret") || "";
+};
