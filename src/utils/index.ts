@@ -1,5 +1,5 @@
 import { MouseEvent } from "react";
-import { AllowedPath } from "../types";
+import { AllowedPath, Screen } from "../types";
 
 export const addSecretAsFirstUrlParam = (search: string, secret: string): string => {
   if (!search && !secret) return "";
@@ -109,4 +109,105 @@ export const path = (path: string): string => {
 export const blurOnClick = (e: MouseEvent<HTMLButtonElement>, cb: () => void): void => {
   e.currentTarget.blur();
   cb();
+};
+
+export const removeSlashAtEnd = (url: string | null): string | null => {
+  if (typeof url !== "string") return url;
+  return url.replace(/\/$/, "");
+};
+
+export const pushToDataLayer = (dataLayerObject: { event: string }) => {
+  if (dataLayerObject) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(dataLayerObject);
+  }
+};
+
+export const sortSearchParams = (searchParams: URLSearchParams): URLSearchParams => {
+  const paramsArray = Array.from(searchParams.entries());
+  paramsArray.sort(([keyA], [keyB]) => {
+    if (keyA === "secret") return -1;
+    if (keyB === "secret") return 1;
+    if (keyA === "page") return -1;
+    if (keyB === "page") return 1;
+    return 0;
+  });
+  return new URLSearchParams(paramsArray);
+};
+
+export const updatePageUrlParameter = (value: Screen): void => {
+  const url = new URL(location.href);
+  const searchParams = new URLSearchParams(url.search);
+  searchParams.set("page", value);
+  window.history.replaceState(
+    {},
+    "",
+    `${url.origin}${url.pathname}?${sortSearchParams(searchParams).toString()}${url.hash}`,
+  );
+};
+
+export const isLeapYear = (year: number): boolean => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+
+export const isValidDate = (date: string): boolean => {
+  const [day, month, year] = date.split("/");
+  const d = parseInt(day, 10);
+  const m = parseInt(month, 10);
+  const y = parseInt(year, 10);
+  if (Number.isNaN(d) || Number.isNaN(m) || Number.isNaN(y) || date.length !== 10) return false;
+  if (m > 12 || d > 31) {
+    return false;
+  } else if (m === 2 && d > 28) {
+    if (d === 29) {
+      if (!isLeapYear(y)) {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  } else if (d > 30 && (m === 4 || m === 6 || m === 9 || m === 11)) {
+    return false;
+  }
+  return true;
+};
+
+export const convertToDateNumber = (num: string): string => {
+  if (parseInt(num).toString().length !== num.length) return "";
+  return num.length === 1 ? `0${num}` : num;
+};
+
+export const isValidBirthDate = (date: string): boolean => {
+  const regExp = /^\s*(3[01]|[12][0-9]|0?[1-9])\/(1[012]|0?[1-9])\/((?:19|20)\d{2})\s*$/g;
+  if (regExp.test(date) && isValidDate(date)) {
+    const [day, month, year] = date.split("/");
+    const today = new Date();
+    const entryAgeYear = String(today.getFullYear() - 18);
+    const entryAgeMonth = convertToDateNumber(String(today.getMonth() + 1));
+    const entryAgeDay = convertToDateNumber(`${today.getDate()}`);
+    const birth = new Date(`${year}-${month}-${day}T00:00:00`);
+    const entry = new Date(`${entryAgeYear}-${entryAgeMonth}-${entryAgeDay}T00:00:00`);
+    return birth <= entry;
+  }
+  return false;
+};
+
+export const download = async (fileName: string, baseUrl: string) => {
+  fetch(getPath("files", baseUrl) + fileName)
+    .then((response) => response.blob())
+    .then((blob) => {
+      const url = window.URL.createObjectURL(new Blob([blob]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    })
+    .catch((error) => {
+      console.error("Error fetching the file:", error);
+    });
+};
+
+export const getPath = (path: string, baseUrl: string): string => {
+  return baseUrl === "/" ? baseUrl + path + "/" : baseUrl + "/" + path + "/";
 };
