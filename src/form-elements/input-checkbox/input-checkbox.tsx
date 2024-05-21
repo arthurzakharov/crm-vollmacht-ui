@@ -38,7 +38,7 @@ export const InputCheckbox: FC<InputCheckboxProps> = (props) => {
     });
 
   return (
-    <div data-id={name} className="input-checkbox">
+    <div data-testid={name} className="input-checkbox">
       <input
         disabled={disabled}
         type="checkbox"

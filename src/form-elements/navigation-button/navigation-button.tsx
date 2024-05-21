@@ -32,7 +32,15 @@ export const NavigationButton: FC<NavigationButtonProps> = (props) => {
   };
 
   return (
-    <button type="button" tabIndex={0} disabled={disabled} className={navigationButtonCn()} onClick={onClickHandler}>
+    <button
+      data-testid={`navigation-button-${type}`}
+      id={`navigation-button-${type}`}
+      type="button"
+      tabIndex={0}
+      disabled={disabled}
+      className={navigationButtonCn()}
+      onClick={onClickHandler}
+    >
       {getText()}
       {type === "forward" && <div />}
     </button>
