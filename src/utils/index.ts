@@ -255,9 +255,6 @@ export const onScreenInParamsMode = (current: Screen | null, previous: Screen | 
   if (current !== previous && current !== screen && current) updatePageUrlParameter(current);
 };
 
-// const screen = getActualScreenFromUrl(isAttachment(), isRemuneration());
-// const secret = getActualSecretFromUrl(isAttachment(), isRemuneration());
-
 export const onScreenInPagesMode = (
   current: Screen | null,
   baseUrl: string,
@@ -279,4 +276,8 @@ export const onScreenInPagesMode = (
     search.delete("secret");
     navigate(`${baseUrl}remuneration/${secret}?${sortSearchParams(search).toString()}${hash}`);
   }
+};
+
+export const getFirstViewUrl = (): string => {
+  return location.origin + (location.pathname === "/" ? "" : removeSlashAtEnd(location.pathname));
 };
