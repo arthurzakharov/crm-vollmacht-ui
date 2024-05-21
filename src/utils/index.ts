@@ -234,3 +234,17 @@ export const getActualSecretFromUrl = (isAttachment: boolean, isRemuneration: bo
   }
   return searchParams().get("secret") || "";
 };
+
+export const formatPriceAddEuro = (num: number): string => (parseFloat(String(num)) + " €").replace(".", ",");
+
+export const formatNumber = (num: number): string => parseFloat(String(num)).toFixed().replace(".", ",");
+
+export const convertDateFormat = (dateString: string): string => {
+  const parts = dateString.split("/");
+  return parts[2] + "-" + parts[1] + "-" + parts[0];
+};
+
+export const blurAfterClick = (e: MouseEvent<HTMLButtonElement>, cb: () => void): void => {
+  e.currentTarget.blur();
+  cb();
+};
