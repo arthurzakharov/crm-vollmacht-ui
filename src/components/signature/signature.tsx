@@ -3,7 +3,7 @@ import { useWindowSize } from "usehooks-ts";
 import SignatureCanvas from "react-signature-canvas";
 import { Loader } from "../loader";
 import { StatusIcon } from "../status-icon";
-import useDimensions from "../../hooks/useDimensions";
+import { useDimensions } from "../../hooks";
 import { ApiStatus } from "../../types";
 import checkLineSrc from "../../assets/png/check-line/check-line.png";
 import "./signature.css";
