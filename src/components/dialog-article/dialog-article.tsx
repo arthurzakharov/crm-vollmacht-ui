@@ -1,5 +1,5 @@
 import React, { useState, FC, PropsWithChildren } from "react";
-import useMoveFocus from "../../hooks/useMoveFocus";
+import { useMoveFocus } from "../../hooks";
 import { blurOnClick } from "../../utils";
 import "./dialog-article.css";
 

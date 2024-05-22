@@ -1,6 +1,6 @@
 import { useState, useCallback, useLayoutEffect } from "react";
 
-type Dimensions = {
+export type Dimensions = {
   width: number;
   height: number;
   top: number;
@@ -11,7 +11,7 @@ type Dimensions = {
   bottom: number;
 };
 
-const useDimensions = <H extends Element>(liveMeasure: boolean) => {
+export const useDimensions = <H extends Element>(liveMeasure: boolean) => {
   const [dimensions, setDimensions] = useState<Dimensions>({
     width: 0,
     height: 0,
@@ -62,5 +62,3 @@ const useDimensions = <H extends Element>(liveMeasure: boolean) => {
     dimensions,
   };
 };
-
-export default useDimensions;

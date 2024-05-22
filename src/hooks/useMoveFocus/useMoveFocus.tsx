@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-function useMoveFocus<T extends HTMLElement>() {
+export const useMoveFocus = <T extends HTMLElement>() => {
   const ref = useRef<T>(null);
 
   useEffect(() => {
@@ -14,6 +14,4 @@ function useMoveFocus<T extends HTMLElement>() {
   }, []);
 
   return ref;
-}
-
-export default useMoveFocus
+};

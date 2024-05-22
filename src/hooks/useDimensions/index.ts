@@ -1,1 +1,1 @@
-export { default } from "./useDimensions";
+export * from "./useDimensions";
