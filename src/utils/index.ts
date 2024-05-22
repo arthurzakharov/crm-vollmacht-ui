@@ -44,11 +44,12 @@ export const urlFromWindow = (): string => {
   return window.origin + pathname;
 };
 
-export const fakeAwait = async (time = 500): Promise<void> => {
+export const fakeAwait = async (time?: number | string): Promise<void> => {
+  const timeNumber = typeof time === "string" ? Number(time) : time;
   return await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, time);
+    }, timeNumber || 500);
   });
 };
 
@@ -218,18 +219,18 @@ export const searchParams = (): URLSearchParams => {
   return new URLSearchParams(search);
 };
 
-export const getActualScreenFromUrl = (isAttachment: boolean, isRemuneration: boolean): Screen => {
-  if (isAttachment) return "attachment";
-  if (isRemuneration) return "remuneration";
+export const getActualScreenFromUrl = (baseUrl: string): Screen => {
+  if (isAttachment(baseUrl)) return "attachment";
+  if (isRemuneration(baseUrl)) return "remuneration";
   return "home";
 };
 
-export const getActualSecretFromUrl = (isAttachment: boolean, isRemuneration: boolean): string => {
-  if (isAttachment) {
+export const getActualSecretFromUrl = (baseUrl: string): string => {
+  if (isAttachment(baseUrl)) {
     const match = location.pathname.match(/\/attachment\/([a-zA-Z0-9]+)/);
     return match ? match[1] : "";
   }
-  if (isRemuneration) {
+  if (isRemuneration(baseUrl)) {
     const match = location.pathname.match(/\/remuneration\/([a-zA-Z0-9]+)/);
     return match ? match[1] : "";
   }
@@ -280,4 +281,32 @@ export const onScreenInPagesMode = (
 
 export const getFirstViewUrl = (): string => {
   return location.origin + (location.pathname === "/" ? "" : removeSlashAtEnd(location.pathname));
+};
+
+export const getAttachment = (baseUrl: string): string => {
+  return baseUrl + "attachment";
+};
+
+export const getRemuneration = (baseUrl: string): string => {
+  return baseUrl + "remuneration";
+};
+
+export const getAttachmentRoute = (baseUrl: string): string => {
+  return baseUrl + "attachment/:secret";
+};
+
+export const getRemunerationRoute = (baseUrl: string): string => {
+  return baseUrl + "remuneration/:secret";
+};
+
+export const isAttachment = (baseUrl: string): boolean => {
+  return location.pathname.includes(getAttachment(baseUrl));
+};
+
+export const isRemuneration = (baseUrl: string): boolean => {
+  return location.pathname.includes(getRemuneration(baseUrl));
+};
+
+export const isHome = (baseUrl: string): boolean => {
+  return location.pathname.startsWith(baseUrl) && !isAttachment(baseUrl) && !isRemuneration(baseUrl);
 };
