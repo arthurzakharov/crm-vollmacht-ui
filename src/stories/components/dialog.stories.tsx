@@ -25,8 +25,7 @@ const meta: Meta<typeof Dialog> = {
     name: "dialog",
     position: "top",
     size: "m",
-    onOverlayClick: fn(),
-    onClose: fn(),
+    closeDialog: fn(),
   },
   render: (args) => {
     const [name, setName] = useState<string | undefined>(args.name);
@@ -36,17 +35,14 @@ const meta: Meta<typeof Dialog> = {
     const onOverlayClick = () => {
       setPosition(undefined);
       setSize(undefined);
-      args.onOverlayClick();
     };
 
-    const onClose = () => {
+    const closeDialog = () => {
       setName(undefined);
-      args.onClose();
+      args.closeDialog();
     };
 
-    return (
-      <Dialog {...args} name={name} position={position} size={size} onOverlayClick={onOverlayClick} onClose={onClose} />
-    );
+    return <Dialog {...args} name={name} position={position} size={size} closeDialog={closeDialog} />;
   },
 };
 
