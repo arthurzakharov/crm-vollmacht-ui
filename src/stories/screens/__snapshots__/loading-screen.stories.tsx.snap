@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SCREENS/LoadingScreen Default smoke-test 1`] = `
+exports[`SCREENS/Loading Screen Default smoke-test 1`] = `
 <div class="layout-without-sidebar">
   <div class="layout-without-sidebar__header">
     <header class="header">

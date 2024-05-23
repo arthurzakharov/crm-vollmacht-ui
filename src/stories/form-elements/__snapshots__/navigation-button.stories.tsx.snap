@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FORM ELEMENTS/NavigationButton DefaultValues smoke-test 1`] = `
-<button type="button"
+<button data-testid="navigation-button-forward"
+        id="navigation-button-forward"
+        type="button"
         tabindex="0"
         class="navigation-button navigation-button--forward"
 >
@@ -12,7 +14,9 @@ exports[`FORM ELEMENTS/NavigationButton DefaultValues smoke-test 1`] = `
 `;
 
 exports[`FORM ELEMENTS/NavigationButton Disabled play-test 1`] = `
-<button type="button"
+<button data-testid="navigation-button-forward"
+        id="navigation-button-forward"
+        type="button"
         tabindex="0"
         disabled
         class="navigation-button navigation-button--forward"
@@ -24,7 +28,9 @@ exports[`FORM ELEMENTS/NavigationButton Disabled play-test 1`] = `
 `;
 
 exports[`FORM ELEMENTS/NavigationButton TypeBackward smoke-test 1`] = `
-<button type="button"
+<button data-testid="navigation-button-backward"
+        id="navigation-button-backward"
+        type="button"
         tabindex="0"
         class="navigation-button navigation-button--backward"
 >
@@ -33,7 +39,9 @@ exports[`FORM ELEMENTS/NavigationButton TypeBackward smoke-test 1`] = `
 `;
 
 exports[`FORM ELEMENTS/NavigationButton TypeForward play-test 1`] = `
-<button type="button"
+<button data-testid="navigation-button-forward"
+        id="navigation-button-forward"
+        type="button"
         tabindex="0"
         class="navigation-button navigation-button--forward"
 >
@@ -44,7 +52,9 @@ exports[`FORM ELEMENTS/NavigationButton TypeForward play-test 1`] = `
 `;
 
 exports[`FORM ELEMENTS/NavigationButton WithCustomText smoke-test 1`] = `
-<button type="button"
+<button data-testid="navigation-button-forward"
+        id="navigation-button-forward"
+        type="button"
         tabindex="0"
         class="navigation-button navigation-button--forward"
 >

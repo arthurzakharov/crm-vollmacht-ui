@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENTS/Dialog DefaultValues smoke-test 1`] = `""`;
+
+exports[`COMPONENTS/Dialog NameIsUndefined smoke-test 1`] = `""`;
+
+exports[`COMPONENTS/Dialog PositionCenter smoke-test 1`] = `
+<div class="dialog dialog--visible dialog--center dialog--m">
+  <div class="dialog__content">
+    <div>
+      <h2>
+        Dialog (1)
+      </h2>
+      <div style="height: 300px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Dialog PositionTop smoke-test 1`] = `
+<div class="dialog dialog--visible dialog--top dialog--m">
+  <div class="dialog__content">
+    <div>
+      <h2>
+        Dialog (1)
+      </h2>
+      <div style="height: 300px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Dialog SizeM smoke-test 1`] = `
+<div class="dialog dialog--visible dialog--top dialog--m">
+  <div class="dialog__content">
+    <div>
+      <h2>
+        Dialog (1)
+      </h2>
+      <div style="height: 300px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`COMPONENTS/Dialog SizeS smoke-test 1`] = `
+<div class="dialog dialog--visible dialog--top dialog--s">
+  <div class="dialog__content">
+    <div>
+      <h2>
+        Dialog (1)
+      </h2>
+      <div style="height: 300px; border: 2px solid rgb(211, 211, 211); background-image: linear-gradient(45deg, rgb(211, 211, 211) 25%, transparent 25%, transparent 50%, rgb(211, 211, 211) 50%, rgb(211, 211, 211) 75%, transparent 75%, transparent 100%); background-size: 56.57px 56.57px;">
+      </div>
+    </div>
+  </div>
+</div>
+`;

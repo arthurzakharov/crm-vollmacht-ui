@@ -18,12 +18,11 @@ export interface DialogProps {
   name?: string;
   position?: DialogPosition;
   size?: DialogSize;
-  onOverlayClick: () => void;
-  onClose: () => void;
+  closeDialog: () => void;
 }
 
 export const Dialog: FC<DialogProps> = (props) => {
-  const { dialogs, lockTarget = "#root", name = "", position = "top", size = "m", onOverlayClick, onClose } = props;
+  const { dialogs, lockTarget = "#root", name = "", position = "top", size = "m", closeDialog } = props;
   const { isLocked, lock, unlock } = useScrollLock({ autoLock: false, lockTarget });
   const [isMounted, setIsMounted] = useState<boolean>(false);
   const [isClosing, setIsClosing] = useState<boolean>(true);
@@ -40,7 +39,7 @@ export const Dialog: FC<DialogProps> = (props) => {
       "dialog--m": size === "m",
     });
 
-  useOnClickOutside(contentRef, onOverlayClick);
+  useOnClickOutside(contentRef, closeDialog);
 
   useEffect(() => {
     if (name) setLocalDialog(name);
@@ -54,7 +53,7 @@ export const Dialog: FC<DialogProps> = (props) => {
       setTimeout(() => {
         setIsMounted(false);
         setLocalDialog(null);
-        onClose();
+        closeDialog();
       }, 300);
     }
   }, [name, isMounted]);

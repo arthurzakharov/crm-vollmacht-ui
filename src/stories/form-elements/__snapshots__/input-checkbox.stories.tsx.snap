@@ -2,7 +2,7 @@
 
 exports[`FORM ELEMENTS/InputCheckbox Checked smoke-test 1`] = `
 <div style="max-width: 600px;">
-  <div data-id="ageement"
+  <div data-testid="ageement"
        class="input-checkbox"
   >
     <input type="checkbox"
@@ -38,7 +38,7 @@ exports[`FORM ELEMENTS/InputCheckbox Checked smoke-test 1`] = `
 
 exports[`FORM ELEMENTS/InputCheckbox DefaultValues smoke-test 1`] = `
 <div style="max-width: 600px;">
-  <div data-id="ageement"
+  <div data-testid="ageement"
        class="input-checkbox"
   >
     <input type="checkbox"
@@ -73,7 +73,7 @@ exports[`FORM ELEMENTS/InputCheckbox DefaultValues smoke-test 1`] = `
 
 exports[`FORM ELEMENTS/InputCheckbox Demo play-test 1`] = `
 <div style="max-width: 600px;">
-  <div data-id="ageement"
+  <div data-testid="ageement"
        class="input-checkbox"
   >
     <input type="checkbox"
@@ -108,7 +108,7 @@ exports[`FORM ELEMENTS/InputCheckbox Demo play-test 1`] = `
 
 exports[`FORM ELEMENTS/InputCheckbox Disabled smoke-test 1`] = `
 <div style="max-width: 600px;">
-  <div data-id="ageement"
+  <div data-testid="ageement"
        class="input-checkbox"
   >
     <input disabled
@@ -144,7 +144,7 @@ exports[`FORM ELEMENTS/InputCheckbox Disabled smoke-test 1`] = `
 
 exports[`FORM ELEMENTS/InputCheckbox Enabled smoke-test 1`] = `
 <div style="max-width: 600px;">
-  <div data-id="ageement"
+  <div data-testid="ageement"
        class="input-checkbox"
   >
     <input type="checkbox"
@@ -179,7 +179,7 @@ exports[`FORM ELEMENTS/InputCheckbox Enabled smoke-test 1`] = `
 
 exports[`FORM ELEMENTS/InputCheckbox NotChecked smoke-test 1`] = `
 <div style="max-width: 600px;">
-  <div data-id="ageement"
+  <div data-testid="ageement"
        class="input-checkbox"
   >
     <input type="checkbox"
@@ -214,7 +214,7 @@ exports[`FORM ELEMENTS/InputCheckbox NotChecked smoke-test 1`] = `
 
 exports[`FORM ELEMENTS/InputCheckbox StatusError smoke-test 1`] = `
 <div style="max-width: 600px;">
-  <div data-id="ageement"
+  <div data-testid="ageement"
        class="input-checkbox"
   >
     <input type="checkbox"
@@ -253,7 +253,7 @@ exports[`FORM ELEMENTS/InputCheckbox StatusError smoke-test 1`] = `
 
 exports[`FORM ELEMENTS/InputCheckbox StatusNeutral smoke-test 1`] = `
 <div style="max-width: 600px;">
-  <div data-id="ageement"
+  <div data-testid="ageement"
        class="input-checkbox"
   >
     <input type="checkbox"
@@ -288,7 +288,7 @@ exports[`FORM ELEMENTS/InputCheckbox StatusNeutral smoke-test 1`] = `
 
 exports[`FORM ELEMENTS/InputCheckbox StatusSuccess smoke-test 1`] = `
 <div style="max-width: 600px;">
-  <div data-id="ageement"
+  <div data-testid="ageement"
        class="input-checkbox"
   >
     <input type="checkbox"

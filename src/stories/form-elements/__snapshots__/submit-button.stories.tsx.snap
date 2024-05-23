@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FORM ELEMENTS/Submit Button Idle play-test 1`] = `
+<div style="max-width: 320px;">
+  <button type="button"
+          tabindex="0"
+          class="submit-button submit-button--idle"
+  >
+    Submit button
+  </button>
+</div>
+`;
+
+exports[`FORM ELEMENTS/Submit Button Loading play-test 1`] = `
+<div style="max-width: 320px;">
+  <button type="button"
+          tabindex="0"
+          disabled
+          class="submit-button submit-button--loading"
+  >
+    <div class="submit-button__loader">
+      <svg viewbox="0 0 24 30"
+           class="loader loader--secondary"
+      >
+        <rect x="0"
+              y="10"
+              class="loader__rect"
+        >
+          <animate attributename="opacity"
+                   attributetype="XML"
+                   values="0.2; 1; .2"
+                   begin="0s"
+                   dur="0.6s"
+                   repeatcount="indefinite"
+          >
+          </animate>
+          <animate attributename="height"
+                   attributetype="XML"
+                   values="10; 20; 10"
+                   begin="0s"
+                   dur="0.6s"
+                   repeatcount="indefinite"
+          >
+          </animate>
+          <animate attributename="y"
+                   attributetype="XML"
+                   values="10; 5; 10"
+                   begin="0s"
+                   dur="0.6s"
+                   repeatcount="indefinite"
+          >
+          </animate>
+        </rect>
+        <rect x="8"
+              y="10"
+              class="loader__rect"
+        >
+          <animate attributename="opacity"
+                   attributetype="XML"
+                   values="0.2; 1; .2"
+                   begin="0.15s"
+                   dur="0.6s"
+                   repeatcount="indefinite"
+          >
+          </animate>
+          <animate attributename="height"
+                   attributetype="XML"
+                   values="10; 20; 10"
+                   begin="0.15s"
+                   dur="0.6s"
+                   repeatcount="indefinite"
+          >
+          </animate>
+          <animate attributename="y"
+                   attributetype="XML"
+                   values="10; 5; 10"
+                   begin="0.15s"
+                   dur="0.6s"
+                   repeatcount="indefinite"
+          >
+          </animate>
+        </rect>
+        <rect x="16"
+              y="10"
+              class="loader__rect"
+        >
+          <animate attributename="opacity"
+                   attributetype="XML"
+                   values="0.2; 1; .2"
+                   begin="0.3s"
+                   dur="0.6s"
+                   repeatcount="indefinite"
+          >
+          </animate>
+          <animate attributename="height"
+                   attributetype="XML"
+                   values="10; 20; 10"
+                   begin="0.3s"
+                   dur="0.6s"
+                   repeatcount="indefinite"
+          >
+          </animate>
+          <animate attributename="y"
+                   attributetype="XML"
+                   values="10; 5; 10"
+                   begin="0.3s"
+                   dur="0.6s"
+                   repeatcount="indefinite"
+          >
+          </animate>
+        </rect>
+      </svg>
+    </div>
+    Submit button
+  </button>
+</div>
+`;
+
+exports[`FORM ELEMENTS/Submit Button VersionMain smoke-test 1`] = `
+<div style="max-width: 320px;">
+  <button type="button"
+          tabindex="0"
+          class="submit-button submit-button--idle"
+  >
+    Submit button
+  </button>
+</div>
+`;
+
+exports[`FORM ELEMENTS/Submit Button VersionSidebar smoke-test 1`] = `
+<div style="max-width: 320px;">
+  <button type="button"
+          tabindex="0"
+          class="submit-button submit-button--idle submit-button--sidebar-version"
+  >
+    Submit button
+  </button>
+</div>
+`;
